@@ -117,5 +117,16 @@ export const en = {
 	},
 	musicBattlesPage: {
 		title: 'Music Battles | Allify'
+	},
+	errorPage: {
+		title404: 'Page not found | Allify',
+		titleOtherErrors: 'Unexpected error | Allify',
+		errorPage404Heading1: 'Page not found',
+		errorPage404Paragraph1:
+			'We couldn’t find the page you were looking for. It may have been removed or the address is incorrect.',
+		errorPageOtherErrorsHeading1: 'Oops! Something went wrong.',
+		errorPageOtherErrorsParagraph1:
+			'There was a problem loading this page. Please try again in a few moments.',
+		errorPageButtonGoHome: 'Go to home page'
 	}
 };
