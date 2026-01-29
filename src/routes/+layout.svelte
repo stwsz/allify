@@ -29,7 +29,7 @@
 				meStore.set(undefined);
 				return;
 			}
-			
+
 			meStore.set({ ...data, streaming: 'spotify' });
 		} catch {
 			meStore.set(undefined);

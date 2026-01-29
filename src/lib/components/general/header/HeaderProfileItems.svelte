@@ -4,6 +4,9 @@
 	import { meStore } from '$lib/stores/me.store';
 	import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
 
+	// Utils
+	import { setTitleByStreaming } from '$lib/utils/setTitleByStreaming';
+
 	// Props
 	export let loggedIn: boolean;
 	export let showProfileOptions: boolean;
@@ -107,7 +110,7 @@
 				<li class="rounded-lg transition-all hover:bg-s-muted">
 					<button
 						disabled={item.streaming === 'deezer'}
-						title={item.streaming === 'deezer' ? $translationsStore.generalTexts.disabledDeezerFunctionalityText : $translationsStore.generalTexts.loginWith + item.streaming.charAt(0).toUpperCase() + item.streaming.slice(1)}
+						title={setTitleByStreaming(item.streaming)}
 						on:click={(e) => {
 							if ($meStore !== undefined) {
 								e.preventDefault();

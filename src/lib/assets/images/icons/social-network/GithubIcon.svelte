@@ -9,6 +9,7 @@
 	viewBox="-2 -2 24 24"
 	class={iconSvgClass}
 	aria-label={iconAltText}
+	fill="currentColor"
 >
 	<title>{iconAltText}</title>
 	<path

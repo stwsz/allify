@@ -11,6 +11,7 @@
 	height="512.000000pt"
 	viewBox="0 0 512.000000 512.000000"
 	class={iconSvgClass}
+	fill="currentColor"
 	aria-label={iconAltText}
 	preserveAspectRatio="xMidYMid meet"
 >
