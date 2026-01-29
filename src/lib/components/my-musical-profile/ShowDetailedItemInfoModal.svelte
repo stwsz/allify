@@ -1,14 +1,14 @@
 <script lang="ts">
 	// Components
 	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
-	import ExternalLink from './ExternalLink.svelte';
+	import DetailedArtistInfoItem from './DetailedArtistInfoItem.svelte';
+	import DetailedTrackInfoItem from './DetailedTrackInfoItem.svelte';
 
 	// Assets
 	import CloseIcon from '$lib/assets/images/icons/CloseIcon.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
 
 	// Types
 	import type { DetailedArtistItem, DetailedTrackItem } from '$lib/types/detailedItem.type';
@@ -38,8 +38,6 @@
 
 			if (choosedItemType === 'artist') detailedArtistInfoItem = res;
 			else if (choosedItemType === 'track') detailedTrackInfoItem = res;
-
-			console.log('Detailed Info Item:', res);
 		} catch (error) {
 			console.error('Error fetching detailed info item:', error);
 		} finally {
@@ -103,127 +101,9 @@
 					/>
 				</div>
 			{:else if choosedItemType === 'artist' && detailedArtistInfoItem !== null}
-				<div class="flex flex-col gap-6">
-					<div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
-						<img
-							src={detailedArtistInfoItem?.images?.[1]?.url}
-							alt={detailedArtistInfoItem?.name}
-							class="h-40 w-40 rounded-xl object-cover shadow-lg sm:h-48 sm:w-48"
-							loading="lazy"
-						/>
-
-						<div class="flex flex-col gap-2 text-center sm:text-left">
-							<h4 class="text-2xl font-bold text-t-primary sm:text-3xl">
-								{detailedArtistInfoItem?.name}
-							</h4>
-
-							<p class="text-base text-t-secondary">
-								{detailedArtistInfoItem?.followers?.total?.toLocaleString()}
-								{$translationsStore.myMusicalProfilePage
-									.myMusicalProfilePageMostListenedArtistsFollowers}
-							</p>
-
-							<div class="flex items-center justify-center gap-2 sm:justify-start">
-								<span class="text-sm text-t-secondary"
-									>{$translationsStore.myMusicalProfilePage
-										.myMusicalProfilePageDetailedArtistInfoModalPopularity}</span
-								>
-								<div class="h-2 w-32 overflow-hidden rounded-full bg-s-muted">
-									<div
-										class="h-full bg-brand-primary"
-										style="width: {detailedArtistInfoItem?.popularity || 0}%"
-									></div>
-								</div>
-								<span class="text-sm font-medium text-t-primary">
-									{detailedArtistInfoItem?.popularity}%
-								</span>
-							</div>
-
-							{#if detailedArtistInfoItem?.genres?.length}
-								<div class="mt-2.5">
-									<h5 class="mb-2 text-sm font-semibold tracking-wide text-t-secondary uppercase">
-										{$translationsStore.myMusicalProfilePage
-											.myMusicalProfilePageDetailedArtistInfoModalGenre}
-									</h5>
-
-									<div class="flex flex-wrap justify-center gap-2 sm:justify-start">
-										{#each detailedArtistInfoItem.genres as genre}
-											<span
-												class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse"
-											>
-												{genre}
-											</span>
-										{/each}
-									</div>
-								</div>
-							{/if}
-						</div>
-					</div>
-
-					<ExternalLink
-						streamingPlatform="spotify"
-						externalLink={detailedArtistInfoItem?.external_urls?.spotify}
-						externalLinkText={$translationsStore.myMusicalProfilePage
-							.myMusicalProfilePageDetailedItemInfoModalExternalLinkArtistText}
-					/>
-				</div>
+				<DetailedArtistInfoItem {detailedArtistInfoItem} />
 			{:else if choosedItemType === 'track' && detailedTrackInfoItem !== null}
-				<div class="flex flex-col gap-6">
-					<div class="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
-						<img
-							src={detailedTrackInfoItem?.album?.images?.[1]?.url}
-							alt={detailedTrackInfoItem?.name}
-							class="h-40 w-40 rounded-xl object-cover shadow-lg sm:h-48 sm:w-48"
-							loading="lazy"
-						/>
-
-						<div class="flex flex-col gap-2 text-center sm:text-left">
-							<h4 class="text-2xl font-bold text-t-primary sm:text-3xl">
-								{detailedTrackInfoItem?.name}
-							</h4>
-
-							<p class="text-base font-medium text-t-secondary">
-								{#each detailedTrackInfoItem?.artists ?? [] as artist, i}
-									<span
-										>{artist.name}{i < (detailedTrackInfoItem?.artists?.length ?? 0) - 1
-											? ', '
-											: ''}</span
-									>
-								{/each}
-							</p>
-
-							<div class="flex flex-col gap-1 text-sm text-t-secondary">
-								<span class="font-medium">{detailedTrackInfoItem?.album?.name}</span>
-								<span class="text-xs text-t-secondary/70">
-									{detailedTrackInfoItem?.album?.release_date}
-								</span>
-							</div>
-
-							<div class="mt-2 flex items-center gap-2">
-								<span class="text-sm text-t-secondary"
-									>{$translationsStore.myMusicalProfilePage
-										.myMusicalProfilePageDetailedTracksInfoModalPopularity}</span
-								>
-								<div class="h-2 w-32 overflow-hidden rounded-full bg-s-muted">
-									<div
-										class="h-full bg-brand-primary"
-										style="width: {detailedTrackInfoItem?.popularity || 0}%"
-									></div>
-								</div>
-								<span class="text-sm font-medium text-t-primary">
-									{detailedTrackInfoItem?.popularity}%
-								</span>
-							</div>
-						</div>
-					</div>
-
-					<ExternalLink
-						streamingPlatform="spotify"
-						externalLink={detailedTrackInfoItem?.external_urls?.spotify}
-						externalLinkText={$translationsStore.myMusicalProfilePage
-							.myMusicalProfilePageDetailedItemInfoModalExternalLinkTrackText}
-					/>
-				</div>
+				<DetailedTrackInfoItem {detailedTrackInfoItem} />
 			{/if}
 		</div>
 	</div>

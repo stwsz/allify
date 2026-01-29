@@ -28,7 +28,7 @@ export const pt = {
 		profileLoggedItem2: 'Configurações',
 		profileLoggedItem3: 'Sair',
 		profileNotLoggedItem1:
-			'Entrar com <span class="ml-1 font-semibold text-[#1fd25e]">Spotify</span>',
+			'Entrar com <span class="ml-1 font-semibold text-spotify">Spotify</span>',
 		profileNotLoggedItem2:
 			'Entrar com <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
 		burguerMenuAltText: 'Abrir menu de navegação',
@@ -52,15 +52,17 @@ export const pt = {
 		stillInDevelopmentText: 'Ainda em desenvolvimento',
 		loadingComponentHeading1: 'Conectando...',
 		loadingComponentSpotifyParagraph1:
-			'Buscando suas informações do <span class="font-semibold text-[#1fd25e]">Spotify</span>',
+			'Buscando suas informações do <span class="font-semibold text-spotify">Spotify</span>',
 		loadingComponentDeezerParagraph1:
-			'Buscando suas informações do <span class="font-semibold text-[#a238ff]">Deezer</span>',
+			'Buscando suas informações do <span class="font-semibold text-deezer">Deezer</span>',
 		loadingComponentAriaLabel: 'Animação de carregamento',
 		notLoggedHeading1: 'Você não está logado',
 		notLoggedMyMusicProfileParagraph1:
 			'Para acessar seu perfil musical, conecte-se com uma de suas plataformas de streaming favoritas.',
-		notLoggedDiscoveriesParagraph1: 'Para acessar as descobertas musicais, conecte-se com uma de suas plataformas de streaming favoritas.',
-		notLoggedMusicBattlesParagraph1: 'Para acessar as batalhas de música, conecte-se com uma de suas plataformas de streaming favoritas.',
+		notLoggedDiscoveriesParagraph1:
+			'Para acessar as descobertas musicais, conecte-se com uma de suas plataformas de streaming favoritas.',
+		notLoggedMusicBattlesParagraph1:
+			'Para acessar as batalhas de música, conecte-se com uma de suas plataformas de streaming favoritas.',
 		notLoggedLoginLinkSpotify: 'Fazer login com Spotify',
 		notLoggedLoginLinkDeezer: 'Fazer login com Deezer',
 		disabledDeezerFunctionalityText: 'Conexão com Deezer atualmente indisponível',
@@ -106,5 +108,14 @@ export const pt = {
 		myMusicalProfilePageDetailedTracksInfoModalPopularity: 'Popularidade',
 		myMusicalProfilePageDetailedItemInfoModalExternalLinkArtistText: 'Abrir artista no Spotify',
 		myMusicalProfilePageDetailedItemInfoModalExternalLinkTrackText: 'Abrir música no Spotify',
+		myMusicalProfilePageCarouselButtonAriaLabelPrev: 'Artista anterior',
+		myMusicalProfilePageCarouselButtonAriaLabelNext: 'Próximo artista',
+		myMusicalProfilePageCarouselArrowIconAltText: 'Ícone de seta do carrossel'
+	},
+	discoveriesPage: {
+		title: 'Descobertas Musicais | Allify'
+	},
+	musicBattlesPage: {
+		title: 'Batalhas de Música | Allify'
 	}
 };

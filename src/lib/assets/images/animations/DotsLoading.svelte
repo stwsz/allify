@@ -4,8 +4,8 @@
 	export let animationAltText: string = '';
 
 	const platformColors = {
-		spotify: 'bg-[#1fd25e]',
-		deezer: 'bg-[#a238ff]'
+		spotify: 'bg-spotify',
+		deezer: 'bg-deezer'
 	};
 </script>
 

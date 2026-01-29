@@ -28,9 +28,9 @@ export const es = {
 		profileLoggedItem2: 'Configuraciones',
 		profileLoggedItem3: 'Cerrar sesión',
 		profileNotLoggedItem1:
-			'Iniciar sesión con <span class="ml-1 font-semibold text-[#1fd25e]">Spotify</span>',
+			'Iniciar sesión con <span class="ml-1 font-semibold text-spotify">Spotify</span>',
 		profileNotLoggedItem2:
-			'Iniciar sesión con <span class="ml-1 font-semibold text-[#a238ff]">Deezer</span>',
+			'Iniciar sesión con <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
 		burguerMenuAltText: 'Abrir menú de navegación',
 		closeMenuAltText: 'Cerrar menú de navegación',
 		cardProfileAsideMenuParagraph1: 'Iniciar sesión o crear cuenta',
@@ -52,15 +52,17 @@ export const es = {
 		stillInDevelopmentText: 'Aún en desarrollo',
 		loadingComponentHeading1: 'Conectando...',
 		loadingComponentSpotifyParagraph1:
-			'Obteniendo tu información de <span class="font-semibold text-[#1fd25e]">Spotify</span>',
+			'Obteniendo tu información de <span class="font-semibold text-spotify">Spotify</span>',
 		loadingComponentDeezerParagraph1:
-			'Obteniendo tu información de <span class="font-semibold text-[#a238ff]">Deezer</span>',
+			'Obteniendo tu información de <span class="font-semibold text-deezer">Deezer</span>',
 		loadingComponentAriaLabel: 'Animación de carga',
 		notLoggedHeading1: 'No has iniciado sesión',
 		notLoggedMyMusicProfileParagraph1:
 			'Para acceder a tu perfil musical, conéctate con una de tus plataformas de streaming favoritas.',
-		notLoggedDiscoveriesParagraph1: 'Para acceder a los descubrimientos musicales, conéctate con una de tus plataformas de streaming favoritas.',
-		notLoggedMusicBattlesParagraph1: 'Para acceder a las batallas de música, conéctate con una de tus plataformas de streaming favoritas.',
+		notLoggedDiscoveriesParagraph1:
+			'Para acceder a los descubrimientos musicales, conéctate con una de tus plataformas de streaming favoritas.',
+		notLoggedMusicBattlesParagraph1:
+			'Para acceder a las batallas de música, conéctate con una de tus plataformas de streaming favoritas.',
 		notLoggedLoginLinkSpotify: 'Iniciar sesión con Spotify',
 		notLoggedLoginLinkDeezer: 'Iniciar sesión con Deezer',
 		disabledDeezerFunctionalityText: 'Conexión con Deezer actualmente no disponible',
@@ -105,6 +107,15 @@ export const es = {
 		myMusicalProfilePageDetailedArtistInfoModalGenre: 'Géneros',
 		myMusicalProfilePageDetailedTracksInfoModalPopularity: 'Popularidad',
 		myMusicalProfilePageDetailedItemInfoModalExternalLinkArtistText: 'Abrir artista en Spotify',
-		myMusicalProfilePageDetailedItemInfoModalExternalLinkTrackText: 'Abrir canción en Spotify'
+		myMusicalProfilePageDetailedItemInfoModalExternalLinkTrackText: 'Abrir canción en Spotify',
+		myMusicalProfilePageCarouselButtonAriaLabelPrev: 'Artista anterior',
+		myMusicalProfilePageCarouselButtonAriaLabelNext: 'Próximo artista',
+		myMusicalProfilePageCarouselArrowIconAltText: 'Ícono de flecha del carrusel'
+	},
+	discoveriesPage: {
+		title: 'Descubrimientos Musicales | Allify'
+	},
+	musicBattlesPage: {
+		title: 'Batallas de Música | Allify'
 	}
 };

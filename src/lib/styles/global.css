@@ -45,6 +45,10 @@
 	--color-status-error: #ef4444;
 	--color-status-warning: #f59e0b;
 	--color-status-info: #3b82f6;
+
+	/* STREAMINGS */
+	--color-spotify: #1fd25e;
+	--color-deezer: #a339ff;
 }
 
 body {
