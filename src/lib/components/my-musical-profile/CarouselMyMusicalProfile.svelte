@@ -121,7 +121,7 @@
 				bind:this={carousel}
 				on:scroll={handleScroll}
 				id="carousel"
-				class="flex snap-x snap-mandatory items-end gap-4 overflow-x-auto scroll-smooth px-4 sm:mx-0 sm:gap-6 sm:px-0 lg:gap-8 lg:overflow-x-hidden xl:gap-12"
+				class="flex snap-x snap-mandatory items-end gap-4 overflow-x-auto overflow-y-hidden scroll-smooth px-4 sm:mx-0 sm:gap-6 sm:px-0 lg:gap-8 lg:overflow-x-hidden xl:gap-12"
 			>
 				<div class="shrink-0 snap-start">
 					{#if mostListenedType === 'artists'}

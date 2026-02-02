@@ -118,6 +118,10 @@ export const en = {
 	musicBattlesPage: {
 		title: 'Music Battles | Allify'
 	},
+	profilePage: {
+		title: 'Profile | Allify',
+		profilePageImageAltText: 'Profile picture of'
+	},
 	errorPage: {
 		title404: 'Page not found | Allify',
 		titleOtherErrors: 'Unexpected error | Allify',
