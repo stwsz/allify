@@ -174,7 +174,7 @@
 		</div>
 	{:else}
 		<div class="flex justify-center py-8">
-			<DotsLoading animationAltText={$translationsStore.generalTexts.loadingComponentAriaLabel} />
+			<DotsLoading />
 		</div>
 	{/if}
 </section>

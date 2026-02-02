@@ -1,7 +1,10 @@
 <script lang="ts">
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
 	// Props
 	export let streamingPlatform: 'spotify' | 'deezer' = 'spotify';
-	export let animationAltText: string = '';
+	export let animationAltText: string = $translationsStore.generalTexts.loadingComponentAriaLabel;
 
 	const platformColors = {
 		spotify: 'bg-spotify',

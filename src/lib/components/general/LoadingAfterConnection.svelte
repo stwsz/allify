@@ -45,10 +45,7 @@
 			</div>
 
 			<div class="relative">
-				<DotsLoading
-					streamingPlatform={streamingPlatform ? streamingPlatform : undefined}
-					animationAltText={$translationsStore.generalTexts.loadingComponentAriaLabel}
-				/>
+				<DotsLoading streamingPlatform={streamingPlatform ? streamingPlatform : undefined} />
 			</div>
 		</div>
 	</div>

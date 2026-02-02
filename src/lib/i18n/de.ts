@@ -120,7 +120,10 @@ export const de = {
 	},
 	profilePage: {
 		title: 'Profil | Allify',
-		profilePageImageAltText: 'Profilbild von'
+		profilePageImageAltText: 'Profilbild von',
+		profilePageFollowers: 'Follower',
+		profilePageHeading1:
+			'Hallo, {{name}}! Hier findest du alles, was du über dein Profil wissen musst.'
 	},
 	errorPage: {
 		title404: 'Seite nicht gefunden | Allify',

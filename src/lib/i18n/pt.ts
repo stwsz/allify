@@ -121,6 +121,8 @@ export const pt = {
 	profilePage: {
 		title: 'Perfil | Allify',
 		profilePageImageAltText: 'Foto do perfil de',
+		profilePageFollowers: 'seguidores',
+		profilePageHeading1: 'Oi, {{name}}! Tudo o que você precisa saber sobre o seu perfil está aqui.'
 	},
 	errorPage: {
 		title404: 'Página não encontrada | Allify',

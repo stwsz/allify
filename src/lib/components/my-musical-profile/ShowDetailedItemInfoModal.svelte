@@ -95,10 +95,7 @@
 
 			{#if loading}
 				<div class="flex h-32 items-center justify-center">
-					<DotsLoading
-						streamingPlatform="spotify"
-						animationAltText={$translationsStore.generalTexts.loadingComponentAriaLabel}
-					/>
+					<DotsLoading streamingPlatform="spotify" />
 				</div>
 			{:else if choosedItemType === 'artist' && detailedArtistInfoItem !== null}
 				<DetailedArtistInfoItem {detailedArtistInfoItem} />

@@ -23,7 +23,7 @@
 	$: loggedItems = [
 		{
 			text: $translationsStore.generalTexts.profileLoggedItem1,
-			href: '/'
+			href: '/profile'
 		},
 		{
 			text: $translationsStore.generalTexts.profileLoggedItem2,
