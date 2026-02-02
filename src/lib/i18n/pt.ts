@@ -118,6 +118,12 @@ export const pt = {
 	musicBattlesPage: {
 		title: 'Batalhas de Música | Allify'
 	},
+	profilePage: {
+		title: 'Perfil | Allify',
+		profilePageImageAltText: 'Foto do perfil de',
+		profilePageFollowers: 'seguidores',
+		profilePageHeading1: 'Oi, {{name}}! Tudo o que você precisa saber sobre o seu perfil está aqui.'
+	},
 	errorPage: {
 		title404: 'Página não encontrada | Allify',
 		titleOtherErrors: 'Erro inesperado | Allify',
