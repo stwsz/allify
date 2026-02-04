@@ -1,50 +1,21 @@
 <script lang="ts">
-	// Seasonal decoration imports
-	import ChristmasHatGroup from './seasonal/ChristmasHatGroup.svelte';
-	import JuninaHatGroup from './seasonal/JuninaHatGroup.svelte';
-	import HalloweenHatGroup from './seasonal/HalloweenHatGroup.svelte';
-	import CarnivalMaskGroup from './seasonal/CarnivalMaskGroup.svelte';
-	import BunnyEasterGroup from './seasonal/BunnyEasterGroup.svelte';
-
-	// Types
-	import type { SeasonalDecoration } from '$lib/types/SeasonalDecoration.type';
+	// logomood
+	import { logomood } from 'logomood';
 
 	//Props
 	export let logoSvgClass = '';
 	export let logoAltText = '';
 
-	function resolveSeasonalDecoration(): SeasonalDecoration {
-		const today = new Date();
-		const month = today.getMonth() + 1;
-		const day = today.getDate();
-
-		if (month === 12) return 'christmas-hat';
-		if (month === 6) return 'junina-hat';
-		if (month === 10) return 'halloween';
-
-		if ((month === 3 && day >= 20) || (month === 4 && day <= 20)) {
-			return 'easter';
-		}
-
-		if (month === 2 || (month === 3 && day < 15)) {
-			return 'carnival';
-		}
-
-		return null;
-	}
-
-	const seasonalDecoration = resolveSeasonalDecoration();
-</script>
-
-<a href="/" aria-label={logoAltText} title={logoAltText}>
+	const allifyLogoColorfulDecorated = logomood(
+		`
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 380 142"
-		class={logoSvgClass}
+		class="${logoSvgClass}"
 		preserveAspectRatio="xMidYMid meet"
 		role="img"
 	>
-		<title>{logoAltText}</title>
+		<title>${logoAltText}</title>
 		<g
 			transform="translate(0.000000,132.000000) scale(0.100000,-0.100000)"
 			fill="#09623A"
@@ -75,19 +46,15 @@ l35 70 -40 20 c-46 23 -150 34 -193 20z"
 			/>
 			<path d="M1670 610 l0 -290 100 0 100 0 0 290 0 290 -100 0 -100 0 0 -290z" />
 		</g>
+	</svg>`,
+		'mask',
+		0.16,
+		295,
+		-5,
+		36
+	);
+</script>
 
-		{#if seasonalDecoration}
-			{#if seasonalDecoration === 'christmas-hat'}
-				<ChristmasHatGroup transformGroup="scale(0.30) translate(910, 10)" />
-			{:else if seasonalDecoration === 'junina-hat'}
-				<JuninaHatGroup transformGroup="scale(0.30) translate(940, -29) rotate(25)" />
-			{:else if seasonalDecoration === 'easter'}
-				<BunnyEasterGroup transformGroup="scale(0.30) translate(1000, 90)" />
-			{:else if seasonalDecoration === 'halloween'}
-				<HalloweenHatGroup transformGroup="scale(0.15) translate(2010, -110) rotate(35)" />
-			{:else if seasonalDecoration === 'carnival'}
-				<CarnivalMaskGroup transformGroup="scale(0.30) translate(940, -29) rotate(25)" />
-			{/if}
-		{/if}
-	</svg>
+<a href="/" aria-label={logoAltText} title={logoAltText}>
+	{@html allifyLogoColorfulDecorated}
 </a>
