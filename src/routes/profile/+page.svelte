@@ -4,6 +4,9 @@
 
 	//Components
 	import KeyInformation from '$lib/components/profile/KeyInformation.svelte';
+	import UserSavedAlbums from '$lib/components/profile/UserSavedAlbums.svelte';
+	import UserPlaylists from '$lib/components/profile/UserPlaylists.svelte';
+	import UserSavedTracks from '$lib/components/profile/UserSavedTracks.svelte';
 
 	// Stores
 	import { meStore } from '$lib/stores/me.store';
@@ -22,7 +25,18 @@
 				$meStore?.display_name ?? ''
 			)}
 		</h1>
-		<KeyInformation userInfo={$meStore} />
+
+		<div class="flex flex-col lg:flex-row">
+			<KeyInformation userInfo={$meStore} />
+
+			<div class="flex flex-col gap-4">
+				<UserSavedTracks />
+
+				<UserPlaylists />
+
+				<UserSavedAlbums />
+			</div>
+		</div>
 	</section>
 {:else}
 	<section class="flex items-center justify-center py-58">

@@ -99,9 +99,10 @@ export const en = {
 	},
 	myMusicalProfilePage: {
 		title: 'My Musical Profile | Allify',
-		myMusicalProfilePageMostListenedArtistsHeading1: 'Your favorite artists',
+		myMusicalProfilePageHeading1: 'Here is everything you have listened to the most',
+		myMusicalProfilePageMostListenedArtistsHeading2: 'Your favorite artists',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'followers',
-		myMusicalProfilePageMostListenedTracksHeading1: 'Your favorite tracks',
+		myMusicalProfilePageMostListenedTracksHeading2: 'Your favorite tracks',
 		myMusicalProfilePageMostListenedItemPlace: 'th place',
 		myMusicalProfilePageDetailedArtistInfoModalPopularity: 'Popularity',
 		myMusicalProfilePageDetailedArtistInfoModalGenre: 'Genres',
