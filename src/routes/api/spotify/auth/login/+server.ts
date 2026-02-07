@@ -3,7 +3,7 @@ import { SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URI } from '$env/static/private';
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async ({ cookies }) => {
-	const scope = 'user-read-email user-read-private user-top-read';
+	const scope = 'user-read-email user-read-private user-top-read user-library-read';
 	const state = crypto.randomUUID();
 
 	cookies.set('spotify_state', state, {

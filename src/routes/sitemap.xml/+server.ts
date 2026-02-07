@@ -2,7 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { ALLIFY_URL } from '$env/static/private';
 
 export const GET: RequestHandler = async () => {
-	const pages = ['/', '/my-musical-profile', '/discoveries', '/music-battles'];
+	const pages = ['/', '/my-musical-profile', '/discoveries', '/music-battles', 'profile'];
 
 	const body = `<?xml version="1.0" encoding="UTF-8" ?>
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

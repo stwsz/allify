@@ -21,6 +21,19 @@
 </svelte:head>
 
 {#if $meStore !== undefined}
+	<h1
+		class="
+		px-8 pt-14 pb-6
+		text-3xl leading-tight font-medium
+		text-t-primary
+		sm:text-3xl
+		lg:px-12 lg:pt-20 lg:pb-2 lg:text-4xl
+		2xl:px-32
+	"
+	>
+		{$translationsStore.myMusicalProfilePage.myMusicalProfilePageHeading1}
+	</h1>
+
 	{#each itemsType as type}
 		<CarouselMyMusicalProfile
 			mostListenedType={type}
