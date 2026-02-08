@@ -10,7 +10,7 @@
 	import MostListenedArtistItem from './MostListenedArtistItem.svelte';
 	import TopTrackItem from './TopTrackItem.svelte';
 	import MostListenedTrackItem from './MostListenedTrackItem.svelte';
-	import CarouselButton from './CarouselButton.svelte';
+	import CarouselButton from '../general/buttons/CarouselButton.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -105,9 +105,9 @@
 >
 	<h2 class="mb-4.5 text-2xl font-medium text-t-primary sm:mb-8 sm:text-3xl lg:mb-8 lg:text-3xl">
 		{#if mostListenedType === 'artists'}
-			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsHeading1}
+			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsHeading2}
 		{:else if mostListenedType === 'tracks'}
-			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracksHeading1}
+			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracksHeading2}
 		{/if}
 	</h2>
 
@@ -121,7 +121,7 @@
 				bind:this={carousel}
 				on:scroll={handleScroll}
 				id="carousel"
-				class="flex snap-x snap-mandatory items-end gap-4 overflow-x-auto overflow-y-hidden scroll-smooth px-4 sm:mx-0 sm:gap-6 sm:px-0 lg:gap-8 lg:overflow-x-hidden xl:gap-12"
+				class="flex snap-x snap-mandatory items-end gap-4 overflow-x-auto overflow-y-hidden scroll-smooth px-4 sm:mx-0 sm:gap-6 sm:px-0 lg:gap-8 lg:py-2 lg:overflow-x-hidden xl:gap-12"
 			>
 				<div class="shrink-0 snap-start">
 					{#if mostListenedType === 'artists'}

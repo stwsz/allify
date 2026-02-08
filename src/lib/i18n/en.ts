@@ -123,7 +123,17 @@ export const en = {
 		title: 'Profile | Allify',
 		profilePageImageAltText: 'Profile picture of',
 		profilePageFollowers: 'followers',
-		profilePageHeading1: 'Hi, {{name}}! Here is everything you need to know about your profile.'
+		profilePageHeading1:
+			'Hi, {{name}}! Everything you need to know about your profile is right here.',
+		profilePageUserSavedTracksSectionHeading2: 'Liked songs',
+		profilePageUserSavedTracksSectionParagraph1:
+			'Your songs will appear here as soon as you save one.',
+		profilePageUserPlaylistsSectionHeading2: 'Your playlists',
+		profilePageUserPlaylistsSectionParagraph1:
+			'Your playlists will appear here as soon as you create or save one.',
+		profilePageUserSavedAlbumsSectionHeading2: 'Saved albums',
+		profilePageUserSavedAlbumsSectionParagraph1:
+			'Your albums will appear here as soon as you save one.'
 	},
 	errorPage: {
 		title404: 'Page not found | Allify',

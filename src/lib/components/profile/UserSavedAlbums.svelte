@@ -1,20 +1,68 @@
 <script lang="ts">
-    async function getSavedAlbums () {
-        try {
-            const response = await fetch('/api/spotify/saved-albums');
-            if (!response.ok) {
-                throw new Error('Failed to fetch saved albums');
-            }
-            const data = await response.json();
+	// Svelte
+	import { onMount } from 'svelte';
 
-            return data;
-        } catch (error) {
-            console.error('Error fetching saved albums:', error);
-        }
-    }
+	// Assets
+	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
 
-    getSavedAlbums();
+	// Components
+	import CarouselUserItems from '$lib/components/profile/CarouselUserItems.svelte';
+
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
+	let userSavedAlbums: any[] = [];
+	let isLoading = true;
+
+	async function getUserSavedAlbums(): Promise<any[]> {
+		try {
+			const reqUserSavedAlbums = await fetch('/api/spotify/user-saved-albums');
+
+			if (!reqUserSavedAlbums.ok) {
+				throw new Error('Failed to fetch saved playlists');
+			}
+
+			const resUserSavedAlbums = await reqUserSavedAlbums.json();
+
+			sessionStorage.setItem('user-saved-Albums', JSON.stringify(resUserSavedAlbums));
+
+			return resUserSavedAlbums.items;
+		} catch (error) {
+			return [];
+		}
+	}
+
+	onMount(async () => {
+		const userSavedAlbumsFromStorage = sessionStorage.getItem('user-saved-albums');
+
+		if (userSavedAlbumsFromStorage) {
+			const userSavedAlbumsFromStorageParsed = await JSON.parse(userSavedAlbumsFromStorage);
+
+			userSavedAlbums = userSavedAlbumsFromStorageParsed.items;
+
+			console.log(userSavedAlbums);
+		} else {
+			userSavedAlbums = await getUserSavedAlbums();
+
+			console.log(userSavedAlbums);
+		}
+
+		isLoading = false;
+	});
 </script>
 
-<h2>Your saved albums</h2>
+<section class="flex flex-col gap-4">
+	<h2 class="text-xl font-medium text-t-primary sm:text-2xl">
+		{$translationsStore.profilePage.profilePageUserSavedAlbumsSectionHeading2}
+	</h2>
 
+	{#if isLoading === true}
+		<div class="flex justify-center py-8">
+			<DotsLoading />
+		</div>
+	{:else if userSavedAlbums.length > 0}
+		<CarouselUserItems items={userSavedAlbums} itemsType="user-saved-albums" />
+	{:else}
+		<p>{$translationsStore.profilePage.profilePageUserSavedAlbumsSectionParagraph1}</p>
+	{/if}
+</section>

@@ -124,7 +124,16 @@ export const de = {
 		profilePageImageAltText: 'Profilbild von',
 		profilePageFollowers: 'Follower',
 		profilePageHeading1:
-			'Hallo, {{name}}! Hier findest du alles, was du über dein Profil wissen musst.'
+			'Hallo, {{name}}! Alles, was du über dein Profil wissen musst, findest du hier.',
+		profilePageUserSavedTracksSectionHeading2: 'Lieblingssongs',
+		profilePageUserSavedTracksSectionParagraph1:
+			'Deine Songs werden hier angezeigt, sobald du einen speicherst.',
+		profilePageUserPlaylistsSectionHeading2: 'Deine Playlists',
+		profilePageUserPlaylistsSectionParagraph1:
+			'Deine Playlists werden hier angezeigt, sobald du eine erstellst oder speicherst.',
+		profilePageUserSavedAlbumsSectionHeading2: 'Gespeicherte Alben',
+		profilePageUserSavedAlbumsSectionParagraph1:
+			'Deine Alben werden hier angezeigt, sobald du eines speicherst.'
 	},
 	errorPage: {
 		title404: 'Seite nicht gefunden | Allify',

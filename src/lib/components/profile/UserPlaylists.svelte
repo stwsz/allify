@@ -1,19 +1,68 @@
 <script lang="ts">
-    async function getSavedPlaylists () {
-        try {
-            const response = await fetch('/api/spotify/saved-playlists');
-            if (!response.ok) {
-                throw new Error('Failed to fetch saved playlists');
-            }
-            const data = await response.json();
+	// Svelte
+	import { onMount } from 'svelte';
 
-            return data;
-        } catch (error) {
-            console.error('Error fetching saved playlists:', error);
-        }
-    }
+	// Assets
+	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
 
-    getSavedPlaylists();
+	// Components
+	import CarouselUserItems from './CarouselUserItems.svelte';
+
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
+	let userPlaylists: any[] = [];
+	let isLoading = true;
+
+	async function getUserPlaylists(): Promise<any[]> {
+		try {
+			const reqUserPlaylists = await fetch('/api/spotify/user-playlists');
+
+			if (!reqUserPlaylists.ok) {
+				throw new Error('Failed to fetch saved playlists');
+			}
+
+			const resUserPlaylists = await reqUserPlaylists.json();
+
+			sessionStorage.setItem('user-saved-playlists', JSON.stringify(resUserPlaylists));
+
+			return resUserPlaylists.items;
+		} catch (error) {
+			return [];
+		}
+	}
+
+	onMount(async () => {
+		const userPlaylistsFromStorage = sessionStorage.getItem('user-playlists');
+
+		if (userPlaylistsFromStorage) {
+			const userPlaylistsFromStorageParsed = await JSON.parse(userPlaylistsFromStorage);
+
+			userPlaylists = userPlaylistsFromStorageParsed.items;
+
+			console.log(userPlaylists);
+		} else {
+			userPlaylists = await getUserPlaylists();
+
+			console.log(userPlaylists);
+		}
+
+		isLoading = false;
+	});
 </script>
 
-<h2>Your playlists</h2>
+<section class="flex flex-col gap-4">
+	<h2 class="text-xl font-medium text-t-primary sm:text-2xl">
+		{$translationsStore.profilePage.profilePageUserPlaylistsSectionHeading2}
+	</h2>
+
+	{#if isLoading === true}
+		<div class="flex justify-center py-8">
+			<DotsLoading />
+		</div>
+	{:else if userPlaylists.length > 0}
+		<CarouselUserItems items={userPlaylists} itemsType="user-playlists" />
+	{:else}
+		<p>{$translationsStore.profilePage.profilePageUserPlaylistsSectionParagraph1}</p>
+	{/if}
+</section>

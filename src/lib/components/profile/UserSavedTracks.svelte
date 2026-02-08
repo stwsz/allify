@@ -1,19 +1,69 @@
 <script lang="ts">
-    async function getSavedTracks () {
-        try {
-            const response = await fetch('/api/spotify/saved-tracks');
-            if (!response.ok) {
-                throw new Error('Failed to fetch saved tracks');
-            }
-            const data = await response.json();
+	// Svelte
+	import { onMount } from 'svelte';
 
-            return data;
-        } catch (error) {
-            console.error('Error fetching saved tracks:', error);
-        }
-    }
+	// Assets
+	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
 
-    getSavedTracks();
+	// Components
+	import CarouselUserItems from './CarouselUserItems.svelte';
+
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
+	let userSavedTracks: any[] = [];
+	let isLoading = true;
+
+	async function getSavedTracks(): Promise<any[]> {
+		try {
+			const reqUserSavedTracks = await fetch('/api/spotify/user-saved-tracks');
+
+			if (!reqUserSavedTracks.ok) {
+				throw new Error('Failed to fetch saved tracks');
+			}
+
+			const resUserSavedTracks = await reqUserSavedTracks.json();
+
+			sessionStorage.setItem('user-saved-tracks', JSON.stringify(resUserSavedTracks));
+
+			return resUserSavedTracks.items;
+		} catch (error) {
+			return [];
+		}
+	}
+
+	onMount(async () => {
+		const userSavedTracksFromStorage = sessionStorage.getItem('user-saved-tracks');
+
+		if (userSavedTracksFromStorage) {
+			const userSavedTracksFromStorageParsed = await JSON.parse(userSavedTracksFromStorage);
+
+			userSavedTracks = userSavedTracksFromStorageParsed.items;
+
+			console.log(userSavedTracks);
+		} else {
+			userSavedTracks = await getSavedTracks();
+
+			console.log(userSavedTracks);
+		}
+
+		isLoading = false;
+	});
 </script>
 
-<h2>Your tracks</h2>
+<section class="flex flex-col gap-4">
+	<h2 class="text-xl font-medium text-t-primary sm:text-2xl">
+		{$translationsStore.profilePage.profilePageUserSavedTracksSectionHeading2}
+	</h2>
+
+	{#if isLoading === true}
+		<div class="flex justify-center py-8">
+			<DotsLoading />
+		</div>
+	{:else if userSavedTracks.length > 0}
+		<CarouselUserItems items={userSavedTracks} itemsType="user-saved-tracks" />
+	{:else}
+		<p>{$translationsStore.profilePage.profilePageUserSavedTracksSectionParagraph1}</p>
+	{/if}
+</section>
+
