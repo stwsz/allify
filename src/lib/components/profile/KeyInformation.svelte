@@ -6,7 +6,7 @@
 	export let userInfo;
 </script>
 
-<div class="flex w-90 flex-col items-center gap-4 rounded-xl bg-brand-primary py-8">
+<div class="flex w-3/12 flex-col items-center gap-4 rounded-xl bg-brand-primary py-8">
 	<div class="relative">
 		<img
 			src={userInfo.images[0].url}

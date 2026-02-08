@@ -19,17 +19,17 @@
 
 {#if $meStore !== undefined}
 	<section class="px-8 py-8 sm:px-8 sm:py-12 lg:px-12 2xl:px-32 2xl:pt-16 2xl:pb-18">
-		<h1 class="text-2xl font-medium text-t-primary sm:mb-8 sm:text-3xl lg:mb-8 lg:text-3xl">
+		<h1 class="text-2xl font-medium text-t-primary sm:mb-12 sm:text-3xl lg:text-3xl">
 			{$translationsStore.profilePage.profilePageHeading1.replace(
 				'{{name}}',
 				$meStore?.display_name ?? ''
 			)}
 		</h1>
 
-		<div class="flex flex-col lg:flex-row">
+		<div class="flex flex-col lg:flex-row lg:gap-10">
 			<KeyInformation userInfo={$meStore} />
 
-			<div class="flex flex-col gap-4">
+			<div class="flex w-9/12 flex-col gap-10">
 				<UserSavedTracks />
 
 				<UserPlaylists />
