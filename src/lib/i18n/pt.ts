@@ -88,7 +88,8 @@ export const pt = {
 		connectPlatformDeezerDescription:
 			'Plataforma global de streaming de música, a Deezer reúne um vasto catálogo de faixas, playlists editoriais e recursos como recomendações personalizadas, oferecendo uma experiência musical completa para diferentes perfis de ouvintes.',
 		connectPlatformCardPlatformConnectIconAltText: 'Ícone de Conexão',
-		connectPlatformCardPlatformConnectButton: 'Conectar',
+		connectPlatformCardPlatformConnectSpotifyButton: 'Conectar Spotify',
+		connectPlatformCardPlatformConnectDeezerButton: 'Conectar Deezer',
 		connectPlatformCardPlatformConnectButtonAriaLabel: 'Conectar à plataforma',
 		connectPlatformCardPlatformConnectedButton: 'Conectado',
 		connectPlatformCardPlatformConnectedButtonAriaLabel: 'Plataforma conectada',

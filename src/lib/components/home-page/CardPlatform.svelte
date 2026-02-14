@@ -20,7 +20,7 @@
 	const platformKey = platform.title.toLowerCase();
 
 	function setCLassByStreaming(streaming: string) {
-		let baseClass: string = `flex cursor-pointer items-center gap-1 rounded-lg border px-3 py-1.5 text-sm transition-all ${streaming === 'spotify' ? 'hover:border-spotify hover:text-spotify' : 'hover:border-s-inverse-muted hover:text-s-inverse-muted'}`;
+		let baseClass: string = `flex cursor-pointer items-center gap-1 rounded-lg border px-3 py-1.5 transition-all text-xs lg:text-base ${streaming === 'spotify' ? 'hover:border-spotify hover:text-spotify' : 'hover:border-s-inverse-muted hover:text-s-inverse-muted'}`;
 
 		if ($meStore?.streaming === streaming) {
 			baseClass = `${baseClass} border-spotify hover:border-spotify hover:text-spotify`;
@@ -63,13 +63,15 @@
 					: $translationsStore.homePage.connectPlatformCardPlatformConnectButtonAriaLabel}
 			>
 				<ConnectIcon
-					iconSvgClass="w-4.5 h-4.5 inline-block mr-2"
+					iconSvgClass="w-3.5 h-3.5 inline-block mr-2 lg:w-4.5 lg:h-4.5"
 					iconAltText={$translationsStore.homePage.connectPlatformCardPlatformConnectIconAltText}
 				/>
 
 				{$meStore?.streaming === platformKey
 					? $translationsStore.homePage.connectPlatformCardPlatformConnectedButton
-					: $translationsStore.homePage.connectPlatformCardPlatformConnectButton}
+					: platformKey === 'spotify'
+						? $translationsStore.homePage.connectPlatformCardPlatformConnectSpotifyButton
+						: $translationsStore.homePage.connectPlatformCardPlatformConnectDeezerButton}
 			</button>
 		</div>
 
