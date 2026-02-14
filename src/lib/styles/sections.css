@@ -3,13 +3,13 @@
 }
 
 .base-section h1 {
-	@apply text-2xl font-semibold text-t-primary sm:text-3xl lg:text-4xl;
+	@apply mb-4 text-2xl font-semibold sm:text-3xl lg:mb-10 lg:text-4xl;
 }
 
 .base-section h2 {
-	@apply text-xl font-semibold text-t-primary sm:text-2xl lg:text-3xl;
+	@apply text-xl font-semibold sm:text-2xl lg:text-3xl;
 }
 
 .base-section h3 {
-	@apply text-lg font-medium text-t-primary sm:text-xl lg:text-2xl;
+	@apply text-lg font-medium sm:text-xl lg:text-2xl;
 }

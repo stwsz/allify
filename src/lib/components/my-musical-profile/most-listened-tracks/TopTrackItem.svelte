@@ -11,8 +11,6 @@
 	// Props
 	export let mostListenedTrackItem: any;
 	export let index: number;
-
-	console.log(mostListenedTrackItem);
 </script>
 
 <div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-[auto_1fr_auto]">
