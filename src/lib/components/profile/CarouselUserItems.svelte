@@ -60,7 +60,7 @@
 		bind:this={carousel}
 		on:scroll={handleScroll}
 		id="carousel"
-		class="flex snap-x snap-mandatory items-end gap-4 overflow-x-auto overflow-y-hidden scroll-smooth px-4 sm:mx-0 sm:gap-6 sm:px-0 lg:gap-8 lg:py-2 lg:overflow-x-hidden"
+		class="flex snap-x snap-mandatory items-end gap-4 overflow-x-auto overflow-y-hidden scroll-smooth px-4 sm:mx-0 sm:gap-6 sm:px-0 lg:gap-8 lg:overflow-x-hidden lg:py-2"
 	>
 		{#if itemsType === 'user-saved-tracks'}
 			{#each items as item}

@@ -66,7 +66,8 @@ export const de = {
 		notLoggedLoginLinkSpotify: 'Mit Spotify anmelden',
 		notLoggedLoginLinkDeezer: 'Mit Deezer anmelden',
 		disabledDeezerFunctionalityText: 'Deezer-Verbindung derzeit nicht verfügbar',
-		loginWith: 'Anmelden mit '
+		loginWith: 'Anmelden mit ',
+		seeOnSpotify: 'Auf Spotify ansehen'
 	},
 	homePage: {
 		title: 'Alles über deine Musik, an einem Ort verbunden | Allify',
@@ -100,18 +101,14 @@ export const de = {
 	myMusicalProfilePage: {
 		title: 'Mein Musikprofil | Allify',
 		myMusicalProfilePageHeading1: 'Hier ist alles, was du am meisten gehört hast',
-		myMusicalProfilePageMostListenedArtistsHeading2: 'Deine Lieblingskünstler',
+		myMusicalProfilePageMostListenedArtistsHeading2: 'Deine meistgehörten Künstler',
+		myMusicalProfilePageMostListenedArtists: 'Am meisten gehört',
+		myMusicalProfilePageMostListenedTracks: 'Am meisten gehört',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'Follower',
-		myMusicalProfilePageMostListenedTracksHeading2: 'Deine Lieblingssongs',
-		myMusicalProfilePageMostListenedItemPlace: '. Platz',
-		myMusicalProfilePageDetailedArtistInfoModalPopularity: 'Beliebtheit',
-		myMusicalProfilePageDetailedArtistInfoModalGenre: 'Genres',
-		myMusicalProfilePageDetailedTracksInfoModalPopularity: 'Beliebtheit',
-		myMusicalProfilePageDetailedItemInfoModalExternalLinkArtistText: 'Künstler auf Spotify öffnen',
-		myMusicalProfilePageDetailedItemInfoModalExternalLinkTrackText: 'Titel auf Spotify öffnen',
-		myMusicalProfilePageCarouselButtonAriaLabelPrev: 'Vorheriger Künstler',
-		myMusicalProfilePageCarouselButtonAriaLabelNext: 'Nächster Künstler',
-		myMusicalProfilePageCarouselArrowIconAltText: 'Karussell-Pfeilsymbol'
+		myMusicalProfilePageMostListenedTracksHeading2: 'Deine meistgehörten Songs',
+		myMusicalProfilePageMostListenedArtistsPopularity: 'Beliebtheit',
+		myMusicalProfilePageMostListenedTracksPopularity: 'Beliebtheit',
+		myMusicalProfilePageDetailedArtistInfoModalFollowers: 'Follower'
 	},
 	discoveriesPage: {
 		title: 'Musikentdeckungen | Allify'
@@ -133,7 +130,9 @@ export const de = {
 			'Deine Playlists werden hier angezeigt, sobald du eine erstellst oder speicherst.',
 		profilePageUserSavedAlbumsSectionHeading2: 'Gespeicherte Alben',
 		profilePageUserSavedAlbumsSectionParagraph1:
-			'Deine Alben werden hier angezeigt, sobald du eines speicherst.'
+			'Deine Alben werden hier angezeigt, sobald du eines speicherst.',
+		profilePageUserTopTrack: 'Dein meistgehörter Titel',
+		profilePageUserTopArtist: 'Dein meistgehörter Künstler'
 	},
 	errorPage: {
 		title404: 'Seite nicht gefunden | Allify',
