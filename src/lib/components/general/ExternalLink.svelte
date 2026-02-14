@@ -5,6 +5,7 @@
 	export let streamingPlatform: 'spotify' | 'deezer' | null = 'spotify';
 	export let externalLink: string | undefined;
 	export let externalLinkText: string;
+	export let additionalClass = '';
 </script>
 
 {#if streamingPlatform === 'spotify'}
@@ -15,7 +16,7 @@
 		class="mt-6 inline-flex items-center justify-center gap-2 rounded-xl
 								bg-spotify px-5 py-2.5 text-sm font-semibold text-t-inverse
 								shadow-md transition-all duration-200
-								hover:scale-[1.02] hover:bg-spotify/90"
+								hover:scale-[1.02] hover:bg-spotify/90 {additionalClass}"
 	>
 		<SpotifyIcon iconSvgClass="w-6.5 h-6.5 text-t-inverse" />
 

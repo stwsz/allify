@@ -66,7 +66,8 @@ export const en = {
 		notLoggedLoginLinkSpotify: 'Log in with Spotify',
 		notLoggedLoginLinkDeezer: 'Log in with Deezer',
 		disabledDeezerFunctionalityText: 'Deezer connection currently unavailable',
-		loginWith: 'Log in with '
+		loginWith: 'Log in with ',
+		seeOnSpotify: 'See on Spotify'
 	},
 	homePage: {
 		title: 'All about your music, connected in one place | Allify',
@@ -99,19 +100,15 @@ export const en = {
 	},
 	myMusicalProfilePage: {
 		title: 'My Musical Profile | Allify',
-		myMusicalProfilePageHeading1: 'Here is everything you have listened to the most',
-		myMusicalProfilePageMostListenedArtistsHeading2: 'Your favorite artists',
+		myMusicalProfilePageHeading1: 'Here’s everything you’ve listened to the most',
+		myMusicalProfilePageMostListenedArtistsHeading2: 'Your most listened artists',
+		myMusicalProfilePageMostListenedArtists: 'Most listened',
+		myMusicalProfilePageMostListenedTracks: 'Most listened',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'followers',
-		myMusicalProfilePageMostListenedTracksHeading2: 'Your favorite tracks',
-		myMusicalProfilePageMostListenedItemPlace: 'th place',
-		myMusicalProfilePageDetailedArtistInfoModalPopularity: 'Popularity',
-		myMusicalProfilePageDetailedArtistInfoModalGenre: 'Genres',
-		myMusicalProfilePageDetailedTracksInfoModalPopularity: 'Popularity',
-		myMusicalProfilePageDetailedItemInfoModalExternalLinkArtistText: 'Open artist on Spotify',
-		myMusicalProfilePageDetailedItemInfoModalExternalLinkTrackText: 'Open track on Spotify',
-		myMusicalProfilePageCarouselButtonAriaLabelPrev: 'Previous artist',
-		myMusicalProfilePageCarouselButtonAriaLabelNext: 'Next artist',
-		myMusicalProfilePageCarouselArrowIconAltText: 'Carousel arrow icon'
+		myMusicalProfilePageMostListenedTracksHeading2: 'Your most listened tracks',
+		myMusicalProfilePageMostListenedArtistsPopularity: 'Popularity',
+		myMusicalProfilePageMostListenedTracksPopularity: 'Popularity',
+		myMusicalProfilePageDetailedArtistInfoModalFollowers: 'Followers'
 	},
 	discoveriesPage: {
 		title: 'Music Discoveries | Allify'
@@ -133,7 +130,9 @@ export const en = {
 			'Your playlists will appear here as soon as you create or save one.',
 		profilePageUserSavedAlbumsSectionHeading2: 'Saved albums',
 		profilePageUserSavedAlbumsSectionParagraph1:
-			'Your albums will appear here as soon as you save one.'
+			'Your albums will appear here as soon as you save one.',
+		profilePageUserTopTrack: 'Your most listened track',
+		profilePageUserTopArtist: 'Your most listened artist'
 	},
 	errorPage: {
 		title404: 'Page not found | Allify',

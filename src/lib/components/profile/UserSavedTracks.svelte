@@ -66,4 +66,3 @@
 		<p>{$translationsStore.profilePage.profilePageUserSavedTracksSectionParagraph1}</p>
 	{/if}
 </section>
-

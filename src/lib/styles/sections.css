@@ -1,0 +1,15 @@
+.base-section {
+	@apply flex flex-col gap-3 px-8 py-8 sm:px-12 lg:py-12 2xl:px-32 2xl:pt-20 2xl:pb-28;
+}
+
+.base-section h1 {
+	@apply text-2xl font-semibold text-t-primary sm:text-3xl lg:text-4xl;
+}
+
+.base-section h2 {
+	@apply text-xl font-semibold text-t-primary sm:text-2xl lg:text-3xl;
+}
+
+.base-section h3 {
+	@apply text-lg font-medium text-t-primary sm:text-xl lg:text-2xl;
+}
