@@ -58,9 +58,6 @@
 				disabled={platformKey === 'deezer'}
 				title={setTitleByStreaming(platformKey)}
 				class={setCLassByStreaming(platformKey)}
-				aria-label={$meStore?.streaming === platformKey
-					? $translationsStore.homePage.connectPlatformCardPlatformConnectedButtonAriaLabel
-					: $translationsStore.homePage.connectPlatformCardPlatformConnectButtonAriaLabel}
 			>
 				<ConnectIcon
 					iconSvgClass="w-3.5 h-3.5 inline-block mr-2 lg:w-4.5 lg:h-4.5"
