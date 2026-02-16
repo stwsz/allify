@@ -74,8 +74,10 @@ export const en = {
 		homePageHeroSectionHeading1: 'Understand your music habits with real data',
 		homePageHeroSectionParagraph1:
 			'Connect your streamings, track detailed metrics, get personalized suggestions, and compete in rankings with your friends.',
-		alliMascotPointingToLeftAltText: 'Alli pointing to the left, indicating the call to action button',
-		alliMascotPointingDownwardsAltText: 'Alli pointing downwards, indicating the call to action button',
+		alliMascotPointingToLeftAltText:
+			'Alli pointing to the left, indicating the call to action button',
+		alliMascotPointingDownwardsAltText:
+			'Alli pointing downwards, indicating the call to action button',
 		homePageHeroSectionButton1: 'Connect my streamings',
 		homePageHeroSectionButton1v2: 'Go to my musical profile',
 		homePageHeroSectionButton1v2AriaLabel: 'Go to my musical profile',

@@ -74,8 +74,10 @@ export const de = {
 		homePageHeroSectionHeading1: 'Verstehe deine Musikgewohnheiten mit echten Daten',
 		homePageHeroSectionParagraph1:
 			'Verbinde deine Streaming-Dienste, verfolge detaillierte Metriken, erhalte personalisierte Vorschläge und konkurriere in Rankings mit deinen Freunden.',
-		alliMascotPointingToLeftAltText: 'Alli zeigt nach links und weist auf die Schaltfläche für die Handlungsaufforderung hin',
-		alliMascotPointingDownwardsAltText: 'Alli zeigt nach unten und weist auf die Schaltfläche für die Handlungsaufforderung hin',
+		alliMascotPointingToLeftAltText:
+			'Alli zeigt nach links und weist auf die Schaltfläche für die Handlungsaufforderung hin',
+		alliMascotPointingDownwardsAltText:
+			'Alli zeigt nach unten und weist auf die Schaltfläche für die Handlungsaufforderung hin',
 		homePageHeroSectionButton1: 'Meine Streamings verbinden',
 		homePageHeroSectionButton1v2: 'Zu meinem Musikprofil gehen',
 		homePageHeroSectionButton1AriaLabel: 'Meine Streamings verbinden',

@@ -21,7 +21,7 @@
 			{$translationsStore.homePage.homePageHeroSectionParagraph1}
 		</p>
 
-		<img 
+		<img
 			src={AlliFullBodyPointingDownwards}
 			alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
 			class="h-72 w-70 lg:hidden"
@@ -42,10 +42,10 @@
 		</a>
 	</div>
 
-	<img 
+	<img
 		src={AlliFullBodyPointing}
 		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-		class="hidden lg:block mr-2 lg:w-72 lg:h-72 2xl:h-110 2xl:w-110 2xl:mr-12"
+		class="mr-2 hidden lg:block lg:h-72 lg:w-72 2xl:mr-12 2xl:h-110 2xl:w-110"
 		fetchpriority="high"
 		loading="eager"
 	/>
