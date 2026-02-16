@@ -74,6 +74,8 @@ export const es = {
 		homePageHeroSectionHeading1: 'Comprende tus hábitos musicales con datos reales',
 		homePageHeroSectionParagraph1:
 			'Conecta tus servicios de streaming, sigue métricas detalladas, recibe sugerencias personalizadas y compite en rankings con tus amigos.',
+		alliMascotPointingToLeftAltText: 'Alli apuntando hacia la izquierda, indicando el botón de llamada a la acción',
+		alliMascotPointingDownwardsAltText: 'Alli apuntando hacia abajo, indicando el botón de llamada a la acción',
 		homePageHeroSectionButton1: 'Conecta tus cuentas de streaming',
 		homePageHeroSectionButton1v2: 'Ir a mi perfil musical',
 		homePageHeroSectionButton1v2AriaLabel: 'Ir a mi perfil musical',

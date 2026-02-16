@@ -74,6 +74,8 @@ export const pt = {
 		homePageHeroSectionHeading1: 'Entenda seus hábitos musicais com dados reais',
 		homePageHeroSectionParagraph1:
 			'Conecte seus streamings, acompanhe métricas detalhadas, receba sugestões personalizadas e dispute rankings com seus amigos.',
+		alliMascotPointingToLeftAltText: 'Alli apontando para a esquerda, indicando o botão de ação',
+		alliMascotPointingDownwardsAltText: 'Alli apontando para baixo, indicando o botão de ação',
 		homePageHeroSectionButton1: 'Conectar meus streamings',
 		homePageHeroSectionButton1v2: 'Ir para meu perfil musical',
 		homePageHeroSectionButton1AriaLabel: 'Conectar meus streamings',
