@@ -1,20 +1,24 @@
 <script lang="ts">
+	// Assets
+	import DevicesImage from '$lib/assets/images/devices-illustration.webp';
+
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 </script>
 
 <section
-	class="flex flex-col-reverse items-center gap-16 bg-s-default py-12 sm:px-12 lg:flex-row lg:justify-between lg:py-32 2xl:px-32"
+	class="flex flex-col-reverse items-center gap-16 bg-s-default px-4 py-12 lg:flex-row lg:justify-between lg:py-32 2xl:px-32"
 	id="devices-section"
 >
-	<!-- Imagens still in development -->
-	<div class="flex h-72 w-2/5 flex-col items-center justify-center rounded-md bg-gray-800">
-		<p class="text-sm font-semibold text-t-inverse opacity-80">
-			{$translationsStore.generalTexts.stillInDevelopmentText}
-		</p>
-	</div>
+	<img
+		src={DevicesImage}
+		alt="Devices Illustration"
+		fetchpriority="low"
+		loading="lazy"
+		class="h-96.5 w-115.5 lg:ml-24"
+	/>
 
-	<div class="w-full space-y-6 lg:w-1/3">
+	<div class="w-full space-y-6 lg:w-2/5">
 		<h2 class="text-center text-4xl text-t-primary lg:text-left lg:text-5xl">
 			{$translationsStore.homePage.devicesSectionHeading1}
 		</h2>
