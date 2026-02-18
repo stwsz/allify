@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Assets
-	import AlliFullBodyPointing from '$lib/assets/images/alli/alli-full-body-pointing.webp';
-	import AlliFullBodyPointingDownwards from '$lib/assets/images/alli/alli-full-body-pointing-downwards.webp';
+	import AlliFullBodyPointing from '$lib/assets/images/alli/alli-full-body-pointing.webp?enhanced';
+	import AlliFullBodyPointingDownwards from '$lib/assets/images/alli/alli-full-body-pointing-downwards.webp?enhanced';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -21,12 +21,12 @@
 			{$translationsStore.homePage.homePageHeroSectionParagraph1}
 		</p>
 
-		<img
+		<enhanced:img
 			src={AlliFullBodyPointingDownwards}
 			alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
-			class="w-70 h-auto lg:hidden"
+			class="h-auto w-56 lg:hidden"
 			fetchpriority="high"
-			loading="eager"
+			sizes="224px"
 		/>
 
 		<a
@@ -42,11 +42,11 @@
 		</a>
 	</div>
 
-	<img
+	<enhanced:img
 		src={AlliFullBodyPointing}
 		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-		class="mr-2 hidden lg:block lg:w-72 lg:h-auto 2xl:mr-12 2xl:w-110 2xl:h-auto"
+		class="mr-2 hidden h-auto w-105 lg:block 2xl:mr-12"
 		fetchpriority="high"
-		loading="eager"
+		sizes="420px"
 	/>
 </section>
