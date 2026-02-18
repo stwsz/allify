@@ -15,7 +15,7 @@
 		alt="Devices Illustration"
 		fetchpriority="low"
 		loading="lazy"
-		class="h-96.5 w-115.5 lg:ml-24"
+		class="w-115.5 h-auto lg:ml-24"
 	/>
 
 	<div class="w-full space-y-6 lg:w-2/5">

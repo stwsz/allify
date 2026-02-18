@@ -24,7 +24,7 @@
 		<img
 			src={AlliFullBodyPointingDownwards}
 			alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
-			class="h-72 w-70 lg:hidden"
+			class="w-70 h-auto lg:hidden"
 			fetchpriority="high"
 			loading="eager"
 		/>
@@ -45,7 +45,7 @@
 	<img
 		src={AlliFullBodyPointing}
 		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-		class="mr-2 hidden lg:block lg:h-72 lg:w-72 2xl:mr-12 2xl:h-110 2xl:w-110"
+		class="mr-2 hidden lg:block lg:w-72 lg:h-auto 2xl:mr-12 2xl:w-110 2xl:h-auto"
 		fetchpriority="high"
 		loading="eager"
 	/>
