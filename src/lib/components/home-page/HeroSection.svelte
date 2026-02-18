@@ -24,9 +24,9 @@
 		<enhanced:img
 			src={AlliFullBodyPointingDownwards}
 			alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
-			class="h-72 w-70 lg:hidden"
+			class="h-auto w-56 lg:hidden"
 			fetchpriority="high"
-			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+			sizes="224px"
 		/>
 
 		<a
@@ -45,8 +45,8 @@
 	<enhanced:img
 		src={AlliFullBodyPointing}
 		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-		class="mr-2 hidden lg:block lg:h-72 lg:w-72 2xl:mr-12 2xl:h-110 2xl:w-110"
+		class="mr-2 hidden h-auto w-105 lg:block 2xl:mr-12"
 		fetchpriority="high"
-		sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+		sizes="420px"
 	/>
 </section>

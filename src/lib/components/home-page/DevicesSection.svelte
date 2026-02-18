@@ -15,8 +15,8 @@
 		alt="Devices Illustration"
 		loading="lazy"
 		fetchpriority="low"
-		sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
-		class="h-96.5 w-115.5 lg:ml-24"
+		class="h-auto w-[320px] lg:ml-20 lg:w-120"
+		sizes="(min-width:1024px) 480px, 320px"
 	/>
 
 	<div class="w-full space-y-6 lg:w-2/5">
@@ -29,4 +29,3 @@
 		</p>
 	</div>
 </section>
-
