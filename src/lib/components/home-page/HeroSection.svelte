@@ -26,7 +26,10 @@
 			alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
 			class="h-auto w-56 lg:hidden"
 			fetchpriority="high"
-			sizes="224px"
+			decoding="async"
+			width="224"
+			height="224"
+			sizes="(max-width: 1023px) 224px"
 		/>
 
 		<a
@@ -45,8 +48,11 @@
 	<enhanced:img
 		src={AlliFullBodyPointing}
 		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-		class="mr-2 hidden h-auto w-105 lg:block 2xl:mr-12"
+		class="mr-2 hidden h-auto w-105 md:mr-5 lg:block 2xl:mr-10"
 		fetchpriority="high"
-		sizes="420px"
+		decoding="async"
+		width="380"
+		height="380"
+		sizes="(min-width: 1536px) 380px, (min-width: 1024px) 380px, 0px"
 	/>
 </section>
