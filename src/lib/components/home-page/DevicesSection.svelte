@@ -12,15 +12,18 @@
 >
 	<enhanced:img
 		src={DevicesImage}
-		alt="Devices Illustration"
+		alt={$translationsStore.homePage.devicesSectionAltText}
 		loading="lazy"
 		fetchpriority="low"
+		decoding="async"
+		width="460"
+		height="460"
 		class="h-auto w-[320px] lg:ml-20 lg:w-120"
-		sizes="(min-width:1024px) 480px, 320px"
+		sizes="(min-width: 1536px) 460px, (min-width: 1024px) 460px, (min-width: 640px) 400px, 320px"
 	/>
 
 	<div class="w-full space-y-6 lg:w-2/5">
-		<h2 class="text-center text-4xl text-t-primary lg:text-left lg:text-5xl">
+		<h2 class="text-center text-4xl text-t-primary lg:w-120 lg:min-w-120 lg:text-left lg:text-5xl">
 			{$translationsStore.homePage.devicesSectionHeading1}
 		</h2>
 

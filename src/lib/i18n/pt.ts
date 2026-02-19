@@ -10,8 +10,6 @@ export const pt = {
 	generalTexts: {
 		logoColorfulAltText: 'Logotipo colorido do Allify',
 		logoLightAltText: 'Logotipo claro do Allify',
-		alliFullBodyAltText:
-			'Ilustração da mascote Allify, chamada Alli, com corpo completo, sorrindo e acenando',
 		headerNavigationItem1: 'Meu Perfil Musical',
 		headerNavigationItem2: 'Descobertas',
 		headerNavigationItem3: 'Batalhas de Música',
@@ -97,7 +95,8 @@ export const pt = {
 		connectPlatformCardPlatformExternalLink: 'Ir para',
 		devicesSectionHeading1: 'Leve sua música com você',
 		devicesSectionParagraph1:
-			'Acesse seus dados musicais de qualquer lugar e em qualquer dispositivo, com uma experiência fluida, consistente e intuitiva.'
+			'Acesse seus dados musicais de qualquer lugar e em qualquer dispositivo, com uma experiência fluida, consistente e intuitiva.',
+		devicesSectionAltText: 'Ilustração de Dispositivos'
 	},
 	myMusicalProfilePage: {
 		title: 'Meu Perfil Musical | Allify',
