@@ -55,7 +55,7 @@
 				},
 				{
 					text: $translationsStore.generalTexts.footerColumn3Item3,
-					href: '/cookies'
+					href: '/data-usage'
 				}
 			]
 		}
