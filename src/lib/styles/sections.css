@@ -13,3 +13,23 @@
 .base-section h3 {
 	@apply text-lg font-medium sm:text-xl lg:text-2xl;
 }
+
+.base-section.legal-pages {
+	@apply space-y-5;
+}
+
+.base-section.legal-pages div {
+	@apply space-y-3;
+}
+
+.base-section.legal-pages ul {
+	@apply list-inside list-disc space-y-3;
+}
+
+.base-section.legal-pages h2 {
+	@apply mb-2 lg:mb-7;
+}
+
+.base-section.legal-pages h3 {
+	@apply mb-1 lg:my-5;
+}

@@ -146,5 +146,184 @@ export const en = {
 		errorPageOtherErrorsParagraph1:
 			'There was a problem loading this page. Please try again in a few moments.',
 		errorPageButtonGoHome: 'Go to home page'
+	},
+	legalPages: {
+		PrivacyPolicy: {
+			title: 'Privacy Policy | Allify',
+			privacyPolicyDiv1Heading1: 'Privacy Policy',
+			privacyPolicyDiv1LastUpdated: 'Last updated: February 22, 2026',
+			privacyPolicyDiv1Paragraph1:
+				'Welcome to Allify. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our platform.',
+			privacyPolicyDiv2Heading2: '1. Who We Are',
+			privacyPolicyDiv2Paragraph1:
+				'Allify is an independent web application that provides music listening insights by connecting to third-party streaming services such as Spotify and, in the future, Deezer.',
+			privacyPolicyDiv2Paragraph2:
+				'Allify is not affiliated with, endorsed by, or sponsored by Spotify or Deezer.',
+			privacyPolicyDiv3Heading2: '2. Information We Collect',
+			privacyPolicyDiv3Heading3_1: '2.1 Account and Authentication Information',
+			privacyPolicyDiv3Paragraph1:
+				'When you use Allify and connect your streaming account, we may collect and store:',
+			privacyPolicyDiv3List1Item1: 'Your platform user ID (Spotify and/or Deezer)',
+			privacyPolicyDiv3List1Item2:
+				'Basic profile information (such as display name, when available)',
+			privacyPolicyDiv3List1Item3:
+				'Connection status (e.g., connected with Spotify, Deezer, or both)',
+			privacyPolicyDiv3List1Item4: 'Internal account identifiers',
+			privacyPolicyDiv3List1Item5:
+				'Ticket balance associated with your account (used for accessing extended features)',
+			privacyPolicyDiv3Paragraph2: 'We do NOT collect or store your Spotify or Deezer password.',
+			privacyPolicyDiv3Paragraph3:
+				'Authentication is handled securely through OAuth authorization provided by the respective platforms.',
+			privacyPolicyDiv3Heading3_2: '2.2 Music Data (Processed in Real Time)',
+			privacyPolicyDiv3Paragraph4: 'Allify accesses music-related data such as:',
+			privacyPolicyDiv3List2Item1: 'Top artists',
+			privacyPolicyDiv3List2Item2: 'Top tracks',
+			privacyPolicyDiv3List2Item3: 'Listening statistics',
+			privacyPolicyDiv3List2Item4: 'Other insights permitted by the API',
+			privacyPolicyDiv3Paragraph5:
+				'This data is processed in real time and is NOT permanently stored in our database.',
+			privacyPolicyDiv3Paragraph6:
+				'We only display the data temporarily to provide insights requested by the user.',
+			privacyPolicyDiv3Heading3_3: '2.3 Technical and Usage Data',
+			privacyPolicyDiv3Paragraph7:
+				'We may automatically collect limited technical data, including:',
+			privacyPolicyDiv3List3Item1: 'IP address',
+			privacyPolicyDiv3List3Item2: 'Browser type and version',
+			privacyPolicyDiv3List3Item3: 'Device information',
+			privacyPolicyDiv3List3Item4: 'Session data',
+			privacyPolicyDiv3List3Item5: 'Basic usage logs for security and performance',
+			privacyPolicyDiv4Heading2: '3. How We Use Your Information',
+			privacyPolicyDiv4Paragraph1: 'We use collected information strictly to:',
+			privacyPolicyDiv4List1Item1: 'Authenticate your account via third-party services',
+			privacyPolicyDiv4List1Item2: 'Display personalized music insights',
+			privacyPolicyDiv4List1Item3: 'Manage your ticket system and feature access',
+			privacyPolicyDiv4List1Item4: 'Maintain platform functionality and security',
+			privacyPolicyDiv4List1Item5: 'Improve the overall user experience',
+			privacyPolicyDiv4Paragraph2: 'We do not sell, rent, or trade your personal data.',
+			privacyPolicyDiv5Heading2: '4. Ticket System and Feature Access',
+			privacyPolicyDiv5Paragraph1:
+				'Allify uses an internal ticket system that allows users to access extended data and additional platform features.',
+			privacyPolicyDiv5Paragraph2: 'We store:',
+			privacyPolicyDiv5List1Item1: 'Your ticket balance',
+			privacyPolicyDiv5List1Item2: 'Ticket usage history (for platform functionality)',
+			privacyPolicyDiv5Paragraph3:
+				'Tickets are used solely to enable additional data insights and do not affect the ownership of your music data.',
+			privacyPolicyDiv6Heading2: '5. Payments and Billing',
+			privacyPolicyDiv6Paragraph1:
+				'Allify may offer paid features through the purchase of internal credits ("tickets").',
+			privacyPolicyDiv6Paragraph2:
+				'Payments are processed securely by third-party payment providers such as AbacatePay. Allify does not collect or store full credit card details or sensitive financial information.',
+			privacyPolicyDiv6Paragraph3:
+				'When a purchase is made, transaction data such as payment status, transaction ID, and purchased ticket amount may be received to manage the user ticket balance.',
+			privacyPolicyDiv7Heading2: '6. Data Storage and Retention',
+			privacyPolicyDiv7Paragraph1: 'Allify follows a data minimization approach.',
+			privacyPolicyDiv7List1Item1: 'Music listening data is not permanently stored in our database',
+			privacyPolicyDiv7List1Item2: 'Only essential account data is stored to provide the service',
+			privacyPolicyDiv7List1Item3:
+				'Connection status and ticket-related information may be retained while the account is active',
+			privacyPolicyDiv7Paragraph2:
+				'Users may request account deletion and data removal at any time.',
+			privacyPolicyDiv8Heading2: '7. Third-Party Services and APIs',
+			privacyPolicyDiv8Paragraph1:
+				'Allify relies on third-party services and APIs to function, including music streaming platforms, hosting providers, and payment processors.',
+			privacyPolicyDiv8Paragraph2:
+				'These third-party services may process data according to their own privacy policies, and we encourage users to review those policies.',
+			privacyPolicyDiv9Heading2: '8. Cookies and Sessions',
+			privacyPolicyDiv9Paragraph1:
+				'Allify may use cookies or similar technologies to maintain secure login sessions, improve usability, and ensure proper platform functionality.',
+			privacyPolicyDiv9Paragraph2:
+				'You can manage or disable cookies through your browser settings.',
+			privacyPolicyDiv10Heading2: '9. Your Privacy Rights',
+			privacyPolicyDiv10Paragraph1:
+				'Depending on your location, you may have the right to access, correct, or request deletion of your personal data, as well as withdraw consent for data processing.',
+			privacyPolicyDiv10Paragraph2:
+				'To exercise your rights, you may contact us using the contact information provided below.',
+			privacyPolicyDiv11Heading2: '10. Data Security',
+			privacyPolicyDiv11Paragraph1:
+				'We implement appropriate technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction.',
+			privacyPolicyDiv11Paragraph2:
+				'However, no method of transmission over the internet is completely secure.',
+			privacyPolicyDiv12Heading2: '11. Changes to This Privacy Policy',
+			privacyPolicyDiv12Paragraph1:
+				'We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Last updated" date at the top of this page.',
+			privacyPolicyDiv13Heading2: '12. Contact Information',
+			privacyPolicyDiv13Paragraph1:
+				'If you have any questions about this Privacy Policy, you can contact:',
+			privacyPolicyDiv13Paragraph2: 'Allify',
+			privacyPolicyDiv13Paragraph3: 'Email: contact@allify.app'
+		},
+		dataUsage: {
+			title: 'Data Usage | Allify',
+			dataUsageDiv1Heading1: 'Data Usage',
+			dataUsageDiv1LastUpdated: 'Last updated: February 22, 2026',
+			dataUsageDiv1Paragraph1:
+				'This Data Usage page explains how Allify collects, uses, and processes information when you use our music insights platform.',
+
+			dataUsageDiv2Heading2: '1. Data We Use',
+			dataUsageDiv2Paragraph1:
+				'Allify uses user-authorized data through connections with streaming services such as Spotify and, in the future, Deezer, as well as essential technical data required for the platform to function.',
+			dataUsageDiv2Paragraph2:
+				'This may include account identifiers, connection status, music data permitted by the API, and limited technical information necessary to operate the service.',
+
+			dataUsageDiv3Heading2: '2. How We Use the Data',
+			dataUsageDiv3Paragraph1:
+				'The data is used to generate personalized music insights, display listening statistics, manage the ticket system, and ensure the proper functioning of Allify’s features.',
+			dataUsageDiv3Paragraph2:
+				'We may also use aggregated and anonymized data for internal analytics, performance improvements, and platform development.',
+
+			dataUsageDiv4Heading2: '3. Data Processing and Storage',
+			dataUsageDiv4Paragraph1:
+				'Music data is primarily processed in real time and is not permanently stored, except when strictly necessary for account functionality.',
+			dataUsageDiv4Paragraph2:
+				'We implement appropriate technical and organizational measures to protect data against unauthorized access, alteration, disclosure, or destruction.',
+
+			dataUsageDiv5Heading2: '4. Third-Party Services and APIs',
+			dataUsageDiv5Paragraph1:
+				'Allify relies on third-party APIs and services, such as music streaming platforms, hosting providers, and payment services, which may process data according to their own policies.',
+			dataUsageDiv5Paragraph2: 'We do not sell, rent, or trade user data to third parties.',
+
+			dataUsageDiv6Heading2: '5. User Control',
+			dataUsageDiv6Paragraph1:
+				'Users retain control over their streaming account connections and may revoke access or request data deletion at any time.',
+			dataUsageDiv6Paragraph2:
+				'By using Allify, you agree to the data usage practices described on this page.'
+		},
+		termsOfService: {
+			title: 'Terms of Service | Allify',
+			termsOfServiceDiv1Heading1: 'Terms of Service',
+			termsOfServiceDiv1LastUpdated: 'Last updated: February 22, 2026',
+			termsOfServiceDiv1Paragraph1:
+				'These Terms of Service govern your access to and use of the Allify platform. By using our services, you agree to comply with these terms and conditions.',
+
+			termsOfServiceDiv2Heading2: '1. Use of the Platform',
+			termsOfServiceDiv2Paragraph1:
+				'Allify is a platform that provides music insights based on user-authorized data from third-party streaming services such as Spotify and, in the future, Deezer.',
+			termsOfServiceDiv2Paragraph2:
+				'You agree to use the platform only for lawful and personal purposes, in accordance with these terms, without attempting to exploit, abuse, or disrupt the service.',
+
+			termsOfServiceDiv3Heading2: '2. User Responsibilities',
+			termsOfServiceDiv3Paragraph1:
+				'You are responsible for the connected account and the permissions granted through the streaming services used on the platform.',
+			termsOfServiceDiv3Paragraph2:
+				'You agree not to use Allify for illegal, abusive, malicious automated activities or in any way that violates third-party API terms.',
+
+			termsOfServiceDiv4Heading2: '3. Service Availability',
+			termsOfServiceDiv4Paragraph1:
+				'We strive to keep Allify available and fully functional, but we do not guarantee uninterrupted or error-free operation at all times.',
+			termsOfServiceDiv4Paragraph2:
+				'We may update, modify, limit, or temporarily suspend features for maintenance, security, technical improvements, or legal compliance.',
+
+			termsOfServiceDiv5Heading2: '4. Limitation of Liability',
+			termsOfServiceDiv5Paragraph1:
+				'Allify is provided "as is" for informational and entertainment purposes related to music insights.',
+			termsOfServiceDiv5Paragraph2:
+				'We are not responsible for inaccuracies in data provided by third-party APIs, external service interruptions, or decisions made based on the displayed insights.',
+
+			termsOfServiceDiv6Heading2: '5. Changes to the Terms',
+			termsOfServiceDiv6Paragraph1:
+				'We may update these Terms of Service periodically to reflect changes in the platform, third-party integrations, or legal requirements.',
+			termsOfServiceDiv6Paragraph2:
+				'By continuing to use Allify after updates, you automatically agree to the revised terms.'
+		}
 	}
 };
