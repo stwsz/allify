@@ -148,7 +148,7 @@ export const de = {
 		errorPageButtonGoHome: 'Zur Startseite'
 	},
 	legalPages: {
-		PrivacyPolicy: {
+		privacyPolicy: {
 			title: 'Datenschutzerklärung | Allify',
 			privacyPolicyDiv1Heading1: 'Datenschutzerklärung',
 			privacyPolicyDiv1LastUpdated: 'Letzte Aktualisierung: 22. Februar 2026',

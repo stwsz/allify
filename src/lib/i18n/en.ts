@@ -148,7 +148,7 @@ export const en = {
 		errorPageButtonGoHome: 'Go to home page'
 	},
 	legalPages: {
-		PrivacyPolicy: {
+		privacyPolicy: {
 			title: 'Privacy Policy | Allify',
 			privacyPolicyDiv1Heading1: 'Privacy Policy',
 			privacyPolicyDiv1LastUpdated: 'Last updated: February 22, 2026',
