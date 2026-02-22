@@ -3,9 +3,10 @@ export const pt = {
 	locale: 'pt-BR',
 	configuration: {
 		langAttribute: 'pt_BR',
-		metaOgAndTwitterContent: 'Entenda seus hábitos musicais com dados reais.',
+		metaOgAndTwitterContent:
+			'Conecte seus streamings, analise estatísticas musicais reais e descubra insights personalizados sobre o que você mais ouve.',
 		metaDescriptionContent:
-			'Conecte seus streamings, analise seus hábitos musicais e descubra novas músicas com o Allify.'
+			'Conecte Spotify e Deezer, analise seus hábitos musicais, veja estatísticas detalhadas e descubra novas músicas com insights personalizados no Allify.'
 	},
 	generalTexts: {
 		logoColorfulAltText: 'Logotipo colorido do Allify',
@@ -146,7 +147,7 @@ export const pt = {
 		errorPageButtonGoHome: 'Ir para a página inicial'
 	},
 	legalPages: {
-		PrivacyPolicy: {
+		privacyPolicy: {
 			title: 'Política de Privacidade | Allify',
 			privacyPolicyDiv1Heading1: 'Política de Privacidade',
 			privacyPolicyDiv1LastUpdated: 'Última atualização: 22 de fevereiro de 2026',

@@ -147,7 +147,7 @@ export const es = {
 		errorPageButtonGoHome: 'Ir a la página principal'
 	},
 	legalPages: {
-		PrivacyPolicy: {
+		privacyPolicy: {
 			title: 'Política de Privacidad | Allify',
 			privacyPolicyDiv1Heading1: 'Política de Privacidad',
 			privacyPolicyDiv1LastUpdated: 'Última actualización: 22 de febrero de 2026',

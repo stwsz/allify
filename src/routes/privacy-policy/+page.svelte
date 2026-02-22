@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{$translationsStore.legalPages.PrivacyPolicy.title}</title>
+	<title>{$translationsStore.legalPages.privacyPolicy.title}</title>
 </svelte:head>
 
 <PrivacyPolicy />
