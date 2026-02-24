@@ -122,8 +122,6 @@ export const de = {
 		title: 'Profil | Allify',
 		profilePageImageAltText: 'Profilbild von',
 		profilePageFollowers: 'Follower',
-		profilePageHeading1:
-			'Hallo, {{name}}! Alles, was du über dein Profil wissen musst, findest du hier.',
 		profilePageUserSavedTracksSectionHeading2: 'Lieblingssongs',
 		profilePageUserSavedTracksSectionParagraph1:
 			'Deine Songs werden hier angezeigt, sobald du einen speicherst.',
@@ -133,8 +131,7 @@ export const de = {
 		profilePageUserSavedAlbumsSectionHeading2: 'Gespeicherte Alben',
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Deine Alben werden hier angezeigt, sobald du eines speicherst.',
-		profilePageUserTopTrack: 'Dein meistgehörter Titel',
-		profilePageUserTopArtist: 'Dein meistgehörter Künstler'
+		profilePageExternalLinkSpotify: 'Profil auf Spotify ansehen'
 	},
 	errorPage: {
 		title404: 'Seite nicht gefunden | Allify',

@@ -20,7 +20,7 @@
 			const reqMostListenedItems = await fetch(`/api/spotify/most-listened-tracks`, {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ locale: $translationsStore.locale })
+				body: JSON.stringify({ locale: $translationsStore.locale, limit: 5 })
 			});
 
 			if (!reqMostListenedItems.ok) return;

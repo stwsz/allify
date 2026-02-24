@@ -4,9 +4,9 @@
 
 	// Components
 	import CarouselButton from '../general/buttons/CarouselButton.svelte';
-	import UserSavedTracksItems from './UserSavedTracksItems.svelte';
-	import UserPlaylistsItems from './UserPlaylistsItems.svelte';
-	import UserSavedAlbumsItems from './UserSavedAlbumsItems.svelte';
+	import UserSavedTracksItems from './saved-tracks/UserSavedTracksItems.svelte';
+	import UserPlaylistsItems from './user-playlists/UserPlaylistsItems.svelte';
+	import UserSavedAlbumsItems from './saved-albums/UserSavedAlbumsItems.svelte';
 
 	// Props
 	export let items: any[];

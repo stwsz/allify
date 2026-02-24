@@ -39,12 +39,8 @@
 			const userSavedAlbumsFromStorageParsed = await JSON.parse(userSavedAlbumsFromStorage);
 
 			userSavedAlbums = userSavedAlbumsFromStorageParsed.items;
-
-			console.log(userSavedAlbums);
 		} else {
 			userSavedAlbums = await getUserSavedAlbums();
-
-			console.log(userSavedAlbums);
 		}
 
 		isLoading = false;
@@ -52,9 +48,9 @@
 </script>
 
 <section class="flex flex-col gap-4">
-	<h2 class="text-xl font-medium text-t-primary sm:text-2xl">
+	<p class="text-xl font-medium text-t-primary sm:text-2xl">
 		{$translationsStore.profilePage.profilePageUserSavedAlbumsSectionHeading2}
-	</h2>
+	</p>
 
 	{#if isLoading === true}
 		<div class="flex justify-center py-8">

@@ -6,7 +6,7 @@
 	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
 
 	// Components
-	import CarouselUserItems from './CarouselUserItems.svelte';
+	import CarouselUserItems from '../CarouselUserItems.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -39,12 +39,8 @@
 			const userSavedTracksFromStorageParsed = await JSON.parse(userSavedTracksFromStorage);
 
 			userSavedTracks = userSavedTracksFromStorageParsed.items;
-
-			console.log(userSavedTracks);
 		} else {
 			userSavedTracks = await getSavedTracks();
-
-			console.log(userSavedTracks);
 		}
 
 		isLoading = false;
@@ -52,9 +48,9 @@
 </script>
 
 <section class="flex flex-col gap-4">
-	<h2 class="text-xl font-medium text-t-primary sm:text-2xl">
+	<p class="text-xl font-medium text-t-primary sm:text-2xl">
 		{$translationsStore.profilePage.profilePageUserSavedTracksSectionHeading2}
-	</h2>
+	</p>
 
 	{#if isLoading === true}
 		<div class="flex justify-center py-8">
