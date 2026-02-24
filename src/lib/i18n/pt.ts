@@ -121,8 +121,6 @@ export const pt = {
 		title: 'Perfil | Allify',
 		profilePageImageAltText: 'Foto do perfil de',
 		profilePageFollowers: 'seguidores',
-		profilePageHeading1:
-			'Oi, {{name}}! Tudo o que você precisa saber sobre o seu perfil está aqui.',
 		profilePageUserSavedTracksSectionHeading2: 'Músicas curtidas',
 		profilePageUserSavedTracksSectionParagraph1:
 			'Suas músicas vão aparecer aqui assim que você salvar alguma.',
@@ -132,8 +130,7 @@ export const pt = {
 		profilePageUserSavedAlbumsSectionHeading2: 'Álbuns salvos',
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Seus álbuns vão aparecer aqui assim que você salvar algum.',
-		profilePageUserTopTrack: 'Sua música mais ouvida',
-		profilePageUserTopArtist: 'Seu artista mais ouvido'
+		profilePageExternalLinkSpotify: 'Ver perfil no Spotify'
 	},
 	errorPage: {
 		title404: 'Página não encontrada | Allify',
@@ -289,7 +286,6 @@ export const pt = {
 			dataUsageDiv6Paragraph2:
 				'Ao utilizar o Allify, você concorda com as práticas de uso de dados descritas nesta página.'
 		},
-
 		termsOfService: {
 			title: 'Termos de Serviço | Allify',
 			termsOfServiceDiv1Heading1: 'Termos de Serviço',

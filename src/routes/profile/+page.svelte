@@ -1,12 +1,12 @@
 <script lang="ts">
 	// Assets
-	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
+	import NotLogged from '$lib/components/general/NotLogged.svelte';
 
 	//Components
 	import KeyInformation from '$lib/components/profile/KeyInformation.svelte';
-	import UserSavedAlbums from '$lib/components/profile/UserSavedAlbums.svelte';
-	import UserPlaylists from '$lib/components/profile/UserPlaylists.svelte';
-	import UserSavedTracks from '$lib/components/profile/UserSavedTracks.svelte';
+	import UserSavedAlbums from '$lib/components/profile/saved-albums/UserSavedAlbums.svelte';
+	import UserPlaylists from '$lib/components/profile/user-playlists/UserPlaylists.svelte';
+	import UserSavedTracks from '$lib/components/profile/saved-tracks/UserSavedTracks.svelte';
 
 	// Stores
 	import { meStore } from '$lib/stores/me.store';
@@ -19,17 +19,10 @@
 
 {#if $meStore !== undefined}
 	<section class="base-section">
-		<h1>
-			{$translationsStore.profilePage.profilePageHeading1.replace(
-				'{{name}}',
-				$meStore?.display_name ?? ''
-			)}
-		</h1>
-
-		<div class="flex flex-col lg:flex-row lg:gap-10">
+		<div class="mx-auto flex w-full flex-col gap-10 sm:gap-12 lg:gap-14">
 			<KeyInformation userInfo={$meStore} />
 
-			<div class="flex w-full flex-col gap-10 lg:w-9/12">
+			<div class="flex w-full flex-col gap-8 sm:gap-10">
 				<UserSavedTracks />
 
 				<UserPlaylists />
@@ -39,7 +32,7 @@
 		</div>
 	</section>
 {:else}
-	<section class="flex items-center justify-center py-58">
-		<DotsLoading />
-	</section>
+	<NotLogged
+		notLoggedParagraph={$translationsStore.generalTexts.notLoggedMyMusicProfileParagraph1}
+	/>
 {/if}
