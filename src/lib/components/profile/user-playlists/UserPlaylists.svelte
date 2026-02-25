@@ -24,7 +24,7 @@
 
 			const resUserPlaylists = await reqUserPlaylists.json();
 
-			sessionStorage.setItem('user-saved-playlists', JSON.stringify(resUserPlaylists));
+			sessionStorage.setItem('user-playlists', JSON.stringify(resUserPlaylists));
 
 			return resUserPlaylists.items;
 		} catch (error) {

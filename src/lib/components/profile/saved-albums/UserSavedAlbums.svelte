@@ -24,7 +24,7 @@
 
 			const resUserSavedAlbums = await reqUserSavedAlbums.json();
 
-			sessionStorage.setItem('user-saved-Albums', JSON.stringify(resUserSavedAlbums));
+			sessionStorage.setItem('user-saved-albums', JSON.stringify(resUserSavedAlbums));
 
 			return resUserSavedAlbums.items;
 		} catch (error) {
