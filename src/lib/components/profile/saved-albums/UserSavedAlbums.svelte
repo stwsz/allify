@@ -26,7 +26,7 @@
 
 			sessionStorage.setItem('user-saved-albums', JSON.stringify(resUserSavedAlbums));
 
-			return resUserSavedAlbums.items;
+			return resUserSavedAlbums;
 		} catch (error) {
 			return [];
 		}
@@ -38,7 +38,7 @@
 		if (userSavedAlbumsFromStorage) {
 			const userSavedAlbumsFromStorageParsed = await JSON.parse(userSavedAlbumsFromStorage);
 
-			userSavedAlbums = userSavedAlbumsFromStorageParsed.items;
+			userSavedAlbums = userSavedAlbumsFromStorageParsed;
 		} else {
 			userSavedAlbums = await getUserSavedAlbums();
 		}

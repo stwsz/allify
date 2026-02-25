@@ -26,7 +26,7 @@
 
 			sessionStorage.setItem('user-playlists', JSON.stringify(resUserPlaylists));
 
-			return resUserPlaylists.items;
+			return resUserPlaylists;
 		} catch (error) {
 			return [];
 		}
@@ -38,7 +38,7 @@
 		if (userPlaylistsFromStorage) {
 			const userPlaylistsFromStorageParsed = await JSON.parse(userPlaylistsFromStorage);
 
-			userPlaylists = userPlaylistsFromStorageParsed.items;
+			userPlaylists = userPlaylistsFromStorageParsed;
 		} else {
 			userPlaylists = await getUserPlaylists();
 		}
