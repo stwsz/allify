@@ -12,6 +12,9 @@
 	export let items: any[];
 	export let itemsType: string;
 
+	export let selectedPlaylist: any;
+	export let showSelectedPlaylistModal: boolean;
+
 	let carousel: HTMLDivElement;
 	let showPrevButton = false;
 	let showNextButton = true;
@@ -68,7 +71,7 @@
 			{/each}
 		{:else if itemsType === 'user-playlists'}
 			{#each items as item}
-				<UserPlaylistsItems {item} />
+				<UserPlaylistsItems {item} bind:selectedPlaylist bind:showSelectedPlaylistModal />
 			{/each}
 		{:else if itemsType === 'user-saved-albums'}
 			{#each items as item}

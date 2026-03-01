@@ -7,12 +7,16 @@
 
 	// Components
 	import CarouselUserItems from '../CarouselUserItems.svelte';
+	import UserSelectedPlaylistModal from './UserSelectedPlaylistModal.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	let userPlaylists: any[] = [];
 	let isLoading = true;
+
+	let showSelectedPlaylistModal = false;
+	let selectedPlaylist: any = null;
 
 	async function getUserPlaylists(): Promise<any[]> {
 		try {
@@ -57,8 +61,15 @@
 			<DotsLoading />
 		</div>
 	{:else if userPlaylists.length > 0}
-		<CarouselUserItems items={userPlaylists} itemsType="user-playlists" />
+		<CarouselUserItems
+			items={userPlaylists}
+			itemsType="user-playlists"
+			bind:selectedPlaylist
+			bind:showSelectedPlaylistModal
+		/>
 	{:else}
 		<p>{$translationsStore.profilePage.profilePageUserPlaylistsSectionParagraph1}</p>
 	{/if}
 </section>
+
+<UserSelectedPlaylistModal bind:playlist={selectedPlaylist} bind:showSelectedPlaylistModal />

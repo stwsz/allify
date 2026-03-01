@@ -1,21 +1,32 @@
 <script lang="ts">
+	// Props
 	export let item: any;
+	export let showSelectedPlaylistModal: boolean;
+	export let selectedPlaylist: any;
 </script>
 
 <button
 	class="flex w-40 shrink-0 cursor-pointer flex-col items-center gap-2 rounded-lg bg-s-muted/90 p-3 transition-all hover:scale-105 sm:w-44"
+	onclick={() => {
+		selectedPlaylist = item;
+		showSelectedPlaylistModal = true;
+	}}
 >
-	<img
-		src={item.images?.[0]?.url}
-		alt={item.name}
-		class="h-36 w-36 rounded-md object-cover"
-		loading="lazy"
-	/>
+	{#if item.images?.[0]?.url}
+		<img
+			src={item.images?.[0]?.url}
+			alt={item.name}
+			class="h-36 w-36 rounded-md object-cover"
+			loading="lazy"
+		/>
+	{/if}
 
 	<div class="flex w-full flex-col gap-0.5 text-center">
-		<p class="line-clamp-1 text-sm font-semibold text-t-primary">
-			{item.name}
-		</p>
+		{#if item.name}
+			<p class="line-clamp-1 text-sm font-semibold text-t-primary">
+				{item.name}
+			</p>
+		{/if}
 
 		{#if item.owner}
 			<p class="line-clamp-1 text-xs text-t-secondary">
