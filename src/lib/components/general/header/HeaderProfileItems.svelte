@@ -6,6 +6,7 @@
 
 	// Utils
 	import { setTitleByStreaming } from '$lib/utils/setTitleByStreaming';
+	import { removeInfoFromStorage } from '$lib/utils/removeInfoFromStorage';
 
 	// Props
 	export let loggedIn: boolean;
@@ -90,8 +91,7 @@
 					hover:bg-status-error/80
 				"
 			on:click={async () => {
-				sessionStorage.removeItem('mostListenedArtists');
-				sessionStorage.removeItem('mostListenedTracks');
+				removeInfoFromStorage();
 
 				await fetch('/api/logout', {
 					method: 'POST',

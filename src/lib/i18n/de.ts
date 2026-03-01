@@ -109,8 +109,7 @@ export const de = {
 		myMusicalProfilePageMostListenedArtistsFollowers: 'Follower',
 		myMusicalProfilePageMostListenedTracksHeading2: 'Deine meistgehörten Songs',
 		myMusicalProfilePageMostListenedArtistsPopularity: 'Beliebtheit',
-		myMusicalProfilePageMostListenedTracksPopularity: 'Beliebtheit',
-		myMusicalProfilePageDetailedArtistInfoModalFollowers: 'Follower'
+		myMusicalProfilePageMostListenedTracksPopularity: 'Beliebtheit'
 	},
 	discoveriesPage: {
 		title: 'Musikentdeckungen | Allify'
@@ -122,7 +121,7 @@ export const de = {
 		title: 'Profil | Allify',
 		profilePageImageAltText: 'Profilbild von',
 		profilePageFollowers: 'Follower',
-		profilePageUserSavedTracksSectionHeading2: 'Lieblingssongs',
+		profilePageUserSavedTracksSectionHeading2: 'Gefällt mir Songs',
 		profilePageUserSavedTracksSectionParagraph1:
 			'Deine Songs werden hier angezeigt, sobald du einen speicherst.',
 		profilePageUserPlaylistsSectionHeading2: 'Deine Playlists',
@@ -131,7 +130,14 @@ export const de = {
 		profilePageUserSavedAlbumsSectionHeading2: 'Gespeicherte Alben',
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Deine Alben werden hier angezeigt, sobald du eines speicherst.',
-		profilePageExternalLinkSpotify: 'Profil auf Spotify ansehen'
+		profilePageExternalLinkSpotify: 'Profil auf Spotify ansehen',
+		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Playlist-Modal schließen',
+		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
+		profilePageUserSelectedPlaylistModalMusics: 'Songs',
+		profilePageUserSelectedPlaylistModalExternalLink: 'Playlist auf Spotify ansehen',
+		profilePageUserSelectedPlaylistModalLoadingMusics: 'Songs der Playlist werden geladen...',
+		profilePageUserSelectedPlaylistModalMusicsNotFound: 'Keine Songs in dieser Playlist gefunden.',
+		profilePageUserSelectedPlaylistModalAddedBy: 'Hinzugefügt von'
 	},
 	errorPage: {
 		title404: 'Seite nicht gefunden | Allify',

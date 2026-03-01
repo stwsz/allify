@@ -25,7 +25,7 @@ export const GET: RequestHandler = async ({ cookies }) => {
 
 		const savedTracksData = await reqSavedTracks.json();
 
-		return new Response(JSON.stringify(savedTracksData), {
+		return new Response(JSON.stringify(savedTracksData.items), {
 			status: 200,
 			headers: { 'Content-Type': 'application/json' }
 		});

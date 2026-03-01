@@ -26,7 +26,7 @@
 
 			sessionStorage.setItem('user-saved-tracks', JSON.stringify(resUserSavedTracks));
 
-			return resUserSavedTracks.items;
+			return resUserSavedTracks;
 		} catch (error) {
 			return [];
 		}
@@ -38,7 +38,7 @@
 		if (userSavedTracksFromStorage) {
 			const userSavedTracksFromStorageParsed = await JSON.parse(userSavedTracksFromStorage);
 
-			userSavedTracks = userSavedTracksFromStorageParsed.items;
+			userSavedTracks = userSavedTracksFromStorageParsed;
 		} else {
 			userSavedTracks = await getSavedTracks();
 		}

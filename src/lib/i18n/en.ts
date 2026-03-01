@@ -109,8 +109,7 @@ export const en = {
 		myMusicalProfilePageMostListenedArtistsFollowers: 'followers',
 		myMusicalProfilePageMostListenedTracksHeading2: 'Your most listened tracks',
 		myMusicalProfilePageMostListenedArtistsPopularity: 'Popularity',
-		myMusicalProfilePageMostListenedTracksPopularity: 'Popularity',
-		myMusicalProfilePageDetailedArtistInfoModalFollowers: 'Followers'
+		myMusicalProfilePageMostListenedTracksPopularity: 'Popularity'
 	},
 	discoveriesPage: {
 		title: 'Music Discoveries | Allify'
@@ -131,7 +130,14 @@ export const en = {
 		profilePageUserSavedAlbumsSectionHeading2: 'Saved albums',
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Your albums will appear here as soon as you save one.',
-		profilePageExternalLinkSpotify: 'See profile on Spotify'
+		profilePageExternalLinkSpotify: 'View profile on Spotify',
+		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Close playlist modal',
+		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
+		profilePageUserSelectedPlaylistModalMusics: 'songs',
+		profilePageUserSelectedPlaylistModalExternalLink: 'View playlist on Spotify',
+		profilePageUserSelectedPlaylistModalLoadingMusics: 'Loading playlist songs...',
+		profilePageUserSelectedPlaylistModalMusicsNotFound: 'No songs found in this playlist.',
+		profilePageUserSelectedPlaylistModalAddedBy: 'Added by'
 	},
 	errorPage: {
 		title404: 'Page not found | Allify',

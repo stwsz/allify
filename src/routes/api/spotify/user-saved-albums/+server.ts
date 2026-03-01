@@ -25,7 +25,7 @@ export const GET: RequestHandler = async ({ cookies }) => {
 
 		const savedAlbumsData = await reqSavedAlbums.json();
 
-		return new Response(JSON.stringify(savedAlbumsData), {
+		return new Response(JSON.stringify(savedAlbumsData.items), {
 			status: 200,
 			headers: { 'Content-Type': 'application/json' }
 		});

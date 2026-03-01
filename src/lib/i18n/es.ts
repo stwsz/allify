@@ -109,8 +109,7 @@ export const es = {
 		myMusicalProfilePageMostListenedArtistsFollowers: 'seguidores',
 		myMusicalProfilePageMostListenedTracksHeading2: 'Tus canciones más escuchadas',
 		myMusicalProfilePageMostListenedArtistsPopularity: 'Popularidad',
-		myMusicalProfilePageMostListenedTracksPopularity: 'Popularidad',
-		myMusicalProfilePageDetailedArtistInfoModalFollowers: 'Seguidores'
+		myMusicalProfilePageMostListenedTracksPopularity: 'Popularidad'
 	},
 	discoveriesPage: {
 		title: 'Descubrimientos Musicales | Allify'
@@ -122,16 +121,24 @@ export const es = {
 		title: 'Perfil | Allify',
 		profilePageImageAltText: 'Foto de perfil de',
 		profilePageFollowers: 'seguidores',
-		profilePageUserSavedTracksSectionHeading2: 'Canciones favoritas',
+		profilePageUserSavedTracksSectionHeading2: 'Canciones que te gustan',
 		profilePageUserSavedTracksSectionParagraph1:
-			'Tus canciones aparecerán aquí en cuanto guardes alguna.',
+			'Tus canciones aparecerán aquí tan pronto como guardes alguna.',
 		profilePageUserPlaylistsSectionHeading2: 'Tus playlists',
 		profilePageUserPlaylistsSectionParagraph1:
-			'Tus playlists aparecerán aquí en cuanto crees o guardes alguna.',
+			'Tus playlists aparecerán aquí tan pronto como crees o guardes alguna.',
 		profilePageUserSavedAlbumsSectionHeading2: 'Álbumes guardados',
 		profilePageUserSavedAlbumsSectionParagraph1:
-			'Tus álbumes aparecerán aquí en cuanto guardes alguno.',
-		profilePageExternalLinkSpotify: 'Ver perfil en Spotify'
+			'Tus álbumes aparecerán aquí tan pronto como guardes alguno.',
+		profilePageExternalLinkSpotify: 'Ver perfil en Spotify',
+		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Cerrar modal de playlist',
+		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
+		profilePageUserSelectedPlaylistModalMusics: 'canciones',
+		profilePageUserSelectedPlaylistModalExternalLink: 'Ver playlist en Spotify',
+		profilePageUserSelectedPlaylistModalLoadingMusics: 'Cargando canciones de la playlist...',
+		profilePageUserSelectedPlaylistModalMusicsNotFound:
+			'No se encontraron canciones en esta playlist.',
+		profilePageUserSelectedPlaylistModalAddedBy: 'Añadida por'
 	},
 	errorPage: {
 		title404: 'Página no encontrada | Allify',
