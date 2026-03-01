@@ -6,7 +6,7 @@
 
 	// Utils
 	import { setTitleByStreaming } from '$lib/utils/setTitleByStreaming';
-	import { removeInfoFromStorage } from '$lib/utils/removeInfoFromStorage';
+	import { logout } from '$lib/utils/logout';
 
 	// Props
 	export let loggedIn: boolean;
@@ -91,15 +91,9 @@
 					hover:bg-status-error/80
 				"
 			on:click={async () => {
-				removeInfoFromStorage();
-
-				await fetch('/api/logout', {
-					method: 'POST',
-					credentials: 'include'
-				});
+				await logout();
 
 				showProfileOptions = false;
-				meStore.set(undefined);
 			}}
 		>
 			{$translationsStore.generalTexts.profileLoggedItem3}

@@ -1,12 +1,13 @@
 <script lang="ts">
 	// Assets
 	import ProfileIcon from '$lib/assets/images/icons/ProfileIcon.svelte';
-
-	// Assets
 	import ArrowIcon from '$lib/assets/images/icons/ArrowIcon.svelte';
 
 	// Components
 	import AsideProfileItems from '$lib/components/general/menus/aside-menu/AsideProfileItems.svelte';
+
+	// Utils
+	import { logout } from '$lib/utils/logout';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -138,9 +139,10 @@
 							duration-200
 							hover:bg-status-error/80
 						"
-						on:click={() => {
+						on:click={async () => {
+							await logout();
+
 							showProfileOptions = false;
-							meStore.set(undefined);
 						}}
 					>
 						{$translationsStore.generalTexts.profileLoggedItem3}
