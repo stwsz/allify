@@ -5,7 +5,7 @@
 	// Components
 	import CarouselButton from '../general/buttons/CarouselButton.svelte';
 	import UserSavedTracksItems from './saved-tracks/UserSavedTracksItems.svelte';
-	import UserPlaylistsItems from './user-playlists/UserPlaylistsItems.svelte';
+	import UserPlaylistItem from './user-playlists/UserPlaylistItem.svelte';
 	import UserSavedAlbumsItems from './saved-albums/UserSavedAlbumsItems.svelte';
 
 	// Props
@@ -71,7 +71,7 @@
 			{/each}
 		{:else if itemsType === 'user-playlists'}
 			{#each items as item}
-				<UserPlaylistsItems {item} bind:selectedPlaylist bind:showSelectedPlaylistModal />
+				<UserPlaylistItem {item} bind:selectedPlaylist bind:showSelectedPlaylistModal />
 			{/each}
 		{:else if itemsType === 'user-saved-albums'}
 			{#each items as item}
