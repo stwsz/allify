@@ -137,7 +137,7 @@
 							externalLink={playlist.external_urls?.spotify}
 							externalLinkText={$translationsStore.profilePage
 								.profilePageUserSelectedPlaylistModalExternalLink}
-							additionalClass="text-xs h-fit mt-0!"
+							additionalClass="text-xs h-fit w-full mt-0! lg:w-70"
 						/>
 					{/if}
 				</div>
