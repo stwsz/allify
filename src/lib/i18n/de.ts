@@ -134,6 +134,8 @@ export const de = {
 		profilePageUserPlaylistItemBy: 'Von',
 		profilePageUserPlaylistItemMusics: 'Songs',
 		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Playlist-Modal schließen',
+		profilePageUserSelectedPlaylistModalPublic: 'Öffentlich',
+		profilePageUserSelectedPlaylistModalPrivate: 'Privat',
 		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
 		profilePageUserSelectedPlaylistModalMusics: 'Songs',
 		profilePageUserSelectedPlaylistModalExternalLink: 'Playlist auf Spotify ansehen',

@@ -95,9 +95,25 @@
 						{/if}
 
 						<div class="flex flex-col">
-							<p class="mb-2 text-xs tracking-wider text-t-secondary uppercase">
-								{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalParagraph1}
-							</p>
+							<div class="flex items-center gap-4">
+								<p class="text-sm tracking-wider text-t-secondary uppercase">
+									{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalParagraph1}
+								</p>
+
+								{#if playlist.public !== undefined}
+									<span
+										class={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${
+											playlist.public
+												? 'bg-status-success/10 text-status-success'
+												: 'bg-status-error/10 text-status-error'
+										}`}
+									>
+										{playlist.public
+											? $translationsStore.profilePage.profilePageUserSelectedPlaylistModalPublic
+											: $translationsStore.profilePage.profilePageUserSelectedPlaylistModalPrivate}
+									</span>
+								{/if}
+							</div>
 
 							{#if playlist.name}
 								<h2 class="text-3xl leading-tight font-bold text-t-primary md:text-4xl">

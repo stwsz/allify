@@ -1,9 +1,13 @@
 <script lang="ts">
 	// Svelte
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
+
+	// Props
+	export let isAsideMenuOpen: boolean;
 
 	$: navItems = [
 		{
@@ -25,8 +29,12 @@
 	<ul class="flex flex-col gap-8 px-8 py-12">
 		{#each navItems as item}
 			<li class="overflow-y-hidden">
-				<a
-					href={item.link}
+				<button
+					on:click={() => {
+						goto(item.link);
+
+						isAsideMenuOpen = false;
+					}}
 					aria-current={$page.url.pathname === item.link ? 'page' : undefined}
 					class="
 						relative
@@ -53,7 +61,7 @@
 					"
 				>
 					{item.name}
-				</a>
+				</button>
 			</li>
 		{/each}
 	</ul>

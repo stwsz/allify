@@ -13,7 +13,11 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { meStore } from '$lib/stores/me.store';
 
+	// Props
+	export let isAsideMenuOpen: boolean;
+
 	$: loggedIn = $meStore ? true : false;
+
 	let showProfileOptions: boolean = false;
 </script>
 
@@ -119,7 +123,7 @@
 			<div class="px-3 pb-3">
 				<div class="mb-3 h-px bg-b-muted/10"></div>
 
-				<AsideProfileItems {loggedIn} />
+				<AsideProfileItems {loggedIn} bind:isAsideMenuOpen />
 
 				{#if loggedIn}
 					<div class="my-3 h-px bg-b-muted/10"></div>
@@ -143,6 +147,7 @@
 							await logout();
 
 							showProfileOptions = false;
+							isAsideMenuOpen = false;
 						}}
 					>
 						{$translationsStore.generalTexts.profileLoggedItem3}

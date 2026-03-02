@@ -33,13 +33,15 @@
 
 		{#if item.owner}
 			<p class="line-clamp-1 text-xs text-t-secondary">
-				{$translationsStore.profilePage.profilePageUserPlaylistItemBy} {item.owner.display_name}
+				{$translationsStore.profilePage.profilePageUserPlaylistItemBy}
+				{item.owner.display_name}
 			</p>
 		{/if}
 
 		{#if item.tracks}
 			<p class="text-xs text-t-secondary/70">
-				{item.tracks.total} {$translationsStore.profilePage.profilePageUserPlaylistItemMusics}
+				{item.tracks.total}
+				{$translationsStore.profilePage.profilePageUserPlaylistItemMusics}
 			</p>
 		{/if}
 	</div>

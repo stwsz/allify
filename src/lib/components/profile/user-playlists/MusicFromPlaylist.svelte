@@ -1,8 +1,8 @@
 <script lang="ts">
-    // Stores
+	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
-    // Props
+	// Props
 	export let music: any;
 
 	function formatDuration(ms: number) {

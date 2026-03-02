@@ -133,6 +133,8 @@ export const pt = {
 		profilePageUserPlaylistItemBy: 'Por',
 		profilePageUserPlaylistItemMusics: 'músicas',
 		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Fechar modal de playlist',
+		profilePageUserSelectedPlaylistModalPublic: 'Pública',
+		profilePageUserSelectedPlaylistModalPrivate: 'Privada',
 		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
 		profilePageUserSelectedPlaylistModalMusics: 'músicas',
 		profilePageUserSelectedPlaylistModalExternalLink: 'Ver playlist no Spotify',

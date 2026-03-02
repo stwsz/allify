@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Svelte
+	import { goto } from '$app/navigation';
+
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { meStore } from '$lib/stores/me.store';
@@ -65,12 +68,16 @@
 		<ul class="space-y-1">
 			{#each loggedItems as item}
 				<li class="rounded-lg transition-all hover:bg-s-muted">
-					<a
-						href={item.href}
-						class="flex w-full items-center px-3 py-2 transition-all hover:translate-x-0.5"
+					<button
+						on:click={() => {
+							goto(item.href);
+
+							showProfileOptions = false;
+						}}
+						class="flex w-full cursor-pointer items-center px-3 py-2 transition-all hover:translate-x-0.5"
 					>
 						{item.text}
-					</a>
+					</button>
 				</li>
 			{/each}
 		</ul>
