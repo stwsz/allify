@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
 	// Props
 	export let item: any;
 	export let showSelectedPlaylistModal: boolean;
@@ -30,13 +33,15 @@
 
 		{#if item.owner}
 			<p class="line-clamp-1 text-xs text-t-secondary">
-				Por {item.owner.display_name}
+				{$translationsStore.profilePage.profilePageUserPlaylistItemBy}
+				{item.owner.display_name}
 			</p>
 		{/if}
 
 		{#if item.tracks}
 			<p class="text-xs text-t-secondary/70">
-				{item.tracks.total} músicas
+				{item.tracks.total}
+				{$translationsStore.profilePage.profilePageUserPlaylistItemMusics}
 			</p>
 		{/if}
 	</div>

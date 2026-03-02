@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Svelte
+	import { goto } from '$app/navigation';
+
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
@@ -6,6 +9,7 @@
 
 	// Props
 	export let loggedIn: boolean;
+	export let isAsideMenuOpen: boolean;
 
 	$: notLoggedItems = [
 		{
@@ -36,12 +40,16 @@
 	{#if loggedIn}
 		{#each loggedItems as item}
 			<li class="rounded-lg transition-all hover:bg-s-muted">
-				<a
-					href={item.href}
+				<button
+					on:click={() => {
+						goto(item.href);
+
+						isAsideMenuOpen = false;
+					}}
 					class="flex w-full items-center px-3 py-2 text-sm text-t-primary transition-all hover:translate-x-0.5"
 				>
 					{item.text}
-				</a>
+				</button>
 			</li>
 		{/each}
 	{:else}
@@ -57,6 +65,7 @@
 							loading: true,
 							streamingPlatform: item.streaming as 'spotify' | 'deezer'
 						});
+
 						window.location.href = item.href;
 					}}
 					class="flex w-full cursor-pointer items-center px-3 py-2 text-left text-sm text-t-primary transition-all hover:translate-x-0.5"

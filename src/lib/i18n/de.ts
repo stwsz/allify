@@ -131,7 +131,11 @@ export const de = {
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Deine Alben werden hier angezeigt, sobald du eines speicherst.',
 		profilePageExternalLinkSpotify: 'Profil auf Spotify ansehen',
+		profilePageUserPlaylistItemBy: 'Von',
+		profilePageUserPlaylistItemMusics: 'Songs',
 		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Playlist-Modal schließen',
+		profilePageUserSelectedPlaylistModalPublic: 'Öffentlich',
+		profilePageUserSelectedPlaylistModalPrivate: 'Privat',
 		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
 		profilePageUserSelectedPlaylistModalMusics: 'Songs',
 		profilePageUserSelectedPlaylistModalExternalLink: 'Playlist auf Spotify ansehen',

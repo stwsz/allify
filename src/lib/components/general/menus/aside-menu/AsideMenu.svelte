@@ -10,6 +10,7 @@
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
+	// Props
 	export let isAsideMenuOpen: boolean;
 </script>
 
@@ -53,8 +54,8 @@
 			</button>
 		</div>
 
-		<AsideNavigation />
+		<AsideNavigation bind:isAsideMenuOpen />
 
-		<AsideProfile />
+		<AsideProfile bind:isAsideMenuOpen />
 	</aside>
 </div>

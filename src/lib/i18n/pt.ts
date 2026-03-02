@@ -130,7 +130,11 @@ export const pt = {
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Seus álbuns vão aparecer aqui assim que você salvar algum.',
 		profilePageExternalLinkSpotify: 'Ver perfil no Spotify',
+		profilePageUserPlaylistItemBy: 'Por',
+		profilePageUserPlaylistItemMusics: 'músicas',
 		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Fechar modal de playlist',
+		profilePageUserSelectedPlaylistModalPublic: 'Pública',
+		profilePageUserSelectedPlaylistModalPrivate: 'Privada',
 		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
 		profilePageUserSelectedPlaylistModalMusics: 'músicas',
 		profilePageUserSelectedPlaylistModalExternalLink: 'Ver playlist no Spotify',
