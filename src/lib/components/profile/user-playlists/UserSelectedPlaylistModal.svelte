@@ -95,7 +95,7 @@
 						{/if}
 
 						<div class="flex flex-col gap-2">
-							<div class="flex flex-col gap-2 lg:gap-4 lg:flex-row lg:items-center">
+							<div class="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4">
 								<p class="text-sm tracking-wider text-t-secondary uppercase">
 									{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalParagraph1}
 								</p>
