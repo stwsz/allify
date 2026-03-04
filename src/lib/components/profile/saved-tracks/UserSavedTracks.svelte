@@ -7,12 +7,16 @@
 
 	// Components
 	import CarouselUserItems from '../CarouselUserItems.svelte';
+	import UserSelectedSavedTrackModal from './UserSelectedSavedTrackModal.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	let userSavedTracks: any[] = [];
 	let isLoading = true;
+
+	let showSelectedSavedTrackModal = false;
+	let selectedSavedTrack: any = null;
 
 	async function getSavedTracks(): Promise<any[]> {
 		try {
@@ -57,8 +61,15 @@
 			<DotsLoading />
 		</div>
 	{:else if userSavedTracks.length > 0}
-		<CarouselUserItems items={userSavedTracks} itemsType="user-saved-tracks" />
+		<CarouselUserItems
+			items={userSavedTracks}
+			itemsType="user-saved-tracks"
+			bind:selectedSavedTrack
+			bind:showSelectedSavedTrackModal
+		/>
 	{:else}
 		<p>{$translationsStore.profilePage.profilePageUserSavedTracksSectionParagraph1}</p>
 	{/if}
 </section>
+
+<UserSelectedSavedTrackModal bind:showSelectedSavedTrackModal bind:selectedSavedTrack />

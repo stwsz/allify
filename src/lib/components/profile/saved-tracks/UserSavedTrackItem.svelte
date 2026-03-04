@@ -1,9 +1,16 @@
 <script lang="ts">
+	// Props
 	export let item: any;
+	export let selectedSavedTrack: any;
+	export let showSelectedSavedTrackModal: boolean;
 </script>
 
 <button
 	class="flex w-40 shrink-0 cursor-pointer flex-col items-center gap-2 rounded-lg bg-s-muted/90 p-3 transition-all hover:scale-105 sm:w-44"
+	onclick={() => {
+		selectedSavedTrack = item.track;
+		showSelectedSavedTrackModal = true;
+	}}
 >
 	<img
 		src={item.track.album.images?.[0]?.url}
@@ -24,7 +31,7 @@
 		</p>
 
 		<p class="line-clamp-1 text-xs text-t-secondary/70">
-			{item.track.name}
+			{item.track.album.name}
 		</p>
 	</div>
 </button>

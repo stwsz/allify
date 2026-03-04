@@ -83,56 +83,66 @@
 				/>
 			</button>
 
-			<div class="border-b border-b-default p-4 lg:p-6">
-				<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
-					<div class="flex flex-row gap-6">
-						{#if playlist.images?.[0]?.url}
-							<img
-								src={playlist.images[0].url}
-								alt={playlist.name}
-								class="h-30 w-30 rounded-2xl object-cover shadow-lg md:h-36 md:w-36"
-							/>
-						{/if}
+			<div class="border-b border-b-default p-5 lg:p-6">
+				<div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-8">
+					{#if playlist.images?.[0]?.url}
+						<img
+							src={playlist.images[0].url}
+							alt={playlist.name}
+							class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:self-start lg:h-48 lg:w-48"
+							loading="lazy"
+							decoding="async"
+							fetchpriority="low"
+						/>
+					{/if}
 
-						<div class="flex flex-col gap-2">
-							<div class="flex flex-col gap-2 lg:gap-4 lg:flex-row lg:items-center">
-								<p class="text-sm tracking-wider text-t-secondary uppercase">
-									{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalParagraph1}
-								</p>
+					<div class="flex min-w-0 flex-1 flex-col gap-1 sm:gap-2.5">
+						<div class="flex items-center gap-2">
+							<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">
+								{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalParagraph1}
+							</p>
 
-								{#if playlist.public !== undefined}
-									<span
-										class={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-medium ${
-											playlist.public
-												? 'bg-status-success/10 text-status-success'
-												: 'bg-status-error/10 text-status-error'
-										}`}
-									>
-										{playlist.public
-											? $translationsStore.profilePage.profilePageUserSelectedPlaylistModalPublic
-											: $translationsStore.profilePage.profilePageUserSelectedPlaylistModalPrivate}
-									</span>
-								{/if}
-							</div>
+							{#if playlist.public !== undefined}
+								<span
+									class={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${
+										playlist.public
+											? 'bg-status-success/10 text-status-success'
+											: 'bg-status-error/10 text-status-error'
+									}`}
+								>
+									{playlist.public
+										? $translationsStore.profilePage.profilePageUserSelectedPlaylistModalPublic
+										: $translationsStore.profilePage.profilePageUserSelectedPlaylistModalPrivate}
+								</span>
+							{/if}
+						</div>
 
+						<div class="flex flex-col gap-1">
 							{#if playlist.name}
-								<h2 class="text-3xl leading-tight font-bold text-t-primary md:text-4xl">
+								<p class="truncate text-xl font-bold text-t-primary sm:text-3xl">
 									{playlist.name}
-								</h2>
+								</p>
 							{/if}
 
 							{#if playlist.description}
-								<p class="mt-3 text-sm leading-relaxed text-t-secondary">
+								<p class="truncate text-sm text-t-secondary">
 									{playlist.description}
 								</p>
 							{/if}
+						</div>
 
-							<div class="flex items-center gap-2 text-sm text-t-secondary lg:mt-1">
+						<div class="flex flex-col gap-2">
+							<div class="flex items-center gap-2 text-xs text-t-secondary">
 								{#if playlist.owner?.display_name}
-									<span class="font-medium">{playlist.owner.display_name}</span>
+									<span
+										class="w-fit rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
+									>
+										{playlist.owner.display_name}
+									</span>
 								{/if}
-								<span>•</span>
+
 								{#if playlist.tracks?.total}
+									<span>•</span>
 									<span
 										>{playlist.tracks.total}
 										{$translationsStore.profilePage
@@ -141,16 +151,18 @@
 								{/if}
 							</div>
 						</div>
-					</div>
 
-					{#if playlist.external_urls?.spotify}
-						<ExternalLink
-							externalLink={playlist.external_urls?.spotify}
-							externalLinkText={$translationsStore.profilePage
-								.profilePageUserSelectedPlaylistModalExternalLink}
-							additionalClass="text-xs h-fit w-full mt-0! lg:w-70"
-						/>
-					{/if}
+						{#if playlist.external_urls?.spotify}
+							<div class="pt-1 sm:w-90">
+								<ExternalLink
+									externalLink={playlist.external_urls.spotify}
+									externalLinkText={$translationsStore.profilePage
+										.profilePageUserSelectedPlaylistModalExternalLink}
+									additionalClass="text-xs h-fit w-full! sm:w-fit"
+								/>
+							</div>
+						{/if}
+					</div>
 				</div>
 			</div>
 

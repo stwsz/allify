@@ -21,7 +21,9 @@ export const POST: RequestHandler = async ({ cookies, request }) => {
 
 		if (!response.ok) {
 			const err = await response.text();
-			return new Response(JSON.stringify({ error: 'Failed to fetch user name', details: err }), { status: response.status });
+			return new Response(JSON.stringify({ error: 'Failed to fetch user name', details: err }), {
+				status: response.status
+			});
 		}
 
 		const data = await response.json();

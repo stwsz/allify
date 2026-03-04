@@ -1,9 +1,14 @@
 <script lang="ts">
+	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
+	// Utils
+	import { formatDuration } from '$lib/utils/formatDuration';
+
+	// Props
 	export let music: any;
 
-	let userName = 'Unknown User';
+	let userName = '';
 
 	$: if (music.added_by?.id) {
 		idToName(music.added_by.id).then((name) => {
@@ -26,12 +31,6 @@
 		} catch (error) {
 			return 'Unknown User';
 		}
-	}
-
-	function formatDuration(ms: number) {
-		const minutes = Math.floor(ms / 60000);
-		const seconds = Math.floor((ms % 60000) / 1000);
-		return `${minutes}:${String(seconds).padStart(2, '0')}`;
 	}
 </script>
 
