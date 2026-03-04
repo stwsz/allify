@@ -1,9 +1,32 @@
 <script lang="ts">
-	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
-	// Props
 	export let music: any;
+
+	let userName = 'Unknown User';
+
+	$: if (music.added_by?.id) {
+		idToName(music.added_by.id).then((name) => {
+			userName = name;
+		});
+	}
+
+	async function idToName(userId: string): Promise<string> {
+		try {
+			const response = await fetch('/api/spotify/user-id-to-name', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ userId })
+			});
+
+			if (!response.ok) throw new Error('Failed to fetch user name');
+
+			const data = await response.json();
+			return data.display_name || 'Unknown User';
+		} catch (error) {
+			return 'Unknown User';
+		}
+	}
 
 	function formatDuration(ms: number) {
 		const minutes = Math.floor(ms / 60000);
@@ -54,7 +77,7 @@
 		{#if music.added_by?.id && music.added_at}
 			<p class="mt-1 text-[11px] text-t-muted">
 				{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalAddedBy}
-				{music.added_by.id} •{' '}
+				{userName} •{' '}
 				{new Date(music.added_at).toLocaleDateString()}
 			</p>
 		{/if}
