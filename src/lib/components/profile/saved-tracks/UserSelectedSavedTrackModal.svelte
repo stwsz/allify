@@ -5,6 +5,9 @@
 	// Components
 	import ExternalLink from '$lib/components/general/ExternalLink.svelte';
 
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
 	// Utils
 	import { formatDuration } from '$lib/utils/formatDuration';
 
@@ -21,12 +24,18 @@
 			class="relative w-full max-w-3xl overflow-hidden rounded-2xl border border-b-default bg-s-default shadow-xl"
 		>
 			<button
-				class="absolute top-4 right-4 z-10 cursor-pointer opacity-60 transition hover:scale-105 hover:opacity-100"
+				class="absolute top-5 right-5 z-10 cursor-pointer opacity-70 transition hover:scale-105 hover:opacity-100"
 				on:click={() => (showSelectedSavedTrackModal = false)}
-				aria-label={`Close ${selectedSavedTrack?.name}`}
+				aria-label={$translationsStore.profilePage
+					.profilePageUserSelectedSavedTrackCloseButtonAriaLabel +
+					' ' +
+					selectedSavedTrack.name}
 			>
 				<CloseIcon
-					iconAltText={`Close ${selectedSavedTrack?.name}`}
+					iconAltText={$translationsStore.profilePage
+						.profilePageUserSelectedSavedTrackCloseButtonAriaLabel +
+						' ' +
+						selectedSavedTrack.name}
 					iconSvgClass="w-5 h-5 text-brand-primary"
 				/>
 			</button>
@@ -37,12 +46,17 @@
 						src={selectedSavedTrack.album.images[0].url}
 						alt={selectedSavedTrack.album.name}
 						class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:h-64 sm:w-64 sm:self-start"
+						loading="lazy"
+						decoding="async"
+						fetchpriority="low"
 					/>
 				{/if}
 
 				<div class="flex min-w-0 flex-1 flex-col gap-1 sm:gap-2.5">
 					<div class="flex items-center gap-2">
-						<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">Track</p>
+						<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">
+							{$translationsStore.profilePage.profilePageUserSelectedSavedTrackTrack}
+						</p>
 
 						{#if selectedSavedTrack?.explicit !== undefined}
 							<span
@@ -52,7 +66,9 @@
 										: 'bg-status-success/10 text-status-success'
 								}`}
 							>
-								{selectedSavedTrack.explicit ? 'Explicit' : 'Clean'}
+								{selectedSavedTrack.explicit
+									? $translationsStore.profilePage.profilePageUserSelectedSavedTrackExplicit
+									: $translationsStore.profilePage.profilePageUserSelectedSavedTrackClean}
 							</span>
 						{/if}
 					</div>
@@ -95,10 +111,13 @@
 						</div>
 					</div>
 
-					<div class="flex flex-col gap-2 pt-1 sm:w-80">
+					<div class="flex flex-col gap-2 pt-1 sm:w-90">
 						{#if selectedSavedTrack?.popularity !== undefined}
-							<div class="flex items-center gap-2">
-								<span class="w-16 shrink-0 text-xs text-t-secondary">Popularity</span>
+							<div class="flex w-full items-center gap-4">
+								<span class="w-20 shrink-0 text-xs text-t-secondary"
+									>{$translationsStore.profilePage
+										.profilePageUserSelectedSavedTrackPopularity}</span
+								>
 								<div class="h-1.5 flex-1 overflow-hidden rounded-full bg-s-muted">
 									<div
 										class="h-full bg-brand-primary transition-all"
@@ -114,7 +133,8 @@
 						{#if selectedSavedTrack?.external_urls?.spotify}
 							<ExternalLink
 								externalLink={selectedSavedTrack.external_urls.spotify}
-								externalLinkText="Open on Spotify"
+								externalLinkText={$translationsStore.profilePage
+									.profilePageUserSelectedSavedTrackOpenOnSpotify}
 								additionalClass="text-xs h-fit mt-2! w-full! sm:w-fit"
 							/>
 						{/if}
