@@ -94,15 +94,15 @@
 							/>
 						{/if}
 
-						<div class="flex flex-col">
-							<div class="flex items-center gap-4">
+						<div class="flex flex-col gap-2">
+							<div class="flex flex-col gap-2 lg:gap-4 lg:flex-row lg:items-center">
 								<p class="text-sm tracking-wider text-t-secondary uppercase">
 									{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalParagraph1}
 								</p>
 
 								{#if playlist.public !== undefined}
 									<span
-										class={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium ${
+										class={`inline-flex w-fit items-center rounded-full px-3 py-1 text-xs font-medium ${
 											playlist.public
 												? 'bg-status-success/10 text-status-success'
 												: 'bg-status-error/10 text-status-error'
@@ -127,7 +127,7 @@
 								</p>
 							{/if}
 
-							<div class="mt-4 flex items-center gap-2 text-sm text-t-secondary">
+							<div class="flex items-center gap-2 text-sm text-t-secondary lg:mt-1">
 								{#if playlist.owner?.display_name}
 									<span class="font-medium">{playlist.owner.display_name}</span>
 								{/if}
