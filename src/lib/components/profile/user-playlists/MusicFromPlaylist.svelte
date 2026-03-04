@@ -3,7 +3,7 @@
 
 	export let music: any;
 
-	let userName = 'Unknown User';
+	let userName = '';
 
 	$: if (music.added_by?.id) {
 		idToName(music.added_by.id).then((name) => {
