@@ -1,6 +1,8 @@
 <script lang="ts">
+	// Utils
 	import { formatDuration } from '$lib/utils/formatDuration';
 
+	// Props
 	export let track: any;
 </script>
 
