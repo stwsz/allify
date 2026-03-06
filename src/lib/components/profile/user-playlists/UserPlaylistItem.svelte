@@ -41,7 +41,7 @@
 		{#if item.tracks}
 			<p class="text-xs text-t-secondary/70">
 				{item.tracks.total}
-				{$translationsStore.profilePage.profilePageUserPlaylistItemMusics}
+				{item.tracks.total === 1 ? $translationsStore.profilePage.profilePageUserPlaylistItemMusics.slice(0, -1) : $translationsStore.profilePage.profilePageUserPlaylistItemMusics}
 			</p>
 		{/if}
 	</div>

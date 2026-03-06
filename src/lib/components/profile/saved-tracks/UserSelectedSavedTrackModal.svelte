@@ -45,7 +45,7 @@
 					<img
 						src={selectedSavedTrack.album.images[0].url}
 						alt={selectedSavedTrack.album.name}
-						class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:h-64 sm:w-64 sm:self-start"
+						class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:h-70 sm:w-70 sm:self-start"
 						loading="lazy"
 						decoding="async"
 						fetchpriority="low"
@@ -55,7 +55,7 @@
 				<div class="flex min-w-0 flex-1 flex-col gap-1 sm:gap-2.5">
 					<div class="flex items-center gap-2">
 						<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">
-							{$translationsStore.profilePage.profilePageUserSelectedSavedTrackTrack}
+							{$translationsStore.profilePage.profilePageUserSelectedSavedTrack}
 						</p>
 
 						{#if selectedSavedTrack?.explicit !== undefined}
@@ -135,7 +135,7 @@
 								externalLink={selectedSavedTrack.external_urls.spotify}
 								externalLinkText={$translationsStore.profilePage
 									.profilePageUserSelectedSavedTrackOpenOnSpotify}
-								additionalClass="text-xs h-fit mt-2! w-full! sm:w-fit"
+								additionalClass="text-xs h-fit mt-3! w-full! sm:w-fit"
 							/>
 						{/if}
 					</div>

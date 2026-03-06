@@ -39,7 +39,9 @@
 
 		<p class="text-xs text-t-secondary/70">
 			{item.album.total_tracks}
-			{$translationsStore.profilePage.profilePageUserAlbumItemTracks}
+			{item.album.total_tracks === 1
+				? $translationsStore.profilePage.profilePageUserAlbumItemTracks.slice(0, -1)
+				: $translationsStore.profilePage.profilePageUserAlbumItemTracks}
 		</p>
 	</div>
 </button>

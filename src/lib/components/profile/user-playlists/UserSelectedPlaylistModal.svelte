@@ -89,7 +89,7 @@
 						<img
 							src={playlist.images[0].url}
 							alt={playlist.name}
-							class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:self-start lg:h-48 lg:w-48"
+							class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:self-start lg:h-52 lg:w-52"
 							loading="lazy"
 							decoding="async"
 							fetchpriority="low"
@@ -145,8 +145,9 @@
 									<span>•</span>
 									<span
 										>{playlist.tracks.total}
-										{$translationsStore.profilePage
-											.profilePageUserSelectedPlaylistModalMusics}</span
+										{playlist.tracks.total === 1
+											? $translationsStore.profilePage.profilePageUserSelectedPlaylistModalMusics.slice(0, -1)
+											: $translationsStore.profilePage.profilePageUserSelectedPlaylistModalMusics}</span
 									>
 								{/if}
 							</div>
@@ -158,7 +159,7 @@
 									externalLink={playlist.external_urls.spotify}
 									externalLinkText={$translationsStore.profilePage
 										.profilePageUserSelectedPlaylistModalExternalLink}
-									additionalClass="text-xs h-fit w-full! sm:w-fit"
+									additionalClass="text-xs mt-2! h-fit w-full! sm:w-fit"
 								/>
 							</div>
 						{/if}

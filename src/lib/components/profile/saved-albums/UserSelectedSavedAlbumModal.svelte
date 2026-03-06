@@ -44,7 +44,7 @@
 						<img
 							src={album.images[0].url}
 							alt={album.name}
-							class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:self-start lg:h-48 lg:w-48"
+							class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:self-start lg:h-52 lg:w-52"
 							loading="lazy"
 							decoding="async"
 							fetchpriority="low"
@@ -64,7 +64,7 @@
 							{/if}
 
 							{#if album.release_date}
-								<p class="truncate text-sm text-t-secondary">
+								<p class="truncate text-xs text-t-secondary">
 									{album.release_date}
 								</p>
 							{/if}
@@ -101,7 +101,7 @@
 									externalLink={album.external_urls.spotify}
 									externalLinkText={$translationsStore.profilePage
 										.profilePageUserSelectedSavedAlbumOpenOnSpotify}
-									additionalClass="text-xs h-fit mt-2! w-full! sm:w-fit"
+									additionalClass="text-xs h-fit mt-3! w-full! sm:w-fit lg:mt-0!"
 								/>
 							</div>
 						{/if}
