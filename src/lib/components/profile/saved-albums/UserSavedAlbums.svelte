@@ -7,6 +7,7 @@
 
 	// Components
 	import CarouselUserItems from '$lib/components/profile/CarouselUserItems.svelte';
+	import UserSelectedSavedAlbumModal from './UserSelectedSavedAlbumModal.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -14,12 +15,15 @@
 	let userSavedAlbums: any[] = [];
 	let isLoading = true;
 
+	let showSelectedAlbumModal = false;
+	let selectedSavedAlbum: any = null;
+
 	async function getUserSavedAlbums(): Promise<any[]> {
 		try {
 			const reqUserSavedAlbums = await fetch('/api/spotify/user-saved-albums');
 
 			if (!reqUserSavedAlbums.ok) {
-				throw new Error('Failed to fetch saved playlists');
+				throw new Error('Failed to fetch user saved albums');
 			}
 
 			const resUserSavedAlbums = await reqUserSavedAlbums.json();
@@ -57,8 +61,15 @@
 			<DotsLoading />
 		</div>
 	{:else if userSavedAlbums.length > 0}
-		<CarouselUserItems items={userSavedAlbums} itemsType="user-saved-albums" />
+		<CarouselUserItems
+			items={userSavedAlbums}
+			itemsType="user-saved-albums"
+			bind:selectedSavedAlbum
+			bind:showSelectedSavedAlbumModal={showSelectedAlbumModal}
+		/>
 	{:else}
 		<p>{$translationsStore.profilePage.profilePageUserSavedAlbumsSectionParagraph1}</p>
 	{/if}
 </section>
+
+<UserSelectedSavedAlbumModal bind:album={selectedSavedAlbum} bind:showSelectedAlbumModal />

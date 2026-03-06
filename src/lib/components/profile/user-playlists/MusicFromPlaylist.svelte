@@ -53,9 +53,17 @@
 			<div class="min-w-0">
 				{#if music.track.name}
 					<p
-						class="truncate text-sm font-medium text-t-primary transition group-hover:text-brand-primary"
+						class="flex items-center gap-1.5 truncate text-sm font-medium text-t-primary transition group-hover:text-brand-primary"
 					>
-						{music.track.name}
+						<span class="truncate">{music.track.name}</span>
+
+						{#if music.track.explicit}
+							<span
+								class="inline-flex shrink-0 items-center rounded bg-s-muted px-1.5 py-0.5 text-[10px] font-semibold text-t-muted uppercase"
+							>
+								E
+							</span>
+						{/if}
 					</p>
 				{/if}
 

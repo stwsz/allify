@@ -1,0 +1,119 @@
+<script lang="ts">
+	// Assets
+	import CloseIcon from '$lib/assets/images/icons/CloseIcon.svelte';
+
+	// Components
+	import ExternalLink from '$lib/components/general/ExternalLink.svelte';
+	import MusicFromAlbum from './MusicFromAlbum.svelte';
+
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
+	// Props
+	export let album: any;
+	export let showSelectedAlbumModal: boolean;
+</script>
+
+{#if showSelectedAlbumModal}
+	<div
+		class="fixed inset-0 z-50 flex items-center justify-center bg-s-inverse/60 p-4 backdrop-blur-md"
+	>
+		<div
+			class="relative flex h-[85vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-b-default bg-s-default shadow-xl"
+		>
+			<button
+				class="absolute top-5 right-5 z-10 cursor-pointer opacity-70 transition hover:scale-105 hover:opacity-100"
+				on:click={() => (showSelectedAlbumModal = false)}
+				aria-label={$translationsStore.profilePage
+					.profilePageUserSelectedSavedAlbumCloseButtonAriaLabel +
+					' ' +
+					album.name}
+			>
+				<CloseIcon
+					iconAltText={$translationsStore.profilePage
+						.profilePageUserSelectedSavedAlbumCloseButtonAriaLabel +
+						' ' +
+						album.name}
+					iconSvgClass="w-5 h-5 text-brand-primary"
+				/>
+			</button>
+
+			<div class="border-b border-b-default p-5 lg:p-6">
+				<div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-8">
+					{#if album.images?.[0]?.url}
+						<img
+							src={album.images[0].url}
+							alt={album.name}
+							class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:self-start lg:h-52 lg:w-52"
+							loading="lazy"
+							decoding="async"
+							fetchpriority="low"
+						/>
+					{/if}
+
+					<div class="flex min-w-0 flex-1 flex-col gap-1 sm:gap-2.5">
+						<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">
+							{$translationsStore.profilePage.profilePageUserSelectedSavedAlbum}
+						</p>
+
+						<div class="flex flex-col gap-1">
+							{#if album.name}
+								<p class="truncate text-xl font-bold text-t-primary sm:text-3xl">
+									{album.name}
+								</p>
+							{/if}
+
+							{#if album.release_date}
+								<p class="truncate text-xs text-t-secondary">
+									{album.release_date}
+								</p>
+							{/if}
+						</div>
+
+						<div class="flex flex-col gap-2">
+							<div class="flex items-center gap-2 text-xs text-t-secondary">
+								{#if album.artists?.length}
+									<span
+										class="w-fit rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
+									>
+										{album.artists.map((a: { name: string }) => a.name).join(', ')}
+									</span>
+								{/if}
+
+								{#if album.total_tracks}
+									<span>•</span>
+									<span>
+										{album.total_tracks}
+										{album.total_tracks === 1
+											? $translationsStore.profilePage.profilePageUserSelectedSavedAlbumItemTracks.slice(
+													0,
+													-1
+												)
+											: $translationsStore.profilePage.profilePageUserSelectedSavedAlbumItemTracks}
+									</span>
+								{/if}
+							</div>
+						</div>
+
+						{#if album.external_urls?.spotify}
+							<div class="pt-1 sm:w-90">
+								<ExternalLink
+									externalLink={album.external_urls.spotify}
+									externalLinkText={$translationsStore.profilePage
+										.profilePageUserSelectedSavedAlbumOpenOnSpotify}
+									additionalClass="text-xs h-fit mt-3! w-full! sm:w-fit lg:mt-0!"
+								/>
+							</div>
+						{/if}
+					</div>
+				</div>
+			</div>
+
+			<div class="flex-1 space-y-1 overflow-y-auto p-4 lg:p-6">
+				{#each album.tracks.items as track}
+					<MusicFromAlbum {track} />
+				{/each}
+			</div>
+		</div>
+	</div>
+{/if}

@@ -6,7 +6,7 @@
 	import CarouselButton from '../general/buttons/CarouselButton.svelte';
 	import UserSavedTrackItem from './saved-tracks/UserSavedTrackItem.svelte';
 	import UserPlaylistItem from './user-playlists/UserPlaylistItem.svelte';
-	import UserSavedAlbumsItems from './saved-albums/UserSavedAlbumsItems.svelte';
+	import UserSavedAlbumItem from './saved-albums/UserSavedAlbumItem.svelte';
 
 	// Props
 	export let items: any[];
@@ -17,6 +17,9 @@
 
 	export let selectedSavedTrack: any = null;
 	export let showSelectedSavedTrackModal: boolean = false;
+
+	export let selectedSavedAlbum: any = null;
+	export let showSelectedSavedAlbumModal: boolean = false;
 
 	let carousel: HTMLDivElement;
 	let showPrevButton = false;
@@ -78,7 +81,7 @@
 			{/each}
 		{:else if itemsType === 'user-saved-albums'}
 			{#each items as item}
-				<UserSavedAlbumsItems {item} />
+				<UserSavedAlbumItem {item} bind:selectedSavedAlbum bind:showSelectedSavedAlbumModal />
 			{/each}
 		{/if}
 	</div>
