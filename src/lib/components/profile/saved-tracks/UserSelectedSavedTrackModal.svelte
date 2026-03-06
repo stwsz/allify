@@ -58,17 +58,11 @@
 							{$translationsStore.profilePage.profilePageUserSelectedSavedTrack}
 						</p>
 
-						{#if selectedSavedTrack?.explicit !== undefined}
+						{#if selectedSavedTrack.explicit}
 							<span
-								class={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${
-									selectedSavedTrack.explicit
-										? 'bg-status-error/10 text-status-error'
-										: 'bg-status-success/10 text-status-success'
-								}`}
+								class="inline-flex shrink-0 items-center rounded bg-s-muted px-1.5 py-0.5 text-[10px] font-semibold text-t-muted uppercase"
 							>
-								{selectedSavedTrack.explicit
-									? $translationsStore.profilePage.profilePageUserSelectedSavedTrackExplicit
-									: $translationsStore.profilePage.profilePageUserSelectedSavedTrackClean}
+								E
 							</span>
 						{/if}
 					</div>
@@ -96,19 +90,19 @@
 							</span>
 						{/if}
 
-						<div class="flex items-center gap-2 text-xs text-t-secondary">
-							{#if selectedSavedTrack?.album?.release_date}
-								<span>{selectedSavedTrack.album.release_date.slice(0, 4)}</span>
-							{/if}
+						{#if selectedSavedTrack?.album?.release_date && selectedSavedTrack?.duration_ms}
+							<div class="flex items-center gap-2 text-xs text-t-secondary">
+								{#if selectedSavedTrack?.album?.release_date}
+									<span>{selectedSavedTrack.album.release_date.slice(0, 4)}</span>
+								{/if}
 
-							{#if selectedSavedTrack?.album?.release_date && selectedSavedTrack?.duration_ms}
 								<span>•</span>
-							{/if}
 
-							{#if selectedSavedTrack?.duration_ms}
-								<span>{formatDuration(selectedSavedTrack.duration_ms)}</span>
-							{/if}
-						</div>
+								{#if selectedSavedTrack?.duration_ms}
+									<span>{formatDuration(selectedSavedTrack.duration_ms)}</span>
+								{/if}
+							</div>
+						{/if}
 					</div>
 
 					<div class="flex flex-col gap-2 pt-1 sm:w-90">

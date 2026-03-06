@@ -104,11 +104,7 @@
 
 							{#if playlist.public !== undefined}
 								<span
-									class={`inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${
-										playlist.public
-											? 'bg-status-success/10 text-status-success'
-											: 'bg-status-error/10 text-status-error'
-									}`}
+									class="inline-flex shrink-0 items-center rounded bg-s-muted px-1.5 py-0.5 text-[10px] font-semibold text-t-muted lowercase"
 								>
 									{playlist.public
 										? $translationsStore.profilePage.profilePageUserSelectedPlaylistModalPublic
@@ -146,8 +142,12 @@
 									<span
 										>{playlist.tracks.total}
 										{playlist.tracks.total === 1
-											? $translationsStore.profilePage.profilePageUserSelectedPlaylistModalMusics.slice(0, -1)
-											: $translationsStore.profilePage.profilePageUserSelectedPlaylistModalMusics}</span
+											? $translationsStore.profilePage.profilePageUserSelectedPlaylistModalMusics.slice(
+													0,
+													-1
+												)
+											: $translationsStore.profilePage
+													.profilePageUserSelectedPlaylistModalMusics}</span
 									>
 								{/if}
 							</div>
