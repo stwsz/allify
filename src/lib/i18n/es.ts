@@ -121,6 +121,9 @@ export const es = {
 		title: 'Perfil | Allify',
 		profilePageImageAltText: 'Foto de perfil de',
 		profilePageFollowers: 'seguidores',
+		profilePageCarouselButtonAriaLabelPrev: 'Botón anterior del carrusel',
+		profilePageCarouselButtonAriaLabelNext: 'Botón siguiente del carrusel',
+		profilePageCarouselArrowIconAltText: 'Ícono de flecha del carrusel',
 		profilePageUserSavedTracksSectionHeading2: 'Canciones que te gustan',
 		profilePageUserSavedTracksSectionParagraph1:
 			'Tus canciones aparecerán aquí cuando guardes alguna.',
@@ -134,7 +137,7 @@ export const es = {
 		profilePageUserPlaylistItemBy: 'Por',
 		profilePageUserPlaylistItemMusics: 'canciones',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Cerrar modal de canción guardada',
-		profilePageUserSelectedSavedTrackTrack: 'Canción',
+		profilePageUserSelectedSavedTrack: 'Canción',
 		profilePageUserSelectedSavedTrackExplicit: 'Explícita',
 		profilePageUserSelectedSavedTrackClean: 'Limpia',
 		profilePageUserSelectedSavedTrackPopularity: 'Popularidad',
@@ -148,7 +151,12 @@ export const es = {
 		profilePageUserSelectedPlaylistModalLoadingMusics: 'Cargando canciones de la playlist...',
 		profilePageUserSelectedPlaylistModalMusicsNotFound:
 			'No se encontraron canciones en esta playlist.',
-		profilePageUserSelectedPlaylistModalAddedBy: 'Añadida por'
+		profilePageUserSelectedPlaylistModalAddedBy: 'Añadida por',
+		profilePageUserAlbumItemTracks: 'canciones',
+		profilePageUserSelectedSavedAlbumCloseButtonAriaLabel: 'Cerrar modal de álbum guardado',
+		profilePageUserSelectedSavedAlbum: 'Álbum',
+		profilePageUserSelectedSavedAlbumItemTracks: 'canciones',
+		profilePageUserSelectedSavedAlbumOpenOnSpotify: 'Abrir álbum en Spotify'
 	},
 	errorPage: {
 		title404: 'Página no encontrada | Allify',

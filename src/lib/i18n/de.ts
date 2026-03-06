@@ -121,6 +121,9 @@ export const de = {
 		title: 'Profil | Allify',
 		profilePageImageAltText: 'Profilbild von',
 		profilePageFollowers: 'Follower',
+		profilePageCarouselButtonAriaLabelPrev: 'Vorherige Karussell-Schaltfläche',
+		profilePageCarouselButtonAriaLabelNext: 'Nächste Karussell-Schaltfläche',
+		profilePageCarouselArrowIconAltText: 'Karussell-Pfeil-Symbol',
 		profilePageUserSavedTracksSectionHeading2: 'Gelikte Songs',
 		profilePageUserSavedTracksSectionParagraph1:
 			'Deine Songs erscheinen hier, sobald du welche gespeichert hast.',
@@ -134,7 +137,7 @@ export const de = {
 		profilePageUserPlaylistItemBy: 'Von',
 		profilePageUserPlaylistItemMusics: 'Songs',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Gespeicherten Track schließen',
-		profilePageUserSelectedSavedTrackTrack: 'Track',
+		profilePageUserSelectedSavedTrack: 'Track',
 		profilePageUserSelectedSavedTrackExplicit: 'Explizit',
 		profilePageUserSelectedSavedTrackClean: 'Sauber',
 		profilePageUserSelectedSavedTrackPopularity: 'Beliebtheit',
@@ -147,7 +150,12 @@ export const de = {
 		profilePageUserSelectedPlaylistModalExternalLink: 'Playlist auf Spotify ansehen',
 		profilePageUserSelectedPlaylistModalLoadingMusics: 'Playlist-Songs werden geladen...',
 		profilePageUserSelectedPlaylistModalMusicsNotFound: 'Keine Songs in dieser Playlist gefunden.',
-		profilePageUserSelectedPlaylistModalAddedBy: 'Hinzugefügt von'
+		profilePageUserSelectedPlaylistModalAddedBy: 'Hinzugefügt von',
+		profilePageUserAlbumItemTracks: 'Songs',
+		profilePageUserSelectedSavedAlbumCloseButtonAriaLabel: 'Gespeichertes Album Modal schließen',
+		profilePageUserSelectedSavedAlbum: 'Album',
+		profilePageUserSelectedSavedAlbumItemTracks: 'Songs',
+		profilePageUserSelectedSavedAlbumOpenOnSpotify: 'Album auf Spotify öffnen'
 	},
 	errorPage: {
 		title404: 'Seite nicht gefunden | Allify',

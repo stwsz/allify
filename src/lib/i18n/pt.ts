@@ -120,6 +120,9 @@ export const pt = {
 		title: 'Perfil | Allify',
 		profilePageImageAltText: 'Foto do perfil de',
 		profilePageFollowers: 'seguidores',
+		profilePageCarouselButtonAriaLabelPrev: 'Botão anterior do carrossel',
+		profilePageCarouselButtonAriaLabelNext: 'Botão próximo do carrossel',
+		profilePageCarouselArrowIconAltText: 'Ícone de seta do carrossel',
 		profilePageUserSavedTracksSectionHeading2: 'Músicas curtidas',
 		profilePageUserSavedTracksSectionParagraph1:
 			'Suas músicas vão aparecer aqui assim que você salvar alguma.',
@@ -133,7 +136,7 @@ export const pt = {
 		profilePageUserPlaylistItemBy: 'Por',
 		profilePageUserPlaylistItemMusics: 'músicas',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Fechar modal de música salva',
-		profilePageUserSelectedSavedTrackTrack: 'Música',
+		profilePageUserSelectedSavedTrack: 'Música',
 		profilePageUserSelectedSavedTrackExplicit: 'Explícita',
 		profilePageUserSelectedSavedTrackClean: 'Limpa',
 		profilePageUserSelectedSavedTrackPopularity: 'Popularidade',
@@ -146,7 +149,12 @@ export const pt = {
 		profilePageUserSelectedPlaylistModalExternalLink: 'Ver playlist no Spotify',
 		profilePageUserSelectedPlaylistModalLoadingMusics: 'Carregando músicas da playlist...',
 		profilePageUserSelectedPlaylistModalMusicsNotFound: 'Nenhuma música encontrada nesta playlist.',
-		profilePageUserSelectedPlaylistModalAddedBy: 'Adicionada por'
+		profilePageUserSelectedPlaylistModalAddedBy: 'Adicionada por',
+		profilePageUserAlbumItemTracks: 'faixas',
+		profilePageUserSelectedSavedAlbumCloseButtonAriaLabel: 'Fechar modal de álbum salvo',
+		profilePageUserSelectedSavedAlbum: 'Álbum',
+		profilePageUserSelectedSavedAlbumItemTracks: 'faixas',
+		profilePageUserSelectedSavedAlbumOpenOnSpotify: 'Abrir álbum no Spotify'
 	},
 	errorPage: {
 		title404: 'Página não encontrada | Allify',

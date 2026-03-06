@@ -121,6 +121,9 @@ export const en = {
 		title: 'Profile | Allify',
 		profilePageImageAltText: 'Profile picture of',
 		profilePageFollowers: 'followers',
+		profilePageCarouselButtonAriaLabelPrev: 'Previous carousel button',
+		profilePageCarouselButtonAriaLabelNext: 'Next carousel button',
+		profilePageCarouselArrowIconAltText: 'Carousel arrow icon',
 		profilePageUserSavedTracksSectionHeading2: 'Liked songs',
 		profilePageUserSavedTracksSectionParagraph1: 'Your songs will appear here once you save some.',
 		profilePageUserPlaylistsSectionHeading2: 'Your playlists',
@@ -132,7 +135,7 @@ export const en = {
 		profilePageUserPlaylistItemBy: 'By',
 		profilePageUserPlaylistItemMusics: 'songs',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Close saved track modal',
-		profilePageUserSelectedSavedTrackTrack: 'Track',
+		profilePageUserSelectedSavedTrack: 'Track',
 		profilePageUserSelectedSavedTrackExplicit: 'Explicit',
 		profilePageUserSelectedSavedTrackClean: 'Clean',
 		profilePageUserSelectedSavedTrackPopularity: 'Popularity',
@@ -145,7 +148,12 @@ export const en = {
 		profilePageUserSelectedPlaylistModalExternalLink: 'View playlist on Spotify',
 		profilePageUserSelectedPlaylistModalLoadingMusics: 'Loading playlist songs...',
 		profilePageUserSelectedPlaylistModalMusicsNotFound: 'No songs found in this playlist.',
-		profilePageUserSelectedPlaylistModalAddedBy: 'Added by'
+		profilePageUserSelectedPlaylistModalAddedBy: 'Added by',
+		profilePageUserAlbumItemTracks: 'songs',
+		profilePageUserSelectedSavedAlbumCloseButtonAriaLabel: 'Close saved album modal',
+		profilePageUserSelectedSavedAlbum: 'Album',
+		profilePageUserSelectedSavedAlbumItemTracks: 'songs',
+		profilePageUserSelectedSavedAlbumOpenOnSpotify: 'Open album on Spotify'
 	},
 	errorPage: {
 		title404: 'Page not found | Allify',
