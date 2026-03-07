@@ -65,7 +65,8 @@ export const en = {
 		notLoggedLoginLinkDeezer: 'Log in with Deezer',
 		disabledDeezerFunctionalityText: 'Deezer connection currently unavailable',
 		loginWith: 'Log in with ',
-		seeOnSpotify: 'See on Spotify'
+		seeOnSpotify: 'See on Spotify',
+		popularity: 'Popularity'
 	},
 	homePage: {
 		title: 'All about your music, connected in one place | Allify',
@@ -108,8 +109,6 @@ export const en = {
 		myMusicalProfilePageMostListenedTracks: 'Most listened',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'followers',
 		myMusicalProfilePageMostListenedTracksHeading2: 'Your most listened tracks',
-		myMusicalProfilePageMostListenedArtistsPopularity: 'Popularity',
-		myMusicalProfilePageMostListenedTracksPopularity: 'Popularity'
 	},
 	discoveriesPage: {
 		title: 'Music Discoveries | Allify'
@@ -138,7 +137,6 @@ export const en = {
 		profilePageUserSelectedSavedTrack: 'Track',
 		profilePageUserSelectedSavedTrackExplicit: 'Explicit',
 		profilePageUserSelectedSavedTrackClean: 'Clean',
-		profilePageUserSelectedSavedTrackPopularity: 'Popularity',
 		profilePageUserSelectedSavedTrackOpenOnSpotify: 'Open on Spotify',
 		profilePageUserSelectedPlaylistCloseButtonAriaLabel: 'Close playlist modal',
 		profilePageUserSelectedPlaylistModalPublic: 'Public',

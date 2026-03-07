@@ -4,6 +4,7 @@
 
 	// Components
 	import ExternalLink from '../../general/ExternalLink.svelte';
+	import Popularity from '$lib/components/general/Popularity.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -63,22 +64,7 @@
 	</div>
 
 	<div class="flex flex-col gap-4 sm:items-start">
-		<div class="flex items-center gap-2">
-			<span class="text-sm text-t-secondary">
-				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsPopularity}
-			</span>
-
-			<div class="h-2 w-32 overflow-hidden rounded-full bg-s-muted">
-				<div
-					class="h-full bg-brand-primary"
-					style="width: {mostListenedArtistItem?.popularity || 0}%"
-				></div>
-			</div>
-
-			<span class="text-sm font-medium text-t-primary">
-				{mostListenedArtistItem?.popularity}%
-			</span>
-		</div>
+		<Popularity item={mostListenedArtistItem} />
 
 		<ExternalLink
 			additionalClass="w-full"
