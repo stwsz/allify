@@ -78,32 +78,32 @@
 							/>
 						</picture>
 
-						<div class="flex min-w-0 flex-col gap-5">
-							<div class="space-y-2">
-								<p class="text-sm font-medium text-t-secondary">
+						<div class="flex min-w-0 flex-col gap-4">
+							<div class="space-y-1.5">
+								<p class="text-xs font-medium text-t-secondary">
 									#{i + 1}
 									{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracks}
 								</p>
 
-								<p class="text-t-primary9 truncate text-3xl font-semibold">
+								<p class="text-2xl leading-tight font-semibold text-t-primary">
 									{track.name}
 								</p>
 
-								<p class="truncate text-sm text-t-secondary">
+								<p class="truncate text-xs text-t-secondary">
 									{track.artists.map((a: any) => a.name).join(', ')}
 								</p>
 							</div>
 
 							<div class="flex flex-wrap gap-2">
 								<span
-									class="rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
+									class="rounded-md bg-brand-primary px-3 py-1 text-[10px] font-medium text-t-inverse"
 								>
 									{track.album.name}
 								</span>
 							</div>
 						</div>
 
-						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:w-70 sm:items-start">
+						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:items-start md:w-70">
 							<Popularity item={track} />
 
 							<ExternalLink

@@ -96,7 +96,7 @@
 						/>
 					{/if}
 
-					<div class="flex min-w-0 flex-1 flex-col gap-1 sm:gap-2.5">
+					<div class="flex min-w-0 flex-1 flex-col gap-3">
 						<div class="flex items-center gap-2">
 							<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">
 								{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalParagraph1}

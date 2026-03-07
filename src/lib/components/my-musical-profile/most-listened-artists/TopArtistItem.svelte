@@ -39,24 +39,26 @@
 
 	<div class="flex flex-col gap-6">
 		<div class="space-y-2">
-			<p class="text-3xl font-medium text-t-secondary">
+			<p class="text-sm font-medium text-t-secondary sm:text-base 2xl:text-lg">
 				#{index + 1}
 				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtists}
 			</p>
 
-			<p class="text-t-primary9 text-7xl font-semibold">
+			<p class="text-3xl font-semibold text-t-primary sm:text-4xl 2xl:text-5xl">
 				{mostListenedArtistItem.name}
 			</p>
 
-			<p class="text-t-secondary">
+			<p class="text-sm text-t-secondary sm:text-base">
 				{mostListenedArtistItem.followers.total.toLocaleString()}
 				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsFollowers}
 			</p>
 		</div>
 
-		<div class="flex flex-wrap gap-3">
+		<div class="flex flex-wrap gap-2">
 			{#each mostListenedArtistItem.genres as genre}
-				<span class="rounded-md bg-brand-primary px-4 py-1.5 text-xs font-medium text-t-inverse">
+				<span
+					class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
+				>
 					{genre}
 				</span>
 			{/each}

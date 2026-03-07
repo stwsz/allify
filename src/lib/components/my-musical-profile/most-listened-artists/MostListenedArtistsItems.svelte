@@ -81,17 +81,17 @@
 						</picture>
 
 						<div class="flex min-w-0 flex-col gap-5">
-							<div class="space-y-2">
-								<p class="text-sm font-medium text-t-secondary">
+							<div class="space-y-1.5">
+								<p class="text-xs font-medium text-t-secondary">
 									#{i + 1}
 									{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtists}
 								</p>
 
-								<p class="text-t-primary9 truncate text-3xl font-semibold">
+								<p class="text-2xl leading-tight font-semibold text-t-primary">
 									{artist.name}
 								</p>
 
-								<p class="text-sm text-t-secondary">
+								<p class="text-xs text-t-secondary">
 									{artist.followers.total.toLocaleString()}
 									{$translationsStore.myMusicalProfilePage
 										.myMusicalProfilePageMostListenedArtistsFollowers}
@@ -101,7 +101,7 @@
 							<div class="flex flex-wrap gap-2">
 								{#each artist.genres.slice(0, 2) as genre}
 									<span
-										class="rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
+										class="rounded-md bg-brand-primary px-3 py-1 text-[10px] font-medium text-t-inverse"
 									>
 										{genre}
 									</span>
@@ -109,7 +109,7 @@
 							</div>
 						</div>
 
-						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:w-70 sm:items-start">
+						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:items-start md:w-70">
 							<Popularity item={artist} />
 
 							<ExternalLinkSpotify

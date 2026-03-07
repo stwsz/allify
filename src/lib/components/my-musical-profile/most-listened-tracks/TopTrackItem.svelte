@@ -39,22 +39,24 @@
 
 	<div class="flex flex-col gap-6">
 		<div class="space-y-2">
-			<p class="text-3xl font-medium text-t-secondary">
+			<p class="text-sm font-medium text-t-secondary sm:text-base 2xl:text-lg">
 				#{index + 1}
 				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracks}
 			</p>
 
-			<p class="text-7xl font-semibold text-t-primary">
+			<p class="text-3xl leading-tight font-semibold text-t-primary sm:text-4xl 2xl:text-5xl">
 				{mostListenedTrackItem.name}
 			</p>
 
-			<p class="text-t-secondary">
+			<p class="text-sm text-t-secondary sm:text-base">
 				{mostListenedTrackItem.artists.map((a: any) => a.name).join(', ')}
 			</p>
 		</div>
 
-		<div class="flex flex-wrap gap-3">
-			<span class="rounded-md bg-brand-primary px-4 py-1.5 text-xs font-medium text-t-inverse">
+		<div class="flex flex-wrap gap-2">
+			<span
+				class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
+			>
 				{mostListenedTrackItem.album.name}
 			</span>
 		</div>
