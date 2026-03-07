@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Components
-	import ExternalLink from '$lib/components/general/ExternalLink.svelte';
+	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -55,6 +55,6 @@
 		streamingPlatform="spotify"
 		externalLink={userInfo.external_urls.spotify}
 		externalLinkText={$translationsStore.profilePage.profilePageExternalLinkSpotify}
-		additionalClass="h-fit w-full sm:w-fit"
+		additionalClass="w-full sm:w-70"
 	/>
 </div>

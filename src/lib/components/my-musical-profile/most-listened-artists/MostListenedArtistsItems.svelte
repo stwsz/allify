@@ -7,7 +7,8 @@
 
 	// Components
 	import TopArtistItem from './TopArtistItem.svelte';
-	import ExternalLink from '../../general/ExternalLink.svelte';
+	import ExternalLinkSpotify from '../../general/ExternalLinkSpotify.svelte';
+	import Popularity from '$lib/components/general/Popularity.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -108,27 +109,11 @@
 							</div>
 						</div>
 
-						<div class="col-span-2 flex flex-col gap-2 sm:col-span-1 sm:items-start">
-							<div class="flex items-center gap-1.5">
-								<span class="text-xs text-t-secondary">
-									{$translationsStore.myMusicalProfilePage
-										.myMusicalProfilePageMostListenedArtistsPopularity}
-								</span>
+						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:w-70 sm:items-start">
+							<Popularity item={artist} />
 
-								<div class="h-1.5 w-20 overflow-hidden rounded-full bg-s-muted">
-									<div
-										class="h-full bg-brand-primary"
-										style="width: {artist?.popularity || 0}%"
-									></div>
-								</div>
-
-								<span class="text-xs font-medium text-t-primary">
-									{artist?.popularity}%
-								</span>
-							</div>
-
-							<ExternalLink
-								additionalClass="w-full"
+							<ExternalLinkSpotify
+								additionalClass="w-full mt-2"
 								streamingPlatform="spotify"
 								externalLink={artist.external_urls.spotify}
 								externalLinkText={$translationsStore.generalTexts.seeOnSpotify}

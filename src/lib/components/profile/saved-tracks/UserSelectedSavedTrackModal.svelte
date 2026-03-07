@@ -3,7 +3,8 @@
 	import CloseIcon from '$lib/assets/images/icons/CloseIcon.svelte';
 
 	// Components
-	import ExternalLink from '$lib/components/general/ExternalLink.svelte';
+	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
+	import Popularity from '$lib/components/general/Popularity.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -106,30 +107,14 @@
 					</div>
 
 					<div class="flex flex-col gap-2 pt-1 sm:w-90">
-						{#if selectedSavedTrack?.popularity !== undefined}
-							<div class="flex w-full items-center gap-4">
-								<span class="w-20 shrink-0 text-xs text-t-secondary"
-									>{$translationsStore.profilePage
-										.profilePageUserSelectedSavedTrackPopularity}</span
-								>
-								<div class="h-1.5 flex-1 overflow-hidden rounded-full bg-s-muted">
-									<div
-										class="h-full bg-brand-primary transition-all"
-										style="width: {selectedSavedTrack.popularity}%"
-									></div>
-								</div>
-								<span class="w-8 shrink-0 text-right text-xs font-semibold text-t-primary">
-									{selectedSavedTrack.popularity}%
-								</span>
-							</div>
-						{/if}
+						<Popularity item={selectedSavedTrack} />
 
 						{#if selectedSavedTrack?.external_urls?.spotify}
 							<ExternalLink
 								externalLink={selectedSavedTrack.external_urls.spotify}
 								externalLinkText={$translationsStore.profilePage
 									.profilePageUserSelectedSavedTrackOpenOnSpotify}
-								additionalClass="text-xs h-fit mt-3! w-full! sm:w-fit"
+								additionalClass="w-full mt-2"
 							/>
 						{/if}
 					</div>
