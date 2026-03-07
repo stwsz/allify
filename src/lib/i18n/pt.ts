@@ -107,7 +107,7 @@ export const pt = {
 		myMusicalProfilePageMostListenedArtists: 'Mais ouvido',
 		myMusicalProfilePageMostListenedTracks: 'Mais ouvida',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'seguidores',
-		myMusicalProfilePageMostListenedTracksHeading2: 'Suas músicas mais ouvidas',
+		myMusicalProfilePageMostListenedTracksHeading2: 'Suas músicas mais ouvidas'
 	},
 	discoveriesPage: {
 		title: 'Descobertas Musicais | Allify'

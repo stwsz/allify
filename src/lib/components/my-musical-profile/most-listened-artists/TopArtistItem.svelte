@@ -3,7 +3,7 @@
 	import CrownIcon from '$lib/assets/images/icons/CrownIcon.svelte';
 
 	// Components
-	import ExternalLink from '../../general/ExternalLink.svelte';
+	import ExternalLinkSpotify from '../../general/ExternalLinkSpotify.svelte';
 	import Popularity from '$lib/components/general/Popularity.svelte';
 
 	// Stores
@@ -63,11 +63,11 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col gap-4 sm:items-start">
+	<div class="flex w-full flex-col gap-4 sm:w-70 sm:items-start">
 		<Popularity item={mostListenedArtistItem} />
 
-		<ExternalLink
-			additionalClass="w-full"
+		<ExternalLinkSpotify
+			additionalClass="w-full mt-2"
 			streamingPlatform="spotify"
 			externalLink={mostListenedArtistItem.external_urls.spotify}
 			externalLinkText={$translationsStore.generalTexts.seeOnSpotify}

@@ -3,7 +3,7 @@
 	import CloseIcon from '$lib/assets/images/icons/CloseIcon.svelte';
 
 	// Components
-	import ExternalLink from '$lib/components/general/ExternalLink.svelte';
+	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
 	import Popularity from '$lib/components/general/Popularity.svelte';
 
 	// Stores
@@ -114,7 +114,7 @@
 								externalLink={selectedSavedTrack.external_urls.spotify}
 								externalLinkText={$translationsStore.profilePage
 									.profilePageUserSelectedSavedTrackOpenOnSpotify}
-								additionalClass="text-xs h-fit mt-3! w-full! sm:w-fit"
+								additionalClass="w-full mt-2"
 							/>
 						{/if}
 					</div>

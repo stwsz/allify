@@ -7,7 +7,7 @@
 
 	// Components
 	import TopTrackItem from './TopTrackItem.svelte';
-	import ExternalLink from '../../general/ExternalLink.svelte';
+	import ExternalLink from '../../general/ExternalLinkSpotify.svelte';
 	import Popularity from '$lib/components/general/Popularity.svelte';
 
 	// Stores
@@ -103,11 +103,11 @@
 							</div>
 						</div>
 
-						<div class="col-span-2 flex flex-col gap-2 sm:col-span-1 sm:items-start">
+						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:w-70 sm:items-start">
 							<Popularity item={track} />
 
 							<ExternalLink
-								additionalClass="w-full"
+								additionalClass="w-full mt-2"
 								streamingPlatform="spotify"
 								externalLink={track.external_urls.spotify}
 								externalLinkText={$translationsStore.generalTexts.seeOnSpotify}

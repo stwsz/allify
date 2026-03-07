@@ -3,7 +3,7 @@
 	import CloseIcon from '$lib/assets/images/icons/CloseIcon.svelte';
 
 	// Components
-	import ExternalLink from '$lib/components/general/ExternalLink.svelte';
+	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
 	import MusicFromPlaylist from './MusicFromPlaylist.svelte';
 
 	// Stores
@@ -154,14 +154,12 @@
 						</div>
 
 						{#if playlist.external_urls?.spotify}
-							<div class="pt-1 sm:w-90">
-								<ExternalLink
-									externalLink={playlist.external_urls.spotify}
-									externalLinkText={$translationsStore.profilePage
-										.profilePageUserSelectedPlaylistModalExternalLink}
-									additionalClass="text-xs mt-2! h-fit w-full! sm:w-fit"
-								/>
-							</div>
+							<ExternalLink
+								externalLink={playlist.external_urls.spotify}
+								externalLinkText={$translationsStore.profilePage
+									.profilePageUserSelectedPlaylistModalExternalLink}
+								additionalClass="w-full mt-2 sm:w-70"
+							/>
 						{/if}
 					</div>
 				</div>
