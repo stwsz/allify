@@ -65,7 +65,7 @@
 
 							{#if album.release_date}
 								<p class="truncate text-xs text-t-secondary">
-									{album.release_date}
+									{new Date(album.release_date).toLocaleDateString($translationsStore.locale)}
 								</p>
 							{/if}
 						</div>

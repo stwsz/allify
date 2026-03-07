@@ -85,7 +85,7 @@
 			<p class="mt-1 text-[11px] text-t-muted">
 				{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalAddedBy}
 				{userName} •{' '}
-				{new Date(music.added_at).toLocaleDateString()}
+				{new Date(music.added_at).toLocaleDateString($translationsStore.locale)}
 			</p>
 		{/if}
 	</div>
