@@ -58,13 +58,13 @@
 
 						<div class="flex flex-col gap-1">
 							{#if album.name}
-								<p class="truncate text-xl font-bold text-t-primary sm:text-3xl">
+								<p class="text-xl font-bold text-t-primary sm:text-2xl">
 									{album.name}
 								</p>
 							{/if}
 
 							{#if album.release_date}
-								<p class="truncate text-xs text-t-secondary">
+								<p class="text-xs text-t-secondary">
 									{new Date(album.release_date).toLocaleDateString($translationsStore.locale)}
 								</p>
 							{/if}

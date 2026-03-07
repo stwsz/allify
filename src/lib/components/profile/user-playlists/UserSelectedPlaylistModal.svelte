@@ -115,13 +115,13 @@
 
 						<div class="flex flex-col gap-1">
 							{#if playlist.name}
-								<p class="truncate text-xl font-bold text-t-primary sm:text-3xl">
+								<p class="text-xl font-bold text-t-primary sm:text-2xl">
 									{playlist.name}
 								</p>
 							{/if}
 
 							{#if playlist.description}
-								<p class="truncate text-sm text-t-secondary">
+								<p class="text-sm text-t-secondary">
 									{playlist.description}
 								</p>
 							{/if}

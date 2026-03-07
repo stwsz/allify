@@ -70,13 +70,13 @@
 
 					<div class="flex flex-col gap-1">
 						{#if selectedSavedTrack?.name}
-							<p class="truncate text-xl font-bold text-t-primary sm:text-3xl">
+							<p class="text-xl font-bold text-t-primary sm:text-2xl">
 								{selectedSavedTrack.name}
 							</p>
 						{/if}
 
 						{#if selectedSavedTrack?.artists?.length}
-							<p class="truncate text-sm text-t-secondary">
+							<p class="text-sm text-t-secondary">
 								{selectedSavedTrack.artists.map((a: any) => a.name).join(', ')}
 							</p>
 						{/if}
