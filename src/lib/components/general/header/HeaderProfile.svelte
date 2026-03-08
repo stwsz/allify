@@ -45,19 +45,41 @@
 	}}
 >
 	{#if loggedIn}
-		<img
-			class={`
-				h-${$meStore?.images[0]?.height}
-				w-${$meStore?.images[0]?.width}
-				rounded-full
-				border
-				object-cover
-				p-1
-				text-brand-primary
-			`}
-			src={$meStore?.images[1]?.url}
-			alt={$meStore?.display_name}
-		/>
+		{#if $meStore?.images[0]}
+			<img
+				class={`
+					h-${$meStore?.images[0]?.height}
+					w-${$meStore?.images[0]?.width}
+					rounded-full
+					border
+					object-cover
+					p-1
+					text-brand-primary
+				`}
+				src={$meStore?.images[0]?.url}
+				alt={$meStore?.display_name}
+			/>
+		{:else}
+			<div
+				class="
+					flex
+					h-9/12
+					w-9/12
+					items-center
+					justify-center
+					rounded-full
+					border
+					object-cover
+					p-1
+					font-medium
+					text-brand-primary
+					pt-1
+				"
+				aria-label={$meStore?.display_name}
+			>
+				{$meStore?.display_name.slice(0, 1)}
+			</div>
+		{/if}
 	{:else}
 		<ProfileIcon
 			iconSvgClass="

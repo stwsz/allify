@@ -55,6 +55,7 @@
 						after:ease-out
 						hover:text-brand-primary-dark
 						hover:after:w-full
+						cursor-pointer
 						{$page.url.pathname === item.link
 						? 'font-semibold text-brand-primary-dark after:w-full'
 						: 'text-brand-primary'}
