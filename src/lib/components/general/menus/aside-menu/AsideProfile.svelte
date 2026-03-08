@@ -54,20 +54,42 @@
 			aria-label="Toggle profile items"
 		>
 			{#if loggedIn}
-				<img
-					class="
-						h-10
-						w-10
-						rounded-full
-						border
-						border-b-default
-						object-cover
-						sm:h-11
-						sm:w-11
-					"
-					src={$meStore?.images[1]?.url}
-					alt={$meStore?.display_name}
-				/>
+				{#if !$meStore?.images[0]}
+					<img
+						class="
+							h-10
+							w-10
+							rounded-full
+							border
+							border-b-default
+							object-cover
+							sm:h-11
+							sm:w-11
+						"
+						src={$meStore?.images[0]?.url}
+						alt={$meStore?.display_name}
+					/>
+				{:else}
+					<div
+						class="
+							flex
+							h-10
+							w-10
+							items-center
+							justify-center
+							rounded-full
+							border
+							object-cover
+							p-1
+							font-medium
+							text-brand-primary
+							pt-1
+						"
+						aria-label={$meStore?.display_name}
+					>
+						{$meStore?.display_name.slice(0, 1)}
+					</div>
+				{/if}
 
 				<div class="min-w-0 flex-1 text-left">
 					<p class="text-sm leading-tight font-semibold text-t-primary">
