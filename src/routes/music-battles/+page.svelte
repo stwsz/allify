@@ -12,6 +12,8 @@
 </svelte:head>
 
 {#if $meStore !== undefined}
+	<h1>Music battles generic heading</h1>
+{:else}
 	<NotLogged
 		notLoggedParagraph={$translationsStore.generalTexts.notLoggedMyMusicProfileParagraph1}
 	/>
