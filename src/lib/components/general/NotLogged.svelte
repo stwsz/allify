@@ -49,6 +49,7 @@
 			<h2 class="mb-3 text-2xl font-medium text-t-primary sm:text-3xl lg:text-4xl">
 				{$translationsStore.generalTexts.notLoggedHeading1}
 			</h2>
+
 			<p class="mt-7 text-base text-t-secondary sm:text-lg">
 				{notLoggedParagraph}
 			</p>
