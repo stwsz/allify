@@ -46,7 +46,7 @@
 
 						isAsideMenuOpen = false;
 					}}
-					class="flex w-full items-center cursor-pointer px-3 py-2 text-xs text-t-primary transition-all hover:translate-x-0.5"
+					class="flex w-full cursor-pointer items-center px-3 py-2 text-xs text-t-primary transition-all hover:translate-x-0.5"
 				>
 					{item.text}
 				</button>

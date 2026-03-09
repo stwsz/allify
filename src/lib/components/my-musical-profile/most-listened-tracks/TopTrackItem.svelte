@@ -25,10 +25,10 @@
 			<img
 				src={mostListenedTrackItem.album.images[1]?.url}
 				srcset="
-					{mostListenedTrackItem.album.images[2]?.url} 160w,
-					{mostListenedTrackItem.album.images[1]?.url} 320w,
-					{mostListenedTrackItem.album.images[0]?.url} 640w
-				"
+						{mostListenedTrackItem.album.images[2]?.url} 160w,
+						{mostListenedTrackItem.album.images[1]?.url} 320w,
+						{mostListenedTrackItem.album.images[0]?.url} 640w
+					"
 				sizes="(max-width: 640px) 160px, (max-width: 1024px) 176px, 192px"
 				alt={mostListenedTrackItem.name}
 				class="h-40 w-40 rounded-lg object-cover shadow-lg sm:h-44 sm:w-44 lg:h-60 lg:w-60"
@@ -44,22 +44,28 @@
 				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracks}
 			</p>
 
-			<p class="text-3xl leading-tight font-semibold text-t-primary sm:text-4xl 2xl:text-5xl">
-				{mostListenedTrackItem.name}
-			</p>
+			{#if mostListenedTrackItem.name}
+				<p class="text-3xl leading-tight font-semibold text-t-primary sm:text-4xl 2xl:text-5xl">
+					{mostListenedTrackItem.name}
+				</p>
+			{/if}
 
-			<p class="text-sm text-t-secondary sm:text-base">
-				{mostListenedTrackItem.artists.map((a: any) => a.name).join(', ')}
-			</p>
+			{#if mostListenedTrackItem.artists}
+				<p class="text-sm text-t-secondary sm:text-base">
+					{mostListenedTrackItem.artists.map((a: any) => a.name).join(', ')}
+				</p>
+			{/if}
 		</div>
 
-		<div class="flex flex-wrap gap-2">
-			<span
-				class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
-			>
-				{mostListenedTrackItem.album.name}
-			</span>
-		</div>
+		{#if mostListenedTrackItem.album.name}
+			<div class="flex flex-wrap gap-2">
+				<span
+					class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
+				>
+					{mostListenedTrackItem.album.name}
+				</span>
+			</div>
+		{/if}
 	</div>
 
 	<div class="flex w-full flex-col gap-4 sm:w-68 sm:items-start">

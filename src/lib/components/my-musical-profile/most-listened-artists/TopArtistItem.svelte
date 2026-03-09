@@ -25,10 +25,10 @@
 			<img
 				src={mostListenedArtistItem.images[1]?.url}
 				srcset="
-					{mostListenedArtistItem.images[2]?.url} 160w,
-					{mostListenedArtistItem.images[1]?.url} 320w,
-					{mostListenedArtistItem.images[0]?.url} 640w
-				"
+						{mostListenedArtistItem.images[2]?.url} 160w,
+						{mostListenedArtistItem.images[1]?.url} 320w,
+						{mostListenedArtistItem.images[0]?.url} 640w
+					"
 				sizes="(max-width: 640px) 160px, (max-width: 1024px) 176px, 192px"
 				alt={mostListenedArtistItem.name}
 				class="h-40 w-40 rounded-lg object-cover shadow-lg sm:h-44 sm:w-44 lg:h-60 lg:w-60"
@@ -44,25 +44,31 @@
 				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtists}
 			</p>
 
-			<p class="text-3xl font-semibold text-t-primary sm:text-4xl 2xl:text-5xl">
-				{mostListenedArtistItem.name}
-			</p>
+			{#if mostListenedArtistItem.name}
+				<p class="text-3xl font-semibold text-t-primary sm:text-4xl 2xl:text-5xl">
+					{mostListenedArtistItem.name}
+				</p>
+			{/if}
 
-			<p class="text-sm text-t-secondary sm:text-base">
-				{mostListenedArtistItem.followers.total.toLocaleString()}
-				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsFollowers}
-			</p>
+			{#if mostListenedArtistItem.followers.total}
+				<p class="text-sm text-t-secondary sm:text-base">
+					{mostListenedArtistItem.followers.total.toLocaleString()}
+					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsFollowers}
+				</p>
+			{/if}
 		</div>
 
-		<div class="flex flex-wrap gap-2">
-			{#each mostListenedArtistItem.genres as genre}
-				<span
-					class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
-				>
-					{genre}
-				</span>
-			{/each}
-		</div>
+		{#if mostListenedArtistItem.genres}
+			<div class="flex flex-wrap gap-2">
+				{#each mostListenedArtistItem.genres as genre}
+					<span
+						class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
+					>
+						{genre}
+					</span>
+				{/each}
+			</div>
+		{/if}
 	</div>
 
 	<div class="flex w-full flex-col gap-4 sm:w-70 sm:items-start">

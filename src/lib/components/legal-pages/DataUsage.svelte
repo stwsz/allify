@@ -1,4 +1,5 @@
 <script lang="ts">
+	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 </script>
 

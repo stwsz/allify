@@ -69,10 +69,10 @@
 							<img
 								src={artist.images[1]?.url}
 								srcset="
-				{artist.images[2]?.url} 160w,
-				{artist.images[1]?.url} 320w,
-				{artist.images[0]?.url} 640w
-			"
+					{artist.images[2]?.url} 160w,
+					{artist.images[1]?.url} 320w,
+					{artist.images[0]?.url} 640w
+				"
 								sizes="96px"
 								alt={artist.name}
 								class="h-20 w-20 rounded-lg object-cover shadow-md sm:h-36 sm:w-36 lg:h-42 lg:w-42"
@@ -87,26 +87,32 @@
 									{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtists}
 								</p>
 
-								<p class="text-2xl leading-tight font-semibold text-t-primary">
-									{artist.name}
-								</p>
+								{#if artist.name}
+									<p class="text-2xl leading-tight font-semibold text-t-primary">
+										{artist.name}
+									</p>
+								{/if}
 
-								<p class="text-xs text-t-secondary">
-									{artist.followers.total.toLocaleString()}
-									{$translationsStore.myMusicalProfilePage
-										.myMusicalProfilePageMostListenedArtistsFollowers}
-								</p>
+								{#if artist.followers.total}
+									<p class="text-xs text-t-secondary">
+										{artist.followers.total.toLocaleString()}
+										{$translationsStore.myMusicalProfilePage
+											.myMusicalProfilePageMostListenedArtistsFollowers}
+									</p>
+								{/if}
 							</div>
 
-							<div class="flex flex-wrap gap-2">
-								{#each artist.genres.slice(0, 2) as genre}
-									<span
-										class="rounded-md bg-brand-primary px-3 py-1 text-[10px] font-medium text-t-inverse"
-									>
-										{genre}
-									</span>
-								{/each}
-							</div>
+							{#if artist.genres}
+								<div class="flex flex-wrap gap-2">
+									{#each artist.genres.slice(0, 2) as genre}
+										<span
+											class="rounded-md bg-brand-primary px-3 py-1 text-[10px] font-medium text-t-inverse"
+										>
+											{genre}
+										</span>
+									{/each}
+								</div>
+							{/if}
 						</div>
 
 						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:items-start md:w-70">
