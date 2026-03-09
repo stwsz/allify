@@ -18,36 +18,59 @@
 		sm:flex-row sm:text-left lg:gap-12"
 	>
 		<div class="relative w-fit">
-			<img
-				src={userInfo.images[0].url}
-				class="h-24 w-24 rounded-full border-4 border-brand-primary object-cover
-				sm:h-32 sm:w-32 lg:h-42 lg:w-42"
-				alt={`${$translationsStore.profilePage.profilePageImageAltText} ${userInfo.display_name}`}
-				decoding="async"
-				fetchpriority="high"
-				loading="eager"
-			/>
+			{#if userInfo.images[0].url}
+				<img
+					src={userInfo.images[0].url}
+					class="h-24 w-24 rounded-full border-4 border-brand-primary object-cover
+					sm:h-32 sm:w-32 lg:h-36 lg:w-36"
+					alt={`${$translationsStore.profilePage.profilePageImageAltText} ${userInfo.display_name}`}
+					decoding="async"
+					fetchpriority="high"
+					loading="eager"
+				/>
+			{:else if userInfo?.display_name}
+				<div
+					class="
+							flex h-24 w-24 items-center justify-center rounded-full border-4 border-brand-primary sm:h-32 sm:w-32 lg:h-36 lg:w-36
+						"
+					aria-label={userInfo?.display_name}
+				>
+					<p
+						class="flex h-18 w-18 items-center justify-center rounded-full border-2 border-brand-primary text-xl font-medium text-brand-primary lg:h-24 lg:w-24 lg:text-3xl"
+					>
+						{userInfo?.display_name.slice(0, 1)}
+					</p>
+				</div>
+			{/if}
 
-			<span
-				class="absolute right-0.5 bottom-0.5 rounded-full bg-brand-primary px-2 py-0.5 text-xs font-semibold text-white"
-			>
-				{userInfo.country}
-			</span>
+			{#if userInfo.country}
+				<span
+					class="absolute right-0.5 bottom-0.5 rounded-full bg-brand-primary px-2 py-0.5 text-xs font-semibold text-white"
+				>
+					{userInfo.country}
+				</span>
+			{/if}
 		</div>
 
 		<div class="flex flex-col justify-center gap-2 text-t-primary">
-			<h1 class="mb-1.5! text-2xl font-semibold sm:text-3xl">
-				{userInfo.display_name}
-			</h1>
+			{#if userInfo.display_name}
+				<h1 class="mb-1.5! text-2xl font-semibold sm:text-3xl">
+					{userInfo.display_name}
+				</h1>
+			{/if}
 
-			<p class="text-sm font-medium break-all lg:text-base">
-				{userInfo.email}
-			</p>
+			{#if userInfo.email}
+				<p class="text-sm font-medium break-all lg:text-base">
+					{userInfo.email}
+				</p>
+			{/if}
 
-			<p class="text-xs font-medium sm:text-sm">
-				{userInfo.followers.total}
-				{$translationsStore.profilePage.profilePageFollowers}
-			</p>
+			{#if userInfo.followers.total}
+				<p class="text-xs font-medium sm:text-sm">
+					{userInfo.followers.total}
+					{$translationsStore.profilePage.profilePageFollowers}
+				</p>
+			{/if}
 		</div>
 	</div>
 

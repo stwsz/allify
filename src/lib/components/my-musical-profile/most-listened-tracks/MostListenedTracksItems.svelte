@@ -67,10 +67,10 @@
 							<img
 								src={track.album.images[1]?.url}
 								srcset="
-				{track.album.images[2]?.url} 160w,
-				{track.album.images[1]?.url} 320w,
-				{track.album.images[0]?.url} 640w
-			"
+					{track.album.images[2]?.url} 160w,
+					{track.album.images[1]?.url} 320w,
+					{track.album.images[0]?.url} 640w
+				"
 								sizes="96px"
 								alt={track.name}
 								class="h-20 w-20 rounded-lg object-cover shadow-md sm:h-36 sm:w-36 lg:h-42 lg:w-42"
@@ -85,22 +85,28 @@
 									{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracks}
 								</p>
 
-								<p class="text-2xl leading-tight font-semibold text-t-primary">
-									{track.name}
-								</p>
+								{#if track.name}
+									<p class="text-2xl leading-tight font-semibold text-t-primary">
+										{track.name}
+									</p>
+								{/if}
 
-								<p class="truncate text-xs text-t-secondary">
-									{track.artists.map((a: any) => a.name).join(', ')}
-								</p>
+								{#if track.artists}
+									<p class="truncate text-xs text-t-secondary">
+										{track.artists.map((a: any) => a.name).join(', ')}
+									</p>
+								{/if}
 							</div>
 
-							<div class="flex flex-wrap gap-2">
-								<span
-									class="rounded-md bg-brand-primary px-3 py-1 text-[10px] font-medium text-t-inverse"
-								>
-									{track.album.name}
-								</span>
-							</div>
+							{#if track.album.name}
+								<div class="flex flex-wrap gap-2">
+									<span
+										class="rounded-md bg-brand-primary px-3 py-1 text-[10px] font-medium text-t-inverse"
+									>
+										{track.album.name}
+									</span>
+								</div>
+							{/if}
 						</div>
 
 						<div class="col-span-2 flex w-full flex-col gap-2 sm:col-span-1 sm:items-start md:w-70">

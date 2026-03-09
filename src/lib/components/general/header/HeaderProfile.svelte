@@ -71,9 +71,9 @@
 					border
 					object-cover
 					p-1
+					pt-1
 					font-medium
 					text-brand-primary
-					pt-1
 				"
 				aria-label={$meStore?.display_name}
 			>

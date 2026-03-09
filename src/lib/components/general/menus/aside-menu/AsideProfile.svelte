@@ -54,7 +54,7 @@
 			aria-label="Toggle profile items"
 		>
 			{#if loggedIn}
-				{#if !$meStore?.images[0]}
+				{#if $meStore?.images[0]}
 					<img
 						class="
 							h-10
@@ -81,9 +81,9 @@
 							border
 							object-cover
 							p-1
+							pt-1
 							font-medium
 							text-brand-primary
-							pt-1
 						"
 						aria-label={$meStore?.display_name}
 					>
