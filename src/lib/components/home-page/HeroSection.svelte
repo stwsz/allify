@@ -21,16 +21,19 @@
 			{$translationsStore.homePage.homePageHeroSectionParagraph1}
 		</p>
 
-		<enhanced:img
-			src={AlliFullBodyPointingDownwards}
-			alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
-			class="h-auto w-56 lg:hidden"
-			fetchpriority="high"
-			decoding="async"
-			width="224"
-			height="224"
-			sizes="(max-width: 1023px) 224px"
-		/>
+		<picture class="lg:hidden">
+			<enhanced:img
+				src={AlliFullBodyPointingDownwards}
+				alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
+				class="h-auto w-56"
+				width="224"
+				height="224"
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
+				sizes="224px"
+			/>
+		</picture>
 
 		<a
 			class="mt-6 w-90 max-w-90 cursor-pointer rounded-lg bg-brand-primary py-5 text-center text-sm font-medium text-t-inverse shadow-md transition-all hover:scale-105 hover:bg-brand-primary-dark"
@@ -45,14 +48,18 @@
 		</a>
 	</div>
 
-	<enhanced:img
-		src={AlliFullBodyPointing}
-		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-		class="mr-2 hidden h-auto w-105 md:mr-5 lg:block 2xl:mr-10"
-		fetchpriority="high"
-		decoding="async"
-		width="380"
-		height="380"
-		sizes="(min-width: 1536px) 380px, (min-width: 1024px) 380px, 0px"
-	/>
+	<picture class="hidden lg:block">
+		<enhanced:img
+			src={AlliFullBodyPointing}
+			alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
+			class="mr-2 h-auto w-105 md:mr-5 2xl:mr-10"
+			width="380"
+			height="380"
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
+			sizes="(min-width: 1024px) 380px, 0px"
+		/>
+	</picture>
 </section>
+
