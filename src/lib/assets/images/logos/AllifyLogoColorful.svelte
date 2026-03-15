@@ -40,7 +40,7 @@
 			return 'carnival';
 		}
 
-		return 'new-year';
+		return null;
 	}
 
 	const seasonalDecoration = resolveSeasonalDecoration();
