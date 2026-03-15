@@ -1,7 +1,49 @@
 <script lang="ts">
-	// Props
+	// Seasonal decoration imports
+	import ChristmasHatGroup from './seasonal-decorations/ChristmasHatGroup.svelte';
+	import JuninaHatGroup from './seasonal-decorations/JuninaHatGroup.svelte';
+	import HalloweenHatGroup from './seasonal-decorations/HalloweenHatGroup.svelte';
+	import CarnivalMaskGroup from './seasonal-decorations/CarnivalMaskGroup.svelte';
+	import BunnyEasterGroup from './seasonal-decorations/BunnyEasterGroup.svelte';
+	import NewYearGroup from './seasonal-decorations/NewYearGroup.svelte';
+
+	//Props
 	export let logoSvgClass = '';
 	export let logoAltText = '';
+
+	function resolveSeasonalDecoration(): string | null {
+		const today = new Date();
+		const month = today.getMonth() + 1;
+		const day = today.getDate();
+
+		if ((month === 12 && day >= 27) || (month === 1 && day <= 5)) {
+			return 'new-year';
+		}
+
+		if (month === 12 && day >= 1 && day <= 26) {
+			return 'christmas-hat';
+		}
+
+		if (month === 10 && day >= 25) {
+			return 'halloween';
+		}
+
+		if (month === 6) {
+			return 'junina-hat';
+		}
+
+		if ((month === 3 && day >= 20) || (month === 4 && day <= 20)) {
+			return 'easter';
+		}
+
+		if ((month === 2 && day >= 10) || (month === 3 && day <= 5)) {
+			return 'carnival';
+		}
+
+		return null;
+	}
+
+	const seasonalDecoration = resolveSeasonalDecoration();
 </script>
 
 <a href="/" aria-label={logoAltText} title={logoAltText}>
@@ -49,5 +91,21 @@ l35 70 -40 20 c-46 23 -150 34 -193 20z"
 
 			<path d="M1670 610 l0 -290 100 0 100 0 0 290 0 290 -100 0 -100 0 0 -290z" />
 		</g>
+
+		{#if seasonalDecoration}
+			{#if seasonalDecoration === 'christmas-hat'}
+				<ChristmasHatGroup transformGroup="scale(0.30) translate(910, 10)" />
+			{:else if seasonalDecoration === 'new-year'}
+				<NewYearGroup transformGroup="scale(0.20) translate(1300, -50)" />
+			{:else if seasonalDecoration === 'junina-hat'}
+				<JuninaHatGroup transformGroup="scale(0.30) translate(940, -29) rotate(25)" />
+			{:else if seasonalDecoration === 'easter'}
+				<BunnyEasterGroup transformGroup="scale(0.32) translate(880, 80)" />
+			{:else if seasonalDecoration === 'halloween'}
+				<HalloweenHatGroup transformGroup="scale(0.15) translate(2010, -110) rotate(35)" />
+			{:else if seasonalDecoration === 'carnival'}
+				<CarnivalMaskGroup transformGroup="scale(0.30) translate(940, -29) rotate(25)" />
+			{/if}
+		{/if}
 	</svg>
 </a>
