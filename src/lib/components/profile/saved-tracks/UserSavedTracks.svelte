@@ -28,7 +28,7 @@
 
 			const resUserSavedTracks = await reqUserSavedTracks.json();
 
-			sessionStorage.setItem('user-saved-tracks', JSON.stringify(resUserSavedTracks));
+			sessionStorage.setItem('spotify-user-saved-tracks', JSON.stringify(resUserSavedTracks));
 
 			return resUserSavedTracks;
 		} catch (error) {
@@ -37,7 +37,7 @@
 	}
 
 	onMount(async () => {
-		const userSavedTracksFromStorage = sessionStorage.getItem('user-saved-tracks');
+		const userSavedTracksFromStorage = sessionStorage.getItem('spotify-user-saved-tracks');
 
 		if (userSavedTracksFromStorage) {
 			const userSavedTracksFromStorageParsed = await JSON.parse(userSavedTracksFromStorage);

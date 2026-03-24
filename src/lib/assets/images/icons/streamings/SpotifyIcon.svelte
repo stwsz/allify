@@ -12,7 +12,7 @@
 	class={iconSvgClass}
 	aria-label={iconAltText}
 	role="img"
-	viewBox="0 0 72 72"
+	viewBox="0 0 65 65"
 	preserveAspectRatio="xMidYMid meet"
 	fill="currentColor"
 >

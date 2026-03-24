@@ -5,11 +5,11 @@
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { meStore } from '$lib/stores/me.store';
-	import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
 
 	// Utils
 	import { setTitleByStreaming } from '$lib/utils/setTitleByStreaming';
-	import { logout } from '$lib/utils/logout';
+	import { logoutSpotify } from '$lib/utils/logoutSpotify';
+	import { signInSpotify } from '$lib/utils/signInSpotify';
 
 	// Props
 	export let loggedIn: boolean;
@@ -18,13 +18,11 @@
 	$: notLoggedItems = [
 		{
 			streaming: 'spotify',
-			text: $translationsStore.generalTexts.profileNotLoggedItem1,
-			href: '/api/spotify/auth/login'
+			text: $translationsStore.generalTexts.profileNotLoggedItem1
 		},
 		{
 			streaming: 'deezer',
-			text: $translationsStore.generalTexts.profileNotLoggedItem2,
-			href: '/'
+			text: $translationsStore.generalTexts.profileNotLoggedItem2
 		}
 	];
 
@@ -35,7 +33,7 @@
 		},
 		{
 			text: $translationsStore.generalTexts.profileLoggedItem2,
-			href: '/'
+			href: '/settings'
 		}
 	];
 </script>
@@ -98,7 +96,7 @@
 					hover:bg-status-error/80
 				"
 			on:click={async () => {
-				await logout();
+				await logoutSpotify();
 
 				showProfileOptions = false;
 			}}
@@ -113,15 +111,11 @@
 						disabled={item.streaming === 'deezer'}
 						title={setTitleByStreaming(item.streaming)}
 						on:click={(e) => {
-							if ($meStore !== undefined) {
-								e.preventDefault();
+							if (item.streaming === 'spotify') {
+								signInSpotify(item.streaming, e);
+							} else {
+								return;
 							}
-
-							loadingAfterConnectionStore.set({
-								loading: true,
-								streamingPlatform: item.streaming as 'spotify' | 'deezer'
-							});
-							window.location.href = item.href;
 						}}
 						class="flex w-full cursor-pointer items-center px-3 py-2 transition-all hover:translate-x-0.5"
 					>

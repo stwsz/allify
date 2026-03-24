@@ -30,7 +30,7 @@
 				height="224"
 				loading="eager"
 				fetchpriority="high"
-				decoding="async"
+				decoding="sync"
 				sizes="224px"
 			/>
 		</picture>
@@ -57,7 +57,7 @@
 			height="380"
 			loading="eager"
 			fetchpriority="high"
-			decoding="async"
+			decoding="sync"
 			sizes="(min-width: 1024px) 380px, 0px"
 		/>
 	</picture>

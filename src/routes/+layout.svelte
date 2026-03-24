@@ -31,7 +31,18 @@
 				return;
 			}
 
-			meStore.set({ ...data, streaming: 'spotify' });
+			const spotifyData = {
+				email: data.email,
+				display_name: data.display_name,
+				country: data.country,
+				images: data.images,
+				external_urls: data.external_urls,
+				followers: data.followers,
+				type: data.type,
+				href: data.href
+			};
+
+			meStore.set({ ...spotifyData, connectedStreamings: { spotify: true, deezer: false } });
 		} catch {
 			meStore.set(undefined);
 		}

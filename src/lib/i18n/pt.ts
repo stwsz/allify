@@ -62,6 +62,10 @@ export const pt = {
 			'Para acessar as descobertas musicais, conecte-se com uma de suas plataformas de streaming favoritas.',
 		notLoggedMusicBattlesParagraph1:
 			'Para acessar as batalhas de música, conecte-se com uma de suas plataformas de streaming favoritas.',
+		notLoggedProfileParagraph1:
+			'Para acessar seu perfil, conecte-se com uma de suas plataformas de streaming favoritas.',
+		notLoggedSettingsParagraph1:
+			'Para acessar as configurações, conecte-se com uma de suas plataformas de streaming favoritas.',
 		notLoggedLoginLinkSpotify: 'Fazer login com Spotify',
 		notLoggedLoginLinkDeezer: 'Fazer login com Deezer',
 		disabledDeezerFunctionalityText: 'Conexão com Deezer atualmente indisponível',
@@ -153,6 +157,16 @@ export const pt = {
 		profilePageUserSelectedSavedAlbum: 'Álbum',
 		profilePageUserSelectedSavedAlbumItemTracks: 'faixas',
 		profilePageUserSelectedSavedAlbumOpenOnSpotify: 'Abrir álbum no Spotify'
+	},
+	settingsPage: {
+		title: 'Configurações | Allify',
+		settingsPageHeading1: 'Configurações',
+		settingsPageConnectedPlatformsSectionHeading2: 'Plataformas conectadas',
+		settingsPageConnectedPlatformsSectionParagraph1:
+			'Gerencie suas conexões com plataformas de streaming, visualize quais contas estão ativas e desconecte quando quiser.',
+		settingsPageConnectedPlatformsNotConnected: 'Não conectado',
+		settingsPageConnectedPlatformsDisconnect: 'Desconectar',
+		settingsPageConnectedPlatformsConnect: 'Conectar'
 	},
 	errorPage: {
 		title404: 'Página não encontrada | Allify',

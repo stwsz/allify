@@ -56,11 +56,15 @@ export const de = {
 		loadingComponentAriaLabel: 'Ladeanimation',
 		notLoggedHeading1: 'Sie sind nicht angemeldet',
 		notLoggedMyMusicProfileParagraph1:
-			'Um auf Ihr Musikprofil zuzugreifen, verbinden Sie sich mit einer Ihrer bevorzugten Streaming-Plattformen.',
+			'Um auf dein Musikprofil zuzugreifen, verbinde dich mit einer deiner bevorzugten Streaming-Plattformen.',
 		notLoggedDiscoveriesParagraph1:
-			'Um auf Musikentdeckungen zuzugreifen, verbinden Sie sich mit einer Ihrer bevorzugten Streaming-Plattformen.',
+			'Um auf Musikentdeckungen zuzugreifen, verbinde dich mit einer deiner bevorzugten Streaming-Plattformen.',
 		notLoggedMusicBattlesParagraph1:
-			'Um auf Musikschlachten zuzugreifen, verbinden Sie sich mit einer Ihrer bevorzugten Streaming-Plattformen.',
+			'Um auf Musikduelle zuzugreifen, verbinde dich mit einer deiner bevorzugten Streaming-Plattformen.',
+		notLoggedProfileParagraph1:
+			'Um auf dein Profil zuzugreifen, verbinde dich mit einer deiner bevorzugten Streaming-Plattformen.',
+		notLoggedSettingsParagraph1:
+			'Um auf die Einstellungen zuzugreifen, verbinde dich mit einer deiner bevorzugten Streaming-Plattformen.',
 		notLoggedLoginLinkSpotify: 'Mit Spotify anmelden',
 		notLoggedLoginLinkDeezer: 'Mit Deezer anmelden',
 		disabledDeezerFunctionalityText: 'Deezer-Verbindung derzeit nicht verfügbar',
@@ -154,6 +158,16 @@ export const de = {
 		profilePageUserSelectedSavedAlbum: 'Album',
 		profilePageUserSelectedSavedAlbumItemTracks: 'Songs',
 		profilePageUserSelectedSavedAlbumOpenOnSpotify: 'Album auf Spotify öffnen'
+	},
+	settingsPage: {
+		title: 'Einstellungen | Allify',
+		settingsPageHeading1: 'Einstellungen',
+		settingsPageConnectedPlatformsSectionHeading2: 'Verbundene Plattformen',
+		settingsPageConnectedPlatformsSectionParagraph1:
+			'Verwalte deine Verbindungen zu Streaming-Plattformen, sieh welche Konten aktiv sind und trenne die Verbindung wann immer du möchtest.',
+		settingsPageConnectedPlatformsNotConnected: 'Nicht verbunden',
+		settingsPageConnectedPlatformsDisconnect: 'Trennen',
+		settingsPageConnectedPlatformsConnect: 'Verbinden'
 	},
 	errorPage: {
 		title404: 'Seite nicht gefunden | Allify',
