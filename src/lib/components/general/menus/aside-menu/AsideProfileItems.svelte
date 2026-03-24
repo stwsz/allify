@@ -30,7 +30,7 @@
 		},
 		{
 			text: $translationsStore.generalTexts.profileLoggedItem2,
-			href: '/'
+			href: '/settings'
 		}
 	];
 </script>
