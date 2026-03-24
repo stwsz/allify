@@ -16,27 +16,29 @@
 </script>
 
 <div
-	class="flex w-full items-center gap-3 rounded-xl border border-b-default bg-s-default p-4 sm:gap-4 sm:p-5 md:w-130"
+	class="flex w-full flex-col gap-3 rounded-xl border border-b-default bg-s-default p-4 sm:gap-4 sm:p-5 md:w-130 md:flex-row md:items-center md:justify-between"
 >
-	<div
-		class={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg sm:h-14 sm:w-14 ${platform.name === 'spotify' ? 'bg-spotify/10' : 'bg-deezer/10'}`}
-	>
-		<svelte:component
-			this={platform.icon}
-			iconSvgClass={`h-6 w-6 text-center sm:h-7.5 sm:w-7.5 ${platform.iconClass}`}
-		/>
-	</div>
+	<div class="flex gap-4">
+		<div
+			class={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg sm:h-14 sm:w-14 ${platform.name === 'spotify' ? 'bg-spotify/10' : 'bg-deezer/10'}`}
+		>
+			<svelte:component
+				this={platform.icon}
+				iconSvgClass={`h-6 w-6 text-center sm:h-7.5 sm:w-7.5 ${platform.iconClass}`}
+			/>
+		</div>
 
-	<div class="min-w-0 flex-1">
-		<p class="truncate font-medium text-t-primary capitalize">{platform.name}</p>
+		<div class="min-w-0 flex-1">
+			<p class="truncate font-medium text-t-primary capitalize">{platform.name}</p>
 
-		{#if $meStore?.connectedStreamings[platform.name.toLowerCase() as 'spotify' | 'deezer']}
-			<p class="mt-0.5 truncate text-xs text-t-secondary">{$meStore.email}</p>
-		{:else}
-			<p class="mt-0.5 line-clamp-2 text-xs text-t-secondary sm:line-clamp-1">
-				{$translationsStore.settingsPage.settingsPageConnectedPlatformsNotConnected}
-			</p>
-		{/if}
+			{#if $meStore?.connectedStreamings[platform.name.toLowerCase() as 'spotify' | 'deezer']}
+				<p class="mt-0.5 truncate text-xs text-t-secondary">{$meStore.email}</p>
+			{:else}
+				<p class="mt-0.5 line-clamp-2 text-xs text-t-secondary sm:line-clamp-1">
+					{$translationsStore.settingsPage.settingsPageConnectedPlatformsNotConnected}
+				</p>
+			{/if}
+		</div>
 	</div>
 
 	{#if $meStore?.connectedStreamings[platform.name.toLowerCase() as 'spotify' | 'deezer']}
