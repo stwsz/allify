@@ -23,7 +23,7 @@
 
 {#if $meStore !== undefined}
 	<section class="base-section">
-		<h1>{$translationsStore.settingsPage.title}</h1>
+		<h1>{$translationsStore.settingsPage.settingsPageHeading1}</h1>
 
 		<div class="flex flex-col items-start gap-2 mt-3">
 			<h2 class="text-xl font-medium text-t-primary">
