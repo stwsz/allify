@@ -6,30 +6,32 @@
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { meStore } from '$lib/stores/me.store';
-	import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
 
 	// Types
 	import type { CardPlatformType } from '$lib/types/CardPlatform.type';
 
 	// Utils
 	import { setTitleByStreaming } from '$lib/utils/setTitleByStreaming';
+	import { signInSpotify } from '$lib/utils/signInSpotify';
 
 	// Props
 	export let platform: CardPlatformType;
 
 	const platformKey = platform.title.toLowerCase();
 
-	function setCLassByStreaming(streaming: string) {
-		let baseClass: string = `flex cursor-pointer items-center gap-1 rounded-lg border px-3 py-1.5 transition-all text-xs lg:text-base ${streaming === 'spotify' ? 'hover:border-spotify hover:text-spotify' : 'hover:border-s-inverse-muted hover:text-s-inverse-muted'}`;
+	$: setClassbyStreaming = (() => {
+		let baseClass: string = `flex cursor-pointer items-center gap-1 rounded-lg border px-3 py-1.5 transition-all text-xs lg:text-base ${platformKey === 'spotify' ? 'hover:border-spotify hover:text-spotify' : 'hover:border-s-inverse-muted hover:text-s-inverse-muted'}`;
 
-		if ($meStore?.streaming === streaming) {
-			baseClass = `${baseClass} border-spotify hover:border-spotify hover:text-spotify`;
+		if ($meStore?.connectedStreamings[platformKey as 'spotify' | 'deezer'] === true) {
+			baseClass = `${baseClass} border-spotify text-spotify hover:border-spotify`;
 		} else {
 			baseClass = `${baseClass} border-s-inverse-muted text-s-inverse-muted hover:border-s-inverse-muted hover:text-s-inverse-muted`;
 		}
 
 		return baseClass;
-	}
+	})();
+
+	$: $meStore?.connectedStreamings;
 </script>
 
 <li
@@ -42,29 +44,17 @@
 			/>
 
 			<button
-				on:click={(e) => {
-					if ($meStore !== undefined && $meStore.streaming === platformKey) {
-						e.preventDefault();
-
-						return;
-					}
-					window.location.href = `/api/${platformKey}/auth/login`;
-
-					loadingAfterConnectionStore.set({
-						loading: true,
-						streamingPlatform: platformKey as 'spotify' | 'deezer'
-					});
-				}}
+				on:click={(e) => signInSpotify(platformKey as 'spotify' | 'deezer', e)}
 				disabled={platformKey === 'deezer'}
 				title={setTitleByStreaming(platformKey)}
-				class={setCLassByStreaming(platformKey)}
+				class={setClassbyStreaming}
 			>
 				<ConnectIcon
 					iconSvgClass="w-3.5 h-3.5 inline-block mr-2 lg:w-4.5 lg:h-4.5"
 					iconAltText={$translationsStore.homePage.connectPlatformCardPlatformConnectIconAltText}
 				/>
 
-				{$meStore?.streaming === platformKey
+				{$meStore?.connectedStreamings[platformKey as 'spotify' | 'deezer'] === true
 					? $translationsStore.homePage.connectPlatformCardPlatformConnectedButton
 					: platformKey === 'spotify'
 						? $translationsStore.homePage.connectPlatformCardPlatformConnectSpotifyButton

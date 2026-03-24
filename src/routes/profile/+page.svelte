@@ -32,7 +32,5 @@
 		</div>
 	</section>
 {:else}
-	<NotLogged
-		notLoggedParagraph={$translationsStore.generalTexts.notLoggedMyMusicProfileParagraph1}
-	/>
+	<NotLogged notLoggedParagraph={$translationsStore.generalTexts.notLoggedProfileParagraph1} />
 {/if}

@@ -29,7 +29,7 @@
 			const resMostListenedItems = await reqMostListenedItems.json();
 			mostListenedTracks = resMostListenedItems;
 
-			sessionStorage.setItem(`most-listened-tracks`, JSON.stringify(mostListenedTracks));
+			sessionStorage.setItem(`spotify-most-listened-tracks`, JSON.stringify(mostListenedTracks));
 		} catch (error) {
 			console.error('Error fetching most listened tracks:', error);
 		} finally {
@@ -38,7 +38,7 @@
 	}
 
 	onMount(async () => {
-		const cachedMostListenedTracks = sessionStorage.getItem(`most-listened-tracks`);
+		const cachedMostListenedTracks = sessionStorage.getItem(`spotify-most-listened-tracks`);
 
 		if (cachedMostListenedTracks) {
 			mostListenedTracks = JSON.parse(cachedMostListenedTracks);

@@ -29,7 +29,7 @@
 			const resMostListenedItems = await reqMostListenedItems.json();
 			mostListenedArtists = resMostListenedItems;
 
-			sessionStorage.setItem(`most-listened-artists`, JSON.stringify(mostListenedArtists));
+			sessionStorage.setItem(`spotify-most-listened-artists`, JSON.stringify(mostListenedArtists));
 		} catch (error) {
 			console.error('Error fetching most listened artists:', error);
 		} finally {
@@ -38,7 +38,7 @@
 	}
 
 	onMount(async () => {
-		const cachedMostListenedArtists = sessionStorage.getItem(`most-listened-artists`);
+		const cachedMostListenedArtists = sessionStorage.getItem(`spotify-most-listened-artists`);
 
 		if (cachedMostListenedArtists) {
 			mostListenedArtists = JSON.parse(cachedMostListenedArtists);

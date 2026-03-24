@@ -7,7 +7,7 @@
 	import AsideProfileItems from '$lib/components/general/menus/aside-menu/AsideProfileItems.svelte';
 
 	// Utils
-	import { logout } from '$lib/utils/logout';
+	import { logoutSpotify } from '$lib/utils/logoutSpotify';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -166,7 +166,7 @@
 							hover:bg-status-error/80
 						"
 						on:click={async () => {
-							await logout();
+							await logoutSpotify();
 
 							showProfileOptions = false;
 							isAsideMenuOpen = false;

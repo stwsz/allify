@@ -8,6 +8,7 @@ export const GET: RequestHandler = async () => {
 		'/discoveries',
 		'/music-battles',
 		'/profile',
+		'/settings',
 		'/privacy-policy',
 		'/terms-of-service',
 		'/data-usage'

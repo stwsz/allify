@@ -17,7 +17,7 @@
 	let isLoading = true;
 
 	function getStorageKey() {
-		return `musics-from-playlist-${playlist.id}`;
+		return `spotify-musics-from-playlist-${playlist.id}`;
 	}
 
 	async function getMusicsFromPlaylist(): Promise<any[]> {
