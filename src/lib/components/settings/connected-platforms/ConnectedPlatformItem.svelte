@@ -18,7 +18,7 @@
 <div
 	class="flex w-full flex-col gap-3 rounded-xl border border-b-default bg-s-default p-4 sm:gap-4 sm:p-5 md:w-130 md:flex-row md:items-center md:justify-between"
 >
-	<div class="flex gap-4">
+	<div class="flex items-center gap-4">
 		<div
 			class={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg sm:h-14 sm:w-14 ${platform.name === 'spotify' ? 'bg-spotify/10' : 'bg-deezer/10'}`}
 		>
