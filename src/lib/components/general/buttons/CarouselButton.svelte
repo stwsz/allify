@@ -8,6 +8,7 @@
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
+	// Props
 	export let direction: 'prev' | 'next' = 'next';
 
 	const dispatch = createEventDispatcher();
