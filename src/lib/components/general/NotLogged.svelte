@@ -10,6 +10,7 @@
 	// Utils
 	import { setTitleByStreaming } from '$lib/utils/setTitleByStreaming';
 
+	// Props
 	export let notLoggedParagraph: string;
 
 	$: streamings = [

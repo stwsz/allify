@@ -1,4 +1,4 @@
-import { json, redirect } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 
 export const GET = async ({ cookies, fetch }) => {
 	let token = cookies.get('spotify_access_token');

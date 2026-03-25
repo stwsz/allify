@@ -115,7 +115,14 @@ export const de = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Deine meistgehörten Songs'
 	},
 	discoveriesPage: {
-		title: 'Musikentdeckungen | Allify'
+		title: 'Musikentdeckungen | Allify',
+		discoveriesPageHeading1: 'Lass Alli neue Musik für dich empfehlen',
+		discoveriesPageParagraph1: 'Alli schlägt 5 Songs und 5 Künstler vor, um deinen Musikgeschmack zu erweitern',
+		discoveriesPageHeading2Artists: 'Künstler',
+		discoveriesPageHeading2Tracks: 'Songs',
+		discoveriesPageDiscoverNow: 'Klicke auf "Jetzt entdecken", um Empfehlungen zu generieren',
+		discoveriesPageDiscoverNowButton: 'Jetzt entdecken',
+		alliMascotWavingAltText: 'Alli winkt auf der Entdeckungsseite'
 	},
 	musicBattlesPage: {
 		title: 'Musik-Battles | Allify'

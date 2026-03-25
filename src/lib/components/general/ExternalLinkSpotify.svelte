@@ -2,6 +2,7 @@
 	// Assets
 	import SpotifyIcon from '$lib/assets/images/icons/streamings/SpotifyIcon.svelte';
 
+	// Props
 	export let streamingPlatform: 'spotify' | 'deezer' | null = 'spotify';
 	export let externalLink: string | undefined;
 	export let externalLinkText: string;
