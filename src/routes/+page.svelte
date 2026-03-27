@@ -9,9 +9,41 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
+
+	// Schema
+	import { getSchemaInfo } from '$lib/utils/getSchemaInfo';
+
+	const schema = getSchemaInfo('homePage');
+	$: locale = $translationsStore.configuration.langAttribute as keyof typeof schema.description;
+
+	$: jsonLd = {
+		'@context': schema.context,
+		'@type': schema.type,
+		name: schema.name,
+		url: schema.url,
+		description: schema.description[locale] ?? schema.description['en'],
+		applicationCategory: schema.applicationCategory,
+		applicationSubCategory: schema.applicationSubCategory,
+		operatingSystem: schema.operatingSystem,
+		inLanguage: schema.inLanguage,
+		featureList: schema.featureList[locale] ?? schema.featureList['en'],
+		offers: schema.offers.map((o) => ({
+			'@type': o.type,
+			price: o.price,
+			priceCurrency: o.priceCurrency,
+			description: o.description[locale] ?? o.description['en']
+		})),
+		publisher: {
+			'@type': schema.publisher.type,
+			name: schema.publisher.name,
+			url: schema.publisher.url
+		}
+	};
 </script>
 
 <svelte:head>
+	<!-- Schema.org -->
+	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
 	<!-- General -->
 	<title>{$translationsStore.homePage.title}</title>
 	<meta name="description" content={$translationsStore.homePage.homePageMetaDescription} />
@@ -34,5 +66,7 @@
 </svelte:head>
 
 <HeroSection />
+
 <ConnectPlatformsSection />
+
 <DevicesSection />
