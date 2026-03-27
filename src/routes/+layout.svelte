@@ -6,7 +6,7 @@
 	import '$lib/styles/global.css';
 
 	// Assets
-	import ogImageAllify from '$lib/assets/images/og-image-allify.png';
+	import ogImageAllify from '$lib/assets/images/open-graph-images/og-image-allify.webp';
 
 	// Components
 	import Header from '$lib/components/general/header/Header.svelte';
