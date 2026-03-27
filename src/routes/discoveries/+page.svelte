@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Svelte
+	import { page } from '$app/stores';
+
 	// Assets
 	import AlliFullBodyWaving from '$lib/assets/images/alli/alli-full-body-waving.webp?enhanced';
 	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
@@ -61,7 +64,28 @@
 </script>
 
 <svelte:head>
+	<!-- General -->
 	<title>{$translationsStore.discoveriesPage.title}</title>
+	<meta
+		name="description"
+		content={$translationsStore.discoveriesPage.discoveriesPageMetaDescription}
+	/>
+	<link rel="canonical" href={`https://allify.app${$page.url.pathname}`} />
+	<!-- Open Graph -->
+	<meta property="og:locale" content={$translationsStore.configuration.langAttribute} />
+	<meta property="og:url" content={`https://allify.app${$page.url.pathname}`} />
+	<meta property="og:title" content={$translationsStore.discoveriesPage.title} />
+	<meta
+		property="og:description"
+		content={$translationsStore.discoveriesPage.discoveriesPageMetaOgAndTwitterContent}
+	/>
+	<!-- Twitter Card -->
+	<meta name="twitter:url" content={`https://allify.app${$page.url.pathname}`} />
+	<meta name="twitter:title" content={$translationsStore.discoveriesPage.title} />
+	<meta
+		name="twitter:description"
+		content={$translationsStore.discoveriesPage.discoveriesPageMetaOgAndTwitterContent}
+	/>
 </svelte:head>
 
 {#if $meStore !== undefined}
@@ -72,9 +96,7 @@
 
 		<div class="flex flex-col-reverse justify-between gap-10 lg:flex-row">
 			<div class="flex w-full flex-col gap-5 lg:w-3/5">
-				<p
-					class="text-center text-sm leading-relaxed text-t-secondary md:text-left md:text-base"
-				>
+				<p class="text-center text-sm leading-relaxed text-t-secondary md:text-left md:text-base">
 					{$translationsStore.discoveriesPage.discoveriesPageParagraph1}
 				</p>
 
@@ -87,7 +109,9 @@
 						</div>
 					{:else if mostListenedArtists.length !== 0 && mostListenedTracks.length !== 0}
 						<div class="flex-1">
-							<h2 class="mb-3 text-sm font-medium text-t-primary">{$translationsStore.discoveriesPage.discoveriesPageHeading2Artists}</h2>
+							<h2 class="mb-3 text-sm font-medium text-t-primary">
+								{$translationsStore.discoveriesPage.discoveriesPageHeading2Artists}
+							</h2>
 
 							<ul class="space-y-3 text-xs text-t-secondary">
 								{#each mostListenedArtists as artist}
@@ -101,7 +125,9 @@
 						<div class="hidden w-px bg-b-default sm:block"></div>
 
 						<div class="flex-1">
-							<h2 class="mb-3 text-sm font-medium text-t-primary">{$translationsStore.discoveriesPage.discoveriesPageHeading2Tracks}</h2>
+							<h2 class="mb-3 text-sm font-medium text-t-primary">
+								{$translationsStore.discoveriesPage.discoveriesPageHeading2Tracks}
+							</h2>
 
 							<ul class="space-y-3 text-xs text-t-secondary">
 								{#each mostListenedTracks as track}
@@ -129,7 +155,7 @@
 			<enhanced:img
 				src={AlliFullBodyWaving}
 				alt={$translationsStore.discoveriesPage.alliMascotWavingAltText}
-				class="h-auto w-44 mx-auto mt-5 sm:w-60 md:w-72 lg:w-85 xl:w-95"
+				class="mx-auto mt-5 h-auto w-44 sm:w-60 md:w-72 lg:w-85 xl:w-95"
 				width="380"
 				height="380"
 				loading="eager"

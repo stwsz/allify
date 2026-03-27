@@ -2,10 +2,7 @@ export const en = {
 	language: 'en',
 	locale: 'en-US',
 	configuration: {
-		langAttribute: 'en_US',
-		metaOgAndTwitterContent: 'Understand your music habits with real data.',
-		metaDescriptionContent:
-			'Connect your streaming platforms, analyze your music habits, and discover new tracks with Allify.'
+		langAttribute: 'en_US'
 	},
 	generalTexts: {
 		logoColorfulAltText: 'Colorful Allify logo',
@@ -74,6 +71,10 @@ export const en = {
 	},
 	homePage: {
 		title: 'All about your music, connected in one place | Allify',
+		homePageMetaDescription:
+			'Discover personalized music insights, connect your streaming platforms, and explore new ways to listen to music with Allify.',
+		homePageMetaOgAndTwitterContent:
+			'Discover personalized music insights, connect your streaming platforms, and explore new ways to listen to music with Allify.',
 		homePageHeroSectionHeading1: 'Understand your music habits with real data',
 		homePageHeroSectionParagraph1:
 			'Connect your streamings, track detailed metrics, get personalized suggestions, and compete in rankings with your friends.',
@@ -107,6 +108,10 @@ export const en = {
 	},
 	myMusicalProfilePage: {
 		title: 'My Musical Profile | Allify',
+		myMusicalProfilePageMetaDescription:
+			'Explore your musical profile, discover your most listened artists and tracks, track your listening statistics, and connect your streaming platforms for personalized insights.',
+		myMusicalProfilePageMetaOgAndTwitterContent:
+			'Explore your musical profile, discover your most listened artists and tracks, track your listening statistics, and connect your streaming platforms for personalized insights.',
 		myMusicalProfilePageHeading1: 'Here’s everything you’ve listened to the most',
 		myMusicalProfilePageMostListenedArtistsHeading2: 'Your most listened artists',
 		myMusicalProfilePageMostListenedArtists: 'Most listened',
@@ -116,8 +121,13 @@ export const en = {
 	},
 	discoveriesPage: {
 		title: 'Music Discoveries | Allify',
+		discoveriesPageMetaDescription:
+			'Let Alli recommend new music for you based on your musical taste. Discover new artists and tracks you will love.',
+		discoveriesPageMetaOgAndTwitterContent:
+			'Let Alli recommend new music for you based on your musical taste. Discover new artists and tracks you will love.',
 		discoveriesPageHeading1: 'Let Alli recommend new music for you',
-		discoveriesPageParagraph1: 'Alli suggests 5 tracks and 5 artists to help you expand your musical taste',
+		discoveriesPageParagraph1:
+			'Alli suggests 5 tracks and 5 artists to help you expand your musical taste',
 		discoveriesPageHeading2Artists: 'Artists',
 		discoveriesPageHeading2Tracks: 'Tracks',
 		discoveriesPageDiscoverNow: 'Click on "Discover now" to generate recommendations',
@@ -125,10 +135,18 @@ export const en = {
 		alliMascotWavingAltText: 'Alli waving on the discoveries page'
 	},
 	musicBattlesPage: {
-		title: 'Music Battles | Allify'
+		title: 'Music Battles | Allify',
+		musicBattlesPageMetaDescription:
+			'Participate in exciting music battles, compare who listened to a track or artist more, challenge your friends and see who the real music master is.',
+		musicBattlesPageMetaOgAndTwitterContent:
+			'Participate in exciting music battles, compare who listened to a track or artist more, challenge your friends and see who the real music master is.'
 	},
 	profilePage: {
 		title: 'Profile | Allify',
+		profilePageMetaDescription:
+			'See your public profile, share your listening statistics, liked songs, playlists and saved albums, and connect your streaming platforms for personalized insights.',
+		profilePageMetaOgAndTwitterContent:
+			'See your public profile, share your listening statistics, liked songs, playlists and saved albums, and connect your streaming platforms for personalized insights.',
 		profilePageImageAltText: 'Profile picture of',
 		profilePageFollowers: 'followers',
 		profilePageCarouselButtonAriaLabelPrev: 'Previous carousel button',
@@ -166,6 +184,10 @@ export const en = {
 	},
 	settingsPage: {
 		title: 'Settings | Allify',
+		settingsPageMetaDescription:
+			'Manage your connections with streaming platforms, view which accounts are active, and disconnect whenever you want.',
+		settingsPageMetaOgAndTwitterContent:
+			'Manage your connections with streaming platforms, view which accounts are active, and disconnect whenever you want.',
 		settingsPageHeading1: 'Settings',
 		settingsPageConnectedPlatformsSectionHeading2: 'Connected platforms',
 		settingsPageConnectedPlatformsSectionParagraph1:
@@ -177,6 +199,14 @@ export const en = {
 	errorPage: {
 		title404: 'Page not found | Allify',
 		titleOtherErrors: 'Unexpected error | Allify',
+		errorPage404MetaDescription:
+			'We couldn’t find the page you were looking for. It may have been removed or the address is incorrect.',
+		errorPageOtherErrorsMetaDescription:
+			'There was a problem loading this page. Please try again in a few moments.',
+		errorPage404MetaOgAndTwitterContent:
+			'We couldn’t find the page you were looking for. It may have been removed or the address is incorrect.',
+		errorPageOtherErrorsMetaOgAndTwitterContent:
+			'There was a problem loading this page. Please try again in a few moments.',
 		errorPage404Heading1: 'Page not found',
 		errorPage404Paragraph1:
 			'We couldn’t find the page you were looking for. It may have been removed or the address is incorrect.',
@@ -188,6 +218,8 @@ export const en = {
 	legalPages: {
 		privacyPolicy: {
 			title: 'Privacy Policy | Allify',
+			privacyPolicyMetaDescription: 'Learn how Allify protects and uses your data.',
+			privacyPolicyMetaOgAndTwitterContent: 'Learn how Allify protects and uses your data.',
 			privacyPolicyDiv1Heading1: 'Privacy Policy',
 			privacyPolicyDiv1LastUpdated: 'Last updated: February 22, 2026',
 			privacyPolicyDiv1Paragraph1:
@@ -292,34 +324,33 @@ export const en = {
 		},
 		dataUsage: {
 			title: 'Data Usage | Allify',
+			dataUsageMetaDescription:
+				'Understand how Allify collects, uses, and processes data related to your music and account.',
+			dataUsageMetaOgAndTwitterContent:
+				'Understand how Allify collects, uses, and processes data related to your music and account.',
 			dataUsageDiv1Heading1: 'Data Usage',
 			dataUsageDiv1LastUpdated: 'Last updated: February 22, 2026',
 			dataUsageDiv1Paragraph1:
 				'This Data Usage page explains how Allify collects, uses, and processes information when you use our music insights platform.',
-
 			dataUsageDiv2Heading2: '1. Data We Use',
 			dataUsageDiv2Paragraph1:
 				'Allify uses user-authorized data through connections with streaming services such as Spotify and, in the future, Deezer, as well as essential technical data required for the platform to function.',
 			dataUsageDiv2Paragraph2:
 				'This may include account identifiers, connection status, music data permitted by the API, and limited technical information necessary to operate the service.',
-
 			dataUsageDiv3Heading2: '2. How We Use the Data',
 			dataUsageDiv3Paragraph1:
 				'The data is used to generate personalized music insights, display listening statistics, manage the ticket system, and ensure the proper functioning of Allify’s features.',
 			dataUsageDiv3Paragraph2:
 				'We may also use aggregated and anonymized data for internal analytics, performance improvements, and platform development.',
-
 			dataUsageDiv4Heading2: '3. Data Processing and Storage',
 			dataUsageDiv4Paragraph1:
 				'Music data is primarily processed in real time and is not permanently stored, except when strictly necessary for account functionality.',
 			dataUsageDiv4Paragraph2:
 				'We implement appropriate technical and organizational measures to protect data against unauthorized access, alteration, disclosure, or destruction.',
-
 			dataUsageDiv5Heading2: '4. Third-Party Services and APIs',
 			dataUsageDiv5Paragraph1:
 				'Allify relies on third-party APIs and services, such as music streaming platforms, hosting providers, and payment services, which may process data according to their own policies.',
 			dataUsageDiv5Paragraph2: 'We do not sell, rent, or trade user data to third parties.',
-
 			dataUsageDiv6Heading2: '5. User Control',
 			dataUsageDiv6Paragraph1:
 				'Users retain control over their streaming account connections and may revoke access or request data deletion at any time.',
@@ -328,35 +359,34 @@ export const en = {
 		},
 		termsOfService: {
 			title: 'Terms of Service | Allify',
+			termsOfServiceMetaDescription:
+				'Read the terms and conditions for accessing and using the Allify platform.',
+			termsOfServiceMetaOgAndTwitterContent:
+				'Read the terms and conditions for accessing and using the Allify platform.',
 			termsOfServiceDiv1Heading1: 'Terms of Service',
 			termsOfServiceDiv1LastUpdated: 'Last updated: February 22, 2026',
 			termsOfServiceDiv1Paragraph1:
 				'These Terms of Service govern your access to and use of the Allify platform. By using our services, you agree to comply with these terms and conditions.',
-
 			termsOfServiceDiv2Heading2: '1. Use of the Platform',
 			termsOfServiceDiv2Paragraph1:
 				'Allify is a platform that provides music insights based on user-authorized data from third-party streaming services such as Spotify and, in the future, Deezer.',
 			termsOfServiceDiv2Paragraph2:
 				'You agree to use the platform only for lawful and personal purposes, in accordance with these terms, without attempting to exploit, abuse, or disrupt the service.',
-
 			termsOfServiceDiv3Heading2: '2. User Responsibilities',
 			termsOfServiceDiv3Paragraph1:
 				'You are responsible for the connected account and the permissions granted through the streaming services used on the platform.',
 			termsOfServiceDiv3Paragraph2:
 				'You agree not to use Allify for illegal, abusive, malicious automated activities or in any way that violates third-party API terms.',
-
 			termsOfServiceDiv4Heading2: '3. Service Availability',
 			termsOfServiceDiv4Paragraph1:
 				'We strive to keep Allify available and fully functional, but we do not guarantee uninterrupted or error-free operation at all times.',
 			termsOfServiceDiv4Paragraph2:
 				'We may update, modify, limit, or temporarily suspend features for maintenance, security, technical improvements, or legal compliance.',
-
 			termsOfServiceDiv5Heading2: '4. Limitation of Liability',
 			termsOfServiceDiv5Paragraph1:
 				'Allify is provided "as is" for informational and entertainment purposes related to music insights.',
 			termsOfServiceDiv5Paragraph2:
 				'We are not responsible for inaccuracies in data provided by third-party APIs, external service interruptions, or decisions made based on the displayed insights.',
-
 			termsOfServiceDiv6Heading2: '5. Changes to the Terms',
 			termsOfServiceDiv6Paragraph1:
 				'We may update these Terms of Service periodically to reflect changes in the platform, third-party integrations, or legal requirements.',

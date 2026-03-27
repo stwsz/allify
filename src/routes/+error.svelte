@@ -17,11 +17,48 @@
 </script>
 
 <svelte:head>
+	<!-- General -->
 	<title>
 		{status === 404
 			? $translationsStore.errorPage.title404
 			: $translationsStore.errorPage.titleOtherErrors}
 	</title>
+	<meta
+		name="description"
+		content={status === 404
+			? $translationsStore.errorPage.errorPage404MetaDescription
+			: $translationsStore.errorPage.errorPageOtherErrorsMetaDescription}
+	/>
+	<link rel="canonical" href={`https://allify.app${$page.url.pathname}`} />
+	<!-- Open Graph -->
+	<meta property="og:locale" content={$translationsStore.configuration.langAttribute} />
+	<meta property="og:url" content={`https://allify.app${$page.url.pathname}`} />
+	<meta
+		property="og:title"
+		content={status === 404
+			? $translationsStore.errorPage.title404
+			: $translationsStore.errorPage.titleOtherErrors}
+	/>
+	<meta
+		property="og:description"
+		content={status === 404
+			? $translationsStore.errorPage.errorPage404MetaOgAndTwitterContent
+			: $translationsStore.errorPage.errorPageOtherErrorsMetaOgAndTwitterContent}
+	/>
+	<!-- Twitter Card -->
+	<meta name="twitter:url" content={`https://allify.app${$page.url.pathname}`} />
+	<meta
+		name="twitter:title"
+		content={status === 404
+			? $translationsStore.errorPage.title404
+			: $translationsStore.errorPage.titleOtherErrors}
+	/>
+	<meta
+		name="twitter:description"
+		content={status === 404
+			? $translationsStore.errorPage.errorPage404MetaOgAndTwitterContent
+			: $translationsStore.errorPage.errorPageOtherErrorsMetaOgAndTwitterContent}
+	/>
 </svelte:head>
 
 <section class="px-8 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16 2xl:px-32">
