@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Svelte
+	import { page } from '$app/stores';
+
 	// Components
 	import MostListenedArtistsItems from '$lib/components/my-musical-profile/most-listened-artists/MostListenedArtistsItems.svelte';
 	import MostListenedTracksItems from '$lib/components/my-musical-profile/most-listened-tracks/MostListenedTracksItems.svelte';
@@ -12,7 +15,28 @@
 </script>
 
 <svelte:head>
+	<!-- General -->
 	<title>{$translationsStore.myMusicalProfilePage.title}</title>
+	<meta
+		name="description"
+		content={$translationsStore.myMusicalProfilePage.myMusicalProfilePageMetaDescription}
+	/>
+	<link rel="canonical" href={`https://allify.app${$page.url.pathname}`} />
+	<!-- Open Graph -->
+	<meta property="og:locale" content={$translationsStore.configuration.langAttribute} />
+	<meta property="og:url" content={`https://allify.app${$page.url.pathname}`} />
+	<meta property="og:title" content={$translationsStore.myMusicalProfilePage.title} />
+	<meta
+		property="og:description"
+		content={$translationsStore.myMusicalProfilePage.myMusicalProfilePageMetaOgAndTwitterContent}
+	/>
+	<!-- Twitter Card -->
+	<meta name="twitter:url" content={`https://allify.app${$page.url.pathname}`} />
+	<meta name="twitter:title" content={$translationsStore.myMusicalProfilePage.title} />
+	<meta
+		name="twitter:description"
+		content={$translationsStore.myMusicalProfilePage.myMusicalProfilePageMetaOgAndTwitterContent}
+	/>
 </svelte:head>
 
 {#if $meStore !== undefined}

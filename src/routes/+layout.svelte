@@ -1,10 +1,12 @@
 <script lang="ts">
 	// Svelte
-	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
 	// Global styles
 	import '$lib/styles/global.css';
+
+	// Assets
+	import ogImageAllify from '$lib/assets/images/og-image-allify.png';
 
 	// Components
 	import Header from '$lib/components/general/header/Header.svelte';
@@ -14,7 +16,6 @@
 	// Stores
 	import { meStore } from '$lib/stores/me.store';
 	import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
-	import { translationsStore } from '$lib/stores/translations.store';
 
 	let { children } = $props();
 
@@ -54,25 +55,19 @@
 </script>
 
 <svelte:head>
-	<link rel="canonical" href={`https://www.allify.com.br${$page.url.pathname}`} />
+	<!-- General -->
 	<meta name="color-scheme" content="light" />
 	<meta name="theme-color" content="#09623a" />
-	<meta name="description" content={$translationsStore.configuration.metaDescriptionContent} />
+	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Allify" />
-	<meta
-		property="og:description"
-		content={$translationsStore.configuration.metaOgAndTwitterContent}
-	/>
-	<meta property="og:url" content={`https://www.allify.com.br${$page.url.pathname}`} />
-	<meta property="og:locale" content={$translationsStore.configuration.langAttribute} />
-	<!-- <meta property="og:image" content="https://www.allify.com.br/og-image.png" /> -->
-	<meta name="twitter:card" content="summary" />
-	<meta
-		name="twitter:description"
-		content={$translationsStore.configuration.metaOgAndTwitterContent}
-	/>
-	<!-- <meta name="twitter:image" content="https://www.allify.com.br/og-image.png" /> -->
+	<meta property="og:image" content={ogImageAllify} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@allifyapp" />
+	<meta name="twitter:image" content={ogImageAllify} />
 </svelte:head>
 
 <Header />
