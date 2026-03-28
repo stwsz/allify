@@ -5,9 +5,6 @@
 	// Global styles
 	import '$lib/styles/global.css';
 
-	// Assets
-	import ogImageAllify from '$lib/assets/images/open-graph-images/og-image-allify.webp';
-
 	// Components
 	import Header from '$lib/components/general/header/Header.svelte';
 	import Footer from '$lib/components/general/footer/Footer.svelte';
@@ -61,13 +58,13 @@
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Allify" />
-	<meta property="og:image" content={ogImageAllify} />
+	<meta property="og:image" content="https://allify-sv.netlify.app/open-graph-images/og-image-allify.webp" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@allifyapp" />
-	<meta name="twitter:image" content={ogImageAllify} />
+	<meta name="twitter:image" content="https://allify-sv.netlify.app/open-graph-images/og-image-allify.webp" />
 </svelte:head>
 
 <Header />
