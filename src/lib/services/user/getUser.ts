@@ -9,9 +9,9 @@ export async function getUser(email: string) {
 
 	const resJson = await getUserFromMongoDB.json();
 
-	if (getUserFromMongoDB.ok) {
+	if (resJson.success === true) {
 		return resJson;
 	} else {
-		throw new Error(resJson.error || 'Failed to fetch user');
+		console.error(resJson.error || 'Failed to fetch user');
 	}
 }
