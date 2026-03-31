@@ -34,7 +34,7 @@
 		{#if item.owner}
 			<p class="line-clamp-1 text-xs text-t-secondary">
 				{$translationsStore.profilePage.profilePageUserPlaylistItemBy}
-				{item.owner.display_name}
+				{item.owner.name}
 			</p>
 		{/if}
 

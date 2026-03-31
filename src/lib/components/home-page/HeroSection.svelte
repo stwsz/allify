@@ -5,7 +5,7 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 </script>
 
 <section
@@ -37,12 +37,12 @@
 
 		<a
 			class="mt-6 w-90 max-w-90 cursor-pointer rounded-lg bg-brand-primary py-5 text-center text-sm font-medium text-t-inverse shadow-md transition-all hover:scale-105 hover:bg-brand-primary-dark"
-			href={`${$meStore !== undefined ? '/my-musical-profile' : '#connect-platforms'}`}
-			aria-label={$meStore !== undefined
+			href={`${$userInfo?.connectedStreamings.spotify?.connected === true ? '/my-musical-profile' : '#connect-platforms-section'}`}
+			aria-label={$userInfo !== undefined
 				? $translationsStore.homePage.homePageHeroSectionButton1v2AriaLabel
 				: $translationsStore.homePage.homePageHeroSectionButton1AriaLabel}
 		>
-			{$meStore !== undefined
+			{$userInfo?.connectedStreamings.spotify?.connected === true
 				? $translationsStore.homePage.homePageHeroSectionButton1v2
 				: $translationsStore.homePage.homePageHeroSectionButton1}
 		</a>

@@ -27,7 +27,7 @@
 			if (!response.ok) throw new Error('Failed to fetch user name');
 
 			const data = await response.json();
-			return data.display_name || 'Unknown User';
+			return data.name || 'Unknown User';
 		} catch (error) {
 			return 'Unknown User';
 		}

@@ -5,7 +5,7 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 
 	// Types
 	import type { CardPlatformType } from '$lib/types/CardPlatform.type';
@@ -17,21 +17,27 @@
 	// Props
 	export let platform: CardPlatformType;
 
-	const platformKey = platform.title.toLowerCase();
+	const platformKey = platform.title.toLowerCase() as 'spotify' | 'deezer';
+
+	const isPlatformConnected = () => {
+		return $userInfo?.connectedStreamings?.[platformKey]?.connected === true;
+	};
 
 	$: setClassbyStreaming = (() => {
-		let baseClass: string = `flex cursor-pointer items-center gap-1 rounded-lg border px-3 py-1.5 transition-all text-xs lg:text-base ${platformKey === 'spotify' ? 'hover:border-spotify hover:text-spotify' : 'hover:border-s-inverse-muted hover:text-s-inverse-muted'}`;
+		let baseClass = `flex cursor-pointer items-center gap-1 rounded-lg border px-3 py-1.5 transition-all text-xs lg:text-base ${
+			platformKey === 'spotify'
+				? 'hover:border-spotify hover:text-spotify'
+				: 'hover:border-s-inverse-muted hover:text-s-inverse-muted'
+		}`;
 
-		if ($meStore?.connectedStreamings[platformKey as 'spotify' | 'deezer'] === true) {
-			baseClass = `${baseClass} border-spotify text-spotify hover:border-spotify`;
+		if (isPlatformConnected()) {
+			baseClass += ` border-spotify text-spotify hover:border-spotify`;
 		} else {
-			baseClass = `${baseClass} border-s-inverse-muted text-s-inverse-muted hover:border-s-inverse-muted hover:text-s-inverse-muted`;
+			baseClass += ` border-s-inverse-muted text-s-inverse-muted hover:border-s-inverse-muted hover:text-s-inverse-muted`;
 		}
 
 		return baseClass;
 	})();
-
-	$: $meStore?.connectedStreamings;
 </script>
 
 <li
@@ -40,12 +46,16 @@
 	<div class="flex flex-col gap-4 p-6 lg:gap-6 lg:p-10">
 		<div class="flex items-center justify-between font-medium">
 			<platform.icon
-				iconSvgClass={`w-10 h-10 ${platformKey === 'spotify' ? 'text-spotify' : 'text-s-inverse-muted'}`}
+				iconSvgClass={`w-10 h-10 ${
+					platformKey === 'spotify' ? 'text-spotify' : 'text-s-inverse-muted'
+				}`}
 			/>
 
 			<button
-				on:click={(e) => signInSpotify(platformKey as 'spotify' | 'deezer', e)}
-				disabled={platformKey === 'deezer'}
+				on:click={(e) => {
+					signInSpotify(platformKey, e);
+				}}
+				disabled={platformKey === 'deezer' || isPlatformConnected()}
 				title={setTitleByStreaming(platformKey)}
 				class={setClassbyStreaming}
 			>
@@ -54,11 +64,13 @@
 					iconAltText={$translationsStore.homePage.connectPlatformCardPlatformConnectIconAltText}
 				/>
 
-				{$meStore?.connectedStreamings[platformKey as 'spotify' | 'deezer'] === true
-					? $translationsStore.homePage.connectPlatformCardPlatformConnectedButton
-					: platformKey === 'spotify'
+				{#if isPlatformConnected()}
+					{$translationsStore.homePage.connectPlatformCardPlatformConnectedButton}
+				{:else}
+					{platformKey === 'spotify'
 						? $translationsStore.homePage.connectPlatformCardPlatformConnectSpotifyButton
 						: $translationsStore.homePage.connectPlatformCardPlatformConnectDeezerButton}
+				{/if}
 			</button>
 		</div>
 
@@ -67,7 +79,9 @@
 				{platform.title}
 			</p>
 
-			<p class="h-fit text-sm sm:text-base">{platform.description}</p>
+			<p class="h-fit text-sm sm:text-base">
+				{platform.description}
+			</p>
 		</div>
 	</div>
 
@@ -78,13 +92,16 @@
 			href={platform.link}
 			target="_blank"
 			rel="noopener noreferrer"
-			class={`flex w-fit cursor-pointer items-center gap-2.5 text-sm transition-all ${platformKey === 'spotify' ? 'hover:text-spotify' : 'hover:text-s-inverse-muted'}`}
-			>{$translationsStore.homePage.connectPlatformCardPlatformExternalLink}
+			class={`flex w-fit cursor-pointer items-center gap-2.5 text-sm transition-all ${
+				platformKey === 'spotify' ? 'hover:text-spotify' : 'hover:text-s-inverse-muted'
+			}`}
+		>
+			{$translationsStore.homePage.connectPlatformCardPlatformExternalLink}
 			{platform.title}
 			<ExternalLinkIcon
 				iconSvgClass="w-5.5 h-5.5 inline-block mb-0.5"
 				iconAltText={$translationsStore.homePage.connectPlatformCardPlatformExternalLinkIconAltText}
-			/></a
-		>
+			/>
+		</a>
 	</div>
 </li>

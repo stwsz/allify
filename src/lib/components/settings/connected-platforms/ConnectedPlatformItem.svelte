@@ -4,7 +4,7 @@
 	import { logoutSpotify } from '$lib/utils/logoutSpotify';
 
 	// Stores
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Props
@@ -31,8 +31,10 @@
 		<div class="min-w-0 flex-1">
 			<p class="truncate font-medium text-t-primary capitalize">{platform.name}</p>
 
-			{#if $meStore?.connectedStreamings[platform.name.toLowerCase() as 'spotify' | 'deezer']}
-				<p class="mt-0.5 truncate text-xs text-t-secondary">{$meStore.email}</p>
+			{#if $userInfo?.connectedStreamings.spotify?.connected === true && platform.name === 'spotify'}
+				<p class="mt-0.5 truncate text-xs text-t-secondary">
+					{$userInfo?.connectedStreamings.spotify?.email}
+				</p>
 			{:else}
 				<p class="mt-0.5 line-clamp-2 text-xs text-t-secondary sm:line-clamp-1">
 					{$translationsStore.settingsPage.settingsPageConnectedPlatformsNotConnected}
@@ -41,7 +43,7 @@
 		</div>
 	</div>
 
-	{#if $meStore?.connectedStreamings[platform.name.toLowerCase() as 'spotify' | 'deezer']}
+	{#if $userInfo?.connectedStreamings.spotify?.connected === true && platform.name === 'spotify'}
 		<button
 			class="shrink-0 cursor-pointer rounded-lg border border-status-error/40 px-2.5 py-1.5 text-xs font-medium text-status-error transition-colors hover:bg-status-error/10 sm:px-3.5"
 			on:click={() => {

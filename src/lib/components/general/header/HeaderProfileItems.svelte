@@ -4,7 +4,7 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 
 	// Utils
 	import { setTitleByStreaming } from '$lib/utils/setTitleByStreaming';
@@ -57,8 +57,12 @@
 >
 	{#if loggedIn}
 		<div class="mb-2 px-2">
-			<p class="text-sm leading-tight font-semibold text-t-primary">{$meStore?.display_name}</p>
-			<p class="mt-0.5 truncate text-[11px] text-t-muted">{$meStore?.email}</p>
+			<p class="text-sm leading-tight font-semibold text-t-primary">
+				{$userInfo?.connectedStreamings.spotify?.name}
+			</p>
+			<p class="mt-0.5 truncate text-[11px] text-t-muted">
+				{$userInfo?.connectedStreamings.spotify?.email}
+			</p>
 		</div>
 
 		<div class="my-3 h-px bg-b-muted/10"></div>

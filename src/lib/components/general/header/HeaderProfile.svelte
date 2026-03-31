@@ -5,13 +5,13 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 
 	// Props
 	export let showProfileOptions: boolean;
 	export let openLanguageDropdown: boolean;
 
-	$: loggedIn = $meStore ? true : false;
+	$: loggedIn = $userInfo ? true : false;
 </script>
 
 <button
@@ -45,19 +45,19 @@
 	}}
 >
 	{#if loggedIn}
-		{#if $meStore?.images[0]}
+		{#if $userInfo?.connectedStreamings.spotify?.images[0]}
 			<img
 				class={`
-					h-${$meStore?.images[0]?.height}
-					w-${$meStore?.images[0]?.width}
+					h-${$userInfo?.connectedStreamings.spotify?.images[0]?.height}
+					w-${$userInfo?.connectedStreamings.spotify?.images[0]?.width}
 					rounded-full
 					border
 					object-cover
 					p-1
 					text-brand-primary
 				`}
-				src={$meStore?.images[0]?.url}
-				alt={$meStore?.display_name}
+				src={$userInfo?.connectedStreamings.spotify?.images[0]?.url}
+				alt={$userInfo?.connectedStreamings.spotify?.name}
 			/>
 		{:else}
 			<div
@@ -75,9 +75,9 @@
 					font-medium
 					text-brand-primary
 				"
-				aria-label={$meStore?.display_name}
+				aria-label={$userInfo?.connectedStreamings.spotify?.name}
 			>
-				{$meStore?.display_name.slice(0, 1)}
+				{$userInfo?.connectedStreamings.spotify?.name.slice(0, 1)}
 			</div>
 		{/if}
 	{:else}

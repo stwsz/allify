@@ -23,11 +23,11 @@
 
 		<picture>
 			<img
-				src={mostListenedTrackItem.album.images[1]?.url}
+				src={mostListenedTrackItem.images[1]?.url}
 				srcset="
-						{mostListenedTrackItem.album.images[2]?.url} 160w,
-						{mostListenedTrackItem.album.images[1]?.url} 320w,
-						{mostListenedTrackItem.album.images[0]?.url} 640w
+						{mostListenedTrackItem.images[2]?.url} 160w,
+						{mostListenedTrackItem.images[1]?.url} 320w,
+						{mostListenedTrackItem.images[0]?.url} 640w
 					"
 				sizes="(max-width: 640px) 160px, (max-width: 1024px) 176px, 192px"
 				alt={mostListenedTrackItem.name}
@@ -57,12 +57,12 @@
 			{/if}
 		</div>
 
-		{#if mostListenedTrackItem.album.name}
+		{#if mostListenedTrackItem.albumName}
 			<div class="flex flex-wrap gap-2">
 				<span
 					class="rounded-md bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
 				>
-					{mostListenedTrackItem.album.name}
+					{mostListenedTrackItem.albumName}
 				</span>
 			</div>
 		{/if}
@@ -74,7 +74,7 @@
 		<ExternalLink
 			additionalClass="w-full mt-2"
 			streamingPlatform="spotify"
-			externalLink={mostListenedTrackItem.external_urls.spotify}
+			externalLink={mostListenedTrackItem.trackLink}
 			externalLinkText={$translationsStore.generalTexts.seeOnSpotify}
 		/>
 	</div>

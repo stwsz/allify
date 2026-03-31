@@ -129,11 +129,11 @@
 
 						<div class="flex flex-col gap-2">
 							<div class="flex items-center gap-2 text-xs text-t-secondary">
-								{#if playlist.owner?.display_name}
+								{#if playlist.owner?.name}
 									<span
 										class="w-fit rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
 									>
-										{playlist.owner.display_name}
+										{playlist.owner.name}
 									</span>
 								{/if}
 

@@ -9,7 +9,7 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 
 	const itemsType: Array<'artists' | 'tracks'> = ['artists', 'tracks'];
 </script>
@@ -39,7 +39,7 @@
 	/>
 </svelte:head>
 
-{#if $meStore !== undefined}
+{#if $userInfo?.connectedStreamings.spotify?.connected === true}
 	<section class="base-section">
 		<h1 class="mb-4 lg:mb-10">
 			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageHeading1}
