@@ -11,7 +11,7 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 
 	let loading = false;
 
@@ -88,7 +88,7 @@
 	/>
 </svelte:head>
 
-{#if $meStore !== undefined}
+{#if $userInfo !== undefined}
 	<section class="base-section px-4 py-10 md:px-6 md:py-14">
 		<h1 class="text-center text-2xl font-semibold text-t-primary md:text-left md:text-3xl">
 			{$translationsStore.discoveriesPage.discoveriesPageHeading1}

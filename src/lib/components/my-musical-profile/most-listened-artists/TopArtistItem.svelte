@@ -77,7 +77,7 @@
 		<ExternalLinkSpotify
 			additionalClass="w-full mt-2"
 			streamingPlatform="spotify"
-			externalLink={mostListenedArtistItem.external_urls.spotify}
+			externalLink={mostListenedArtistItem.artistLink}
 			externalLinkText={$translationsStore.generalTexts.seeOnSpotify}
 		/>
 	</div>

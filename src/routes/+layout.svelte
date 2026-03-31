@@ -11,43 +11,24 @@
 	import LoadingAfterConnection from '$lib/components/general/LoadingAfterConnection.svelte';
 
 	// Stores
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 	import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
+
+	// Services
+	import { fetchUserInfo } from '$lib/services/user/fetchUserInfo';
 
 	let { children } = $props();
 
 	const fetchMeInfo = async () => {
 		try {
-			const response = await fetch('/api/spotify/me', {
-				credentials: 'include'
-			});
-
-			const data = await response.json();
-
-			if (data.error) {
-				meStore.set(undefined);
-				return;
-			}
-
-			const spotifyData = {
-				email: data.email,
-				display_name: data.display_name,
-				country: data.country,
-				images: data.images,
-				external_urls: data.external_urls,
-				followers: data.followers,
-				type: data.type,
-				href: data.href
-			};
-
-			meStore.set({ ...spotifyData, connectedStreamings: { spotify: true, deezer: false } });
+			fetchUserInfo();
 		} catch {
-			meStore.set(undefined);
+			userInfo.set(undefined);
 		}
 	};
 
 	onMount(() => {
-		if (!$meStore) fetchMeInfo();
+		if (!$userInfo) fetchMeInfo();
 	});
 </script>
 
@@ -58,13 +39,19 @@
 	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Allify" />
-	<meta property="og:image" content="https://allify-sv.netlify.app/open-graph-images/og-image-allify.webp" />
+	<meta
+		property="og:image"
+		content="https://allify-sv.netlify.app/open-graph-images/og-image-allify.webp"
+	/>
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@allifyapp" />
-	<meta name="twitter:image" content="https://allify-sv.netlify.app/open-graph-images/og-image-allify.webp" />
+	<meta
+		name="twitter:image"
+		content="https://allify-sv.netlify.app/open-graph-images/og-image-allify.webp"
+	/>
 </svelte:head>
 
 <Header />

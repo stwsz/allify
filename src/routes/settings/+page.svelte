@@ -7,7 +7,7 @@
 	import NotLogged from '$lib/components/general/NotLogged.svelte';
 
 	// Stores
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 	import { translationsStore } from '$lib/stores/translations.store';
 </script>
 
@@ -33,7 +33,7 @@
 	/>
 </svelte:head>
 
-{#if $meStore !== undefined}
+{#if $userInfo?.connectedStreamings.spotify?.connected === true}
 	<section class="base-section">
 		<h1>{$translationsStore.settingsPage.settingsPageHeading1}</h1>
 

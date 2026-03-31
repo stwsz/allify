@@ -2,13 +2,13 @@
 import { get } from 'svelte/store';
 
 // Stores
-import { meStore } from '$lib/stores/me.store';
+import { userInfo } from '$lib/stores/userInfo.store';
 import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
 
 export function signInSpotify(platformKey: 'spotify' | 'deezer', e: MouseEvent) {
-	const me = get(meStore);
+	const userInfoStore = get(userInfo);
 
-	if (me !== undefined && me.connectedStreamings[platformKey as 'spotify' | 'deezer'] === true) {
+	if (userInfoStore?.connectedStreamings.spotify?.connected === true) {
 		e.preventDefault();
 
 		return;

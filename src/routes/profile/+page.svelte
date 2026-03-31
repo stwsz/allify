@@ -12,7 +12,7 @@
 	import UserSavedTracks from '$lib/components/profile/saved-tracks/UserSavedTracks.svelte';
 
 	// Stores
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 	import { translationsStore } from '$lib/stores/translations.store';
 </script>
 
@@ -38,10 +38,10 @@
 	/>
 </svelte:head>
 
-{#if $meStore !== undefined}
+{#if $userInfo?.connectedStreamings.spotify?.connected === true}
 	<section class="base-section">
 		<div class="mx-auto flex w-full flex-col gap-10 sm:gap-12 lg:gap-14">
-			<KeyInformation userInfo={$meStore} />
+			<KeyInformation userInfo={$userInfo} />
 
 			<div class="flex w-full flex-col gap-8 sm:gap-10">
 				<UserSavedTracks />

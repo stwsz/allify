@@ -40,10 +40,10 @@ Connect your streaming services, track detailed metrics, get personalized sugges
 
 ## 🔗 Integrations
 
-| Platform | Status |
-|---|---|
-| ![Spotify](https://img.shields.io/badge/Spotify-1DB954?style=flat-square&logo=spotify&logoColor=white) | ✅ Supported |
-| ![Deezer](https://img.shields.io/badge/Deezer-FF0000?style=flat-square&logo=deezer&logoColor=white) | 🚧 Coming soon |
+| Platform                                                                                               | Status         |
+| ------------------------------------------------------------------------------------------------------ | -------------- |
+| ![Spotify](https://img.shields.io/badge/Spotify-1DB954?style=flat-square&logo=spotify&logoColor=white) | ✅ Supported   |
+| ![Deezer](https://img.shields.io/badge/Deezer-FF0000?style=flat-square&logo=deezer&logoColor=white)    | 🚧 Coming soon |
 
 <br />
 
@@ -58,16 +58,16 @@ Connect your streaming services, track detailed metrics, get personalized sugges
 
 ## 🛠️ Tech Stack
 
-| Technology | Version | Purpose |
-|---|---|---|
-| [Svelte 5](https://svelte.dev/) | `^5.51.3` | Component framework |
-| [SvelteKit 2](https://kit.svelte.dev/) | `^2.50.2` | Full-stack framework / routing |
-| [TypeScript](https://www.typescriptlang.org/) | `^5.9.3` | Static typing |
-| [Tailwind CSS 4](https://tailwindcss.com/) | `^4.1.17` | Styling |
-| [Vite 7](https://vitejs.dev/) | `^7.3.1` | Bundler / dev server |
-| [Netlify Adapter](https://github.com/sveltejs/kit/tree/main/packages/adapter-netlify) | `^6.0.0` | Netlify deployment |
-| [PostCSS](https://postcss.org/) | `^8.5.6` | CSS processing |
-| [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) | `^9.x` / `^3.x` | Linting and formatting |
+| Technology                                                                            | Version         | Purpose                        |
+| ------------------------------------------------------------------------------------- | --------------- | ------------------------------ |
+| [Svelte 5](https://svelte.dev/)                                                       | `^5.51.3`       | Component framework            |
+| [SvelteKit 2](https://kit.svelte.dev/)                                                | `^2.50.2`       | Full-stack framework / routing |
+| [TypeScript](https://www.typescriptlang.org/)                                         | `^5.9.3`        | Static typing                  |
+| [Tailwind CSS 4](https://tailwindcss.com/)                                            | `^4.1.17`       | Styling                        |
+| [Vite 7](https://vitejs.dev/)                                                         | `^7.3.1`        | Bundler / dev server           |
+| [Netlify Adapter](https://github.com/sveltejs/kit/tree/main/packages/adapter-netlify) | `^6.0.0`        | Netlify deployment             |
+| [PostCSS](https://postcss.org/)                                                       | `^8.5.6`        | CSS processing                 |
+| [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)                      | `^9.x` / `^3.x` | Linting and formatting         |
 
 <br />
 
@@ -124,15 +124,15 @@ ANTHROPIC_API_KEY=
 
 ## 📦 Available scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start the development server |
-| `npm run build` | Generate the production build |
-| `npm run preview` | Preview the build locally |
-| `npm run check` | Type-check with `svelte-check` |
-| `npm run check:watch` | Type-check in watch mode |
-| `npm run lint` | Check formatting and lint errors |
-| `npm run format` | Format code with Prettier |
+| Command               | Description                      |
+| --------------------- | -------------------------------- |
+| `npm run dev`         | Start the development server     |
+| `npm run build`       | Generate the production build    |
+| `npm run preview`     | Preview the build locally        |
+| `npm run check`       | Type-check with `svelte-check`   |
+| `npm run check:watch` | Type-check in watch mode         |
+| `npm run lint`        | Check formatting and lint errors |
+| `npm run format`      | Format code with Prettier        |
 
 <br />
 

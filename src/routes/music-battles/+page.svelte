@@ -7,7 +7,7 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 </script>
 
 <svelte:head>
@@ -35,7 +35,7 @@
 	/>
 </svelte:head>
 
-{#if $meStore !== undefined}
+{#if $userInfo?.connectedStreamings.spotify?.connected === true}
 	<h1>Music battles generic heading</h1>
 {:else}
 	<NotLogged notLoggedParagraph={$translationsStore.generalTexts.notLoggedMusicBattlesParagraph1} />

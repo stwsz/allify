@@ -65,7 +65,6 @@ export const POST: RequestHandler = async ({ request }) => {
 			headers: { 'Content-Type': 'application/json' }
 		});
 	} catch (e) {
-		console.error('Unexpected error:', e);
 		return new Response(
 			JSON.stringify({ error: 'Unexpected error while processing the request' }),
 			{

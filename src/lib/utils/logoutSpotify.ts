@@ -1,5 +1,5 @@
 // Stores
-import { meStore } from '$lib/stores/me.store';
+import { userInfo } from '$lib/stores/userInfo.store';
 
 export async function logoutSpotify() {
 	sessionStorage.removeItem('spotify-user-playlists');
@@ -18,5 +18,5 @@ export async function logoutSpotify() {
 		credentials: 'include'
 	});
 
-	meStore.set(undefined);
+	userInfo.set(undefined);
 }

@@ -11,12 +11,12 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { meStore } from '$lib/stores/me.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 
 	// Props
 	export let isAsideMenuOpen: boolean;
 
-	$: loggedIn = $meStore ? true : false;
+	$: loggedIn = $userInfo ? true : false;
 
 	let showProfileOptions: boolean = false;
 </script>
@@ -54,7 +54,7 @@
 			aria-label="Toggle profile items"
 		>
 			{#if loggedIn}
-				{#if $meStore?.images[0]}
+				{#if $userInfo?.connectedStreamings.spotify?.images[0]}
 					<img
 						class="
 							h-10
@@ -66,8 +66,8 @@
 							sm:h-11
 							sm:w-11
 						"
-						src={$meStore?.images[0]?.url}
-						alt={$meStore?.display_name}
+						src={$userInfo?.connectedStreamings.spotify?.images[0]?.url}
+						alt={$userInfo?.connectedStreamings.spotify?.name}
 					/>
 				{:else}
 					<div
@@ -85,18 +85,18 @@
 							font-medium
 							text-brand-primary
 						"
-						aria-label={$meStore?.display_name}
+						aria-label={$userInfo?.connectedStreamings.spotify?.name}
 					>
-						{$meStore?.display_name.slice(0, 1)}
+						{$userInfo?.connectedStreamings.spotify?.name.slice(0, 1)}
 					</div>
 				{/if}
 
 				<div class="min-w-0 flex-1 text-left">
 					<p class="text-sm leading-tight font-semibold text-t-primary">
-						{$meStore?.display_name}
+						{$userInfo?.connectedStreamings.spotify?.name}
 					</p>
 					<p class="mt-0.5 truncate text-xs text-t-muted">
-						{$meStore?.email}
+						{$userInfo?.connectedStreamings.spotify?.email}
 					</p>
 				</div>
 			{:else}
