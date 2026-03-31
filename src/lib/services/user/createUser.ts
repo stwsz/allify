@@ -13,7 +13,7 @@ export async function createUser(user: UserInfo) {
 	const resJson = await createUserOnMongoDB.json();
 
 	if (createUserOnMongoDB.ok) {
-		console.log(resJson);
+		return resJson;
 	} else {
 		console.error(resJson.error || 'Failed to create user');
 	}

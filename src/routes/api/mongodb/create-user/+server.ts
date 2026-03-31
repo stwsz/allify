@@ -3,7 +3,7 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 
 // Server
-import { connectDB } from '../../../../server/mongodb';
+import { connectDB } from '../../../../server/mongodb.server';
 
 // Environment variables
 import { MONGO_DB } from '$env/static/private';
