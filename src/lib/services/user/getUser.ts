@@ -10,15 +10,13 @@ export async function getUser(email: string) {
 
 		const resJson = await response.json();
 
-		console.log('[getUser] resJson:', resJson);
-
 		if (resJson.success === true) {
 			return resJson;
 		} else {
-			console.error('[API ERROR]:', resJson.error);
+			return undefined;
 		}
 	} catch (error) {
-		console.error('[getUser]', error);
+		return undefined;
 	}
 }
 
