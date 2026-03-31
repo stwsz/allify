@@ -27,8 +27,6 @@ export const POST: RequestHandler = async ({ request }) => {
 			createdAt: new Date()
 		});
 
-		await client.close();
-
 		return json({
 			success: true,
 			createdUser: user,

@@ -1,18 +1,15 @@
 // mongoDB
 import { MongoClient } from 'mongodb';
+import { env } from '$env/dynamic/private';
 
-// Environment variables
-import { MONGO_URI } from '$env/static/private';
+let client: MongoClient;
+let clientPromise: Promise<MongoClient>;
 
-const client = new MongoClient(MONGO_URI);
-
-let isConnected = false;
-
-export async function connectDB() {
-	if (!isConnected) {
-		await client.connect();
-		isConnected = true;
+export function connectDB() {
+	if (!clientPromise) {
+		client = new MongoClient(env.MONGO_URI);
+		clientPromise = client.connect();
 	}
 
-	return client;
+	return clientPromise;
 }
