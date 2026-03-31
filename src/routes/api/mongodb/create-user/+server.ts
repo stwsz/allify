@@ -29,8 +29,10 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		return json({
 			success: true,
-			createdUser: user,
-			userId: result.insertedId
+			createdUser: {
+				...user,
+				_id: result.insertedId
+			}
 		});
 	} catch (err) {
 		return json({ error: err instanceof Error ? err.message : 'Internal error' }, { status: 500 });

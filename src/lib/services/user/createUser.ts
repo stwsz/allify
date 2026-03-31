@@ -12,9 +12,9 @@ export async function createUser(user: UserInfo) {
 
 	const resJson = await createUserOnMongoDB.json();
 
-	if (resJson.success === true) {
-		return resJson;
-	} else {
-		console.error(resJson.error || 'Failed to create user');
+	if (!resJson.success) {
+		throw new Error(resJson.error || 'Request failed');
 	}
+
+	return resJson;
 }
