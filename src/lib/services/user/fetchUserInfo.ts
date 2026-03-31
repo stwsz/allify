@@ -41,7 +41,6 @@ export async function fetchUserInfo() {
 			userInfo.set(undefined);
 		}
 	} catch (error) {
-		console.error('[fetchUserInfo]', error);
 		userInfo.set(undefined);
 	}
 }
