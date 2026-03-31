@@ -6,10 +6,15 @@ import { connectDB } from '$lib/server/mongodb';
 
 // Environment variables
 import { MONGO_DB } from '$env/static/private';
+import { MONGO_URI } from '$env/static/private';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		console.log('➡️ [START] Incoming request to /get-user');
+		console.log('URI length:', MONGO_URI?.length);
+		console.log('URI:', MONGO_URI);
+		console.log('Last char:', MONGO_URI?.slice(-1));
+
 
 		const body = await request.json();
 		console.log('[BODY RECEIVED]:', body);
