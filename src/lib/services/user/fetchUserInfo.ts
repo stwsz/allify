@@ -13,7 +13,7 @@ export async function fetchUserInfo() {
 		if (userFromSpotify) {
 			const getUserInfoBySpotify = await getUser(userFromSpotify.email);
 
-			if (getUserInfoBySpotify.success === true) {
+			if (getUserInfoBySpotify?.success === true) {
 				userInfo.set(getUserInfoBySpotify.userInfoFromMongoDB);
 			} else {
 				const userInfoInitialBuild = {

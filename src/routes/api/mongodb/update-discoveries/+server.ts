@@ -24,7 +24,11 @@ export const POST: RequestHandler = async ({ request }) => {
 		const users = db.collection('users');
 		await users.updateOne(
 			{ email },
-			{ $set: { discoveries: { tracks, artists, updatedAt: new Date().toLocaleDateString('en-US') } } }
+			{
+				$set: {
+					discoveries: { tracks, artists, updatedAt: new Date().toLocaleDateString('en-US') }
+				}
+			}
 		);
 
 		return new Response(
