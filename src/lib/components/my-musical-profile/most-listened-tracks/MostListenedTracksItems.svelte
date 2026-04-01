@@ -13,6 +13,8 @@
 
 	let mostListenedTracks: TrackSpotify[] | undefined =
 		$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.mostListenedTracksItems;
+
+	console.log('mostListenedTracks', mostListenedTracks);
 </script>
 
 <div class="flex flex-col gap-10 lg:gap-14">
@@ -58,17 +60,17 @@
 
 							{#if track.artists}
 								<p class="truncate text-xs text-t-secondary">
-									{track.artists.map((a: any) => a.name).join(', ')}
+									{track.artists.join(', ')}
 								</p>
 							{/if}
 						</div>
 
-						{#if track.name}
+						{#if track.albumName}
 							<div class="flex flex-wrap gap-2">
 								<span
 									class="rounded-md bg-brand-primary px-3 py-1 text-[10px] font-medium text-t-inverse"
 								>
-									{track.name}
+									{track.albumName}
 								</span>
 							</div>
 						{/if}

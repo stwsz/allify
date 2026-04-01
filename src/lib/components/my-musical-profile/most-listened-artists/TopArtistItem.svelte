@@ -12,6 +12,8 @@
 	// Props
 	export let mostListenedArtistItem: any;
 	export let index: number;
+
+	console.log('mostListenedArtistItem', mostListenedArtistItem);
 </script>
 
 <div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-[auto_1fr_auto]">
@@ -50,9 +52,9 @@
 				</p>
 			{/if}
 
-			{#if mostListenedArtistItem.followers.total}
+			{#if mostListenedArtistItem.followers}
 				<p class="text-sm text-t-secondary sm:text-base">
-					{mostListenedArtistItem.followers.total.toLocaleString()}
+					{mostListenedArtistItem.followers.toLocaleString()}
 					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsFollowers}
 				</p>
 			{/if}

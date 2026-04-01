@@ -52,7 +52,7 @@
 
 			{#if mostListenedTrackItem.artists}
 				<p class="text-sm text-t-secondary sm:text-base">
-					{mostListenedTrackItem.artists.map((a: any) => a.name).join(', ')}
+					{mostListenedTrackItem.artists.join(', ')}
 				</p>
 			{/if}
 		</div>
