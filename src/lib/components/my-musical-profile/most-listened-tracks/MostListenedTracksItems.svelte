@@ -13,8 +13,6 @@
 
 	let mostListenedTracks: TrackSpotify[] | undefined =
 		$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.mostListenedTracksItems;
-
-	console.log('mostListenedTracks', mostListenedTracks);
 </script>
 
 <div class="flex flex-col gap-10 lg:gap-14">
