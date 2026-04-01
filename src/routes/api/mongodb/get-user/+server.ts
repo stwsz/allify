@@ -1,3 +1,4 @@
+// Svelte
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -18,8 +19,6 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		const client = await connectDB();
-
-		console.log(client);
 
 		const db = client.db(MONGO_DB);
 		const users = db.collection('users');
@@ -42,4 +41,3 @@ export const POST: RequestHandler = async ({ request }) => {
 		);
 	}
 };
-

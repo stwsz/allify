@@ -4,63 +4,19 @@
 
 	// Assets
 	import AlliFullBodyWaving from '$lib/assets/images/alli/alli-full-body-waving.webp?enhanced';
-	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
 
 	// Components
 	import NotLogged from '$lib/components/general/NotLogged.svelte';
+
+	// Services
+	import { getDiscoveries } from '$lib/services/user/getDiscoveries';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { userInfo } from '$lib/stores/userInfo.store';
 
-	let loading = false;
-
-	$: mostListenedArtists = [] as string[];
-	$: mostListenedTracks = [] as string[];
-
-	async function ClaudeCallToGetDiscoveries() {
-		loading = true;
-
-		let mostListenedArtistsCall = [] as string[];
-		let mostListenedTracksCall = [] as string[];
-
-		const mostListenedArtistsFromStorage = sessionStorage.getItem('spotify-most-listened-artists');
-		const mostListenedTracksFromStorage = sessionStorage.getItem('spotify-most-listened-tracks');
-
-		if (mostListenedArtistsFromStorage && mostListenedTracksFromStorage) {
-			let mostListenedArtistsParsed = JSON.parse(mostListenedArtistsFromStorage);
-			let mostListenedTracksParsed = JSON.parse(mostListenedTracksFromStorage);
-
-			for (const artist of mostListenedArtistsParsed) {
-				mostListenedArtistsCall.push(artist.name);
-			}
-
-			for (const track of mostListenedTracksParsed) {
-				mostListenedTracksCall.push(track.name);
-			}
-		} else {
-			return;
-		}
-
-		const discoveriesReq = await fetch('/api/calls-claude/discoveries', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify({
-				mostListenedTracks: mostListenedTracksCall,
-				mostListenedArtists: mostListenedTracksCall
-			})
-		});
-
-		const discoveriesRes = await discoveriesReq.json();
-		const { songs, artists } = discoveriesRes;
-
-		mostListenedArtists = artists;
-		mostListenedTracks = songs;
-
-		loading = false;
-	}
+	$: mostListenedArtists = $userInfo?.discoveries.artists;
+	$: mostListenedTracks = $userInfo?.discoveries.tracks;
 </script>
 
 <svelte:head>
@@ -103,11 +59,7 @@
 				<div
 					class="mt-2 flex min-h-45 flex-col gap-6 rounded-xl border border-b-default bg-s-default px-8 py-6 shadow-sm sm:flex-row"
 				>
-					{#if loading === true}
-						<div class="flex w-full items-center justify-center text-center">
-							<DotsLoading />
-						</div>
-					{:else if mostListenedArtists.length !== 0 && mostListenedTracks.length !== 0}
+					{#if (mostListenedArtists?.length ?? 0) !== 0 && (mostListenedTracks?.length ?? 0) !== 0}
 						<div class="flex-1">
 							<h2 class="mb-3 text-sm font-medium text-t-primary">
 								{$translationsStore.discoveriesPage.discoveriesPageHeading2Artists}
@@ -115,7 +67,7 @@
 
 							<ul class="space-y-3 text-xs text-t-secondary">
 								{#each mostListenedArtists as artist}
-									<li class="truncate transition-colors hover:text-t-primary">
+									<li class="truncate">
 										{artist}
 									</li>
 								{/each}
@@ -131,7 +83,7 @@
 
 							<ul class="space-y-3 text-xs text-t-secondary">
 								{#each mostListenedTracks as track}
-									<li class="truncate transition-colors hover:text-t-primary">
+									<li class="truncate">
 										{track}
 									</li>
 								{/each}
@@ -146,7 +98,16 @@
 
 				<button
 					class="mx-auto mt-4 w-full cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse shadow-sm transition-all hover:bg-brand-primary-dark hover:shadow-md active:scale-95 sm:w-fit"
-					onclick={ClaudeCallToGetDiscoveries}
+					onclick={() =>
+						getDiscoveries(
+							$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.mostListenedTracksItems?.map(
+								(track) => `${track.name} - ${track.artists.map((artist) => artist).join(', ')}`
+							) ?? [],
+							$userInfo?.connectedStreamings.spotify?.mostListenedArtists?.mostListenedArtistsItems?.map(
+								(artist) => artist.name
+							) ?? [],
+							$userInfo?.email
+						)}
 				>
 					{$translationsStore.discoveriesPage.discoveriesPageDiscoverNowButton}
 				</button>
@@ -155,7 +116,7 @@
 			<enhanced:img
 				src={AlliFullBodyWaving}
 				alt={$translationsStore.discoveriesPage.alliMascotWavingAltText}
-				class="mx-auto mt-5 h-auto w-44 sm:w-60 md:w-72 lg:w-85 xl:w-95"
+				class="mx-auto mt-5 h-auto w-44 sm:w-60 md:w-72 lg:mt-0 lg:w-85 xl:w-95"
 				width="380"
 				height="380"
 				loading="eager"
