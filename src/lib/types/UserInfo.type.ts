@@ -2,7 +2,8 @@ export type UserInfo = {
 	email: string;
 	tickets: number;
 	discoveries: {
-		musics: string[];
+		updatedAt: string;
+		tracks: string[];
 		artists: string[];
 	};
 	connectedStreamings: {

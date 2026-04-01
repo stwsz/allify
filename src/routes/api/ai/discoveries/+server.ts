@@ -1,4 +1,7 @@
+// Types
 import type { RequestHandler } from '@sveltejs/kit';
+
+// Environment variables
 import { ANTHROPIC_API_KEY } from '$env/static/private';
 
 export const POST: RequestHandler = async ({ request }) => {
@@ -8,27 +11,9 @@ export const POST: RequestHandler = async ({ request }) => {
 		Most listened artists: ${mostListenedArtists.join(', ')}.
 		Most listened songs: ${mostListenedTracks.join(', ')}.
 
-		Task:
 		Suggest exactly 5 songs and 5 artists the user will like.
-
-		STRICT RULES:
-		- DO NOT include any artist from the provided artists list.
-		- DO NOT include any song from the provided songs list.
-		- Do not include any artist in the "artists" list if they already appear in the "songs" list.
-		- Avoid duplicates or variations (remix, live, acoustic).
-		- Ensure diversity of artists.
-
-		VALIDATION STEP (IMPORTANT):
-		Before responding, internally check:
-		- If ANY suggested item appears in the input lists → REMOVE and replace it.
-		- Only return when ALL items are 100% new.
-
-		OUTPUT FORMAT:
-		Respond ONLY in pure JSON, no explanation:
-		{
-		"songs": ["Song Name - Artist Name", "Song Name - Artist Name", "Song Name - Artist Name", "Song Name - Artist Name", "Song Name - Artist Name"],
-		"artists": ["Artist Name", "Artist Name", "Artist Name", "Artist Name", "Artist Name"]
-		}
+		DO NOT include any artist or song from the lists above.
+		Do not include an artist in "artists" if they already appear in "songs".
 	`;
 
 	try {
@@ -42,6 +27,29 @@ export const POST: RequestHandler = async ({ request }) => {
 			body: JSON.stringify({
 				model: 'claude-haiku-4-5-20251001',
 				max_tokens: 1000,
+				tools: [
+					{
+						name: 'music_suggestions',
+						description: 'Returns music recommendations for the user.',
+						input_schema: {
+							type: 'object',
+							properties: {
+								tracks: {
+									type: 'array',
+									items: { type: 'string' },
+									description: 'List of 5 songs in "Song Name - Artist Name" format'
+								},
+								artists: {
+									type: 'array',
+									items: { type: 'string' },
+									description: 'List of 5 artist names'
+								}
+							},
+							required: ['songs', 'artists']
+						}
+					}
+				],
+				tool_choice: { type: 'tool', name: 'music_suggestions' },
 				messages: [{ role: 'user', content: prompt }]
 			})
 		});
@@ -54,23 +62,27 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		const data = await response.json();
-		const text = data.content
-			?.map((b: { text?: string }) => b.text ?? '')
-			.join('')
-			.trim();
-		const result = JSON.parse(text.replace(/```json|```/g, '').trim());
 
-		return new Response(JSON.stringify(result), {
+		const toolUse = data.content?.find((b: { type: string }) => b.type === 'tool_use');
+
+		if (!toolUse?.input) {
+			return new Response(JSON.stringify({ error: 'No tool response from Claude' }), {
+				status: 500,
+				headers: { 'Content-Type': 'application/json' }
+			});
+		}
+
+		return new Response(JSON.stringify(toolUse.input), {
 			status: 200,
 			headers: { 'Content-Type': 'application/json' }
 		});
 	} catch (e) {
 		return new Response(
-			JSON.stringify({ error: 'Unexpected error while processing the request' }),
-			{
-				status: 500,
-				headers: { 'Content-Type': 'application/json' }
-			}
+			JSON.stringify({
+				error: 'Unexpected error',
+				details: e instanceof Error ? e.message : String(e)
+			}),
+			{ status: 500, headers: { 'Content-Type': 'application/json' } }
 		);
 	}
 };

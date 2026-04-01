@@ -20,7 +20,8 @@ export async function fetchUserInfo() {
 					email: userFromSpotify.email,
 					tickets: 5,
 					discoveries: {
-						musics: [],
+						updatedAt: '',
+						tracks: [],
 						artists: []
 					},
 					connectedStreamings: {
