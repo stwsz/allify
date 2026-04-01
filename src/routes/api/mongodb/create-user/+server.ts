@@ -24,7 +24,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		const result = await users.insertOne({
 			...user,
-			createdAt: new Date()
+			createdAt: new Date().toLocaleDateString('en-US')
 		});
 
 		return json({
