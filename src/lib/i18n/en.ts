@@ -127,7 +127,7 @@ export const en = {
 			'Let Alli recommend new music for you based on your musical taste. Discover new artists and tracks you will love.',
 		discoveriesPageHeading1: 'Let Alli recommend new music for you',
 		discoveriesPageParagraph1:
-			'Alli suggests 5 tracks and 5 artists to help you expand your musical taste',
+			'Alli suggests 5 tracks and 5 artists to help you expand your musical taste based on what you’ve listened to the most.',
 		discoveriesPageHeading2Artists: 'Artists',
 		discoveriesPageHeading2Tracks: 'Tracks',
 		discoveriesPageDiscoverNow: 'Click on "Discover now" to generate recommendations',

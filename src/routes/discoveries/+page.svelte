@@ -4,6 +4,7 @@
 
 	// Assets
 	import AlliFullBodyWaving from '$lib/assets/images/alli/alli-full-body-waving.webp?enhanced';
+	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
 
 	// Components
 	import NotLogged from '$lib/components/general/NotLogged.svelte';
@@ -14,6 +15,8 @@
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { userInfo } from '$lib/stores/userInfo.store';
+
+	let loadingDiscoveries = false;
 
 	$: mostListenedArtists = $userInfo?.discoveries.artists;
 	$: mostListenedTracks = $userInfo?.discoveries.tracks;
@@ -57,9 +60,13 @@
 				</p>
 
 				<div
-					class="mt-2 flex min-h-45 flex-col gap-6 rounded-xl border border-b-default bg-s-default px-8 py-6 shadow-sm sm:flex-row"
+					class={`mt-2 flex min-h-45 flex-col gap-6 rounded-xl border border-b-default bg-s-default px-6 py-4 shadow-sm ${loadingDiscoveries ? 'h-30' : 'h-auto'} sm:flex-row md:px-8 md:py-6`}
 				>
-					{#if (mostListenedArtists?.length ?? 0) !== 0 && (mostListenedTracks?.length ?? 0) !== 0}
+					{#if loadingDiscoveries}
+						<div class="mx-auto flex h-full items-center justify-center">
+							<DotsLoading />
+						</div>
+					{:else if (mostListenedArtists?.length ?? 0) !== 0 && (mostListenedTracks?.length ?? 0) !== 0}
 						<div class="flex-1">
 							<h2 class="mb-3 text-sm font-medium text-t-primary">
 								{$translationsStore.discoveriesPage.discoveriesPageHeading2Artists}
@@ -98,8 +105,10 @@
 
 				<button
 					class="mx-auto mt-4 w-full cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse shadow-sm transition-all hover:bg-brand-primary-dark hover:shadow-md active:scale-95 sm:w-fit"
-					onclick={() =>
-						getDiscoveries(
+					onclick={async () => {
+						loadingDiscoveries = true;
+
+						const loadedDiscoveries = await getDiscoveries(
 							$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.mostListenedTracksItems?.map(
 								(track) => `${track.name} - ${track.artists.map((artist) => artist).join(', ')}`
 							) ?? [],
@@ -107,7 +116,12 @@
 								(artist) => artist.name
 							) ?? [],
 							$userInfo?.email
-						)}
+						);
+
+						if (loadedDiscoveries.loaded === true) {
+							loadingDiscoveries = false;
+						}
+					}}
 				>
 					{$translationsStore.discoveriesPage.discoveriesPageDiscoverNowButton}
 				</button>

@@ -127,7 +127,7 @@ export const es = {
 			'Deja que Alli te recomiende nuevas canciones basadas en tu gusto musical. Descubre nuevos artistas y canciones que te encantarán.',
 		discoveriesPageHeading1: 'Deja que Alli te recomiende nuevas canciones',
 		discoveriesPageParagraph1:
-			'Alli sugiere 5 canciones y 5 artistas para que amplíes tu gusto musical',
+			'Alli sugiere 5 canciones y 5 artistas para que amplíes tu gusto musical basado en lo que más has escuchado.',
 		discoveriesPageHeading2Artists: 'Artistas',
 		discoveriesPageHeading2Tracks: 'Músicas',
 		discoveriesPageDiscoverNow: 'Haz clic en "Descubrir ahora" para generar recomendaciones',
