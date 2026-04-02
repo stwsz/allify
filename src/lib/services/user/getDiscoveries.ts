@@ -36,4 +36,6 @@ export async function getDiscoveries(
 		if (!current?.email) return current;
 		return { ...current, discoveries: updateRes.discoveries };
 	});
+
+	return { loaded: true };
 }
