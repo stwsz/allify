@@ -1,12 +1,18 @@
+// Svelte
 import { derived, type Readable } from 'svelte/store';
+
+// Stores
 import { languageStore } from './language.store';
 
+// Translations
 import { en } from '../i18n/en';
 import { pt } from '../i18n/pt';
 import { de } from '../i18n/de';
 import { es } from '../i18n/es';
+import { fr } from '../i18n/fr';
+import { it } from '../i18n/it';
 
-type Translations = typeof en | typeof pt | typeof de | typeof es;
+type Translations = typeof en | typeof pt | typeof de | typeof es | typeof fr;
 
 export const translationsStore: Readable<Translations> = derived(languageStore, ($language) => {
 	switch ($language) {
@@ -18,6 +24,10 @@ export const translationsStore: Readable<Translations> = derived(languageStore, 
 			return de;
 		case 'es':
 			return es;
+		case 'fr':
+			return fr;
+		case 'it':
+			return it;
 		default:
 			return pt;
 	}
