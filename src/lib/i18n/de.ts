@@ -16,6 +16,7 @@ export const de = {
 		headerLanguageEs: 'Spanisch',
 		headerLanguageDe: 'Deutsch',
 		headerLanguageFr: 'Französisch',
+		headerLanguageIt: 'Italienisch',
 		dropdownAriaLabel: 'Sprachauswahl',
 		profileButtonAriaLabel: 'Benutzerprofil-Schaltfläche',
 		profileNotLoggedAltText: 'Benutzerprofil-Avatar',

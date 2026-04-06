@@ -10,6 +10,7 @@ import { pt } from '../i18n/pt';
 import { de } from '../i18n/de';
 import { es } from '../i18n/es';
 import { fr } from '../i18n/fr';
+import { it } from '../i18n/it';
 
 type Translations = typeof en | typeof pt | typeof de | typeof es | typeof fr;
 
@@ -25,6 +26,8 @@ export const translationsStore: Readable<Translations> = derived(languageStore, 
 			return es;
 		case 'fr':
 			return fr;
+		case 'it':
+			return it;
 		default:
 			return pt;
 	}

@@ -12,6 +12,7 @@
 	import portugueseFlag from '$lib/assets/images/icons/flags/brazil-icon.webp';
 	import spanishFlag from '$lib/assets/images/icons/flags/spain-icon.webp';
 	import frenchFlag from '$lib/assets/images/icons/flags/france-icon.webp';
+	import italianFlag from '$lib/assets/images/icons/flags/italy-icon.webp';
 	import ArrowIcon from '$lib/assets/images/icons/ArrowIcon.svelte';
 	import SelectedIcon from '$lib/assets/images/icons/SelectedIcon.svelte';
 
@@ -24,7 +25,8 @@
 		{ code: 'pt', label: $translationsStore.generalTexts.headerLanguagePt, flag: portugueseFlag },
 		{ code: 'es', label: $translationsStore.generalTexts.headerLanguageEs, flag: spanishFlag },
 		{ code: 'de', label: $translationsStore.generalTexts.headerLanguageDe, flag: germanyFlag },
-		{ code: 'fr', label: $translationsStore.generalTexts.headerLanguageFr, flag: frenchFlag }
+		{ code: 'fr', label: $translationsStore.generalTexts.headerLanguageFr, flag: frenchFlag },
+		{ code: 'it', label: $translationsStore.generalTexts.headerLanguageIt, flag: italianFlag }
 	];
 
 	$: selectedLanguage =
