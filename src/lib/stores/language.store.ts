@@ -1,4 +1,7 @@
+// Svelte
 import { browser } from '$app/environment';
+
+// Stores
 import { writable } from 'svelte/store';
 
 export const languageStore = writable<string>('');

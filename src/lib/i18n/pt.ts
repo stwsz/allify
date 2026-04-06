@@ -15,6 +15,7 @@ export const pt = {
 		headerLanguageEn: 'Inglês',
 		headerLanguageEs: 'Espanhol',
 		headerLanguageDe: 'Alemão',
+		headerLanguageFr: 'Francês',
 		dropdownAriaLabel: 'Seleção de idioma',
 		profileButtonAriaLabel: 'Botão de perfil do usuário',
 		profileNotLoggedAltText: 'Avatar do perfil do usuário',
