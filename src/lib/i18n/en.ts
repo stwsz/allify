@@ -18,6 +18,7 @@ export const en = {
 		headerLanguageFr: 'French',
 		headerLanguageIt: 'Italian',
 		headerLanguageRu: 'Russian',
+		headerLanguageZh: 'Chinese',
 		dropdownAriaLabel: 'Language selection',
 		profileButtonAriaLabel: 'User profile button',
 		profileNotLoggedAltText: 'User profile avatar',
