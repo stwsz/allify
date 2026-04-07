@@ -17,6 +17,7 @@ export const es = {
 		headerLanguageDe: 'Alemán',
 		headerLanguageFr: 'Francés',
 		headerLanguageIt: 'Italiano',
+		headerLanguageRu: 'Ruso',
 		dropdownAriaLabel: 'Selección de idioma',
 		profileButtonAriaLabel: 'Botón de perfil del usuario',
 		profileNotLoggedAltText: 'Avatar del perfil del usuario',
