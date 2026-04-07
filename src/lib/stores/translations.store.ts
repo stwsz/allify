@@ -11,8 +11,10 @@ import { de } from '../i18n/de';
 import { es } from '../i18n/es';
 import { fr } from '../i18n/fr';
 import { it } from '../i18n/it';
+import { ru } from '../i18n/ru';
+import { zh } from '../i18n/zh';
 
-type Translations = typeof en | typeof pt | typeof de | typeof es | typeof fr;
+type Translations = typeof en | typeof pt | typeof de | typeof es | typeof fr | typeof it | typeof ru | typeof zh;
 
 export const translationsStore: Readable<Translations> = derived(languageStore, ($language) => {
 	switch ($language) {
@@ -28,6 +30,10 @@ export const translationsStore: Readable<Translations> = derived(languageStore, 
 			return fr;
 		case 'it':
 			return it;
+		case 'ru':
+			return ru;
+		case 'zh':
+			return zh;
 		default:
 			return pt;
 	}

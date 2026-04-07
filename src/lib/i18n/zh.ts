@@ -1,0 +1,391 @@
+export const zh = {
+	language: 'zh',
+	locale: 'zh-CN',
+	configuration: {
+		langAttribute: 'zh_CN'
+	},
+	generalTexts: {
+		logoColorfulAltText: 'Allify 彩色标志',
+		logoLightAltText: 'Allify 浅色标志',
+		headerNavigationItem1: '我的音乐档案',
+		headerNavigationItem2: '发现',
+		headerNavigationItem3: '音乐对战',
+		headerNavigationAriaLabel: '主导航',
+		headerLanguagePt: '葡萄牙语',
+		headerLanguageEn: '英语',
+		headerLanguageEs: '西班牙语',
+		headerLanguageDe: '德语',
+		headerLanguageFr: '法语',
+		headerLanguageIt: '意大利语',
+        headerLanguageRu: '俄语',
+        headerLanguageZh: '中文',
+		dropdownAriaLabel: '语言选择',
+		profileButtonAriaLabel: '用户资料按钮',
+		profileNotLoggedAltText: '用户资料头像',
+		profileLoggedAltText: '用户资料照片',
+		profileLoggedItem1: '资料',
+		profileLoggedItem2: '设置',
+		profileLoggedItem3: '退出登录',
+		profileNotLoggedItem1:
+			'通过 <span class="ml-1 font-semibold text-spotify">Spotify</span> 登录',
+		profileNotLoggedItem2:
+			'通过 <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span> 登录',
+		burguerMenuAltText: '打开导航菜单',
+		closeMenuAltText: '关闭导航菜单',
+		cardProfileAsideMenuParagraph1: '登录或创建账户',
+		footerFirstSectionText1:
+			'将音乐数据转化为发现、排行榜和全新的音乐聆听方式。',
+		footerFirstSectionText2: '出品方',
+		footerCopyrightText: '版权所有。',
+		footerColumn1Title: '关注我们',
+		footerColumn1Item1AltText: 'LinkedIn 图标',
+		footerColumn1Item2AltText: 'GitHub 图标',
+		footerColumn2Title: '导航',
+		footerColumn2Item1: '我的音乐档案',
+		footerColumn2Item2: '发现',
+		footerColumn2Item3: '音乐对战',
+		footerColumn3Title: '法律信息',
+		footerColumn3Item1: '隐私政策',
+		footerColumn3Item2: '服务条款',
+		footerColumn3Item3: '数据使用',
+		stillInDevelopmentText: '开发中',
+		loadingComponentHeading1: '连接中...',
+		loadingComponentSpotifyParagraph1:
+			'正在获取您的 <span class="font-semibold text-spotify">Spotify</span> 信息',
+		loadingComponentDeezerParagraph1:
+			'正在获取您的 <span class="font-semibold text-deezer">Deezer</span> 信息',
+		loadingComponentAriaLabel: '加载动画',
+		notLoggedHeading1: '您尚未登录',
+		notLoggedMyMusicProfileParagraph1:
+			'要访问您的音乐档案，请连接您喜爱的流媒体平台之一。',
+		notLoggedDiscoveriesParagraph1:
+			'要访问音乐发现功能，请连接您喜爱的流媒体平台之一。',
+		notLoggedMusicBattlesParagraph1:
+			'要访问音乐对战功能，请连接您喜爱的流媒体平台之一。',
+		notLoggedProfileParagraph1:
+			'要访问您的资料，请连接您喜爱的流媒体平台之一。',
+		notLoggedSettingsParagraph1:
+			'要访问设置，请连接您喜爱的流媒体平台之一。',
+		notLoggedLoginLinkSpotify: '通过 Spotify 登录',
+		notLoggedLoginLinkDeezer: '通过 Deezer 登录',
+		disabledDeezerFunctionalityText: 'Deezer 连接暂时不可用',
+		loginWith: '登录方式：',
+		seeOnSpotify: '在 Spotify 上查看',
+		popularity: '热度'
+	},
+	homePage: {
+		title: '关于您音乐的一切，尽在一处 | Allify',
+		homePageMetaDescription:
+			'使用 Allify 探索个性化音乐洞察，连接您的流媒体平台，发现全新的音乐聆听方式。',
+		homePageMetaOgAndTwitterContent:
+			'使用 Allify 探索个性化音乐洞察，连接您的流媒体平台，发现全新的音乐聆听方式。',
+		homePageHeroSectionHeading1: '用真实数据了解您的音乐习惯',
+		homePageHeroSectionParagraph1:
+			'连接您的流媒体账户，追踪详细指标，获取个性化推荐，与朋友竞争排行榜。',
+		alliMascotPointingToLeftAltText: 'Alli 向左指，指向操作按钮',
+		alliMascotPointingDownwardsAltText: 'Alli 向下指，指向操作按钮',
+		homePageHeroSectionButton1: '连接我的流媒体',
+		homePageHeroSectionButton1v2: '前往我的音乐档案',
+		homePageHeroSectionButton1AriaLabel: '连接我的流媒体',
+		homePageHeroSectionButton1v2AriaLabel: '前往我的音乐档案',
+		connectPlatformsSectionHeading1: '连接您的流媒体平台',
+		connectPlatformsSectionParagraph1:
+			'整合您的账户，在一处追踪指标、表现和洞察。',
+		connectPlatformSpotifyAltText: 'Spotify 图标',
+		connectPlatformSpotifyDescription:
+			'Spotify 是全球最大的流媒体平台之一，提供数百万曲目、个性化播放列表和先进的音乐发现功能，通过数据、趋势和智能推荐连接艺术家与听众。',
+		connectPlatformDeezerAltText: 'Deezer 图标',
+		connectPlatformDeezerDescription:
+			'Deezer 是全球流媒体音乐平台，汇聚海量曲目目录、编辑精选播放列表和个性化推荐功能，为不同类型的听众提供完整的音乐体验。',
+		connectPlatformCardPlatformConnectIconAltText: '连接图标',
+		connectPlatformCardPlatformConnectSpotifyButton: '连接 Spotify',
+		connectPlatformCardPlatformConnectDeezerButton: '连接 Deezer',
+		connectPlatformCardPlatformConnectedButton: '已连接',
+		connectPlatformCardPlatformExternalLinkIconAltText: '外部链接图标',
+		connectPlatformCardPlatformExternalLink: '前往',
+		devicesSectionHeading1: '随时随地携带您的音乐',
+		devicesSectionParagraph1:
+			'随时随地在任何设备上访问您的音乐数据，体验流畅、一致且直观的使用感受。',
+		devicesSectionAltText: '设备插图'
+	},
+	myMusicalProfilePage: {
+		title: '我的音乐档案 | Allify',
+		myMusicalProfilePageMetaDescription:
+			'探索您的音乐档案，了解您最常听的艺术家和曲目，追踪聆听统计数据，连接流媒体平台获取个性化洞察。',
+		myMusicalProfilePageMetaOgAndTwitterContent:
+			'探索您的音乐档案，了解您最常听的艺术家和曲目，追踪聆听统计数据，连接流媒体平台获取个性化洞察。',
+		myMusicalProfilePageHeading1: '这是您最常聆听的一切',
+		myMusicalProfilePageMostListenedArtistsHeading2: '您最常听的艺术家',
+		myMusicalProfilePageMostListenedArtists: '最常听',
+		myMusicalProfilePageMostListenedTracks: '最常听',
+		myMusicalProfilePageMostListenedArtistsFollowers: '粉丝',
+		myMusicalProfilePageMostListenedTracksHeading2: '您最常听的歌曲'
+	},
+	discoveriesPage: {
+		title: '音乐发现 | Allify',
+		discoveriesPageMetaDescription:
+			'让 Alli 根据您的音乐品味为您推荐新音乐。发现您会喜欢的新艺术家和新曲目。',
+		discoveriesPageMetaOgAndTwitterContent:
+			'让 Alli 根据您的音乐品味为您推荐新音乐。发现您会喜欢的新艺术家和新曲目。',
+		discoveriesPageHeading1: '让 Alli 为您推荐新音乐',
+		discoveriesPageParagraph1:
+			'Alli 根据您最常听的内容，为您推荐 5 首歌曲和 5 位艺术家，帮助您拓展音乐品味。',
+		discoveriesPageHeading2Artists: '艺术家',
+		discoveriesPageHeading2Tracks: '歌曲',
+		discoveriesPageDiscoverNow: '点击"立即发现"生成推荐内容',
+		discoveriesPageDiscoverNowButton: '立即发现',
+		alliMascotWavingAltText: 'Alli 在发现页面挥手致意'
+	},
+	musicBattlesPage: {
+		title: '音乐对战 | Allify',
+		musicBattlesPageMetaDescription:
+			'参与激动人心的音乐对战，比较谁播放一首歌曲或艺术家更多，向朋友发起挑战，看看谁才是真正的音乐达人。',
+		musicBattlesPageMetaOgAndTwitterContent:
+			'参与激动人心的音乐对战，比较谁播放一首歌曲或艺术家更多，向朋友发起挑战，看看谁才是真正的音乐达人。'
+	},
+	profilePage: {
+		title: '资料 | Allify',
+		profilePageMetaDescription:
+			'查看您的公开资料，分享聆听统计数据、收藏歌曲、播放列表和已保存专辑，连接流媒体平台获取个性化洞察。',
+		profilePageMetaOgAndTwitterContent:
+			'查看您的公开资料，分享聆听统计数据、收藏歌曲、播放列表和已保存专辑，连接流媒体平台获取个性化洞察。',
+		profilePageImageAltText: '的资料照片',
+		profilePageFollowers: '粉丝',
+		profilePageCarouselButtonAriaLabelPrev: '轮播上一个按钮',
+		profilePageCarouselButtonAriaLabelNext: '轮播下一个按钮',
+		profilePageCarouselArrowIconAltText: '轮播箭头图标',
+		profilePageUserSavedTracksSectionHeading2: '收藏的歌曲',
+		profilePageUserSavedTracksSectionParagraph1:
+			'保存歌曲后，它们将显示在这里。',
+		profilePageUserPlaylistsSectionHeading2: '您的播放列表',
+		profilePageUserPlaylistsSectionParagraph1:
+			'创建或保存播放列表后，它们将显示在这里。',
+		profilePageUserSavedAlbumsSectionHeading2: '已保存的专辑',
+		profilePageUserSavedAlbumsSectionParagraph1:
+			'保存专辑后，它们将显示在这里。',
+		profilePageExternalLinkSpotify: '在 Spotify 上查看资料',
+		profilePageUserPlaylistItemBy: '作者',
+		profilePageUserPlaylistItemMusics: '首歌曲',
+		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: '关闭收藏歌曲弹窗',
+		profilePageUserSelectedSavedTrack: '歌曲',
+		profilePageUserSelectedSavedTrackExplicit: '含限制内容',
+		profilePageUserSelectedSavedTrackClean: '干净版',
+		profilePageUserSelectedSavedTrackOpenOnSpotify: '在 Spotify 中打开',
+		profilePageUserSelectedPlaylistCloseButtonAriaLabel: '关闭播放列表弹窗',
+		profilePageUserSelectedPlaylistModalPublic: '公开',
+		profilePageUserSelectedPlaylistModalPrivate: '私密',
+		profilePageUserSelectedPlaylistModalParagraph1: '播放列表',
+		profilePageUserSelectedPlaylistModalMusics: '首歌曲',
+		profilePageUserSelectedPlaylistModalExternalLink: '在 Spotify 上查看播放列表',
+		profilePageUserSelectedPlaylistModalLoadingMusics: '正在加载播放列表歌曲...',
+		profilePageUserSelectedPlaylistModalMusicsNotFound: '此播放列表中未找到歌曲。',
+		profilePageUserSelectedPlaylistModalAddedBy: '添加者',
+		profilePageUserAlbumItemTracks: '首曲目',
+		profilePageUserSelectedSavedAlbumCloseButtonAriaLabel: '关闭已保存专辑弹窗',
+		profilePageUserSelectedSavedAlbum: '专辑',
+		profilePageUserSelectedSavedAlbumItemTracks: '首曲目',
+		profilePageUserSelectedSavedAlbumOpenOnSpotify: '在 Spotify 中打开专辑'
+	},
+	settingsPage: {
+		title: '设置 | Allify',
+		settingsPageMetaDescription:
+			'管理您与流媒体平台的连接，查看哪些账户处于活跃状态，随时断开连接。',
+		settingsPageMetaOgAndTwitterContent:
+			'管理您与流媒体平台的连接，查看哪些账户处于活跃状态，随时断开连接。',
+		settingsPageHeading1: '设置',
+		settingsPageConnectedPlatformsSectionHeading2: '已连接的平台',
+		settingsPageConnectedPlatformsSectionParagraph1:
+			'管理您与流媒体平台的连接，查看哪些账户处于活跃状态，随时断开连接。',
+		settingsPageConnectedPlatformsNotConnected: '未连接',
+		settingsPageConnectedPlatformsDisconnect: '断开连接',
+		settingsPageConnectedPlatformsConnect: '连接'
+	},
+	errorPage: {
+		title404: '页面未找到 | Allify',
+		titleOtherErrors: '意外错误 | Allify',
+		errorPage404MetaDescription:
+			'未找到您要查找的页面。该页面可能已被删除或地址有误。',
+		errorPageOtherErrorsMetaDescription:
+			'加载此页面时出现问题。请稍后重试。',
+		errorPage404MetaOgAndTwitterContent:
+			'未找到您要查找的页面。该页面可能已被删除或地址有误。',
+		errorPageOtherErrorsMetaOgAndTwitterContent:
+			'加载此页面时出现问题。请稍后重试。',
+		errorPage404Heading1: '页面未找到',
+		errorPage404Paragraph1:
+			'未找到您要查找的页面。该页面可能已被删除或地址有误。',
+		errorPageOtherErrorsHeading1: '糟糕！出现了问题。',
+		errorPageOtherErrorsParagraph1:
+			'加载此页面时出现问题。请稍后重试。',
+		errorPageButtonGoHome: '返回首页'
+	},
+	legalPages: {
+		privacyPolicy: {
+			title: '隐私政策 | Allify',
+			privacyPolicyMetaDescription: '了解 Allify 如何保护和使用您的数据。',
+			privacyPolicyMetaOgAndTwitterContent: '了解 Allify 如何保护和使用您的数据。',
+			privacyPolicyDiv1Heading1: '隐私政策',
+			privacyPolicyDiv1LastUpdated: '最后更新：2026年2月22日',
+			privacyPolicyDiv1Paragraph1:
+				'欢迎使用 Allify。您的隐私对我们至关重要。本隐私政策说明我们在您使用平台时如何收集、使用和保护您的信息。',
+			privacyPolicyDiv2Heading2: '1. 关于我们',
+			privacyPolicyDiv2Paragraph1:
+				'Allify 是一款独立的网络应用程序，通过连接 Spotify 及未来的 Deezer 等第三方流媒体服务，为用户提供音乐聆听洞察。',
+			privacyPolicyDiv2Paragraph2:
+				'Allify 与 Spotify 或 Deezer 没有任何关联、背书或赞助关系。',
+			privacyPolicyDiv3Heading2: '2. 我们收集的信息',
+			privacyPolicyDiv3Heading3_1: '2.1 账户与身份验证信息',
+			privacyPolicyDiv3Paragraph1:
+				'当您使用 Allify 并连接流媒体账户时，我们可能收集并存储：',
+			privacyPolicyDiv3List1Item1: '您的平台用户 ID（Spotify 和/或 Deezer）',
+			privacyPolicyDiv3List1Item2: '基本资料信息（如显示名称，如果可用）',
+			privacyPolicyDiv3List1Item3: '连接状态（例如：已连接 Spotify、Deezer 或两者）',
+			privacyPolicyDiv3List1Item4: '内部账户标识符',
+			privacyPolicyDiv3List1Item5: '与您账户关联的积分余额（用于访问高级功能）',
+			privacyPolicyDiv3Paragraph2: '我们不收集或存储您的 Spotify 或 Deezer 密码。',
+			privacyPolicyDiv3Paragraph3:
+				'身份验证通过各平台提供的 OAuth 安全完成。',
+			privacyPolicyDiv3Heading3_2: '2.2 音乐数据（实时处理）',
+			privacyPolicyDiv3Paragraph4: 'Allify 访问与音乐相关的数据，例如：',
+			privacyPolicyDiv3List2Item1: '最常听的艺术家',
+			privacyPolicyDiv3List2Item2: '最常听的歌曲',
+			privacyPolicyDiv3List2Item3: '聆听统计数据',
+			privacyPolicyDiv3List2Item4: 'API 允许的其他洞察',
+			privacyPolicyDiv3Paragraph5:
+				'这些数据实时处理，不会永久存储在我们的数据库中。',
+			privacyPolicyDiv3Paragraph6:
+				'我们仅临时显示数据，以提供用户请求的洞察内容。',
+			privacyPolicyDiv3Heading3_3: '2.3 技术与使用数据',
+			privacyPolicyDiv3Paragraph7: '我们可能自动收集有限的技术数据，包括：',
+			privacyPolicyDiv3List3Item1: 'IP 地址',
+			privacyPolicyDiv3List3Item2: '浏览器类型和版本',
+			privacyPolicyDiv3List3Item3: '设备信息',
+			privacyPolicyDiv3List3Item4: '会话数据',
+			privacyPolicyDiv3List3Item5: '用于安全和性能的基本使用日志',
+			privacyPolicyDiv4Heading2: '3. 我们如何使用您的信息',
+			privacyPolicyDiv4Paragraph1: '我们严格将收集到的信息用于：',
+			privacyPolicyDiv4List1Item1: '通过第三方服务验证您的账户',
+			privacyPolicyDiv4List1Item2: '显示个性化音乐洞察',
+			privacyPolicyDiv4List1Item3: '管理积分系统和功能访问权限',
+			privacyPolicyDiv4List1Item4: '维护平台功能和安全性',
+			privacyPolicyDiv4List1Item5: '改善整体用户体验',
+			privacyPolicyDiv4Paragraph2: '我们不出售、出租或转让您的个人数据。',
+			privacyPolicyDiv5Heading2: '4. 积分系统与功能访问',
+			privacyPolicyDiv5Paragraph1:
+				'Allify 使用内部积分系统，允许用户访问扩展数据和平台附加功能。',
+			privacyPolicyDiv5Paragraph2: '我们存储：',
+			privacyPolicyDiv5List1Item1: '您的积分余额',
+			privacyPolicyDiv5List1Item2: '积分使用历史（用于平台运营）',
+			privacyPolicyDiv5Paragraph3:
+				'积分仅用于解锁额外洞察功能，不影响您对音乐数据的所有权。',
+			privacyPolicyDiv6Heading2: '5. 付款与计费',
+			privacyPolicyDiv6Paragraph1:
+				'Allify 可能通过购买内部积分（"积分"）提供付费功能。',
+			privacyPolicyDiv6Paragraph2:
+				'付款由 AbacatePay 等第三方支付提供商安全处理。Allify 不收集或存储完整的卡片数据或敏感的财务信息。',
+			privacyPolicyDiv6Paragraph3:
+				'进行购买时，我们可能会收到交易数据，例如付款状态、交易 ID 和购买的积分数量，以便管理用户余额。',
+			privacyPolicyDiv7Heading2: '6. 数据存储与保留',
+			privacyPolicyDiv7Paragraph1: 'Allify 遵循数据最小化原则。',
+			privacyPolicyDiv7List1Item1: '音乐聆听数据不会永久存储在我们的数据库中',
+			privacyPolicyDiv7List1Item2: '仅存储提供服务所必需的基本账户数据',
+			privacyPolicyDiv7List1Item3: '连接状态和积分信息可在账户活跃期间保留',
+			privacyPolicyDiv7Paragraph2: '用户可随时申请删除账户和数据。',
+			privacyPolicyDiv8Heading2: '7. 第三方服务与 API',
+			privacyPolicyDiv8Paragraph1:
+				'Allify 依赖第三方服务和 API 运营，包括流媒体音乐平台、托管提供商和支付处理商。',
+			privacyPolicyDiv8Paragraph2:
+				'这些第三方服务可能根据其自身的隐私政策处理数据，我们建议用户查阅相关政策。',
+			privacyPolicyDiv9Heading2: '8. Cookie 与会话',
+			privacyPolicyDiv9Paragraph1:
+				'Allify 可能使用 Cookie 或类似技术来维护安全会话、提升可用性并确保平台正常运行。',
+			privacyPolicyDiv9Paragraph2: '您可以通过浏览器设置管理或禁用 Cookie。',
+			privacyPolicyDiv10Heading2: '9. 您的隐私权',
+			privacyPolicyDiv10Paragraph1:
+				'根据您所在的位置，您可能有权访问、更正或请求删除您的个人数据，以及撤回数据处理同意。',
+			privacyPolicyDiv10Paragraph2:
+				'要行使您的权利，请使用以下联系信息与我们联系。',
+			privacyPolicyDiv11Heading2: '10. 数据安全',
+			privacyPolicyDiv11Paragraph1:
+				'我们采取适当的技术和组织措施，保护您的数据免遭未经授权的访问、更改、披露或销毁。',
+			privacyPolicyDiv11Paragraph2: '然而，没有任何互联网传输方法是完全安全的。',
+			privacyPolicyDiv12Heading2: '11. 本隐私政策的变更',
+			privacyPolicyDiv12Paragraph1:
+				'我们可能会定期更新本隐私政策。任何变更将通过更新本页顶部的"最后更新"日期来体现。',
+			privacyPolicyDiv13Heading2: '12. 联系信息',
+			privacyPolicyDiv13Paragraph1: '如果您对本隐私政策有任何疑问，请联系我们：',
+			privacyPolicyDiv13Paragraph2: 'Allify',
+			privacyPolicyDiv13Paragraph3: '电子邮件：contact@allify.app'
+		},
+		dataUsage: {
+			title: '数据使用 | Allify',
+			dataUsageMetaDescription:
+				'了解 Allify 如何收集、使用和处理与您的音乐和账户相关的数据。',
+			dataUsageMetaOgAndTwitterContent:
+				'了解 Allify 如何收集、使用和处理与您的音乐和账户相关的数据。',
+			dataUsageDiv1Heading1: '数据使用',
+			dataUsageDiv1LastUpdated: '最后更新：2026年2月22日',
+			dataUsageDiv1Paragraph1:
+				'本数据使用页面说明 Allify 在您使用我们的音乐洞察平台时如何收集、使用和处理信息。',
+			dataUsageDiv2Heading2: '1. 我们使用的数据',
+			dataUsageDiv2Paragraph1:
+				'Allify 使用用户通过连接 Spotify 及未来的 Deezer 等流媒体服务授权的数据，以及平台运营所需的基本技术数据。',
+			dataUsageDiv2Paragraph2:
+				'这可能包括账户标识符、连接状态、API 允许的音乐数据，以及运营服务所需的有限技术信息。',
+			dataUsageDiv3Heading2: '2. 我们如何使用数据',
+			dataUsageDiv3Paragraph1:
+				'数据用于生成个性化音乐洞察、显示聆听统计数据、管理积分系统并确保 Allify 功能的正常运行。',
+			dataUsageDiv3Paragraph2:
+				'我们也可能使用聚合和匿名数据进行内部分析、性能改进和平台发展。',
+			dataUsageDiv4Heading2: '3. 数据处理与存储',
+			dataUsageDiv4Paragraph1:
+				'音乐数据主要实时处理，不会永久存储，除非账户功能严格需要。',
+			dataUsageDiv4Paragraph2:
+				'我们采取适当的技术和组织措施，保护数据免遭未经授权的访问、更改、披露或销毁。',
+			dataUsageDiv5Heading2: '4. 第三方服务与 API',
+			dataUsageDiv5Paragraph1:
+				'Allify 依赖流媒体音乐平台、托管提供商和支付服务等第三方 API 和服务，这些服务可能根据其自身政策处理数据。',
+			dataUsageDiv5Paragraph2: '我们不向第三方出售、出租或转让用户数据。',
+			dataUsageDiv6Heading2: '5. 用户控制',
+			dataUsageDiv6Paragraph1:
+				'用户对流媒体账户的连接保持控制，可随时撤销访问权限或申请删除数据。',
+			dataUsageDiv6Paragraph2:
+				'使用 Allify，即表示您同意本页面所述的数据使用做法。'
+		},
+		termsOfService: {
+			title: '服务条款 | Allify',
+			termsOfServiceMetaDescription: '阅读访问和使用 Allify 平台的条款和条件。',
+			termsOfServiceMetaOgAndTwitterContent:
+				'阅读访问和使用 Allify 平台的条款和条件。',
+			termsOfServiceDiv1Heading1: '服务条款',
+			termsOfServiceDiv1LastUpdated: '最后更新：2026年2月22日',
+			termsOfServiceDiv1Paragraph1:
+				'本服务条款规范对 Allify 平台的访问和使用。使用我们的服务即表示您同意遵守这些条款和条件。',
+			termsOfServiceDiv2Heading2: '1. 平台使用',
+			termsOfServiceDiv2Paragraph1:
+				'Allify 是一个平台，基于 Spotify 及未来的 Deezer 等第三方流媒体服务授权的数据提供音乐洞察。',
+			termsOfServiceDiv2Paragraph2:
+				'您同意仅将平台用于合法、个人目的，并遵守这些条款，不得试图利用、滥用或破坏服务的正常运行。',
+			termsOfServiceDiv3Heading2: '2. 用户责任',
+			termsOfServiceDiv3Paragraph1:
+				'您对通过平台所使用流媒体服务连接的账户及授予的权限负责。',
+			termsOfServiceDiv3Paragraph2:
+				'您同意不将 Allify 用于非法、滥用、恶意自动化活动或违反第三方 API 条款的行为。',
+			termsOfServiceDiv4Heading2: '3. 服务可用性',
+			termsOfServiceDiv4Paragraph1:
+				'我们努力保持 Allify 的可用性和正常运行，但不保证在任何时候都能不间断或无错误地运行。',
+			termsOfServiceDiv4Paragraph2:
+				'我们可能会临时更新、修改、限制或暂停功能，以进行维护、安全、技术改进或法规合规。',
+			termsOfServiceDiv5Heading2: '4. 责任限制',
+			termsOfServiceDiv5Paragraph1:
+				'Allify 按"现状"提供，仅用于与音乐洞察相关的信息和娱乐目的。',
+			termsOfServiceDiv5Paragraph2:
+				'我们不对第三方 API 提供的数据不准确、外部服务中断或基于所显示洞察所做的决定承担责任。',
+			termsOfServiceDiv6Heading2: '5. 条款变更',
+			termsOfServiceDiv6Paragraph1:
+				'我们可能会定期更新本服务条款，以反映平台变化、第三方集成或法律要求。',
+			termsOfServiceDiv6Paragraph2:
+				'在条款更新后继续使用 Allify，即表示您自动同意修订版本。'
+		}
+	}
+};
