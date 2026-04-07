@@ -38,6 +38,6 @@ export const translationsStore: Readable<Translations> = derived(languageStore, 
 		case 'ja':
 			return ja;
 		default:
-			return pt;
+			return en;
 	}
 });
