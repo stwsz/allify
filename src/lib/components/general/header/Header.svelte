@@ -22,7 +22,7 @@
 >
 	<div class="flex items-center gap-4 2xl:gap-20">
 		<AllifyLogoColorful
-			logoSvgClass="w-30 h-fit transition-all cursor-pointer lg:w-32 hover:scale-105"
+			logoSvgClass="w-26 h-fit transition-all cursor-pointer lg:w-32 hover:scale-105"
 			logoAltText={$translationsStore.generalTexts.logoColorfulAltText}
 		/>
 
@@ -35,7 +35,7 @@
 		<HeaderProfile bind:showProfileOptions bind:openLanguageDropdown />
 	</div>
 
-	<div class="flex items-center gap-4 lg:hidden">
+	<div class="flex items-center gap-2 lg:hidden">
 		<HeaderSelectLanguage bind:openLanguageDropdown />
 
 		<button

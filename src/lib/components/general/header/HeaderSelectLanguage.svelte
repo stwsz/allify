@@ -45,9 +45,10 @@
 			border
 			border-b-default
 			bg-s-default
-			px-3 py-2
+			px-2.5 py-1.5
 			text-sm
 			transition-all duration-200
+			md:px-3 md:py-2
 			hover:border-brand-primary
 			hover:bg-s-muted
 			hover:shadow-sm
@@ -65,11 +66,11 @@
 				<img
 					src={selectedLanguage.flag}
 					alt={selectedLanguage.label}
-					class="h-5 w-5 shrink-0 rounded object-cover shadow-sm"
+					class="h-4 w-4 shrink-0 rounded object-cover shadow-sm md:h-5 md:w-5"
 				/>
 			{/if}
 
-			<p class="text-xs font-medium text-t-primary">
+			<p class="text-[11px] font-medium text-t-primary md:text-xs">
 				{selectedLanguage.label}
 			</p>
 		</div>
@@ -111,10 +112,10 @@
 						<img
 							src={language.flag}
 							alt={language.label}
-							class="h-5 w-5 shrink-0 rounded object-cover shadow-sm"
+							class="h-4 w-4 shrink-0 rounded object-cover shadow-sm md:h-5 md:w-5"
 						/>
 
-						<p class="text-xs font-medium text-t-primary">
+						<p class="text-[11px] font-medium text-t-primary md:text-xs">
 							{language.label}
 						</p>
 
