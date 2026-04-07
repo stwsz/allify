@@ -19,6 +19,7 @@ export const de = {
 		headerLanguageIt: 'Italienisch',
 		headerLanguageRu: 'Russisch',
 		headerLanguageZh: 'Chinesisch',
+		headerLanguageJa: 'Japanisch',
 		dropdownAriaLabel: 'Sprachauswahl',
 		profileButtonAriaLabel: 'Benutzerprofil-Schaltfläche',
 		profileNotLoggedAltText: 'Benutzerprofil-Avatar',
