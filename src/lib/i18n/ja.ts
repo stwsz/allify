@@ -37,7 +37,7 @@ export const ja = {
 		footerFirstSectionText1:
 			'音楽データを発見、ランキング、そして新しい音楽体験へと変換します。',
 		footerFirstSectionText2: '製品提供元',
-		footerCopyrightText: 'All rights reserved.',
+		footerCopyrightText: '全著作権所有',
 		footerColumn1Title: 'フォロー',
 		footerColumn1Item1AltText: 'LinkedInアイコン',
 		footerColumn1Item2AltText: 'GitHubアイコン',
