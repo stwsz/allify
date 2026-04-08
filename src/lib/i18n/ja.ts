@@ -19,7 +19,7 @@ export const ja = {
 		headerLanguageIt: 'イタリア語',
 		headerLanguageRu: 'ロシア語',
 		headerLanguageZh: '中国語',
-        headerLanguageJa: '日本語',
+		headerLanguageJa: '日本語',
 		dropdownAriaLabel: '言語選択',
 		profileButtonAriaLabel: 'ユーザープロフィールボタン',
 		profileNotLoggedAltText: 'ユーザープロフィールアバター',
@@ -27,15 +27,13 @@ export const ja = {
 		profileLoggedItem1: 'プロフィール',
 		profileLoggedItem2: '設定',
 		profileLoggedItem3: 'ログアウト',
-		profileNotLoggedItem1:
-			'<span class="ml-1 font-semibold text-spotify">Spotify</span>でログイン',
+		profileNotLoggedItem1: '<span class="ml-1 font-semibold text-spotify">Spotify</span>でログイン',
 		profileNotLoggedItem2:
 			'<span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>でログイン',
 		burguerMenuAltText: 'ナビゲーションメニューを開く',
 		closeMenuAltText: 'ナビゲーションメニューを閉じる',
 		cardProfileAsideMenuParagraph1: 'ログインまたはアカウント作成',
-		footerFirstSectionText1:
-			'音楽データを発見、ランキング、そして新しい音楽体験へと変換します。',
+		footerFirstSectionText1: '音楽データを発見、ランキング、そして新しい音楽体験へと変換します。',
 		footerFirstSectionText2: '製品提供元',
 		footerCopyrightText: '全著作権所有',
 		footerColumn1Title: 'フォロー',
@@ -156,14 +154,12 @@ export const ja = {
 		profilePageCarouselButtonAriaLabelNext: 'カルーセルの次へボタン',
 		profilePageCarouselArrowIconAltText: 'カルーセルの矢印アイコン',
 		profilePageUserSavedTracksSectionHeading2: 'お気に入りの曲',
-		profilePageUserSavedTracksSectionParagraph1:
-			'曲を保存するとここに表示されます。',
+		profilePageUserSavedTracksSectionParagraph1: '曲を保存するとここに表示されます。',
 		profilePageUserPlaylistsSectionHeading2: 'あなたのプレイリスト',
 		profilePageUserPlaylistsSectionParagraph1:
 			'プレイリストを作成または保存するとここに表示されます。',
 		profilePageUserSavedAlbumsSectionHeading2: '保存したアルバム',
-		profilePageUserSavedAlbumsSectionParagraph1:
-			'アルバムを保存するとここに表示されます。',
+		profilePageUserSavedAlbumsSectionParagraph1: 'アルバムを保存するとここに表示されます。',
 		profilePageExternalLinkSpotify: 'Spotifyでプロフィールを見る',
 		profilePageUserPlaylistItemBy: '作成者',
 		profilePageUserPlaylistItemMusics: '曲',
@@ -223,8 +219,10 @@ export const ja = {
 	legalPages: {
 		privacyPolicy: {
 			title: 'プライバシーポリシー | Allify',
-			privacyPolicyMetaDescription: 'Allifyがあなたのデータをどのように保護・利用するかをご確認ください。',
-			privacyPolicyMetaOgAndTwitterContent: 'Allifyがあなたのデータをどのように保護・利用するかをご確認ください。',
+			privacyPolicyMetaDescription:
+				'Allifyがあなたのデータをどのように保護・利用するかをご確認ください。',
+			privacyPolicyMetaOgAndTwitterContent:
+				'Allifyがあなたのデータをどのように保護・利用するかをご確認ください。',
 			privacyPolicyDiv1Heading1: 'プライバシーポリシー',
 			privacyPolicyDiv1LastUpdated: '最終更新：2026年2月22日',
 			privacyPolicyDiv1Paragraph1:
@@ -258,8 +256,7 @@ export const ja = {
 			privacyPolicyDiv3Paragraph6:
 				'ユーザーが要求したインサイトを提供するために、データを一時的にのみ表示します。',
 			privacyPolicyDiv3Heading3_3: '2.3 技術・利用データ',
-			privacyPolicyDiv3Paragraph7:
-				'限られた技術データを自動的に収集する場合があります：',
+			privacyPolicyDiv3Paragraph7: '限られた技術データを自動的に収集する場合があります：',
 			privacyPolicyDiv3List3Item1: 'IPアドレス',
 			privacyPolicyDiv3List3Item2: 'ブラウザの種類とバージョン',
 			privacyPolicyDiv3List3Item3: 'デバイス情報',
@@ -290,14 +287,11 @@ export const ja = {
 				'購入が行われた際、ユーザー残高を管理するために、支払いステータス・取引ID・取得チケット数などの取引データを受け取る場合があります。',
 			privacyPolicyDiv7Heading2: '6. データの保存と保持',
 			privacyPolicyDiv7Paragraph1: 'Allifyはデータ最小化のアプローチに従います。',
-			privacyPolicyDiv7List1Item1:
-				'音楽リスニングデータはデータベースに永続的に保存されません',
-			privacyPolicyDiv7List1Item2:
-				'サービス提供に必要な基本的なアカウントデータのみを保存します',
+			privacyPolicyDiv7List1Item1: '音楽リスニングデータはデータベースに永続的に保存されません',
+			privacyPolicyDiv7List1Item2: 'サービス提供に必要な基本的なアカウントデータのみを保存します',
 			privacyPolicyDiv7List1Item3:
 				'接続ステータスとチケット情報はアカウントがアクティブな間保持される場合があります',
-			privacyPolicyDiv7Paragraph2:
-				'ユーザーはいつでもアカウントとデータの削除を要求できます。',
+			privacyPolicyDiv7Paragraph2: 'ユーザーはいつでもアカウントとデータの削除を要求できます。',
 			privacyPolicyDiv8Heading2: '7. サードパーティサービスとAPI',
 			privacyPolicyDiv8Paragraph1:
 				'Allifyは音楽ストリーミングプラットフォーム・ホスティングプロバイダー・決済プロセッサーなどのサードパーティサービスとAPIに依存して機能します。',
@@ -306,8 +300,7 @@ export const ja = {
 			privacyPolicyDiv9Heading2: '8. クッキーとセッション',
 			privacyPolicyDiv9Paragraph1:
 				'Allifyは安全なセッションの維持、使いやすさの向上、プラットフォームの適切な動作を確保するためにクッキーまたは類似の技術を使用する場合があります。',
-			privacyPolicyDiv9Paragraph2:
-				'ブラウザの設定でクッキーを管理または無効化することができます。',
+			privacyPolicyDiv9Paragraph2: 'ブラウザの設定でクッキーを管理または無効化することができます。',
 			privacyPolicyDiv10Heading2: '9. プライバシーに関するあなたの権利',
 			privacyPolicyDiv10Paragraph1:
 				'お住まいの地域によっては、個人データへのアクセス・修正・削除の要求、またはデータ処理への同意の撤回をする権利がある場合があります。',

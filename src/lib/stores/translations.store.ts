@@ -13,8 +13,18 @@ import { fr } from '../i18n/fr';
 import { it } from '../i18n/it';
 import { ru } from '../i18n/ru';
 import { zh } from '../i18n/zh';
+import { ja } from '../i18n/ja';
 
-type Translations = typeof en | typeof pt | typeof de | typeof es | typeof fr | typeof it | typeof ru | typeof zh | typeof ja;
+type Translations =
+	| typeof en
+	| typeof pt
+	| typeof de
+	| typeof es
+	| typeof fr
+	| typeof it
+	| typeof ru
+	| typeof zh
+	| typeof ja;
 
 export const translationsStore: Readable<Translations> = derived(languageStore, ($language) => {
 	switch ($language) {
