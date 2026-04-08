@@ -19,6 +19,7 @@ export const it = {
 		headerLanguageIt: 'Italiano',
 		headerLanguageRu: 'Russo',
 		headerLanguageZh: 'Cinese',
+		headerLanguageJa: 'Giapponese',
 		dropdownAriaLabel: 'Selezione della lingua',
 		profileButtonAriaLabel: 'Pulsante profilo utente',
 		profileNotLoggedAltText: 'Avatar del profilo utente',

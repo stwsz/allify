@@ -19,6 +19,7 @@ export const zh = {
 		headerLanguageIt: '意大利语',
 		headerLanguageRu: '俄语',
 		headerLanguageZh: '中文',
+		headerLanguageJa: '日语',
 		dropdownAriaLabel: '语言选择',
 		profileButtonAriaLabel: '用户资料按钮',
 		profileNotLoggedAltText: '用户资料头像',
