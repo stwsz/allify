@@ -17,8 +17,8 @@ export const zh = {
 		headerLanguageDe: '德语',
 		headerLanguageFr: '法语',
 		headerLanguageIt: '意大利语',
-        headerLanguageRu: '俄语',
-        headerLanguageZh: '中文',
+		headerLanguageRu: '俄语',
+		headerLanguageZh: '中文',
 		dropdownAriaLabel: '语言选择',
 		profileButtonAriaLabel: '用户资料按钮',
 		profileNotLoggedAltText: '用户资料头像',
@@ -26,15 +26,13 @@ export const zh = {
 		profileLoggedItem1: '资料',
 		profileLoggedItem2: '设置',
 		profileLoggedItem3: '退出登录',
-		profileNotLoggedItem1:
-			'通过 <span class="ml-1 font-semibold text-spotify">Spotify</span> 登录',
+		profileNotLoggedItem1: '通过 <span class="ml-1 font-semibold text-spotify">Spotify</span> 登录',
 		profileNotLoggedItem2:
 			'通过 <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span> 登录',
 		burguerMenuAltText: '打开导航菜单',
 		closeMenuAltText: '关闭导航菜单',
 		cardProfileAsideMenuParagraph1: '登录或创建账户',
-		footerFirstSectionText1:
-			'将音乐数据转化为发现、排行榜和全新的音乐聆听方式。',
+		footerFirstSectionText1: '将音乐数据转化为发现、排行榜和全新的音乐聆听方式。',
 		footerFirstSectionText2: '出品方',
 		footerCopyrightText: '版权所有。',
 		footerColumn1Title: '关注我们',
@@ -56,16 +54,11 @@ export const zh = {
 			'正在获取您的 <span class="font-semibold text-deezer">Deezer</span> 信息',
 		loadingComponentAriaLabel: '加载动画',
 		notLoggedHeading1: '您尚未登录',
-		notLoggedMyMusicProfileParagraph1:
-			'要访问您的音乐档案，请连接您喜爱的流媒体平台之一。',
-		notLoggedDiscoveriesParagraph1:
-			'要访问音乐发现功能，请连接您喜爱的流媒体平台之一。',
-		notLoggedMusicBattlesParagraph1:
-			'要访问音乐对战功能，请连接您喜爱的流媒体平台之一。',
-		notLoggedProfileParagraph1:
-			'要访问您的资料，请连接您喜爱的流媒体平台之一。',
-		notLoggedSettingsParagraph1:
-			'要访问设置，请连接您喜爱的流媒体平台之一。',
+		notLoggedMyMusicProfileParagraph1: '要访问您的音乐档案，请连接您喜爱的流媒体平台之一。',
+		notLoggedDiscoveriesParagraph1: '要访问音乐发现功能，请连接您喜爱的流媒体平台之一。',
+		notLoggedMusicBattlesParagraph1: '要访问音乐对战功能，请连接您喜爱的流媒体平台之一。',
+		notLoggedProfileParagraph1: '要访问您的资料，请连接您喜爱的流媒体平台之一。',
+		notLoggedSettingsParagraph1: '要访问设置，请连接您喜爱的流媒体平台之一。',
 		notLoggedLoginLinkSpotify: '通过 Spotify 登录',
 		notLoggedLoginLinkDeezer: '通过 Deezer 登录',
 		disabledDeezerFunctionalityText: 'Deezer 连接暂时不可用',
@@ -89,8 +82,7 @@ export const zh = {
 		homePageHeroSectionButton1AriaLabel: '连接我的流媒体',
 		homePageHeroSectionButton1v2AriaLabel: '前往我的音乐档案',
 		connectPlatformsSectionHeading1: '连接您的流媒体平台',
-		connectPlatformsSectionParagraph1:
-			'整合您的账户，在一处追踪指标、表现和洞察。',
+		connectPlatformsSectionParagraph1: '整合您的账户，在一处追踪指标、表现和洞察。',
 		connectPlatformSpotifyAltText: 'Spotify 图标',
 		connectPlatformSpotifyDescription:
 			'Spotify 是全球最大的流媒体平台之一，提供数百万曲目、个性化播放列表和先进的音乐发现功能，通过数据、趋势和智能推荐连接艺术家与听众。',
@@ -155,14 +147,11 @@ export const zh = {
 		profilePageCarouselButtonAriaLabelNext: '轮播下一个按钮',
 		profilePageCarouselArrowIconAltText: '轮播箭头图标',
 		profilePageUserSavedTracksSectionHeading2: '收藏的歌曲',
-		profilePageUserSavedTracksSectionParagraph1:
-			'保存歌曲后，它们将显示在这里。',
+		profilePageUserSavedTracksSectionParagraph1: '保存歌曲后，它们将显示在这里。',
 		profilePageUserPlaylistsSectionHeading2: '您的播放列表',
-		profilePageUserPlaylistsSectionParagraph1:
-			'创建或保存播放列表后，它们将显示在这里。',
+		profilePageUserPlaylistsSectionParagraph1: '创建或保存播放列表后，它们将显示在这里。',
 		profilePageUserSavedAlbumsSectionHeading2: '已保存的专辑',
-		profilePageUserSavedAlbumsSectionParagraph1:
-			'保存专辑后，它们将显示在这里。',
+		profilePageUserSavedAlbumsSectionParagraph1: '保存专辑后，它们将显示在这里。',
 		profilePageExternalLinkSpotify: '在 Spotify 上查看资料',
 		profilePageUserPlaylistItemBy: '作者',
 		profilePageUserPlaylistItemMusics: '首歌曲',
@@ -203,20 +192,14 @@ export const zh = {
 	errorPage: {
 		title404: '页面未找到 | Allify',
 		titleOtherErrors: '意外错误 | Allify',
-		errorPage404MetaDescription:
-			'未找到您要查找的页面。该页面可能已被删除或地址有误。',
-		errorPageOtherErrorsMetaDescription:
-			'加载此页面时出现问题。请稍后重试。',
-		errorPage404MetaOgAndTwitterContent:
-			'未找到您要查找的页面。该页面可能已被删除或地址有误。',
-		errorPageOtherErrorsMetaOgAndTwitterContent:
-			'加载此页面时出现问题。请稍后重试。',
+		errorPage404MetaDescription: '未找到您要查找的页面。该页面可能已被删除或地址有误。',
+		errorPageOtherErrorsMetaDescription: '加载此页面时出现问题。请稍后重试。',
+		errorPage404MetaOgAndTwitterContent: '未找到您要查找的页面。该页面可能已被删除或地址有误。',
+		errorPageOtherErrorsMetaOgAndTwitterContent: '加载此页面时出现问题。请稍后重试。',
 		errorPage404Heading1: '页面未找到',
-		errorPage404Paragraph1:
-			'未找到您要查找的页面。该页面可能已被删除或地址有误。',
+		errorPage404Paragraph1: '未找到您要查找的页面。该页面可能已被删除或地址有误。',
 		errorPageOtherErrorsHeading1: '糟糕！出现了问题。',
-		errorPageOtherErrorsParagraph1:
-			'加载此页面时出现问题。请稍后重试。',
+		errorPageOtherErrorsParagraph1: '加载此页面时出现问题。请稍后重试。',
 		errorPageButtonGoHome: '返回首页'
 	},
 	legalPages: {
@@ -231,30 +214,25 @@ export const zh = {
 			privacyPolicyDiv2Heading2: '1. 关于我们',
 			privacyPolicyDiv2Paragraph1:
 				'Allify 是一款独立的网络应用程序，通过连接 Spotify 及未来的 Deezer 等第三方流媒体服务，为用户提供音乐聆听洞察。',
-			privacyPolicyDiv2Paragraph2:
-				'Allify 与 Spotify 或 Deezer 没有任何关联、背书或赞助关系。',
+			privacyPolicyDiv2Paragraph2: 'Allify 与 Spotify 或 Deezer 没有任何关联、背书或赞助关系。',
 			privacyPolicyDiv3Heading2: '2. 我们收集的信息',
 			privacyPolicyDiv3Heading3_1: '2.1 账户与身份验证信息',
-			privacyPolicyDiv3Paragraph1:
-				'当您使用 Allify 并连接流媒体账户时，我们可能收集并存储：',
+			privacyPolicyDiv3Paragraph1: '当您使用 Allify 并连接流媒体账户时，我们可能收集并存储：',
 			privacyPolicyDiv3List1Item1: '您的平台用户 ID（Spotify 和/或 Deezer）',
 			privacyPolicyDiv3List1Item2: '基本资料信息（如显示名称，如果可用）',
 			privacyPolicyDiv3List1Item3: '连接状态（例如：已连接 Spotify、Deezer 或两者）',
 			privacyPolicyDiv3List1Item4: '内部账户标识符',
 			privacyPolicyDiv3List1Item5: '与您账户关联的积分余额（用于访问高级功能）',
 			privacyPolicyDiv3Paragraph2: '我们不收集或存储您的 Spotify 或 Deezer 密码。',
-			privacyPolicyDiv3Paragraph3:
-				'身份验证通过各平台提供的 OAuth 安全完成。',
+			privacyPolicyDiv3Paragraph3: '身份验证通过各平台提供的 OAuth 安全完成。',
 			privacyPolicyDiv3Heading3_2: '2.2 音乐数据（实时处理）',
 			privacyPolicyDiv3Paragraph4: 'Allify 访问与音乐相关的数据，例如：',
 			privacyPolicyDiv3List2Item1: '最常听的艺术家',
 			privacyPolicyDiv3List2Item2: '最常听的歌曲',
 			privacyPolicyDiv3List2Item3: '聆听统计数据',
 			privacyPolicyDiv3List2Item4: 'API 允许的其他洞察',
-			privacyPolicyDiv3Paragraph5:
-				'这些数据实时处理，不会永久存储在我们的数据库中。',
-			privacyPolicyDiv3Paragraph6:
-				'我们仅临时显示数据，以提供用户请求的洞察内容。',
+			privacyPolicyDiv3Paragraph5: '这些数据实时处理，不会永久存储在我们的数据库中。',
+			privacyPolicyDiv3Paragraph6: '我们仅临时显示数据，以提供用户请求的洞察内容。',
 			privacyPolicyDiv3Heading3_3: '2.3 技术与使用数据',
 			privacyPolicyDiv3Paragraph7: '我们可能自动收集有限的技术数据，包括：',
 			privacyPolicyDiv3List3Item1: 'IP 地址',
@@ -271,16 +249,13 @@ export const zh = {
 			privacyPolicyDiv4List1Item5: '改善整体用户体验',
 			privacyPolicyDiv4Paragraph2: '我们不出售、出租或转让您的个人数据。',
 			privacyPolicyDiv5Heading2: '4. 积分系统与功能访问',
-			privacyPolicyDiv5Paragraph1:
-				'Allify 使用内部积分系统，允许用户访问扩展数据和平台附加功能。',
+			privacyPolicyDiv5Paragraph1: 'Allify 使用内部积分系统，允许用户访问扩展数据和平台附加功能。',
 			privacyPolicyDiv5Paragraph2: '我们存储：',
 			privacyPolicyDiv5List1Item1: '您的积分余额',
 			privacyPolicyDiv5List1Item2: '积分使用历史（用于平台运营）',
-			privacyPolicyDiv5Paragraph3:
-				'积分仅用于解锁额外洞察功能，不影响您对音乐数据的所有权。',
+			privacyPolicyDiv5Paragraph3: '积分仅用于解锁额外洞察功能，不影响您对音乐数据的所有权。',
 			privacyPolicyDiv6Heading2: '5. 付款与计费',
-			privacyPolicyDiv6Paragraph1:
-				'Allify 可能通过购买内部积分（"积分"）提供付费功能。',
+			privacyPolicyDiv6Paragraph1: 'Allify 可能通过购买内部积分（"积分"）提供付费功能。',
 			privacyPolicyDiv6Paragraph2:
 				'付款由 AbacatePay 等第三方支付提供商安全处理。Allify 不收集或存储完整的卡片数据或敏感的财务信息。',
 			privacyPolicyDiv6Paragraph3:
@@ -303,8 +278,7 @@ export const zh = {
 			privacyPolicyDiv10Heading2: '9. 您的隐私权',
 			privacyPolicyDiv10Paragraph1:
 				'根据您所在的位置，您可能有权访问、更正或请求删除您的个人数据，以及撤回数据处理同意。',
-			privacyPolicyDiv10Paragraph2:
-				'要行使您的权利，请使用以下联系信息与我们联系。',
+			privacyPolicyDiv10Paragraph2: '要行使您的权利，请使用以下联系信息与我们联系。',
 			privacyPolicyDiv11Heading2: '10. 数据安全',
 			privacyPolicyDiv11Paragraph1:
 				'我们采取适当的技术和组织措施，保护您的数据免遭未经授权的访问、更改、披露或销毁。',
@@ -319,8 +293,7 @@ export const zh = {
 		},
 		dataUsage: {
 			title: '数据使用 | Allify',
-			dataUsageMetaDescription:
-				'了解 Allify 如何收集、使用和处理与您的音乐和账户相关的数据。',
+			dataUsageMetaDescription: '了解 Allify 如何收集、使用和处理与您的音乐和账户相关的数据。',
 			dataUsageMetaOgAndTwitterContent:
 				'了解 Allify 如何收集、使用和处理与您的音乐和账户相关的数据。',
 			dataUsageDiv1Heading1: '数据使用',
@@ -335,11 +308,9 @@ export const zh = {
 			dataUsageDiv3Heading2: '2. 我们如何使用数据',
 			dataUsageDiv3Paragraph1:
 				'数据用于生成个性化音乐洞察、显示聆听统计数据、管理积分系统并确保 Allify 功能的正常运行。',
-			dataUsageDiv3Paragraph2:
-				'我们也可能使用聚合和匿名数据进行内部分析、性能改进和平台发展。',
+			dataUsageDiv3Paragraph2: '我们也可能使用聚合和匿名数据进行内部分析、性能改进和平台发展。',
 			dataUsageDiv4Heading2: '3. 数据处理与存储',
-			dataUsageDiv4Paragraph1:
-				'音乐数据主要实时处理，不会永久存储，除非账户功能严格需要。',
+			dataUsageDiv4Paragraph1: '音乐数据主要实时处理，不会永久存储，除非账户功能严格需要。',
 			dataUsageDiv4Paragraph2:
 				'我们采取适当的技术和组织措施，保护数据免遭未经授权的访问、更改、披露或销毁。',
 			dataUsageDiv5Heading2: '4. 第三方服务与 API',
@@ -347,16 +318,13 @@ export const zh = {
 				'Allify 依赖流媒体音乐平台、托管提供商和支付服务等第三方 API 和服务，这些服务可能根据其自身政策处理数据。',
 			dataUsageDiv5Paragraph2: '我们不向第三方出售、出租或转让用户数据。',
 			dataUsageDiv6Heading2: '5. 用户控制',
-			dataUsageDiv6Paragraph1:
-				'用户对流媒体账户的连接保持控制，可随时撤销访问权限或申请删除数据。',
-			dataUsageDiv6Paragraph2:
-				'使用 Allify，即表示您同意本页面所述的数据使用做法。'
+			dataUsageDiv6Paragraph1: '用户对流媒体账户的连接保持控制，可随时撤销访问权限或申请删除数据。',
+			dataUsageDiv6Paragraph2: '使用 Allify，即表示您同意本页面所述的数据使用做法。'
 		},
 		termsOfService: {
 			title: '服务条款 | Allify',
 			termsOfServiceMetaDescription: '阅读访问和使用 Allify 平台的条款和条件。',
-			termsOfServiceMetaOgAndTwitterContent:
-				'阅读访问和使用 Allify 平台的条款和条件。',
+			termsOfServiceMetaOgAndTwitterContent: '阅读访问和使用 Allify 平台的条款和条件。',
 			termsOfServiceDiv1Heading1: '服务条款',
 			termsOfServiceDiv1LastUpdated: '最后更新：2026年2月22日',
 			termsOfServiceDiv1Paragraph1:
@@ -367,8 +335,7 @@ export const zh = {
 			termsOfServiceDiv2Paragraph2:
 				'您同意仅将平台用于合法、个人目的，并遵守这些条款，不得试图利用、滥用或破坏服务的正常运行。',
 			termsOfServiceDiv3Heading2: '2. 用户责任',
-			termsOfServiceDiv3Paragraph1:
-				'您对通过平台所使用流媒体服务连接的账户及授予的权限负责。',
+			termsOfServiceDiv3Paragraph1: '您对通过平台所使用流媒体服务连接的账户及授予的权限负责。',
 			termsOfServiceDiv3Paragraph2:
 				'您同意不将 Allify 用于非法、滥用、恶意自动化活动或违反第三方 API 条款的行为。',
 			termsOfServiceDiv4Heading2: '3. 服务可用性',
@@ -377,15 +344,13 @@ export const zh = {
 			termsOfServiceDiv4Paragraph2:
 				'我们可能会临时更新、修改、限制或暂停功能，以进行维护、安全、技术改进或法规合规。',
 			termsOfServiceDiv5Heading2: '4. 责任限制',
-			termsOfServiceDiv5Paragraph1:
-				'Allify 按"现状"提供，仅用于与音乐洞察相关的信息和娱乐目的。',
+			termsOfServiceDiv5Paragraph1: 'Allify 按"现状"提供，仅用于与音乐洞察相关的信息和娱乐目的。',
 			termsOfServiceDiv5Paragraph2:
 				'我们不对第三方 API 提供的数据不准确、外部服务中断或基于所显示洞察所做的决定承担责任。',
 			termsOfServiceDiv6Heading2: '5. 条款变更',
 			termsOfServiceDiv6Paragraph1:
 				'我们可能会定期更新本服务条款，以反映平台变化、第三方集成或法律要求。',
-			termsOfServiceDiv6Paragraph2:
-				'在条款更新后继续使用 Allify，即表示您自动同意修订版本。'
+			termsOfServiceDiv6Paragraph2: '在条款更新后继续使用 Allify，即表示您自动同意修订版本。'
 		}
 	}
 };

@@ -14,7 +14,15 @@ import { it } from '../i18n/it';
 import { ru } from '../i18n/ru';
 import { zh } from '../i18n/zh';
 
-type Translations = typeof en | typeof pt | typeof de | typeof es | typeof fr | typeof it | typeof ru | typeof zh;
+type Translations =
+	| typeof en
+	| typeof pt
+	| typeof de
+	| typeof es
+	| typeof fr
+	| typeof it
+	| typeof ru
+	| typeof zh;
 
 export const translationsStore: Readable<Translations> = derived(languageStore, ($language) => {
 	switch ($language) {

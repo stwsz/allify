@@ -17,8 +17,8 @@ export const ru = {
 		headerLanguageDe: 'Немецкий',
 		headerLanguageFr: 'Французский',
 		headerLanguageIt: 'Итальянский',
-        headerLanguageRu: 'Русский',
-        headerLanguageZh: 'Китайский',
+		headerLanguageRu: 'Русский',
+		headerLanguageZh: 'Китайский',
 		dropdownAriaLabel: 'Выбор языка',
 		profileButtonAriaLabel: 'Кнопка профиля пользователя',
 		profileNotLoggedAltText: 'Аватар профиля пользователя',
@@ -238,7 +238,8 @@ export const ru = {
 			privacyPolicyDiv3Heading3_1: '2.1 Информация об аккаунте и аутентификации',
 			privacyPolicyDiv3Paragraph1:
 				'При использовании Allify и подключении вашего стримингового аккаунта мы можем собирать и хранить:',
-			privacyPolicyDiv3List1Item1: 'Ваш идентификатор пользователя платформы (Spotify и/или Deezer)',
+			privacyPolicyDiv3List1Item1:
+				'Ваш идентификатор пользователя платформы (Spotify и/или Deezer)',
 			privacyPolicyDiv3List1Item2:
 				'Базовую информацию профиля (например, отображаемое имя, если доступно)',
 			privacyPolicyDiv3List1Item3:
@@ -246,8 +247,7 @@ export const ru = {
 			privacyPolicyDiv3List1Item4: 'Внутренние идентификаторы аккаунта',
 			privacyPolicyDiv3List1Item5:
 				'Баланс билетов, связанный с вашим аккаунтом (используется для доступа к расширенным функциям)',
-			privacyPolicyDiv3Paragraph2:
-				'Мы НЕ собираем и не храним ваш пароль от Spotify или Deezer.',
+			privacyPolicyDiv3Paragraph2: 'Мы НЕ собираем и не храним ваш пароль от Spotify или Deezer.',
 			privacyPolicyDiv3Paragraph3:
 				'Аутентификация осуществляется безопасно через OAuth соответствующих платформ.',
 			privacyPolicyDiv3Heading3_2: '2.2 Музыкальные данные (обрабатываются в реальном времени)',
@@ -267,7 +267,8 @@ export const ru = {
 			privacyPolicyDiv3List3Item2: 'Тип и версию браузера',
 			privacyPolicyDiv3List3Item3: 'Информацию об устройстве',
 			privacyPolicyDiv3List3Item4: 'Данные сессии',
-			privacyPolicyDiv3List3Item5: 'Базовые журналы использования для обеспечения безопасности и производительности',
+			privacyPolicyDiv3List3Item5:
+				'Базовые журналы использования для обеспечения безопасности и производительности',
 			privacyPolicyDiv4Heading2: '3. Как мы используем вашу информацию',
 			privacyPolicyDiv4Paragraph1: 'Мы используем собранную информацию исключительно для:',
 			privacyPolicyDiv4List1Item1: 'Аутентификации вашего аккаунта через сторонние сервисы',

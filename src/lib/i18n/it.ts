@@ -16,7 +16,7 @@ export const it = {
 		headerLanguageEs: 'Spagnolo',
 		headerLanguageDe: 'Tedesco',
 		headerLanguageFr: 'Francese',
-        headerLanguageIt: 'Italiano',
+		headerLanguageIt: 'Italiano',
 		headerLanguageRu: 'Russo',
 		headerLanguageZh: 'Cinese',
 		dropdownAriaLabel: 'Selezione della lingua',
@@ -83,7 +83,8 @@ export const it = {
 		homePageHeroSectionParagraph1:
 			'Connetti i tuoi servizi di streaming, monitora metriche dettagliate, ricevi suggerimenti personalizzati e compete nelle classifiche con i tuoi amici.',
 		alliMascotPointingToLeftAltText: 'Alli indica a sinistra, puntando al pulsante di azione',
-		alliMascotPointingDownwardsAltText: 'Alli indica verso il basso, puntando al pulsante di azione',
+		alliMascotPointingDownwardsAltText:
+			'Alli indica verso il basso, puntando al pulsante di azione',
 		homePageHeroSectionButton1: 'Connetti i miei streaming',
 		homePageHeroSectionButton1v2: 'Vai al mio profilo musicale',
 		homePageHeroSectionButton1AriaLabel: 'Connetti i miei streaming',
@@ -96,7 +97,7 @@ export const it = {
 			'Una delle più grandi piattaforme di streaming musicale al mondo, Spotify offre milioni di brani, playlist personalizzate e funzionalità avanzate di scoperta che collegano artisti e ascoltatori tramite dati, tendenze e raccomandazioni intelligenti.',
 		connectPlatformDeezerAltText: 'Icona Deezer',
 		connectPlatformDeezerDescription:
-			'La piattaforma globale di streaming musicale Deezer riunisce un vasto catalogo di brani, playlist editoriali e funzionalità come le raccomandazioni personalizzate, offrendo un\'esperienza musicale completa per diversi tipi di ascoltatori.',
+			"La piattaforma globale di streaming musicale Deezer riunisce un vasto catalogo di brani, playlist editoriali e funzionalità come le raccomandazioni personalizzate, offrendo un'esperienza musicale completa per diversi tipi di ascoltatori.",
 		connectPlatformCardPlatformConnectIconAltText: 'Icona di connessione',
 		connectPlatformCardPlatformConnectSpotifyButton: 'Connetti Spotify',
 		connectPlatformCardPlatformConnectDeezerButton: 'Connetti Deezer',
@@ -105,7 +106,7 @@ export const it = {
 		connectPlatformCardPlatformExternalLink: 'Vai a',
 		devicesSectionHeading1: 'Porta la tua musica ovunque',
 		devicesSectionParagraph1:
-			'Accedi ai tuoi dati musicali da qualsiasi luogo e su qualsiasi dispositivo, con un\'esperienza fluida, coerente e intuitiva.',
+			"Accedi ai tuoi dati musicali da qualsiasi luogo e su qualsiasi dispositivo, con un'esperienza fluida, coerente e intuitiva.",
 		devicesSectionAltText: 'Illustrazione dei dispositivi'
 	},
 	myMusicalProfilePage: {
@@ -177,8 +178,10 @@ export const it = {
 		profilePageUserSelectedPlaylistModalParagraph1: 'Playlist',
 		profilePageUserSelectedPlaylistModalMusics: 'canzoni',
 		profilePageUserSelectedPlaylistModalExternalLink: 'Visualizza playlist su Spotify',
-		profilePageUserSelectedPlaylistModalLoadingMusics: 'Caricamento delle canzoni della playlist...',
-		profilePageUserSelectedPlaylistModalMusicsNotFound: 'Nessuna canzone trovata in questa playlist.',
+		profilePageUserSelectedPlaylistModalLoadingMusics:
+			'Caricamento delle canzoni della playlist...',
+		profilePageUserSelectedPlaylistModalMusicsNotFound:
+			'Nessuna canzone trovata in questa playlist.',
 		profilePageUserSelectedPlaylistModalAddedBy: 'Aggiunto da',
 		profilePageUserAlbumItemTracks: 'tracce',
 		profilePageUserSelectedSavedAlbumCloseButtonAriaLabel: 'Chiudi finestra album salvato',
@@ -204,16 +207,16 @@ export const it = {
 		title404: 'Pagina non trovata | Allify',
 		titleOtherErrors: 'Errore imprevisto | Allify',
 		errorPage404MetaDescription:
-			'Non siamo riusciti a trovare la pagina che stavi cercando. Potrebbe essere stata rimossa o l\'indirizzo potrebbe essere errato.',
+			"Non siamo riusciti a trovare la pagina che stavi cercando. Potrebbe essere stata rimossa o l'indirizzo potrebbe essere errato.",
 		errorPageOtherErrorsMetaDescription:
 			'Si è verificato un problema durante il caricamento di questa pagina. Riprova tra qualche istante.',
 		errorPage404MetaOgAndTwitterContent:
-			'Non siamo riusciti a trovare la pagina che stavi cercando. Potrebbe essere stata rimossa o l\'indirizzo potrebbe essere errato.',
+			"Non siamo riusciti a trovare la pagina che stavi cercando. Potrebbe essere stata rimossa o l'indirizzo potrebbe essere errato.",
 		errorPageOtherErrorsMetaOgAndTwitterContent:
 			'Si è verificato un problema durante il caricamento di questa pagina. Riprova tra qualche istante.',
 		errorPage404Heading1: 'Pagina non trovata',
 		errorPage404Paragraph1:
-			'Non siamo riusciti a trovare la pagina che stavi cercando. Potrebbe essere stata rimossa o l\'indirizzo potrebbe essere errato.',
+			"Non siamo riusciti a trovare la pagina che stavi cercando. Potrebbe essere stata rimossa o l'indirizzo potrebbe essere errato.",
 		errorPageOtherErrorsHeading1: 'Ops! Qualcosa è andato storto.',
 		errorPageOtherErrorsParagraph1:
 			'Si è verificato un problema durante il caricamento di questa pagina. Riprova tra qualche istante.',
@@ -230,11 +233,11 @@ export const it = {
 				'Benvenuto su Allify. La tua privacy è importante per noi. Questa informativa sulla privacy spiega come raccogliamo, utilizziamo e proteggiamo le tue informazioni quando utilizzi la nostra piattaforma.',
 			privacyPolicyDiv2Heading2: '1. Chi siamo',
 			privacyPolicyDiv2Paragraph1:
-				'Allify è un\'applicazione web indipendente che fornisce insights sulle abitudini di ascolto musicale connettendosi a servizi di streaming di terze parti come Spotify e, in futuro, Deezer.',
+				"Allify è un'applicazione web indipendente che fornisce insights sulle abitudini di ascolto musicale connettendosi a servizi di streaming di terze parti come Spotify e, in futuro, Deezer.",
 			privacyPolicyDiv2Paragraph2:
 				'Allify non è affiliato, approvato o sponsorizzato da Spotify o Deezer.',
 			privacyPolicyDiv3Heading2: '2. Informazioni che raccogliamo',
-			privacyPolicyDiv3Heading3_1: '2.1 Informazioni sull\'account e autenticazione',
+			privacyPolicyDiv3Heading3_1: "2.1 Informazioni sull'account e autenticazione",
 			privacyPolicyDiv3Paragraph1:
 				'Quando utilizzi Allify e connetti il tuo account di streaming, potremmo raccogliere e archiviare:',
 			privacyPolicyDiv3List1Item1: 'Il tuo ID utente della piattaforma (Spotify e/o Deezer)',
@@ -242,23 +245,23 @@ export const it = {
 				'Informazioni di profilo di base (come il nome visualizzato, se disponibile)',
 			privacyPolicyDiv3List1Item3:
 				'Stato della connessione (es. connesso a Spotify, Deezer o entrambi)',
-			privacyPolicyDiv3List1Item4: 'Identificatori interni dell\'account',
+			privacyPolicyDiv3List1Item4: "Identificatori interni dell'account",
 			privacyPolicyDiv3List1Item5:
-				'Il tuo saldo di ticket associato all\'account (per l\'accesso alle funzionalità avanzate)',
+				"Il tuo saldo di ticket associato all'account (per l'accesso alle funzionalità avanzate)",
 			privacyPolicyDiv3Paragraph2:
 				'NON raccogliamo né archiviamo la tua password di Spotify o Deezer.',
 			privacyPolicyDiv3Paragraph3:
-				'L\'autenticazione avviene in modo sicuro tramite OAuth fornito dalle rispettive piattaforme.',
+				"L'autenticazione avviene in modo sicuro tramite OAuth fornito dalle rispettive piattaforme.",
 			privacyPolicyDiv3Heading3_2: '2.2 Dati musicali (elaborati in tempo reale)',
 			privacyPolicyDiv3Paragraph4: 'Allify accede a dati relativi alla musica, come:',
 			privacyPolicyDiv3List2Item1: 'Artisti più ascoltati',
 			privacyPolicyDiv3List2Item2: 'Canzoni più ascoltate',
 			privacyPolicyDiv3List2Item3: 'Statistiche di ascolto',
-			privacyPolicyDiv3List2Item4: 'Altri insights consentiti dall\'API',
+			privacyPolicyDiv3List2Item4: "Altri insights consentiti dall'API",
 			privacyPolicyDiv3Paragraph5:
 				'Questi dati vengono elaborati in tempo reale e NON vengono archiviati in modo permanente nel nostro database.',
 			privacyPolicyDiv3Paragraph6:
-				'Visualizziamo i dati solo temporaneamente per fornire gli insights richiesti dall\'utente.',
+				"Visualizziamo i dati solo temporaneamente per fornire gli insights richiesti dall'utente.",
 			privacyPolicyDiv3Heading3_3: '2.3 Dati tecnici e di utilizzo',
 			privacyPolicyDiv3Paragraph7:
 				'Potremmo raccogliere automaticamente dati tecnici limitati, tra cui:',
@@ -268,13 +271,12 @@ export const it = {
 			privacyPolicyDiv3List3Item4: 'Dati di sessione',
 			privacyPolicyDiv3List3Item5: 'Log di utilizzo di base per sicurezza e prestazioni',
 			privacyPolicyDiv4Heading2: '3. Come utilizziamo le tue informazioni',
-			privacyPolicyDiv4Paragraph1:
-				'Utilizziamo le informazioni raccolte esclusivamente per:',
+			privacyPolicyDiv4Paragraph1: 'Utilizziamo le informazioni raccolte esclusivamente per:',
 			privacyPolicyDiv4List1Item1: 'Autenticare il tuo account tramite servizi di terze parti',
 			privacyPolicyDiv4List1Item2: 'Visualizzare insights musicali personalizzati',
-			privacyPolicyDiv4List1Item3: 'Gestire il sistema di ticket e l\'accesso alle funzionalità',
+			privacyPolicyDiv4List1Item3: "Gestire il sistema di ticket e l'accesso alle funzionalità",
 			privacyPolicyDiv4List1Item4: 'Mantenere la funzionalità e la sicurezza della piattaforma',
-			privacyPolicyDiv4List1Item5: 'Migliorare l\'esperienza utente complessiva',
+			privacyPolicyDiv4List1Item5: "Migliorare l'esperienza utente complessiva",
 			privacyPolicyDiv4Paragraph2:
 				'Non vendiamo, affittiamo né commercializziamo i tuoi dati personali.',
 			privacyPolicyDiv5Heading2: '4. Sistema di ticket e accesso alle funzionalità',
@@ -282,7 +284,8 @@ export const it = {
 				'Allify utilizza un sistema interno di ticket che consente agli utenti di accedere a dati estesi e funzionalità aggiuntive della piattaforma.',
 			privacyPolicyDiv5Paragraph2: 'Archiviamo:',
 			privacyPolicyDiv5List1Item1: 'Il tuo saldo di ticket',
-			privacyPolicyDiv5List1Item2: 'Cronologia di utilizzo dei ticket (per il funzionamento della piattaforma)',
+			privacyPolicyDiv5List1Item2:
+				'Cronologia di utilizzo dei ticket (per il funzionamento della piattaforma)',
 			privacyPolicyDiv5Paragraph3:
 				'I ticket vengono utilizzati esclusivamente per abilitare insights aggiuntivi e non influenzano la proprietà dei tuoi dati musicali.',
 			privacyPolicyDiv6Heading2: '5. Pagamenti e fatturazione',
@@ -291,17 +294,17 @@ export const it = {
 			privacyPolicyDiv6Paragraph2:
 				'I pagamenti vengono elaborati in modo sicuro da fornitori di servizi di pagamento di terze parti come AbacatePay. Allify non raccoglie né archivia dati completi della carta o informazioni finanziarie sensibili.',
 			privacyPolicyDiv6Paragraph3:
-				'Quando viene effettuato un acquisto, potremmo ricevere dati della transazione come stato del pagamento, ID della transazione e numero di ticket acquistati per gestire il saldo dell\'utente.',
+				"Quando viene effettuato un acquisto, potremmo ricevere dati della transazione come stato del pagamento, ID della transazione e numero di ticket acquistati per gestire il saldo dell'utente.",
 			privacyPolicyDiv7Heading2: '6. Archiviazione e conservazione dei dati',
 			privacyPolicyDiv7Paragraph1: 'Allify adotta un approccio di minimizzazione dei dati.',
 			privacyPolicyDiv7List1Item1:
 				'I dati di ascolto musicale non vengono archiviati in modo permanente nel nostro database',
 			privacyPolicyDiv7List1Item2:
-				'Solo i dati essenziali dell\'account vengono archiviati per fornire il servizio',
+				"Solo i dati essenziali dell'account vengono archiviati per fornire il servizio",
 			privacyPolicyDiv7List1Item3:
-				'Lo stato della connessione e le informazioni sui ticket possono essere conservati finché l\'account è attivo',
+				"Lo stato della connessione e le informazioni sui ticket possono essere conservati finché l'account è attivo",
 			privacyPolicyDiv7Paragraph2:
-				'Gli utenti possono richiedere la cancellazione dell\'account e dei propri dati in qualsiasi momento.',
+				"Gli utenti possono richiedere la cancellazione dell'account e dei propri dati in qualsiasi momento.",
 			privacyPolicyDiv8Heading2: '7. Servizi e API di terze parti',
 			privacyPolicyDiv8Paragraph1:
 				'Allify dipende da servizi e API di terze parti, tra cui piattaforme di streaming musicale, provider di hosting e processori di pagamento.',
@@ -309,7 +312,7 @@ export const it = {
 				'Questi servizi di terze parti possono elaborare i dati secondo le proprie informative sulla privacy, e consigliamo agli utenti di consultarle.',
 			privacyPolicyDiv9Heading2: '8. Cookie e sessioni',
 			privacyPolicyDiv9Paragraph1:
-				'Allify può utilizzare cookie o tecnologie simili per mantenere sessioni sicure, migliorare l\'usabilità e garantire il corretto funzionamento della piattaforma.',
+				"Allify può utilizzare cookie o tecnologie simili per mantenere sessioni sicure, migliorare l'usabilità e garantire il corretto funzionamento della piattaforma.",
 			privacyPolicyDiv9Paragraph2:
 				'Puoi gestire o disattivare i cookie tramite le impostazioni del tuo browser.',
 			privacyPolicyDiv10Heading2: '9. I tuoi diritti sulla privacy',
@@ -340,12 +343,12 @@ export const it = {
 			dataUsageDiv1Heading1: 'Utilizzo dei dati',
 			dataUsageDiv1LastUpdated: 'Ultimo aggiornamento: 22 febbraio 2026',
 			dataUsageDiv1Paragraph1:
-				'Questa pagina sull\'utilizzo dei dati spiega come Allify raccoglie, utilizza ed elabora le informazioni quando utilizzi la nostra piattaforma di insights musicali.',
+				"Questa pagina sull'utilizzo dei dati spiega come Allify raccoglie, utilizza ed elabora le informazioni quando utilizzi la nostra piattaforma di insights musicali.",
 			dataUsageDiv2Heading2: '1. Dati che utilizziamo',
 			dataUsageDiv2Paragraph1:
-				'Allify utilizza dati autorizzati dall\'utente tramite connessioni a servizi di streaming come Spotify e, in futuro, Deezer, oltre ai dati tecnici necessari per il funzionamento della piattaforma.',
+				"Allify utilizza dati autorizzati dall'utente tramite connessioni a servizi di streaming come Spotify e, in futuro, Deezer, oltre ai dati tecnici necessari per il funzionamento della piattaforma.",
 			dataUsageDiv2Paragraph2:
-				'Ciò può includere identificatori dell\'account, stato della connessione, dati musicali consentiti dall\'API e informazioni tecniche limitate necessarie per il funzionamento del servizio.',
+				"Ciò può includere identificatori dell'account, stato della connessione, dati musicali consentiti dall'API e informazioni tecniche limitate necessarie per il funzionamento del servizio.",
 			dataUsageDiv3Heading2: '2. Come utilizziamo i dati',
 			dataUsageDiv3Paragraph1:
 				'I dati vengono utilizzati per generare insights musicali personalizzati, visualizzare statistiche di ascolto, gestire il sistema di ticket e garantire il corretto funzionamento delle funzionalità di Allify.',
@@ -353,7 +356,7 @@ export const it = {
 				'Potremmo anche utilizzare dati aggregati e anonimizzati per analisi interne, miglioramento delle prestazioni e sviluppo della piattaforma.',
 			dataUsageDiv4Heading2: '3. Elaborazione e archiviazione dei dati',
 			dataUsageDiv4Paragraph1:
-				'I dati musicali vengono elaborati principalmente in tempo reale e non vengono archiviati in modo permanente, salvo quando strettamente necessario per la funzionalità dell\'account.',
+				"I dati musicali vengono elaborati principalmente in tempo reale e non vengono archiviati in modo permanente, salvo quando strettamente necessario per la funzionalità dell'account.",
 			dataUsageDiv4Paragraph2:
 				'Implementiamo misure tecniche e organizzative adeguate per proteggere i dati da accessi non autorizzati, modifiche, divulgazioni o distruzioni.',
 			dataUsageDiv5Heading2: '4. Servizi e API di terze parti',
@@ -361,9 +364,9 @@ export const it = {
 				'Allify dipende da API e servizi di terze parti, come piattaforme di streaming musicale, provider di hosting e servizi di pagamento, che possono elaborare i dati secondo le proprie politiche.',
 			dataUsageDiv5Paragraph2:
 				'Non vendiamo, affittiamo né commercializziamo i dati degli utenti a terze parti.',
-			dataUsageDiv6Heading2: '5. Controllo dell\'utente',
+			dataUsageDiv6Heading2: "5. Controllo dell'utente",
 			dataUsageDiv6Paragraph1:
-				'Gli utenti mantengono il controllo sulla connessione ai propri account di streaming e possono revocare l\'accesso o richiedere la cancellazione dei propri dati in qualsiasi momento.',
+				"Gli utenti mantengono il controllo sulla connessione ai propri account di streaming e possono revocare l'accesso o richiedere la cancellazione dei propri dati in qualsiasi momento.",
 			dataUsageDiv6Paragraph2:
 				'Utilizzando Allify, accetti le pratiche di utilizzo dei dati descritte in questa pagina.'
 		},
@@ -376,15 +379,15 @@ export const it = {
 			termsOfServiceDiv1Heading1: 'Termini di servizio',
 			termsOfServiceDiv1LastUpdated: 'Ultimo aggiornamento: 22 febbraio 2026',
 			termsOfServiceDiv1Paragraph1:
-				'Questi termini di servizio regolano l\'accesso e l\'utilizzo della piattaforma Allify. Utilizzando i nostri servizi, accetti di rispettare questi termini e condizioni.',
+				"Questi termini di servizio regolano l'accesso e l'utilizzo della piattaforma Allify. Utilizzando i nostri servizi, accetti di rispettare questi termini e condizioni.",
 			termsOfServiceDiv2Heading2: '1. Utilizzo della piattaforma',
 			termsOfServiceDiv2Paragraph1:
-				'Allify è una piattaforma che fornisce insights musicali basati su dati autorizzati dall\'utente provenienti da servizi di streaming di terze parti come Spotify e, in futuro, Deezer.',
+				"Allify è una piattaforma che fornisce insights musicali basati su dati autorizzati dall'utente provenienti da servizi di streaming di terze parti come Spotify e, in futuro, Deezer.",
 			termsOfServiceDiv2Paragraph2:
 				'Accetti di utilizzare la piattaforma solo per scopi legali e personali, in conformità con questi termini, senza tentare di sfruttare, abusare o compromettere il funzionamento del servizio.',
-			termsOfServiceDiv3Heading2: '2. Responsabilità dell\'utente',
+			termsOfServiceDiv3Heading2: "2. Responsabilità dell'utente",
 			termsOfServiceDiv3Paragraph1:
-				'Sei responsabile dell\'account connesso e delle autorizzazioni concesse tramite i servizi di streaming utilizzati sulla piattaforma.',
+				"Sei responsabile dell'account connesso e delle autorizzazioni concesse tramite i servizi di streaming utilizzati sulla piattaforma.",
 			termsOfServiceDiv3Paragraph2:
 				'Accetti di non utilizzare Allify per attività illegali, abusive, automatizzate in modo malevolo o che violino i termini delle API di terze parti.',
 			termsOfServiceDiv4Heading2: '3. Disponibilità del servizio',

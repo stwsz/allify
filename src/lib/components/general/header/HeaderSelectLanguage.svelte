@@ -48,11 +48,11 @@
 			px-2.5 py-1.5
 			text-sm
 			transition-all duration-200
-			md:px-3 md:py-2
-			hover:border-brand-primary
-			hover:bg-s-muted
+			hover:border-brand-primary hover:bg-s-muted
 			hover:shadow-sm
 			focus:outline-none
+			md:px-3
+			md:py-2
 		"
 		aria-haspopup="listbox"
 		aria-expanded={openLanguageDropdown}

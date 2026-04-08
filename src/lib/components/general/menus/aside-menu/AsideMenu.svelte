@@ -37,10 +37,12 @@
 		<div
 			class="flex items-center justify-between border-b border-b-default/60 pt-8 pr-3 pb-5.5 pl-8"
 		>
-			<AllifyLogoColorful
-				logoSvgClass="w-26"
-				logoAltText={$translationsStore.generalTexts.logoColorfulAltText}
-			/>
+			<button on:click={() => (isAsideMenuOpen = false)}>
+				<AllifyLogoColorful
+					logoSvgClass="w-26"
+					logoAltText={$translationsStore.generalTexts.logoColorfulAltText}
+				/>
+			</button>
 
 			<button
 				aria-label={$translationsStore.generalTexts.closeMenuAltText}
