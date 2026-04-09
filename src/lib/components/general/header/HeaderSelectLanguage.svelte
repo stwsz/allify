@@ -36,7 +36,7 @@
 	];
 
 	$: selectedLanguage =
-		languageOptions.find((lang) => lang.code === $languageStore) ?? languageOptions[1];
+		languageOptions.find((lang) => lang.code === $languageStore) ?? languageOptions[0];
 </script>
 
 <div class="relative inline-block">
@@ -50,11 +50,11 @@
 			px-2.5 py-1.5
 			text-sm
 			transition-all duration-200
-			md:px-3 md:py-2
-			hover:border-brand-primary
-			hover:bg-s-muted
+			hover:border-brand-primary hover:bg-s-muted
 			hover:shadow-sm
 			focus:outline-none
+			md:px-3
+			md:py-2
 		"
 		aria-haspopup="listbox"
 		aria-expanded={openLanguageDropdown}

@@ -1,54 +1,16 @@
 <script lang="ts">
-	// Svelte
-	import { onMount } from 'svelte';
-
-	// Assets
-	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
-
 	// Components
 	import CarouselUserItems from '../CarouselUserItems.svelte';
 	import UserSelectedSavedTrackModal from './UserSelectedSavedTrackModal.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-
-	let userSavedTracks: any[] = [];
-	let isLoading = true;
+	import { userInfo } from '$lib/stores/userInfo.store';
 
 	let showSelectedSavedTrackModal = false;
 	let selectedSavedTrack: any = null;
 
-	async function getSavedTracks(): Promise<any[]> {
-		try {
-			const reqUserSavedTracks = await fetch('/api/spotify/user-saved-tracks');
-
-			if (!reqUserSavedTracks.ok) {
-				throw new Error('Failed to fetch saved tracks');
-			}
-
-			const resUserSavedTracks = await reqUserSavedTracks.json();
-
-			sessionStorage.setItem('spotify-user-saved-tracks', JSON.stringify(resUserSavedTracks));
-
-			return resUserSavedTracks;
-		} catch (error) {
-			return [];
-		}
-	}
-
-	onMount(async () => {
-		const userSavedTracksFromStorage = sessionStorage.getItem('spotify-user-saved-tracks');
-
-		if (userSavedTracksFromStorage) {
-			const userSavedTracksFromStorageParsed = await JSON.parse(userSavedTracksFromStorage);
-
-			userSavedTracks = userSavedTracksFromStorageParsed;
-		} else {
-			userSavedTracks = await getSavedTracks();
-		}
-
-		isLoading = false;
-	});
+	let likedTracks = $userInfo?.connectedStreamings.spotify?.likedTracks?.likedTracksItems || [];
 </script>
 
 <section class="flex flex-col gap-4">
@@ -56,19 +18,17 @@
 		{$translationsStore.profilePage.profilePageUserSavedTracksSectionHeading2}
 	</p>
 
-	{#if isLoading === true}
-		<div class="flex justify-center py-8">
-			<DotsLoading />
-		</div>
-	{:else if userSavedTracks.length > 0}
+	{#if likedTracks && likedTracks.length > 0}
 		<CarouselUserItems
-			items={userSavedTracks}
+			items={likedTracks}
 			itemsType="user-saved-tracks"
 			bind:selectedSavedTrack
 			bind:showSelectedSavedTrackModal
 		/>
 	{:else}
-		<p>{$translationsStore.profilePage.profilePageUserSavedTracksSectionParagraph1}</p>
+		<p class="my-2 text-sm">
+			{$translationsStore.profilePage.profilePageUserSavedTracksSectionParagraph1}
+		</p>
 	{/if}
 </section>
 

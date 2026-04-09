@@ -36,7 +36,13 @@ export type UserInfoSpotify = {
 				mostListenedTracksItems: TrackSpotify[];
 		  }
 		| undefined;
-	// likedMusics: [];
+	likedTracks:
+		| {
+				limit: number;
+				updatedAt: string;
+				likedTracksItems: LikedTrackSpotify[];
+		  }
+		| undefined;
 	// savedMusics: [];
 	// playlists: [];
 };
@@ -58,5 +64,20 @@ export type TrackSpotify = {
 	popularity: number;
 	albumName: string;
 	images: { url: string; height: number | null; width: number | null }[];
+	trackLink: string;
+};
+
+export type LikedTrackSpotify = {
+	addedAt: string;
+	name: string;
+	artists: string[];
+	popularity: number;
+	album: {
+		name: string;
+		images: { url: string; height: number | null; width: number | null }[];
+	};
+	explicit: boolean;
+	releaseDate: string;
+	durationMs: number;
 	trackLink: string;
 };
