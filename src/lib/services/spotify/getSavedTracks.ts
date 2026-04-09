@@ -29,7 +29,7 @@ export async function getLikedTracks() {
 		}
 
 		return {
-			limit: 5,
+			limit: 20,
 			updatedAt: new Date().toLocaleDateString('en-US'),
 			likedTracksItems
 		};
