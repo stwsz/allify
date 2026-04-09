@@ -24,22 +24,24 @@
 		<div
 			class="relative w-full max-w-3xl overflow-hidden rounded-2xl border border-b-default bg-s-default shadow-xl"
 		>
-			<button
-				class="absolute top-5 right-5 z-10 cursor-pointer opacity-70 transition hover:scale-105 hover:opacity-100"
-				on:click={() => (showSelectedSavedTrackModal = false)}
-				aria-label={$translationsStore.profilePage
-					.profilePageUserSelectedSavedTrackCloseButtonAriaLabel +
-					' ' +
-					selectedSavedTrack.name}
-			>
-				<CloseIcon
-					iconAltText={$translationsStore.profilePage
+			{#if selectedSavedTrack.name}
+				<button
+					class="absolute top-5 right-5 z-10 cursor-pointer opacity-70 transition hover:scale-105 hover:opacity-100"
+					on:click={() => (showSelectedSavedTrackModal = false)}
+					aria-label={$translationsStore.profilePage
 						.profilePageUserSelectedSavedTrackCloseButtonAriaLabel +
 						' ' +
 						selectedSavedTrack.name}
-					iconSvgClass="w-5 h-5 text-brand-primary"
-				/>
-			</button>
+				>
+					<CloseIcon
+						iconAltText={$translationsStore.profilePage
+							.profilePageUserSelectedSavedTrackCloseButtonAriaLabel +
+							' ' +
+							selectedSavedTrack.name}
+						iconSvgClass="w-5 h-5 text-brand-primary"
+					/>
+				</button>
+			{/if}
 
 			<div class="flex flex-col gap-4 p-5 sm:flex-row sm:items-start sm:gap-8 sm:p-6">
 				{#if selectedSavedTrack?.album?.images?.[0]?.url}
@@ -77,7 +79,7 @@
 
 						{#if selectedSavedTrack?.artists?.length}
 							<p class="text-sm text-t-secondary">
-								{selectedSavedTrack.artists.map((a: any) => a.name).join(', ')}
+								<span>{selectedSavedTrack.artists.join(', ')}</span>
 							</p>
 						{/if}
 					</div>
@@ -91,16 +93,16 @@
 							</span>
 						{/if}
 
-						{#if selectedSavedTrack?.album?.release_date && selectedSavedTrack?.duration_ms}
+						{#if selectedSavedTrack?.album?.releaseDate && selectedSavedTrack?.durationMs}
 							<div class="flex items-center gap-2 text-xs text-t-secondary">
-								{#if selectedSavedTrack?.album?.release_date}
-									<span>{selectedSavedTrack.album.release_date.slice(0, 4)}</span>
+								{#if selectedSavedTrack?.album?.releaseDate}
+									<span>{selectedSavedTrack.album.releaseDate.slice(0, 4)}</span>
 								{/if}
 
 								<span>•</span>
 
-								{#if selectedSavedTrack?.duration_ms}
-									<span>{formatDuration(selectedSavedTrack.duration_ms)}</span>
+								{#if selectedSavedTrack?.durationMs}
+									<span>{formatDuration(selectedSavedTrack.durationMs)}</span>
 								{/if}
 							</div>
 						{/if}
@@ -109,9 +111,9 @@
 					<div class="flex flex-col gap-2 pt-1 sm:w-90">
 						<Popularity item={selectedSavedTrack} />
 
-						{#if selectedSavedTrack?.external_urls?.spotify}
+						{#if selectedSavedTrack?.trackLink}
 							<ExternalLink
-								externalLink={selectedSavedTrack.external_urls.spotify}
+								externalLink={selectedSavedTrack.trackLink}
 								externalLinkText={$translationsStore.profilePage
 									.profilePageUserSelectedSavedTrackOpenOnSpotify}
 								additionalClass="w-full mt-2"
