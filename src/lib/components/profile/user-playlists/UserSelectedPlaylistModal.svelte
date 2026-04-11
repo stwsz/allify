@@ -12,51 +12,6 @@
 	// Props
 	export let playlist: any;
 	export let showSelectedPlaylistModal: boolean;
-
-	let musicsFromPlaylist: any[] = [];
-	let isLoading = true;
-
-	function getStorageKey() {
-		return `spotify-musics-from-playlist-${playlist.id}`;
-	}
-
-	async function getMusicsFromPlaylist(): Promise<any[]> {
-		try {
-			const req = await fetch('/api/spotify/musics-from-playlist', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({ playlistTracksHref: playlist.tracks.href })
-			});
-
-			if (!req.ok) throw new Error('Failed to fetch musics');
-
-			const data = await req.json();
-
-			sessionStorage.setItem(getStorageKey(), JSON.stringify(data));
-
-			return data;
-		} catch {
-			return [];
-		}
-	}
-
-	$: if (playlist?.id && showSelectedPlaylistModal) {
-		loadMusics();
-	}
-
-	async function loadMusics() {
-		isLoading = true;
-
-		const storage = sessionStorage.getItem(getStorageKey());
-
-		if (storage) {
-			musicsFromPlaylist = JSON.parse(storage);
-		} else {
-			musicsFromPlaylist = await getMusicsFromPlaylist();
-		}
-
-		isLoading = false;
-	}
 </script>
 
 {#if showSelectedPlaylistModal}
@@ -129,11 +84,11 @@
 
 						<div class="flex flex-col gap-2">
 							<div class="flex items-center gap-2 text-xs text-t-secondary">
-								{#if playlist.owner?.name}
+								{#if playlist.owner}
 									<span
 										class="w-fit rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
 									>
-										{playlist.owner.name}
+										{playlist.owner}
 									</span>
 								{/if}
 
@@ -153,9 +108,9 @@
 							</div>
 						</div>
 
-						{#if playlist.external_urls?.spotify}
+						{#if playlist.playlistLink}
 							<ExternalLink
-								externalLink={playlist.external_urls.spotify}
+								externalLink={playlist.playlistLink}
 								externalLinkText={$translationsStore.profilePage
 									.profilePageUserSelectedPlaylistModalExternalLink}
 								additionalClass="w-full mt-2 sm:w-70"
@@ -166,17 +121,13 @@
 			</div>
 
 			<div class="flex-1 space-y-1 overflow-y-auto p-4 lg:p-6">
-				{#if isLoading}
-					<p class="mt-10 text-center text-sm text-t-secondary">
-						{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalLoadingMusics}
-					</p>
-				{:else if musicsFromPlaylist.length === 0}
+				{#if playlist.tracks?.total === 0}
 					<p class="mt-10 text-center text-sm text-t-secondary">
 						{$translationsStore.profilePage.profilePageUserSelectedPlaylistModalMusicsNotFound}
 					</p>
 				{:else}
-					{#each musicsFromPlaylist as music}
-						{#if music.track.external_urls?.spotify}
+					{#each playlist.tracks.items as music}
+						{#if music.trackLink}
 							<MusicFromPlaylist {music} />
 						{/if}
 					{/each}
