@@ -1,54 +1,20 @@
 <script lang="ts">
-	// Svelte
-	import { onMount } from 'svelte';
-
-	// Assets
-	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
-
 	// Components
 	import CarouselUserItems from '../CarouselUserItems.svelte';
 	import UserSelectedPlaylistModal from './UserSelectedPlaylistModal.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
 
-	let userPlaylists: any[] = [];
-	let isLoading = true;
+	// Types
+	import type { PlaylistSpotify } from '$lib/types/UserInfo.type';
 
 	let showSelectedPlaylistModal = false;
-	let selectedPlaylist: any = null;
+	let selectedPlaylist: PlaylistSpotify | undefined = undefined;
 
-	async function getUserPlaylists(): Promise<any[]> {
-		try {
-			const reqUserPlaylists = await fetch('/api/spotify/user-playlists');
-
-			if (!reqUserPlaylists.ok) {
-				throw new Error('Failed to fetch saved playlists');
-			}
-
-			const resUserPlaylists = await reqUserPlaylists.json();
-
-			sessionStorage.setItem('spotify-user-playlists', JSON.stringify(resUserPlaylists));
-
-			return resUserPlaylists;
-		} catch (error) {
-			return [];
-		}
-	}
-
-	onMount(async () => {
-		const userPlaylistsFromStorage = sessionStorage.getItem('spotify-user-playlists');
-
-		if (userPlaylistsFromStorage) {
-			const userPlaylistsFromStorageParsed = await JSON.parse(userPlaylistsFromStorage);
-
-			userPlaylists = userPlaylistsFromStorageParsed;
-		} else {
-			userPlaylists = await getUserPlaylists();
-		}
-
-		isLoading = false;
-	});
+	let userPlaylists: PlaylistSpotify[] =
+		$userInfo?.connectedStreamings.spotify?.playlists?.playlistItems || [];
 </script>
 
 <section class="flex flex-col gap-4">
@@ -56,11 +22,7 @@
 		{$translationsStore.profilePage.profilePageUserPlaylistsSectionHeading2}
 	</p>
 
-	{#if isLoading === true}
-		<div class="flex justify-center py-8">
-			<DotsLoading />
-		</div>
-	{:else if userPlaylists.length > 0}
+	{#if userPlaylists.length > 0}
 		<CarouselUserItems
 			items={userPlaylists}
 			itemsType="user-playlists"

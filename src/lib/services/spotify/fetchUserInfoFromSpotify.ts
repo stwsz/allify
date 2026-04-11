@@ -4,7 +4,8 @@ import type { UserInfoSpotify } from '$lib/types/UserInfo.type';
 // Services
 import { getMostListenedArtists } from './getMostListenedArtists';
 import { getMostListenedTracks } from './getMostListenedTracks';
-import { getLikedTracks } from './getSavedTracks';
+import { getLikedTracks } from './getLikedTracks';
+import { getPlaylists } from './getPlaylists';
 
 export async function fetchUserInfoFromSpotify() {
 	let dataFromSpotify: UserInfoSpotify | undefined;
@@ -30,7 +31,8 @@ export async function fetchUserInfoFromSpotify() {
 			profileLink: data.external_urls.spotify,
 			mostListenedArtists: undefined,
 			mostListenedTracks: undefined,
-			likedTracks: undefined
+			likedTracks: undefined,
+			playlists: undefined
 		};
 
 		try {
@@ -55,6 +57,14 @@ export async function fetchUserInfoFromSpotify() {
 			dataFromSpotify.likedTracks = likedTracks;
 		} catch {
 			dataFromSpotify.likedTracks = undefined;
+		}
+
+		try {
+			const playlists = await getPlaylists();
+
+			dataFromSpotify.playlists = playlists;
+		} catch {
+			dataFromSpotify.playlists = undefined;
 		}
 
 		return dataFromSpotify;
