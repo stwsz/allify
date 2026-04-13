@@ -66,8 +66,7 @@ export async function getPlaylists() {
 			updatedAt: new Date().toLocaleDateString('en-US'),
 			playlistItems
 		};
-	} catch (err) {
-		console.error(err);
+	} catch {
 		return undefined;
 	}
 }

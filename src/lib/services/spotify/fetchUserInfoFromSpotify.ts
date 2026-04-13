@@ -6,6 +6,7 @@ import { getMostListenedArtists } from './getMostListenedArtists';
 import { getMostListenedTracks } from './getMostListenedTracks';
 import { getLikedTracks } from './getLikedTracks';
 import { getPlaylists } from './getPlaylists';
+import { getAlbums } from './getAlbums';
 
 export async function fetchUserInfoFromSpotify() {
 	let dataFromSpotify: UserInfoSpotify | undefined;
@@ -32,7 +33,8 @@ export async function fetchUserInfoFromSpotify() {
 			mostListenedArtists: undefined,
 			mostListenedTracks: undefined,
 			likedTracks: undefined,
-			playlists: undefined
+			playlists: undefined,
+			albums: undefined
 		};
 
 		try {
@@ -65,6 +67,14 @@ export async function fetchUserInfoFromSpotify() {
 			dataFromSpotify.playlists = playlists;
 		} catch {
 			dataFromSpotify.playlists = undefined;
+		}
+
+		try {
+			const albums = await getAlbums();
+
+			dataFromSpotify.albums = albums;
+		} catch {
+			dataFromSpotify.albums = undefined;
 		}
 
 		return dataFromSpotify;

@@ -52,7 +52,7 @@ export async function getMostListenedArtists() {
 			mostListenedArtistItem,
 			mostListenedArtistsItems
 		};
-	} catch (error) {
+	} catch {
 		return undefined;
 	}
 }

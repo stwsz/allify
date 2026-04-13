@@ -8,13 +8,13 @@
 
 <a
 	class="group flex w-full cursor-pointer items-center gap-4 rounded-lg px-4 py-3 text-left transition hover:bg-s-muted"
-	href={track.external_urls.spotify}
+	href={track.trackLink}
 	target="_blank"
 	rel="noopener noreferrer"
 >
 	<div class="flex h-8 w-8 shrink-0 items-center justify-center">
 		<span class="text-sm font-semibold text-t-muted transition group-hover:hidden">
-			{track.track_number ?? '—'}
+			{track.trackNumber ?? '—'}
 		</span>
 		<svg
 			class="hidden h-4 w-4 text-brand-primary transition group-hover:block"
@@ -47,14 +47,14 @@
 
 		{#if track.artists}
 			<p class="truncate text-xs text-t-secondary">
-				{track.artists.map((a: { name: string }) => a.name).join(', ')}
+				{track.artists.join(', ')}
 			</p>
 		{/if}
 	</div>
 
-	{#if track.duration_ms}
+	{#if track.durationMs}
 		<span class="shrink-0 text-xs text-t-muted transition group-hover:text-brand-primary">
-			{formatDuration(track.duration_ms)}
+			{formatDuration(track.durationMs)}
 		</span>
 	{/if}
 </a>
