@@ -15,7 +15,7 @@ export async function getLikedTracks() {
 			likedTracksItems.push({
 				addedAt: resUserLikedTracks[i].added_at,
 				name: resUserLikedTracks[i].track.name,
-				artists: resUserLikedTracks[i].track.artists.map((artist: any) => artist.name),
+				artists: resUserLikedTracks[i].track.artists.map((artist: { name: string }) => artist.name),
 				popularity: resUserLikedTracks[i].track.popularity,
 				album: {
 					name: resUserLikedTracks[i].track.album.name,

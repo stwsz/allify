@@ -49,6 +49,12 @@ export type UserInfoSpotify = {
 				playlistItems: PlaylistSpotify[];
 		  }
 		| undefined;
+	albums:
+		| {
+				updatedAt: string;
+				albumItems: AlbumSpotify[];
+		  }
+		| undefined;
 };
 
 export type ArtistSpotify = {
@@ -107,5 +113,25 @@ export type PlaylistSpotify = {
 					trackLink: string;
 			  }[]
 			| undefined;
+	};
+};
+
+export type AlbumSpotify = {
+	addedAt: string;
+	name: string;
+	images: { url: string; height: number | null; width: number | null }[];
+	releaseDate: string;
+	artists: string[];
+	albumLink: string;
+	tracks: {
+		total: number;
+		items: {
+			name: string;
+			explicit: boolean;
+			artists: string[];
+			durationMs: number;
+			trackNumber: number;
+			trackLink: string | undefined;
+		}[];
 	};
 };

@@ -6,11 +6,14 @@
 	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
 	import MusicFromAlbum from './MusicFromAlbum.svelte';
 
+	// Types
+	import type { AlbumSpotify } from '$lib/types/UserInfo.type';
+
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Props
-	export let album: any;
+	export let album: AlbumSpotify | undefined = undefined;
 	export let showSelectedAlbumModal: boolean;
 </script>
 
@@ -27,23 +30,23 @@
 				aria-label={$translationsStore.profilePage
 					.profilePageUserSelectedSavedAlbumCloseButtonAriaLabel +
 					' ' +
-					album.name}
+					album?.name}
 			>
 				<CloseIcon
 					iconAltText={$translationsStore.profilePage
 						.profilePageUserSelectedSavedAlbumCloseButtonAriaLabel +
 						' ' +
-						album.name}
+						album?.name}
 					iconSvgClass="w-5 h-5 text-brand-primary"
 				/>
 			</button>
 
 			<div class="border-b border-b-default p-5 lg:p-6">
 				<div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-8">
-					{#if album.images?.[0]?.url}
+					{#if album?.images?.[0]?.url}
 						<img
-							src={album.images[0].url}
-							alt={album.name}
+							src={album?.images[0].url}
+							alt={album?.name}
 							class="h-32 w-32 shrink-0 self-center rounded-xl object-cover shadow-lg sm:self-start lg:h-52 lg:w-52"
 							loading="lazy"
 							decoding="async"
@@ -57,34 +60,34 @@
 						</p>
 
 						<div class="flex flex-col gap-1">
-							{#if album.name}
+							{#if album?.name}
 								<p class="text-xl font-bold text-t-primary sm:text-2xl">
 									{album.name}
 								</p>
 							{/if}
 
-							{#if album.release_date}
+							{#if album?.releaseDate}
 								<p class="text-xs text-t-secondary">
-									{new Date(album.release_date).toLocaleDateString($translationsStore.locale)}
+									{new Date(album.releaseDate).toLocaleDateString($translationsStore.locale)}
 								</p>
 							{/if}
 						</div>
 
 						<div class="flex flex-col gap-2">
 							<div class="flex items-center gap-2 text-xs text-t-secondary">
-								{#if album.artists?.length}
+								{#if album?.artists?.length}
 									<span
 										class="w-fit rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
 									>
-										{album.artists.map((a: { name: string }) => a.name).join(', ')}
+										{album?.artists.join(', ')}
 									</span>
 								{/if}
 
-								{#if album.total_tracks}
+								{#if album?.tracks.total}
 									<span>•</span>
 									<span>
-										{album.total_tracks}
-										{album.total_tracks === 1
+										{album.tracks.total}
+										{album.tracks.total === 1
 											? $translationsStore.profilePage.profilePageUserSelectedSavedAlbumItemTracks.slice(
 													0,
 													-1
@@ -95,9 +98,9 @@
 							</div>
 						</div>
 
-						{#if album.external_urls?.spotify}
+						{#if album?.albumLink}
 							<ExternalLink
-								externalLink={album.external_urls.spotify}
+								externalLink={album?.albumLink}
 								externalLinkText={$translationsStore.profilePage
 									.profilePageUserSelectedSavedAlbumOpenOnSpotify}
 								additionalClass="w-full mt-2 sm:w-70"
@@ -108,7 +111,7 @@
 			</div>
 
 			<div class="flex-1 space-y-1 overflow-y-auto p-4 lg:p-6">
-				{#each album.tracks.items as track}
+				{#each album?.tracks.items as track}
 					<MusicFromAlbum {track} />
 				{/each}
 			</div>
