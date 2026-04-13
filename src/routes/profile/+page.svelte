@@ -44,11 +44,11 @@
 			<KeyInformation userInfo={$userInfo} />
 
 			<div class="flex w-full flex-col gap-8 sm:gap-10">
-				<UserSavedTracks />
+				<UserSavedTracks likedTracks={$userInfo?.connectedStreamings.spotify?.likedTracks?.likedTracksItems || []} />
 
-				<UserPlaylists />
+				<UserPlaylists userPlaylists={$userInfo?.connectedStreamings.spotify?.playlists?.playlistItems || []} />
 
-				<UserSavedAlbums />
+				<UserSavedAlbums userSavedAlbums={$userInfo?.connectedStreamings.spotify?.albums?.albumItems || []} />
 			</div>
 		</div>
 	</section>

@@ -3,17 +3,17 @@
 	import CarouselUserItems from '$lib/components/profile/CarouselUserItems.svelte';
 	import UserSelectedSavedAlbumModal from './UserSelectedSavedAlbumModal.svelte';
 
+	// Stores
+	import { translationsStore } from '$lib/stores/translations.store';
+
 	// Types
 	import type { AlbumSpotify } from '$lib/types/UserInfo.type';
 
-	// Stores
-	import { translationsStore } from '$lib/stores/translations.store';
-	import { userInfo } from '$lib/stores/userInfo.store';
+	// Props
+	export let userSavedAlbums: AlbumSpotify[];
 
 	let showSelectedAlbumModal = false;
 	let selectedSavedAlbum: AlbumSpotify | undefined = undefined;
-
-	let userSavedAlbums: AlbumSpotify[] = $userInfo?.connectedStreamings.spotify?.albums?.albumItems|| [];
 </script>
 
 <section class="flex flex-col gap-4">
