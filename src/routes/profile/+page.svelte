@@ -15,7 +15,8 @@
 	import { userInfo } from '$lib/stores/userInfo.store';
 	import { translationsStore } from '$lib/stores/translations.store';
 
-	$: selectedStreaming = $userInfo?.connectedStreamings.spotify?.connected === true ? 'spotify' : null;
+	$: selectedStreaming =
+		$userInfo?.connectedStreamings.spotify?.connected === true ? 'spotify' : null;
 </script>
 
 <svelte:head>
@@ -46,11 +47,23 @@
 			<KeyInformation userInfo={selectedStreaming ? $userInfo.connectedStreamings.spotify : null} />
 
 			<div class="flex w-full flex-col gap-8 sm:gap-10">
-				<UserSavedTracks likedTracks={selectedStreaming ? $userInfo.connectedStreamings.spotify.likedTracks?.likedTracksItems || [] : []} />
+				<UserSavedTracks
+					likedTracks={selectedStreaming
+						? $userInfo.connectedStreamings.spotify.likedTracks?.likedTracksItems || []
+						: []}
+				/>
 
-				<UserPlaylists userPlaylists={selectedStreaming ? $userInfo.connectedStreamings.spotify.playlists?.playlistItems || [] : []} />
+				<UserPlaylists
+					userPlaylists={selectedStreaming
+						? $userInfo.connectedStreamings.spotify.playlists?.playlistItems || []
+						: []}
+				/>
 
-				<UserSavedAlbums userSavedAlbums={selectedStreaming ? $userInfo.connectedStreamings.spotify.albums?.albumItems || [] : []} />
+				<UserSavedAlbums
+					userSavedAlbums={selectedStreaming
+						? $userInfo.connectedStreamings.spotify.albums?.albumItems || []
+						: []}
+				/>
 			</div>
 		</div>
 	</section>
