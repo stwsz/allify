@@ -15,59 +15,59 @@
 >
 	<div
 		class="flex flex-col items-center gap-6 text-center
-		sm:flex-row sm:text-left lg:gap-12"
+			sm:flex-row sm:text-left lg:gap-12"
 	>
 		<div class="relative w-fit">
-			{#if userInfo.connectedStreamings.spotify.images[0].url}
+			{#if userInfo.images[0].url}
 				<img
-					src={userInfo.connectedStreamings.spotify.images[0].url}
+					src={userInfo.images[0].url}
 					class="h-24 w-24 rounded-full border-4 border-brand-primary object-cover
-					sm:h-32 sm:w-32 lg:h-36 lg:w-36"
-					alt={`${$translationsStore.profilePage.profilePageImageAltText} ${userInfo.connectedStreamings.spotify.name}`}
+						sm:h-32 sm:w-32 lg:h-36 lg:w-36"
+					alt={`${$translationsStore.profilePage.profilePageImageAltText} ${userInfo.name}`}
 					decoding="async"
 					fetchpriority="high"
 					loading="eager"
 				/>
-			{:else if userInfo.connectedStreamings.spotify.name}
+			{:else if userInfo.name}
 				<div
 					class="
-							flex h-24 w-24 items-center justify-center rounded-full border-4 border-brand-primary sm:h-32 sm:w-32 lg:h-36 lg:w-36
-						"
-					aria-label={userInfo.connectedStreamings.spotify.name}
+								flex h-24 w-24 items-center justify-center rounded-full border-4 border-brand-primary sm:h-32 sm:w-32 lg:h-36 lg:w-36
+							"
+					aria-label={userInfo.name}
 				>
 					<p
 						class="flex h-18 w-18 items-center justify-center rounded-full border-2 border-brand-primary text-xl font-medium text-brand-primary lg:h-24 lg:w-24 lg:text-3xl"
 					>
-						{userInfo.connectedStreamings.spotify.name.slice(0, 1)}
+						{userInfo.name.slice(0, 1)}
 					</p>
 				</div>
 			{/if}
 
-			{#if userInfo.connectedStreamings.spotify.country}
+			{#if userInfo.country}
 				<span
 					class="absolute right-0.5 bottom-0.5 rounded-full bg-brand-primary px-2 py-0.5 text-xs font-semibold text-white"
 				>
-					{userInfo.connectedStreamings.spotify.country}
+					{userInfo.country}
 				</span>
 			{/if}
 		</div>
 
 		<div class="flex flex-col justify-center gap-2 text-t-primary">
-			{#if userInfo.connectedStreamings.spotify.name}
+			{#if userInfo.name}
 				<h1 class="mb-1.5! text-2xl font-semibold sm:text-3xl">
-					{userInfo.connectedStreamings.spotify.name}
+					{userInfo.name}
 				</h1>
 			{/if}
 
-			{#if userInfo.connectedStreamings.spotify.email}
+			{#if userInfo.email}
 				<p class="text-sm font-medium break-all lg:text-base">
-					{userInfo.connectedStreamings.spotify.email}
+					{userInfo.email}
 				</p>
 			{/if}
 
-			{#if userInfo.connectedStreamings.spotify.followers}
+			{#if userInfo.followers}
 				<p class="text-xs font-medium sm:text-sm">
-					{userInfo.connectedStreamings.spotify.followers}
+					{userInfo.followers}
 					{$translationsStore.profilePage.profilePageFollowers}
 				</p>
 			{/if}
@@ -76,7 +76,7 @@
 
 	<ExternalLink
 		streamingPlatform="spotify"
-		externalLink={userInfo.connectedStreamings.spotify.profileLink}
+		externalLink={userInfo.profileLink}
 		externalLinkText={$translationsStore.profilePage.profilePageExternalLinkSpotify}
 		additionalClass="w-full sm:w-70"
 	/>

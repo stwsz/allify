@@ -15,20 +15,19 @@ export async function getAlbums() {
 				addedAt: resUserAlbums[i].added_at,
 				name: resUserAlbums[i].album.name,
 				images: resUserAlbums[i].album.images,
-                releaseDate: resUserAlbums[i].album.release_date,
+				releaseDate: resUserAlbums[i].album.release_date,
 				artists: resUserAlbums[i].album.artists.map((artist: { name: string }) => artist.name),
 				albumLink: resUserAlbums[i].album.external_urls.spotify,
 				tracks: {
 					total: resUserAlbums[i].album.total_tracks,
-					items: resUserAlbums[i].album.tracks.items
-						.map((trackItem: any) => ({
-							name: trackItem.name,
-                            explicit: trackItem.explicit,
-							artists: trackItem.artists.map((artist: { name: string }) => artist.name),
-                            durationMs: trackItem.duration_ms,
-                            trackNumber: trackItem.track_number,
-                            trackLink: trackItem.external_urls.spotify
-						}))
+					items: resUserAlbums[i].album.tracks.items.map((trackItem: any) => ({
+						name: trackItem.name,
+						explicit: trackItem.explicit,
+						artists: trackItem.artists.map((artist: { name: string }) => artist.name),
+						durationMs: trackItem.duration_ms,
+						trackNumber: trackItem.track_number,
+						trackLink: trackItem.external_urls.spotify
+					}))
 				}
 			});
 		}

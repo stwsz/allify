@@ -14,6 +14,9 @@
 	// Stores
 	import { userInfo } from '$lib/stores/userInfo.store';
 	import { translationsStore } from '$lib/stores/translations.store';
+
+	$: selectedStreaming =
+		$userInfo?.connectedStreamings.spotify?.connected === true ? 'spotify' : null;
 </script>
 
 <svelte:head>
@@ -41,14 +44,26 @@
 {#if $userInfo?.connectedStreamings.spotify?.connected === true}
 	<section class="base-section">
 		<div class="mx-auto flex w-full flex-col gap-10 sm:gap-12 lg:gap-14">
-			<KeyInformation userInfo={$userInfo} />
+			<KeyInformation userInfo={selectedStreaming ? $userInfo.connectedStreamings.spotify : null} />
 
 			<div class="flex w-full flex-col gap-8 sm:gap-10">
-				<UserSavedTracks />
+				<UserSavedTracks
+					likedTracks={selectedStreaming
+						? $userInfo.connectedStreamings.spotify.likedTracks?.likedTracksItems || []
+						: []}
+				/>
 
-				<UserPlaylists />
+				<UserPlaylists
+					userPlaylists={selectedStreaming
+						? $userInfo.connectedStreamings.spotify.playlists?.playlistItems || []
+						: []}
+				/>
 
-				<UserSavedAlbums />
+				<UserSavedAlbums
+					userSavedAlbums={selectedStreaming
+						? $userInfo.connectedStreamings.spotify.albums?.albumItems || []
+						: []}
+				/>
 			</div>
 		</div>
 	</section>

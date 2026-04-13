@@ -5,16 +5,15 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { userInfo } from '$lib/stores/userInfo.store';
 
 	// Types
 	import type { PlaylistSpotify } from '$lib/types/UserInfo.type';
 
+	// Props
+	export let userPlaylists: PlaylistSpotify[];
+
 	let showSelectedPlaylistModal = false;
 	let selectedPlaylist: PlaylistSpotify | undefined = undefined;
-
-	let userPlaylists: PlaylistSpotify[] =
-		$userInfo?.connectedStreamings.spotify?.playlists?.playlistItems || [];
 </script>
 
 <section class="flex flex-col gap-4">

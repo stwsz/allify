@@ -5,12 +5,15 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
-	import { userInfo } from '$lib/stores/userInfo.store';
+
+	// Types
+	import type { LikedTrackSpotify } from '$lib/types/UserInfo.type';
+
+	// Props
+	export let likedTracks: LikedTrackSpotify[] = [];
 
 	let showSelectedSavedTrackModal = false;
-	let selectedSavedTrack: any = null;
-
-	let likedTracks = $userInfo?.connectedStreamings.spotify?.likedTracks?.likedTracksItems || [];
+	let selectedSavedTrack: LikedTrackSpotify | undefined = undefined;
 </script>
 
 <section class="flex flex-col gap-4">
