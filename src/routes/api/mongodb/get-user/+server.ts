@@ -25,7 +25,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		const user = await users.findOne({ email });
 
 		if (!user) {
-			return json({ error: 'User not found' }, { status: 404 });
+			return json({ success: false, error: 'User not found' }, { status: 200 });
 		}
 
 		return json({
