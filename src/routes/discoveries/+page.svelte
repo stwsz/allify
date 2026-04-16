@@ -20,6 +20,11 @@
 
 	$: mostListenedArtists = $userInfo?.discoveries.artists;
 	$: mostListenedTracks = $userInfo?.discoveries.tracks;
+
+	console.log('Most Listened Artists:', mostListenedArtists);
+	console.log('Most Listened Tracks:', mostListenedTracks);
+
+	console.log('User Info:', $userInfo);
 </script>
 
 <svelte:head>
@@ -68,7 +73,7 @@
 						</div>
 					{:else if (mostListenedArtists?.length ?? 0) !== 0 && (mostListenedTracks?.length ?? 0) !== 0}
 						<div class="flex-1">
-							<h2 class="mb-3 text-sm font-medium text-t-primary">
+							<h2 class="mb-3.5 text-lg! font-medium text-t-primary">
 								{$translationsStore.discoveriesPage.discoveriesPageHeading2Artists}
 							</h2>
 
@@ -84,7 +89,7 @@
 						<div class="hidden w-px bg-b-default sm:block"></div>
 
 						<div class="flex-1">
-							<h2 class="mb-3 text-sm font-medium text-t-primary">
+							<h2 class="mb-3.5 text-lg! font-medium text-t-primary">
 								{$translationsStore.discoveriesPage.discoveriesPageHeading2Tracks}
 							</h2>
 
@@ -98,7 +103,11 @@
 						</div>
 					{:else}
 						<div class="flex w-full items-center justify-center text-center text-sm text-t-muted">
-							{$translationsStore.discoveriesPage.discoveriesPageDiscoverNow}
+							{#if $userInfo.discoveries.artists.length === 0 && $userInfo.discoveries.tracks.length === 0}
+								{$translationsStore.discoveriesPage.discoveriesPageDiscoverNow}
+							{:else}
+								{$translationsStore.discoveriesPage.discoveriesPageDiscoverAgain}
+							{/if}
 						</div>
 					{/if}
 				</div>
@@ -123,7 +132,11 @@
 						}
 					}}
 				>
-					{$translationsStore.discoveriesPage.discoveriesPageDiscoverNowButton}
+					{#if $userInfo.discoveries.artists.length === 0 && $userInfo.discoveries.tracks.length === 0}
+						{$translationsStore.discoveriesPage.discoveriesPageDiscoverNowButton}
+					{:else}
+						{$translationsStore.discoveriesPage.discoveriesPageDiscoverAgainButton}
+					{/if}
 				</button>
 			</div>
 

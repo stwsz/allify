@@ -124,19 +124,23 @@ export const it = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Le tue canzoni più ascoltate'
 	},
 	discoveriesPage: {
-		title: 'Scoperte musicali | Allify',
+		title: 'Scoperte Musicali | Allify',
 		discoveriesPageMetaDescription:
-			'Lascia che Alli ti consigli nuova musica in base ai tuoi gusti musicali. Scopri nuovi artisti e brani che amerai.',
+			'Scopri nuova musica con Alli. Ricevi consigli personalizzati su artisti e brani in base ai tuoi gusti musicali.',
 		discoveriesPageMetaOgAndTwitterContent:
-			'Lascia che Alli ti consigli nuova musica in base ai tuoi gusti musicali. Scopri nuovi artisti e brani che amerai.',
-		discoveriesPageHeading1: 'Lascia che Alli ti consigli nuova musica',
+			'Scopri artisti e brani consigliati appositamente per te con Alli.',
+		discoveriesPageHeading1: 'Scopri nuova musica con Alli',
 		discoveriesPageParagraph1:
-			'Alli suggerisce 5 canzoni e 5 artisti per ampliare i tuoi gusti musicali, basandosi su ciò che hai ascoltato di più.',
-		discoveriesPageHeading2Artists: 'Artisti',
-		discoveriesPageHeading2Tracks: 'Canzoni',
-		discoveriesPageDiscoverNow: 'Clicca su "Scopri ora" per generare raccomandazioni',
+			'Alli consiglia 5 brani e 5 artisti per aiutarti a esplorare e ampliare i tuoi gusti musicali in base a ciò che ascolti di più.',
+		discoveriesPageHeading2Artists: 'Artisti consigliati',
+		discoveriesPageHeading2Tracks: 'Brani consigliati',
+		discoveriesPageDiscoverNow:
+			'Clicca su "Scopri ora" per ricevere i tuoi consigli',
+		discoveriesPageDiscoverAgain:
+			'Clicca su "Scopri di nuovo" per aggiornare i tuoi consigli',
 		discoveriesPageDiscoverNowButton: 'Scopri ora',
-		alliMascotWavingAltText: 'Alli saluta nella pagina delle scoperte'
+		discoveriesPageDiscoverAgainButton: 'Scopri di nuovo',
+		alliMascotWavingAltText: 'Mascotte Alli che saluta nella pagina delle scoperte'
 	},
 	musicBattlesPage: {
 		title: 'Battaglie musicali | Allify',

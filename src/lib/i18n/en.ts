@@ -127,17 +127,21 @@ export const en = {
 	discoveriesPage: {
 		title: 'Music Discoveries | Allify',
 		discoveriesPageMetaDescription:
-			'Let Alli recommend new music for you based on your musical taste. Discover new artists and tracks you will love.',
+			'Find new music with Alli. Get personalized recommendations for artists and tracks based on your musical taste.',
 		discoveriesPageMetaOgAndTwitterContent:
-			'Let Alli recommend new music for you based on your musical taste. Discover new artists and tracks you will love.',
-		discoveriesPageHeading1: 'Let Alli recommend new music for you',
+			'Discover artists and songs recommended just for you with Alli.',
+		discoveriesPageHeading1: 'Discover new music with Alli',
 		discoveriesPageParagraph1:
-			'Alli suggests 5 tracks and 5 artists to help you expand your musical taste based on what you’ve listened to the most.',
-		discoveriesPageHeading2Artists: 'Artists',
-		discoveriesPageHeading2Tracks: 'Tracks',
-		discoveriesPageDiscoverNow: 'Click on "Discover now" to generate recommendations',
+			'Alli recommends 5 tracks and 5 artists to help you explore and expand your musical taste based on what you listen to most.',
+		discoveriesPageHeading2Artists: 'Recommended artists',
+		discoveriesPageHeading2Tracks: 'Recommended tracks',
+		discoveriesPageDiscoverNow:
+			'Click "Discover now" to get your recommendations',
+		discoveriesPageDiscoverAgain:
+			'Click "Discover again" to refresh your recommendations',
 		discoveriesPageDiscoverNowButton: 'Discover now',
-		alliMascotWavingAltText: 'Alli waving on the discoveries page'
+		discoveriesPageDiscoverAgainButton: 'Discover again',
+		alliMascotWavingAltText: 'Alli mascot waving on the discoveries page'
 	},
 	musicBattlesPage: {
 		title: 'Music Battles | Allify',

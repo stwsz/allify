@@ -8,7 +8,7 @@ import { getLikedTracks } from './getLikedTracks';
 import { getPlaylists } from './getPlaylists';
 import { getAlbums } from './getAlbums';
 
-export async function fetchUserInfoFromSpotify() {
+export async function userInfoFromSpotify() {
 	let dataFromSpotify: UserInfoSpotify | undefined;
 
 	try {
