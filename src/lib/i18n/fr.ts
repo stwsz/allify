@@ -125,20 +125,23 @@ export const fr = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Vos chansons les plus écoutées'
 	},
 	discoveriesPage: {
-		title: 'Découvertes musicales | Allify',
+		title: 'Découvertes Musicales | Allify',
 		discoveriesPageMetaDescription:
-			'Laissez Alli vous recommander de nouvelles musiques basées sur vos goûts musicaux. Découvrez de nouveaux artistes et chansons que vous allez adorer.',
+			'Trouvez de nouvelles musiques avec Alli. Recevez des recommandations personnalisées d’artistes et de morceaux selon vos goûts musicaux.',
 		discoveriesPageMetaOgAndTwitterContent:
-			'Laissez Alli vous recommander de nouvelles musiques basées sur vos goûts musicaux. Découvrez de nouveaux artistes et chansons que vous allez adorer.',
-		discoveriesPageHeading1: 'Laissez Alli vous recommander de nouvelles musiques',
+			'Découvrez des artistes et des morceaux recommandés spécialement pour vous avec Alli.',
+		discoveriesPageHeading1: 'Découvrez de nouvelles musiques avec Alli',
 		discoveriesPageParagraph1:
-			'Alli suggère 5 chansons et 5 artistes pour élargir vos goûts musicaux, basés sur ce que vous écoutez le plus.',
-		discoveriesPageHeading2Artists: 'Artistes',
-		discoveriesPageHeading2Tracks: 'Chansons',
+			'Alli recommande 5 morceaux et 5 artistes pour vous aider à explorer et élargir vos goûts musicaux selon ce que vous écoutez le plus.',
+		discoveriesPageHeading2Artists: 'Artistes recommandés',
+		discoveriesPageHeading2Tracks: 'Morceaux recommandés',
 		discoveriesPageDiscoverNow:
-			'Cliquez sur "Découvrir maintenant" pour générer des recommandations',
+			'Cliquez sur "Découvrir maintenant" pour obtenir vos recommandations',
+		discoveriesPageDiscoverAgain:
+			'Cliquez sur "Découvrir à nouveau" pour actualiser vos recommandations',
 		discoveriesPageDiscoverNowButton: 'Découvrir maintenant',
-		alliMascotWavingAltText: 'Alli fait signe sur la page des découvertes'
+		discoveriesPageDiscoverAgainButton: 'Découvrir à nouveau',
+		alliMascotWavingAltText: 'Mascotte Alli faisant signe sur la page de découvertes'
 	},
 	musicBattlesPage: {
 		title: 'Battles musicaux | Allify',

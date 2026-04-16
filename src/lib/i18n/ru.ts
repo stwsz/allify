@@ -125,17 +125,21 @@ export const ru = {
 	discoveriesPage: {
 		title: 'Музыкальные открытия | Allify',
 		discoveriesPageMetaDescription:
-			'Позвольте Алли рекомендовать вам новую музыку, основываясь на ваших вкусах. Открывайте новых исполнителей и треки, которые вам понравятся.',
+			'Находите новую музыку с Alli. Получайте персональные рекомендации артистов и треков на основе ваших музыкальных предпочтений.',
 		discoveriesPageMetaOgAndTwitterContent:
-			'Позвольте Алли рекомендовать вам новую музыку, основываясь на ваших вкусах. Открывайте новых исполнителей и треки, которые вам понравятся.',
-		discoveriesPageHeading1: 'Позвольте Алли рекомендовать вам новую музыку',
+			'Откройте для себя артистов и треки, подобранные специально для вас с Alli.',
+		discoveriesPageHeading1: 'Откройте новую музыку с Alli',
 		discoveriesPageParagraph1:
-			'Алли предлагает 5 треков и 5 исполнителей, чтобы расширить ваш музыкальный вкус на основе того, что вы слушаете чаще всего.',
-		discoveriesPageHeading2Artists: 'Исполнители',
-		discoveriesPageHeading2Tracks: 'Треки',
-		discoveriesPageDiscoverNow: 'Нажмите «Открыть сейчас», чтобы получить рекомендации',
+			'Alli рекомендует 5 треков и 5 артистов, чтобы вы могли расширить свои музыкальные предпочтения на основе того, что вы слушаете чаще всего.',
+		discoveriesPageHeading2Artists: 'Рекомендуемые артисты',
+		discoveriesPageHeading2Tracks: 'Рекомендуемые треки',
+		discoveriesPageDiscoverNow:
+			'Нажмите «Открыть сейчас», чтобы получить рекомендации',
+		discoveriesPageDiscoverAgain:
+			'Нажмите «Открыть снова», чтобы обновить рекомендации',
 		discoveriesPageDiscoverNowButton: 'Открыть сейчас',
-		alliMascotWavingAltText: 'Алли машет рукой на странице открытий'
+		discoveriesPageDiscoverAgainButton: 'Открыть снова',
+		alliMascotWavingAltText: 'Маскот Alli машет на странице открытий'
 	},
 	musicBattlesPage: {
 		title: 'Музыкальные баттлы | Allify',

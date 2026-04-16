@@ -125,17 +125,21 @@ export const pt = {
 	discoveriesPage: {
 		title: 'Descobertas Musicais | Allify',
 		discoveriesPageMetaDescription:
-			'Deixe o Alli recomendar novas músicas para você, com base no seu gosto musical. Descubra novos artistas e faixas que você vai adorar.',
+			'Encontre novas músicas com o Alli. Receba recomendações personalizadas de artistas e faixas com base no seu gosto musical.',
 		discoveriesPageMetaOgAndTwitterContent:
-			'Deixe o Alli recomendar novas músicas para você, com base no seu gosto musical. Descubra novos artistas e faixas que você vai adorar.',
-		discoveriesPageHeading1: 'Deixe o Alli te recomendar novas músicas',
+			'Descubra artistas e músicas recomendados especialmente para você com o Alli.',
+		discoveriesPageHeading1: 'Descubra novas músicas com o Alli',
 		discoveriesPageParagraph1:
-			'O Alli sugere 5 músicas e 5 artistas para você expandir seu gosto musical baseado no que você mais ouviu.',
-		discoveriesPageHeading2Artists: 'Artistas',
-		discoveriesPageHeading2Tracks: 'Músicas',
-		discoveriesPageDiscoverNow: 'Clique em "Descobrir agora" para gerar recomendações',
+			'O Alli recomenda 5 músicas e 5 artistas para você explorar e expandir seu gosto musical, com base no que você mais ouve.',
+		discoveriesPageHeading2Artists: 'Artistas recomendados',
+		discoveriesPageHeading2Tracks: 'Músicas recomendadas',
+		discoveriesPageDiscoverNow:
+			'Clique em "Descobrir agora" para receber suas recomendações',
+		discoveriesPageDiscoverAgain:
+			'Clique em "Descobrir novamente" para atualizar suas recomendações',
 		discoveriesPageDiscoverNowButton: 'Descobrir agora',
-		alliMascotWavingAltText: 'Alli acenando na página de descobertas'
+		discoveriesPageDiscoverAgainButton: 'Descobrir novamente',
+		alliMascotWavingAltText: 'Mascote Alli acenando na página de descobertas'
 	},
 	musicBattlesPage: {
 		title: 'Batalhas de Música | Allify',

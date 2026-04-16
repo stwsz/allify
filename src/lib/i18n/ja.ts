@@ -121,19 +121,23 @@ export const ja = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'よく聴く曲'
 	},
 	discoveriesPage: {
-		title: '音楽発見 | Allify',
+		title: '音乐发现 | Allify',
 		discoveriesPageMetaDescription:
-			'Alliがあなたの音楽の好みに基づいて新しい曲をおすすめします。あなたが気に入るアーティストやトラックを発見しましょう。',
+			'使用Alli发现新音乐。根据你的音乐喜好，获取个性化的艺术家和歌曲推荐。',
 		discoveriesPageMetaOgAndTwitterContent:
-			'Alliがあなたの音楽の好みに基づいて新しい曲をおすすめします。あなたが気に入るアーティストやトラックを発見しましょう。',
-		discoveriesPageHeading1: 'Alliに新しい音楽をおすすめしてもらおう',
+			'通过Alli发现专为你推荐的艺术家和歌曲。',
+		discoveriesPageHeading1: '用Alli发现新音乐',
 		discoveriesPageParagraph1:
-			'Alliはあなたが最もよく聴いた音楽をもとに、5曲と5人のアーティストを提案して音楽の幅を広げます。',
-		discoveriesPageHeading2Artists: 'アーティスト',
-		discoveriesPageHeading2Tracks: '曲',
-		discoveriesPageDiscoverNow: '「今すぐ発見」をクリックしてレコメンデーションを生成しましょう',
-		discoveriesPageDiscoverNowButton: '今すぐ発見',
-		alliMascotWavingAltText: '発見ページで手を振るAlliマスコット'
+			'Alli会根据你最常听的音乐，为你推荐5首歌曲和5位艺术家，帮助你拓展音乐品味。',
+		discoveriesPageHeading2Artists: '推荐艺术家',
+		discoveriesPageHeading2Tracks: '推荐歌曲',
+		discoveriesPageDiscoverNow:
+			'点击“立即发现”获取你的推荐',
+		discoveriesPageDiscoverAgain:
+			'点击“再次发现”刷新你的推荐',
+		discoveriesPageDiscoverNowButton: '立即发现',
+		discoveriesPageDiscoverAgainButton: '再次发现',
+		alliMascotWavingAltText: 'Alli吉祥物在发现页面挥手'
 	},
 	musicBattlesPage: {
 		title: '音楽バトル | Allify',
