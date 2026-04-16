@@ -125,10 +125,8 @@ export const zh = {
 			'Alliは、あなたがよく聴く音楽をもとに、5曲と5人のアーティストをおすすめし、あなたの音楽の幅を広げます。',
 		discoveriesPageHeading2Artists: 'おすすめのアーティスト',
 		discoveriesPageHeading2Tracks: 'おすすめの楽曲',
-		discoveriesPageDiscoverNow:
-			'「今すぐ発見」をクリックしておすすめを受け取りましょう',
-		discoveriesPageDiscoverAgain:
-			'「もう一度発見」をクリックしておすすめを更新しましょう',
+		discoveriesPageDiscoverNow: '「今すぐ発見」をクリックしておすすめを受け取りましょう',
+		discoveriesPageDiscoverAgain: '「もう一度発見」をクリックしておすすめを更新しましょう',
 		discoveriesPageDiscoverNowButton: '今すぐ発見',
 		discoveriesPageDiscoverAgainButton: 'もう一度発見',
 		alliMascotWavingAltText: '発見ページで手を振るAlliのマスコット'

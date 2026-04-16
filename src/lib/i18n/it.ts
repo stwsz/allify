@@ -134,10 +134,8 @@ export const it = {
 			'Alli consiglia 5 brani e 5 artisti per aiutarti a esplorare e ampliare i tuoi gusti musicali in base a ciò che ascolti di più.',
 		discoveriesPageHeading2Artists: 'Artisti consigliati',
 		discoveriesPageHeading2Tracks: 'Brani consigliati',
-		discoveriesPageDiscoverNow:
-			'Clicca su "Scopri ora" per ricevere i tuoi consigli',
-		discoveriesPageDiscoverAgain:
-			'Clicca su "Scopri di nuovo" per aggiornare i tuoi consigli',
+		discoveriesPageDiscoverNow: 'Clicca su "Scopri ora" per ricevere i tuoi consigli',
+		discoveriesPageDiscoverAgain: 'Clicca su "Scopri di nuovo" per aggiornare i tuoi consigli',
 		discoveriesPageDiscoverNowButton: 'Scopri ora',
 		discoveriesPageDiscoverAgainButton: 'Scopri di nuovo',
 		alliMascotWavingAltText: 'Mascotte Alli che saluta nella pagina delle scoperte'

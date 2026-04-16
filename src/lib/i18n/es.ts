@@ -135,8 +135,7 @@ export const es = {
 			'Alli recomienda 5 canciones y 5 artistas para ayudarte a explorar y ampliar tu gusto musical según lo que más escuchas.',
 		discoveriesPageHeading2Artists: 'Artistas recomendados',
 		discoveriesPageHeading2Tracks: 'Canciones recomendadas',
-		discoveriesPageDiscoverNow:
-			'Haz clic en "Descubrir ahora" para obtener tus recomendaciones',
+		discoveriesPageDiscoverNow: 'Haz clic en "Descubrir ahora" para obtener tus recomendaciones',
 		discoveriesPageDiscoverAgain:
 			'Haz clic en "Descubrir de nuevo" para actualizar tus recomendaciones',
 		discoveriesPageDiscoverNowButton: 'Descubrir ahora',

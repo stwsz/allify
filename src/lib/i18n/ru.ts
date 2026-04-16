@@ -133,10 +133,8 @@ export const ru = {
 			'Alli рекомендует 5 треков и 5 артистов, чтобы вы могли расширить свои музыкальные предпочтения на основе того, что вы слушаете чаще всего.',
 		discoveriesPageHeading2Artists: 'Рекомендуемые артисты',
 		discoveriesPageHeading2Tracks: 'Рекомендуемые треки',
-		discoveriesPageDiscoverNow:
-			'Нажмите «Открыть сейчас», чтобы получить рекомендации',
-		discoveriesPageDiscoverAgain:
-			'Нажмите «Открыть снова», чтобы обновить рекомендации',
+		discoveriesPageDiscoverNow: 'Нажмите «Открыть сейчас», чтобы получить рекомендации',
+		discoveriesPageDiscoverAgain: 'Нажмите «Открыть снова», чтобы обновить рекомендации',
 		discoveriesPageDiscoverNowButton: 'Открыть сейчас',
 		discoveriesPageDiscoverAgainButton: 'Открыть снова',
 		alliMascotWavingAltText: 'Маскот Alli машет на странице открытий'

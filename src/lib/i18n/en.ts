@@ -135,10 +135,8 @@ export const en = {
 			'Alli recommends 5 tracks and 5 artists to help you explore and expand your musical taste based on what you listen to most.',
 		discoveriesPageHeading2Artists: 'Recommended artists',
 		discoveriesPageHeading2Tracks: 'Recommended tracks',
-		discoveriesPageDiscoverNow:
-			'Click "Discover now" to get your recommendations',
-		discoveriesPageDiscoverAgain:
-			'Click "Discover again" to refresh your recommendations',
+		discoveriesPageDiscoverNow: 'Click "Discover now" to get your recommendations',
+		discoveriesPageDiscoverAgain: 'Click "Discover again" to refresh your recommendations',
 		discoveriesPageDiscoverNowButton: 'Discover now',
 		discoveriesPageDiscoverAgainButton: 'Discover again',
 		alliMascotWavingAltText: 'Alli mascot waving on the discoveries page'

@@ -124,17 +124,14 @@ export const ja = {
 		title: '音乐发现 | Allify',
 		discoveriesPageMetaDescription:
 			'使用Alli发现新音乐。根据你的音乐喜好，获取个性化的艺术家和歌曲推荐。',
-		discoveriesPageMetaOgAndTwitterContent:
-			'通过Alli发现专为你推荐的艺术家和歌曲。',
+		discoveriesPageMetaOgAndTwitterContent: '通过Alli发现专为你推荐的艺术家和歌曲。',
 		discoveriesPageHeading1: '用Alli发现新音乐',
 		discoveriesPageParagraph1:
 			'Alli会根据你最常听的音乐，为你推荐5首歌曲和5位艺术家，帮助你拓展音乐品味。',
 		discoveriesPageHeading2Artists: '推荐艺术家',
 		discoveriesPageHeading2Tracks: '推荐歌曲',
-		discoveriesPageDiscoverNow:
-			'点击“立即发现”获取你的推荐',
-		discoveriesPageDiscoverAgain:
-			'点击“再次发现”刷新你的推荐',
+		discoveriesPageDiscoverNow: '点击“立即发现”获取你的推荐',
+		discoveriesPageDiscoverAgain: '点击“再次发现”刷新你的推荐',
 		discoveriesPageDiscoverNowButton: '立即发现',
 		discoveriesPageDiscoverAgainButton: '再次发现',
 		alliMascotWavingAltText: 'Alli吉祥物在发现页面挥手'
