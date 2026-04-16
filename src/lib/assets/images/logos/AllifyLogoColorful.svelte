@@ -32,7 +32,7 @@
 			return 'junina-hat';
 		}
 
-		if ((month === 3 && day >= 20) || (month === 4 && day <= 20)) {
+		if ((month === 3 && day >= 20) || (month === 4 && day <= 10)) {
 			return 'easter';
 		}
 
