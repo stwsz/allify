@@ -65,7 +65,10 @@ export const zh = {
 		disabledDeezerFunctionalityText: 'Deezer 连接暂时不可用',
 		loginWith: '登录方式：',
 		seeOnSpotify: '在 Spotify 上查看',
-		popularity: '热度'
+		popularity: '热度',
+		ticketAltText: '票券图标',
+		ticket: '票券',
+		tickets: '票券'
 	},
 	homePage: {
 		title: '关于您音乐的一切，尽在一处 | Allify',

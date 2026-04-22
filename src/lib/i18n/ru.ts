@@ -72,7 +72,10 @@ export const ru = {
 		disabledDeezerFunctionalityText: 'Подключение к Deezer временно недоступно',
 		loginWith: 'Войти через ',
 		seeOnSpotify: 'Открыть в Spotify',
-		popularity: 'Популярность'
+		popularity: 'Популярность',
+		ticketAltText: 'Иконка билета',
+		ticket: 'Билет',
+		tickets: 'Билеты'
 	},
 	homePage: {
 		title: 'Всё о вашей музыке — в одном месте | Allify',

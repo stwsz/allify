@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Assets
+	import TicketIcon from '$lib/assets/images/icons/TicketIcon.webp';
+
 	// Components
 	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
 
@@ -7,6 +10,7 @@
 
 	// Props
 	export let userInfo;
+	export let tickets;
 </script>
 
 <div
@@ -53,11 +57,25 @@
 		</div>
 
 		<div class="flex flex-col justify-center gap-2 text-t-primary">
-			{#if userInfo.name}
-				<h1 class="mb-1.5! text-2xl font-semibold sm:text-3xl">
-					{userInfo.name}
-				</h1>
-			{/if}
+			<div class="flex flex-col items-center gap-1 md:flex-row md:gap-8">
+				{#if userInfo.name}
+					<h1 class="mb-1.5! text-2xl font-semibold sm:text-3xl">
+						{userInfo.name}
+					</h1>
+				{/if}
+
+				{#if tickets}
+					<div
+						class="flex w-fit items-center gap-3 rounded-full bg-brand-primary px-3.5 py-2.5 text-t-inverse"
+					>
+						<img src={TicketIcon} alt={$translationsStore.generalTexts.ticketAltText} class="h-6 w-6 rounded-full bg-s-page p-0.5" />
+
+						<span class="text-sm font-medium">
+							{(tickets ?? 0)} {(tickets ?? 0) > 1 ? $translationsStore.generalTexts.tickets : $translationsStore.generalTexts.ticket}
+						</span>
+					</div>
+				{/if}
+			</div>
 
 			{#if userInfo.email}
 				<p class="text-sm font-medium break-all lg:text-base">

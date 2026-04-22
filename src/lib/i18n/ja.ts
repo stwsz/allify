@@ -70,7 +70,10 @@ export const ja = {
 		disabledDeezerFunctionalityText: 'Deezer接続は現在利用できません',
 		loginWith: 'でログイン',
 		seeOnSpotify: 'Spotifyで見る',
-		popularity: '人気度'
+		popularity: '人気度',
+		ticketAltText: 'チケットアイコン',
+		ticket: 'チケット',
+		tickets: 'チケット'
 	},
 	homePage: {
 		title: 'あなたの音楽、すべてひとつの場所に | Allify',

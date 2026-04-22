@@ -26,11 +26,11 @@
             z-50
             flex
 			h-dvh
-            w-4/5 flex-col
-            rounded-l-xl
+            w-4/5 flex-col rounded-l-xl
             bg-s-default
             shadow-lg
             sm:w-3/5
+            md:w-2/5
             lg:hidden
         "
 	>

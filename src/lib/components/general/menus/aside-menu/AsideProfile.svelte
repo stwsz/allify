@@ -2,6 +2,7 @@
 	// Assets
 	import ProfileIcon from '$lib/assets/images/icons/ProfileIcon.svelte';
 	import ArrowIcon from '$lib/assets/images/icons/ArrowIcon.svelte';
+	import TicketIcon from '$lib/assets/images/icons/TicketIcon.webp';
 
 	// Components
 	import AsideProfileItems from '$lib/components/general/menus/aside-menu/AsideProfileItems.svelte';
@@ -91,10 +92,23 @@
 					</div>
 				{/if}
 
-				<div class="min-w-0 flex-1 text-left">
-					<p class="text-sm leading-tight font-semibold text-t-primary">
-						{$userInfo?.connectedStreamings.spotify?.name}
-					</p>
+				<div class="min-w-0 flex-1 space-y-1.5 text-left">
+					<div class="flex items-center gap-4">
+						<p class="truncate text-sm leading-tight font-semibold text-t-primary">
+							{$userInfo?.connectedStreamings.spotify?.name}
+						</p>
+
+						<div
+							class="flex shrink-0 items-center gap-2 rounded-full bg-brand-primary px-2.5 py-1.5 text-t-inverse"
+						>
+							<img src={TicketIcon} alt={$translationsStore.generalTexts.ticketAltText} class="h-3.5 w-3.5 rounded-full bg-s-page p-0.5" />
+
+							<span class="text-[11px] font-medium">
+								{($userInfo?.tickets ?? 0)} {($userInfo?.tickets ?? 0) > 1 ? $translationsStore.generalTexts.tickets : $translationsStore.generalTexts.ticket}
+							</span>
+						</div>
+					</div>
+
 					<p class="mt-0.5 truncate text-xs text-t-muted">
 						{$userInfo?.connectedStreamings.spotify?.email}
 					</p>
@@ -123,13 +137,14 @@
 					/>
 				</div>
 
-				<p class="flex-1 text-sm font-medium text-t-primary">
+				<p class="text-xs font-medium text-t-primary md:text-sm">
 					{$translationsStore.generalTexts.cardProfileAsideMenuParagraph1}
 				</p>
 			{/if}
 
 			<ArrowIcon
 				iconSvgClass="
+					ml-auto
 					h-5
 					w-5
 					text-t-muted

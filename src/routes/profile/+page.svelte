@@ -44,7 +44,10 @@
 {#if $userInfo?.connectedStreamings.spotify?.connected === true}
 	<section class="base-section">
 		<div class="mx-auto flex w-full flex-col gap-10 sm:gap-12 lg:gap-14">
-			<KeyInformation userInfo={selectedStreaming ? $userInfo.connectedStreamings.spotify : null} />
+			<KeyInformation
+				userInfo={selectedStreaming ? $userInfo.connectedStreamings.spotify : null}
+				tickets={$userInfo.tickets}
+			/>
 
 			<div class="flex w-full flex-col gap-8 sm:gap-10">
 				<UserSavedTracks
