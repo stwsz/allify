@@ -75,7 +75,15 @@ export const ru = {
 		popularity: 'Популярность',
 		ticketAltText: 'Иконка билета',
 		ticket: 'Билет',
-		tickets: 'Билеты'
+		tickets: 'Билеты',
+		toastSuccessTitle: 'Успех',
+		toastSuccessAltText: 'Иконка успеха',
+		toastWarningTitle: 'Предупреждение',
+		toastWarningAltText: 'Иконка предупреждения',
+		toastErrorTitle: 'Ошибка',
+		toastErrorAltText: 'Иконка ошибки',
+		toastCloseButtonAriaLabel: 'Закрыть уведомление',
+		toastCloseButtonAltText: 'Иконка для закрытия уведомления'
 	},
 	homePage: {
 		title: 'Всё о вашей музыке — в одном месте | Allify',
@@ -140,7 +148,8 @@ export const ru = {
 		discoveriesPageDiscoverAgain: 'Нажмите «Открыть снова», чтобы обновить рекомендации',
 		discoveriesPageDiscoverNowButton: 'Открыть сейчас',
 		discoveriesPageDiscoverAgainButton: 'Открыть снова',
-		alliMascotWavingAltText: 'Маскот Alli машет на странице открытий'
+		alliMascotWavingAltText: 'Маскот Alli машет на странице открытий',
+		noTicketsToastMessage: 'Похоже, у вас недостаточно билетов для доступа к новым открытиям.'
 	},
 	musicBattlesPage: {
 		title: 'Музыкальные баттлы | Allify',

@@ -68,7 +68,15 @@ export const zh = {
 		popularity: '热度',
 		ticketAltText: '票券图标',
 		ticket: '票券',
-		tickets: '票券'
+		tickets: '票券',
+		toastSuccessTitle: '成功',
+		toastSuccessAltText: '成功图标',
+		toastWarningTitle: '警告',
+		toastWarningAltText: '警告图标',
+		toastErrorTitle: '错误',
+		toastErrorAltText: '错误图标',
+		toastCloseButtonAriaLabel: '关闭通知',
+		toastCloseButtonAltText: '关闭通知图标'
 	},
 	homePage: {
 		title: '关于您音乐的一切，尽在一处 | Allify',
@@ -132,7 +140,8 @@ export const zh = {
 		discoveriesPageDiscoverAgain: '「もう一度発見」をクリックしておすすめを更新しましょう',
 		discoveriesPageDiscoverNowButton: '今すぐ発見',
 		discoveriesPageDiscoverAgainButton: 'もう一度発見',
-		alliMascotWavingAltText: '発見ページで手を振るAlliのマスコット'
+		alliMascotWavingAltText: '発見ページで手を振るAlliのマスコット',
+		noTicketsToastMessage: '新しい発見にアクセスするためのチケットが不足しているようです。'
 	},
 	musicBattlesPage: {
 		title: '音乐对战 | Allify',

@@ -12,6 +12,7 @@
 	// Services
 	import { getDiscoveries } from '$lib/services/user/getDiscoveries';
 	import { useTicket } from '$lib/services/user/useTicket';
+	import { toast } from '$lib/stores/toast.store';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -111,7 +112,15 @@
 				<button
 					class="mx-auto mt-4 w-full cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse shadow-sm transition-all hover:bg-brand-primary-dark hover:shadow-md active:scale-95 sm:w-fit"
 					onclick={async () => {
-						if (($userInfo.tickets ?? 0) === 0) return;
+						if (($userInfo.tickets ?? 0) === 0) {
+							toast.set({
+								showToast: true,
+								toastType: 'warning',
+								toastMessage: $translationsStore.discoveriesPage.noTicketsToastMessage
+							});
+
+							return;
+						}
 
 						loadingDiscoveries = true;
 

@@ -68,10 +68,17 @@
 				<div
 					class="flex shrink-0 items-center gap-2 rounded-full bg-brand-primary px-2.5 py-1.5 text-t-inverse"
 				>
-					<img src={TicketIcon} alt={$translationsStore.generalTexts.ticketAltText} class="h-3.5 w-3.5 rounded-full bg-s-page p-0.5" />
+					<img
+						src={TicketIcon}
+						alt={$translationsStore.generalTexts.ticketAltText}
+						class="h-3.5 w-3.5 rounded-full bg-s-page p-0.5"
+					/>
 
 					<span class="text-[11px] font-medium">
-						{($userInfo?.tickets ?? 0)} {($userInfo?.tickets ?? 0) > 1 ? $translationsStore.generalTexts.tickets : $translationsStore.generalTexts.ticket}
+						{$userInfo?.tickets ?? 0}
+						{($userInfo?.tickets ?? 0) > 1
+							? $translationsStore.generalTexts.tickets
+							: $translationsStore.generalTexts.ticket}
 					</span>
 				</div>
 			</div>

@@ -75,7 +75,15 @@ export const it = {
 		popularity: 'Popolarità',
 		ticketAltText: 'Icona di ticket',
 		ticket: 'Ticket',
-		tickets: 'Tickets'
+		tickets: 'Tickets',
+		toastSuccessTitle: 'Successo',
+		toastSuccessAltText: 'Icona di successo',
+		toastWarningTitle: 'Attenzione',
+		toastWarningAltText: 'Icona di attenzione',
+		toastErrorTitle: 'Errore',
+		toastErrorAltText: 'Icona di errore',
+		toastCloseButtonAriaLabel: 'Chiudi notifica',
+		toastCloseButtonAltText: 'Icona per chiudere la notifica'
 	},
 	homePage: {
 		title: 'Tutto sulla tua musica, connesso in un unico posto | Allify',
@@ -141,7 +149,9 @@ export const it = {
 		discoveriesPageDiscoverAgain: 'Clicca su "Scopri di nuovo" per aggiornare i tuoi consigli',
 		discoveriesPageDiscoverNowButton: 'Scopri ora',
 		discoveriesPageDiscoverAgainButton: 'Scopri di nuovo',
-		alliMascotWavingAltText: 'Mascotte Alli che saluta nella pagina delle scoperte'
+		alliMascotWavingAltText: 'Mascotte Alli che saluta nella pagina delle scoperte',
+		noTicketsToastMessage:
+			'Sembra che tu non abbia abbastanza ticket per accedere a nuove scoperte.'
 	},
 	musicBattlesPage: {
 		title: 'Battaglie musicali | Allify',
