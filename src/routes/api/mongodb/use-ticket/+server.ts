@@ -8,21 +8,21 @@ import { connectDB } from '$lib/server/mongodb';
 import { MONGO_DB } from '$env/static/private';
 
 export const POST: RequestHandler = async ({ request }) => {
-    const { tickets, email } = await request.json();
+	const { tickets, email } = await request.json();
 
 	if (!tickets) {
 		return new Response(JSON.stringify({ error: true, message: 'Missing required fields' }), {
 			status: 400,
 			headers: { 'Content-Type': 'application/json' }
 		});
-	};
+	}
 
 	if (tickets === 0) {
 		return new Response(JSON.stringify({ error: true, message: 'No tickets available' }), {
 			status: 400,
 			headers: { 'Content-Type': 'application/json' }
 		});
-	};
+	}
 
 	try {
 		const client = await connectDB();
@@ -54,4 +54,4 @@ export const POST: RequestHandler = async ({ request }) => {
 			headers: { 'Content-Type': 'application/json' }
 		});
 	}
-}
+};

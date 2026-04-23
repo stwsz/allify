@@ -9,6 +9,7 @@
 	import Header from '$lib/components/general/header/Header.svelte';
 	import Footer from '$lib/components/general/footer/Footer.svelte';
 	import LoadingAfterConnection from '$lib/components/general/LoadingAfterConnection.svelte';
+	import Toast from '$lib/components/general/Toast.svelte';
 
 	// Stores
 	import { userInfo } from '$lib/stores/userInfo.store';
@@ -61,6 +62,8 @@
 </main>
 
 <Footer />
+
+<Toast />
 
 <LoadingAfterConnection
 	loading={$loadingAfterConnectionStore.loading}

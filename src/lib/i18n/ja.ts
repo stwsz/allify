@@ -73,7 +73,15 @@ export const ja = {
 		popularity: '人気度',
 		ticketAltText: 'チケットアイコン',
 		ticket: 'チケット',
-		tickets: 'チケット'
+		tickets: 'チケット',
+		toastSuccessTitle: '成功',
+		toastSuccessAltText: '成功アイコン',
+		toastWarningTitle: '警告',
+		toastWarningAltText: '警告アイコン',
+		toastErrorTitle: 'エラー',
+		toastErrorAltText: 'エラーアイコン',
+		toastCloseButtonAriaLabel: '通知を閉じる',
+		toastCloseButtonAltText: '通知を閉じるアイコン'
 	},
 	homePage: {
 		title: 'あなたの音楽、すべてひとつの場所に | Allify',
@@ -137,7 +145,8 @@ export const ja = {
 		discoveriesPageDiscoverAgain: '点击“再次发现”刷新你的推荐',
 		discoveriesPageDiscoverNowButton: '立即发现',
 		discoveriesPageDiscoverAgainButton: '再次发现',
-		alliMascotWavingAltText: 'Alli吉祥物在发现页面挥手'
+		alliMascotWavingAltText: 'Alli吉祥物在发现页面挥手',
+		noTicketsToastMessage: '看起来你没有足够的票来访问新的发现。'
 	},
 	musicBattlesPage: {
 		title: '音楽バトル | Allify',
