@@ -72,7 +72,10 @@ export const en = {
 		disabledDeezerFunctionalityText: 'Deezer connection currently unavailable',
 		loginWith: 'Log in with ',
 		seeOnSpotify: 'See on Spotify',
-		popularity: 'Popularity'
+		popularity: 'Popularity',
+		ticketAltText: 'Ticket icon',
+		ticket: 'Ticket',
+		tickets: 'Tickets'
 	},
 	homePage: {
 		title: 'All about your music, connected in one place | Allify',

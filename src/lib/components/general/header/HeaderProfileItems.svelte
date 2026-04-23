@@ -2,6 +2,9 @@
 	// Svelte
 	import { goto } from '$app/navigation';
 
+	// Assets
+	import TicketIcon from '$lib/assets/images/icons/TicketIcon.webp';
+
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { userInfo } from '$lib/stores/userInfo.store';
@@ -40,7 +43,7 @@
 
 <div
 	class={`${showProfileOptions ? 'block' : 'hidden'}
-		${loggedIn ? 'right-10 -bottom-44 w-56' : 'right-10 -bottom-16 w-54'}
+		${loggedIn ? 'right-10 -bottom-52 w-56' : 'right-10 -bottom-16 w-54'}
 		animate-fadeIn
 		absolute
 		z-50
@@ -56,16 +59,29 @@
 	`}
 >
 	{#if loggedIn}
-		<div class="mb-2 px-2">
-			<p class="text-sm leading-tight font-semibold text-t-primary">
-				{$userInfo?.connectedStreamings.spotify?.name}
-			</p>
+		<div class="mb-2 space-y-1.5 px-2">
+			<div class="flex items-center gap-4">
+				<p class="truncate text-sm leading-tight font-semibold text-t-primary">
+					{$userInfo?.connectedStreamings.spotify?.name}
+				</p>
+
+				<div
+					class="flex shrink-0 items-center gap-2 rounded-full bg-brand-primary px-2.5 py-1.5 text-t-inverse"
+				>
+					<img src={TicketIcon} alt={$translationsStore.generalTexts.ticketAltText} class="h-3.5 w-3.5 rounded-full bg-s-page p-0.5" />
+
+					<span class="text-[11px] font-medium">
+						{($userInfo?.tickets ?? 0)} {($userInfo?.tickets ?? 0) > 1 ? $translationsStore.generalTexts.tickets : $translationsStore.generalTexts.ticket}
+					</span>
+				</div>
+			</div>
+
 			<p class="mt-0.5 truncate text-[11px] text-t-muted">
 				{$userInfo?.connectedStreamings.spotify?.email}
 			</p>
 		</div>
 
-		<div class="my-3 h-px bg-b-muted/10"></div>
+		<div class="my-4 h-px bg-b-muted/10"></div>
 
 		<ul class="space-y-1">
 			{#each loggedItems as item}
@@ -84,7 +100,7 @@
 			{/each}
 		</ul>
 
-		<div class="my-3 h-px bg-b-muted/10"></div>
+		<div class="my-4 h-px bg-b-muted/10"></div>
 
 		<button
 			class="

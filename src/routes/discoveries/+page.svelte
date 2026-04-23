@@ -11,6 +11,7 @@
 
 	// Services
 	import { getDiscoveries } from '$lib/services/user/getDiscoveries';
+	import { useTicket } from '$lib/services/user/useTicket';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -20,11 +21,6 @@
 
 	$: mostListenedArtists = $userInfo?.discoveries.artists;
 	$: mostListenedTracks = $userInfo?.discoveries.tracks;
-
-	console.log('Most Listened Artists:', mostListenedArtists);
-	console.log('Most Listened Tracks:', mostListenedTracks);
-
-	console.log('User Info:', $userInfo);
 </script>
 
 <svelte:head>
@@ -115,6 +111,8 @@
 				<button
 					class="mx-auto mt-4 w-full cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse shadow-sm transition-all hover:bg-brand-primary-dark hover:shadow-md active:scale-95 sm:w-fit"
 					onclick={async () => {
+						if (($userInfo.tickets ?? 0) === 0) return;
+
 						loadingDiscoveries = true;
 
 						const loadedDiscoveries = await getDiscoveries(
