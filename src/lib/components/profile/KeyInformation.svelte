@@ -64,17 +64,16 @@
 					</h1>
 				{/if}
 
-				{#if tickets}
-					<div
-						class="flex w-fit items-center gap-3 rounded-full bg-brand-primary px-3.5 py-2.5 text-t-inverse"
-					>
-						<img src={TicketIcon} alt={$translationsStore.generalTexts.ticketAltText} class="h-6 w-6 rounded-full bg-s-page p-0.5" />
+			
+				<div
+					class="flex w-fit items-center gap-3 rounded-full bg-brand-primary px-3.5 py-2.5 text-t-inverse"
+				>
+					<img src={TicketIcon} alt={$translationsStore.generalTexts.ticketAltText} class="h-6 w-6 rounded-full bg-s-page p-0.5" />
 
-						<span class="text-sm font-medium">
-							{(tickets ?? 0)} {(tickets ?? 0) > 1 ? $translationsStore.generalTexts.tickets : $translationsStore.generalTexts.ticket}
-						</span>
-					</div>
-				{/if}
+					<span class="text-sm font-medium">
+						{(tickets ?? 0)} {(tickets ?? 0) > 1 ? $translationsStore.generalTexts.tickets : $translationsStore.generalTexts.ticket}
+					</span>
+				</div>
 			</div>
 
 			{#if userInfo.email}
