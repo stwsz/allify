@@ -1,8 +1,22 @@
+// Svelte
 import { redirect } from '@sveltejs/kit';
-import { SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URI } from '$env/static/private';
 import type { RequestHandler } from '@sveltejs/kit';
 
-export const GET: RequestHandler = async ({ cookies }) => {
+// Environment variables
+import { SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URI, ALLIFY_URL } from '$env/static/private';
+
+const ALLOWED_ORIGINS = [ALLIFY_URL];
+
+export const GET: RequestHandler = async ({ cookies, request }) => {
+	const origin = request.headers.get('origin');
+
+	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
+		return new Response(JSON.stringify({ error: 'Forbidden' }), {
+			status: 403,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
 	const scope = 'user-read-email user-read-private user-top-read user-library-read';
 	const state = crypto.randomUUID();
 

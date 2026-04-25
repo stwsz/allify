@@ -1,14 +1,30 @@
 // Types
 import type { RequestHandler } from '@sveltejs/kit';
 
+// Environment variables
+import { ALLIFY_URL } from '$env/static/private';
+
+const ALLOWED_ORIGINS = [ALLIFY_URL];
+
 export const POST: RequestHandler = async ({ request, cookies }) => {
+	const origin = request.headers.get('origin');
+
+	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
+		return new Response(JSON.stringify({ error: 'Forbidden' }), {
+			status: 403,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
 	try {
 		const { locale } = await request.json();
 
 		const token = cookies.get('spotify_access_token');
 
 		if (!token) {
-			return new Response('No Spotify access token found', { status: 401 });
+			return new Response(JSON.stringify({ error: 'No Spotify access token found' }), {
+				status: 401
+			});
 		}
 
 		const response = await fetch(
@@ -23,7 +39,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 
 		if (!response.ok) {
 			const err = await response.text();
-			return new Response(err, { status: response.status });
+			return new Response(JSON.stringify({ error: err }), { status: response.status });
 		}
 
 		const data = await response.json();
@@ -33,6 +49,8 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 			headers: { 'Content-Type': 'application/json' }
 		});
 	} catch (error) {
-		return new Response('Failed to fetch Spotify access token', { status: 500 });
+		return new Response(JSON.stringify({ error: 'Failed to fetch Spotify access token' }), {
+			status: 500
+		});
 	}
 };

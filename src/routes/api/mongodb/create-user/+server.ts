@@ -6,9 +6,20 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { connectDB } from '$lib/server/mongodb';
 
 // Environment variables
-import { MONGO_DB } from '$env/static/private';
+import { MONGO_DB, ALLIFY_URL } from '$env/static/private';
+
+const ALLOWED_ORIGINS = [ALLIFY_URL];
 
 export const POST: RequestHandler = async ({ request }) => {
+	const origin = request.headers.get('origin');
+
+	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
+		return new Response(JSON.stringify({ error: 'Forbidden' }), {
+			status: 403,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
 	try {
 		const { user } = await request.json();
 
