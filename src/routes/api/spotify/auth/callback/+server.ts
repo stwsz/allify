@@ -1,12 +1,27 @@
+// Svelte
+import type { RequestHandler } from '@sveltejs/kit';
 import { json, redirect, error } from '@sveltejs/kit';
+
+// Environment variables
 import {
 	SPOTIFY_CLIENT_ID,
 	SPOTIFY_CLIENT_SECRET,
-	SPOTIFY_REDIRECT_URI
+	SPOTIFY_REDIRECT_URI,
+	ALLIFY_URL
 } from '$env/static/private';
-import type { RequestHandler } from '@sveltejs/kit';
 
-export const GET: RequestHandler = async ({ url, cookies }) => {
+const ALLOWED_ORIGINS = [ALLIFY_URL];
+
+export const GET: RequestHandler = async ({ url, cookies, request }) => {
+	const origin = request.headers.get('origin');
+
+	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
+		return new Response(JSON.stringify({ error: 'Forbidden' }), {
+			status: 403,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
 	const code = url.searchParams.get('code');
 	const state = url.searchParams.get('state');
 	const savedState = cookies.get('spotify_state');

@@ -2,9 +2,20 @@
 import type { RequestHandler } from '@sveltejs/kit';
 
 // Environment variables
-import { ANTHROPIC_API_KEY } from '$env/static/private';
+import { ANTHROPIC_API_KEY, ALLIFY_URL } from '$env/static/private';
+
+const ALLOWED_ORIGINS = [ALLIFY_URL];
 
 export const POST: RequestHandler = async ({ request }) => {
+	const origin = request.headers.get('origin');
+
+	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
+		return new Response(JSON.stringify({ error: 'Forbidden' }), {
+			status: 403,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
 	const { mostListenedTracks, mostListenedArtists } = await request.json();
 
 	const prompt = `

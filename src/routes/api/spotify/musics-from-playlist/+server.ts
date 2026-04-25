@@ -1,6 +1,21 @@
+// Svelte
 import type { RequestHandler } from '@sveltejs/kit';
 
+// Environment variables
+import { ALLIFY_URL } from '$env/static/private';
+
+const ALLOWED_ORIGINS = [ALLIFY_URL];
+
 export const POST: RequestHandler = async ({ cookies, request }) => {
+	const origin = request.headers.get('origin');
+
+	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
+		return new Response(JSON.stringify({ error: 'Forbidden' }), {
+			status: 403,
+			headers: { 'Content-Type': 'application/json' }
+		});
+	}
+
 	const token = cookies.get('spotify_access_token');
 	const { playlistTracksHref } = await request.json();
 
