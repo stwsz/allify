@@ -3,20 +3,9 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 
 // Environment variables
-import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, ALLIFY_URL } from '$env/static/private';
+import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } from '$env/static/private';
 
-const ALLOWED_ORIGINS = [ALLIFY_URL];
-
-export const POST: RequestHandler = async ({ cookies, request }) => {
-	const origin = request.headers.get('origin');
-
-	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
-		return new Response(JSON.stringify({ error: 'Forbidden' }), {
-			status: 403,
-			headers: { 'Content-Type': 'application/json' }
-		});
-	}
-
+export const POST: RequestHandler = async ({ cookies }) => {
 	const refresh_token = cookies.get('spotify_refresh_token');
 
 	if (!refresh_token) {
