@@ -6,22 +6,10 @@ import { json, redirect, error } from '@sveltejs/kit';
 import {
 	SPOTIFY_CLIENT_ID,
 	SPOTIFY_CLIENT_SECRET,
-	SPOTIFY_REDIRECT_URI,
-	ALLIFY_URL
+	SPOTIFY_REDIRECT_URI
 } from '$env/static/private';
 
-const ALLOWED_ORIGINS = [ALLIFY_URL];
-
-export const GET: RequestHandler = async ({ url, cookies, request }) => {
-	const origin = request.headers.get('origin');
-
-	if (!origin || !ALLOWED_ORIGINS.includes(origin)) {
-		return new Response(JSON.stringify({ error: 'Forbidden' }), {
-			status: 403,
-			headers: { 'Content-Type': 'application/json' }
-		});
-	}
-
+export const GET: RequestHandler = async ({ url, cookies }) => {
 	const code = url.searchParams.get('code');
 	const state = url.searchParams.get('state');
 	const savedState = cookies.get('spotify_state');
