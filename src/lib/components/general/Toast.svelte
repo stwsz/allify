@@ -1,7 +1,4 @@
 <script lang="ts">
-	// Svelte
-	import { onMount } from 'svelte';
-
 	// Stores
 	import { toast } from '$lib/stores/toast.store';
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -14,14 +11,6 @@
 
 	let timeout: ReturnType<typeof setTimeout>;
 
-	onMount(() => {
-		timeout = setTimeout(() => {
-			closeToast();
-		}, 3500);
-
-		return () => clearTimeout(timeout);
-	});
-
 	const closeToast = () => {
 		toast.set({
 			showToast: false,
@@ -29,14 +18,22 @@
 			toastMessage: undefined
 		});
 	};
+
+	$: if ($toast.showToast) {
+		clearTimeout(timeout);
+
+		timeout = setTimeout(() => {
+			closeToast();
+		}, 3500);
+	}
 </script>
 
 {#if $toast.showToast}
 	<div
-		class={`animate-in fade-in slide-in-from-top-2 fixed top-4 right-4 left-4 z-50 flex w-full 
+		class={`animate-in fade-in slide-in-from-top-2 fixed top-2 right-2 z-50 flex w-11/12 
 	max-w-sm items-start gap-4 rounded-xl 
 	border bg-s-default p-4 shadow-lg transition-all 
-	duration-300 sm:right-6 sm:left-auto sm:max-w-md md:max-w-lg
+	duration-300 sm:top-6 sm:right-6 sm:left-auto sm:max-w-md md:max-w-lg
 	${
 		$toast.toastType === 'success'
 			? 'border-status-success/30'
@@ -67,7 +64,7 @@
 		</div>
 
 		<div class="flex-1">
-			<p class="text-s-default-foreground text-sm font-semibold">
+			<p class="text-s-default-foreground text-xs font-semibold sm:text-sm">
 				{#if $toast.toastType === 'warning'}
 					{$translationsStore.generalTexts.toastWarningTitle}
 				{:else if $toast.toastType === 'success'}
@@ -77,7 +74,7 @@
 				{/if}
 			</p>
 
-			<p class="text-s-muted-foreground mt-1 text-xs leading-relaxed">
+			<p class="text-s-muted-foreground mt-1 text-[11px] leading-relaxed sm:text-xs">
 				{$toast.toastMessage}
 			</p>
 		</div>
