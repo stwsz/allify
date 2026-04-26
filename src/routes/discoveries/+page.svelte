@@ -5,13 +5,13 @@
 	// Assets
 	import AlliFullBodyWaving from '$lib/assets/images/alli/alli-full-body-waving.webp?enhanced';
 	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
+	import TicketIcon from '$lib/assets/images/icons/TicketIcon.webp';
 
 	// Components
 	import NotLogged from '$lib/components/general/NotLogged.svelte';
 
 	// Services
 	import { getDiscoveries } from '$lib/services/user/getDiscoveries';
-	import { useTicket } from '$lib/services/user/useTicket';
 	import { toast } from '$lib/stores/toast.store';
 
 	// Stores
@@ -142,7 +142,25 @@
 					{#if $userInfo.discoveries.artists.length === 0 && $userInfo.discoveries.tracks.length === 0}
 						{$translationsStore.discoveriesPage.discoveriesPageDiscoverNowButton}
 					{:else}
-						{$translationsStore.discoveriesPage.discoveriesPageDiscoverAgainButton}
+						<div
+							class="flex w-full flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left"
+						>
+							<span class="text-sm">
+								{$translationsStore.discoveriesPage.discoveriesPageDiscoverAgainButton}
+							</span>
+
+							<div
+								class="flex w-fit items-center gap-2 rounded-full bg-s-page px-3 py-1.5 text-brand-primary sm:px-3.5"
+							>
+								<img
+									src={TicketIcon}
+									alt={$translationsStore.generalTexts.ticketAltText}
+									class="h-5 w-5"
+								/>
+
+								<span class="text-sm font-semibold"> -1 </span>
+							</div>
+						</div>
 					{/if}
 				</button>
 			</div>
