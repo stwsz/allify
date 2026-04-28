@@ -129,7 +129,11 @@ export const ja = {
 		myMusicalProfilePageMostListenedArtists: 'よく聴く',
 		myMusicalProfilePageMostListenedTracks: 'よく聴く',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'フォロワー',
-		myMusicalProfilePageMostListenedTracksHeading2: 'よく聴く曲'
+		myMusicalProfilePageMostListenedTracksHeading2: 'よく聴く曲',
+		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '+5アーティストを表示',
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '+5曲を表示',
+		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage: '新しいアーティストにアクセスするためのチケットが不足しているようです。',
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage: '新しい曲にアクセスするためのチケットが不足しているようです。'
 	},
 	discoveriesPage: {
 		title: '音乐发现 | Allify',

@@ -3,15 +3,13 @@
 	import TopTrackItem from './TopTrackItem.svelte';
 	import ExternalLink from '../../general/ExternalLinkSpotify.svelte';
 	import Popularity from '$lib/components/general/Popularity.svelte';
+	import MoreMyMusicalProfileItems from '../MoreMyMusicalProfileItems.svelte';
 
 	// Stores
 	import { userInfo } from '$lib/stores/userInfo.store';
 	import { translationsStore } from '$lib/stores/translations.store';
 
-	// Types
-	import type { TrackSpotify } from '$lib/types/UserInfo.type';
-
-	let mostListenedTracks: TrackSpotify[] | undefined =
+	$: mostListenedTracks =
 		$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.mostListenedTracksItems;
 </script>
 
@@ -87,5 +85,7 @@
 				</div>
 			{/if}
 		{/each}
+
+		<MoreMyMusicalProfileItems additionalItemsType="tracks" />
 	</div>
 </div>

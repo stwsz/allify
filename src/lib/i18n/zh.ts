@@ -123,7 +123,11 @@ export const zh = {
 		myMusicalProfilePageMostListenedArtists: '最常听',
 		myMusicalProfilePageMostListenedTracks: '最常听',
 		myMusicalProfilePageMostListenedArtistsFollowers: '粉丝',
-		myMusicalProfilePageMostListenedTracksHeading2: '您最常听的歌曲'
+		myMusicalProfilePageMostListenedTracksHeading2: '您最常听的歌曲',
+		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '显示 +5 艺术家',
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '显示 +5 歌曲',
+		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage: '看起来您没有足够的票来访问新的艺术家。',
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage: '看起来您没有足够的票来访问新的歌曲。'
 	},
 	discoveriesPage: {
 		title: '音楽の発見 | Allify',

@@ -17,7 +17,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 	}
 
 	try {
-		const { locale } = await request.json();
+		const { locale, artistsLimit } = await request.json();
 
 		const token = cookies.get('spotify_access_token');
 
@@ -28,7 +28,7 @@ export const POST: RequestHandler = async ({ request, cookies }) => {
 		}
 
 		const response = await fetch(
-			`https://api.spotify.com/v1/me/top/artists?offset=0&limit=${5}&locale=${locale}`,
+			`https://api.spotify.com/v1/me/top/artists?offset=0&limit=${artistsLimit}&locale=${locale}`,
 			{
 				method: 'GET',
 				headers: {
