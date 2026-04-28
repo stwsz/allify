@@ -86,6 +86,8 @@
 			{/if}
 		{/each}
 
-		<MoreMyMusicalProfileItems additionalItemsType="tracks" />
+		{#if ($userInfo?.connectedStreamings.spotify?.mostListenedTracks?.limit ?? 0) < 50}
+			<MoreMyMusicalProfileItems additionalItemsType="tracks" />
+		{/if}
 	</div>
 </div>

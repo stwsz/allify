@@ -27,8 +27,10 @@
 				toastType: 'warning',
 				toastMessage:
 					additionalItemsType === 'artists'
-						? $translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage
-						: $translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage
+						? $translationsStore.myMusicalProfilePage
+								.myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage
+						: $translationsStore.myMusicalProfilePage
+								.myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage
 			});
 
 			return;
@@ -75,9 +77,11 @@
 		{#if !loadingMoreItems}
 			<span class="text-sm font-medium">
 				{#if additionalItemsType === 'artists'}
-					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedShowMoreFiveArtistsButton}
+					{$translationsStore.myMusicalProfilePage
+						.myMusicalProfilePageMostListenedShowMoreFiveArtistsButton}
 				{:else if additionalItemsType === 'tracks'}
-					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedShowMoreFiveTracksButton}
+					{$translationsStore.myMusicalProfilePage
+						.myMusicalProfilePageMostListenedShowMoreFiveTracksButton}
 				{/if}
 			</span>
 

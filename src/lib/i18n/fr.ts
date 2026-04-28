@@ -136,8 +136,10 @@ export const fr = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Vos chansons les plus écoutées',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Afficher +5 artistes',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Afficher +5 chansons',
-		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage: 'Il semble que vous n\'ayez pas assez de tickets pour accéder à de nouveaux artistes.',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage: 'Il semble que vous n\'ayez pas assez de tickets pour accéder à de nouvelles chansons.'
+		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:
+			"Il semble que vous n'ayez pas assez de tickets pour accéder à de nouveaux artistes.",
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage:
+			"Il semble que vous n'ayez pas assez de tickets pour accéder à de nouvelles chansons."
 	},
 	discoveriesPage: {
 		title: 'Découvertes Musicales | Allify',
