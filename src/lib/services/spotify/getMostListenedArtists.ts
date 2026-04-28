@@ -12,8 +12,6 @@ export async function getMostListenedArtists() {
 	const getTranslationStore = get(translationsStore);
 	const userInfoStore = get(userInfo);
 
-	if (!userInfoStore?.connectedStreamings.spotify?.mostListenedArtists) return undefined;
-
 	let mostListenedArtistItem: ArtistSpotify;
 	let mostListenedArtistsItems = [] as ArtistSpotify[];
 
@@ -23,7 +21,7 @@ export async function getMostListenedArtists() {
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				locale: getTranslationStore.locale,
-				artistsLimit: userInfoStore.connectedStreamings.spotify.mostListenedArtists.limit
+				artistsLimit: userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit ? userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit : 5
 			})
 		});
 
@@ -54,7 +52,7 @@ export async function getMostListenedArtists() {
 		}
 
 		return {
-			limit: userInfoStore.connectedStreamings.spotify.mostListenedArtists.limit,
+			limit: userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit ? userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit : 5,
 			updatedAt: new Date().toLocaleDateString('en-US'),
 			mostListenedArtistItem,
 			mostListenedArtistsItems
