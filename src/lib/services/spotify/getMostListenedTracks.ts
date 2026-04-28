@@ -3,12 +3,16 @@ import { get } from 'svelte/store';
 
 // Stores
 import { translationsStore } from '$lib/stores/translations.store';
+import { userInfo } from '$lib/stores/userInfo.store';
 
 // Types
 import type { TrackSpotify } from '$lib/types/UserInfo.type';
 
 export async function getMostListenedTracks() {
 	const getTranslationStore = get(translationsStore);
+	const userInfoStore = get(userInfo);
+
+	if (!userInfoStore?.connectedStreamings.spotify?.mostListenedTracks) return undefined;
 
 	let mostListenedTrackItem: TrackSpotify;
 	let mostListenedTracksItems = [] as TrackSpotify[];
@@ -17,7 +21,10 @@ export async function getMostListenedTracks() {
 		const reqMostListenedTracks = await fetch(`/api/spotify/most-listened-tracks`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ locale: getTranslationStore.locale })
+			body: JSON.stringify({
+				locale: getTranslationStore.locale,
+				tracksLimit: userInfoStore.connectedStreamings.spotify.mostListenedTracks.limit
+			})
 		});
 
 		if (!reqMostListenedTracks.ok) return undefined;
@@ -47,7 +54,7 @@ export async function getMostListenedTracks() {
 		}
 
 		return {
-			limit: 5,
+			limit: userInfoStore.connectedStreamings.spotify.mostListenedTracks.limit,
 			updatedAt: new Date().toLocaleDateString('en-US'),
 			mostListenedTrackItem,
 			mostListenedTracksItems

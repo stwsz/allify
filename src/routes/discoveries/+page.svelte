@@ -134,7 +134,7 @@
 							$userInfo?.email
 						);
 
-						if (loadedDiscoveries.loaded === true) {
+						if (loadedDiscoveries?.loaded === true) {
 							loadingDiscoveries = false;
 						}
 					}}

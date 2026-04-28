@@ -12,19 +12,21 @@ export async function getDiscoveries(
 	mostListenedArtists: string[],
 	email: string
 ) {
+	if (!email || !mostListenedTracks || !mostListenedArtists) return undefined;
+
 	const userInfoValue = get(userInfo);
 
-	const discoveriesReq = await fetch('/api/ai/discoveries', {
+	const discoveriesRequest = await fetch('/api/ai/discoveries', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify({ mostListenedTracks, mostListenedArtists })
 	});
 
-	if (!discoveriesReq.ok) {
-		throw new Error(`Failed to fetch discoveries: ${discoveriesReq.status}`);
+	if (!discoveriesRequest.ok) {
+		throw new Error(`Failed to fetch discoveries: ${discoveriesRequest.status}`);
 	}
 
-	const discoveriesRes = await discoveriesReq.json();
+	const discoveriesRes = await discoveriesRequest.json();
 
 	const { tracks, artists } = discoveriesRes;
 
@@ -51,9 +53,9 @@ export async function getDiscoveries(
 			if (!current?.email) return current;
 			return { ...current, discoveries: updateRes.discoveries, tickets: ticketUsed.tickets };
 		});
+
+		return { loaded: true };
 	} catch {
 		return { error: true, loaded: true };
 	}
-
-	return { loaded: true };
 }
