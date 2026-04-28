@@ -134,8 +134,10 @@ export const ru = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Ваши самые прослушиваемые треки',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Показать +5 исполнителей',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков',
-		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage: 'Похоже, у вас недостаточно билетов для доступа к новым исполнителям.',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage: 'Похоже, у вас недостаточно билетов для доступа к новым трекам.'
+		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:
+			'Похоже, у вас недостаточно билетов для доступа к новым исполнителям.',
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage:
+			'Похоже, у вас недостаточно билетов для доступа к новым трекам.'
 	},
 	discoveriesPage: {
 		title: 'Музыкальные открытия | Allify',

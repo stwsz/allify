@@ -1,5 +1,9 @@
+// Svelte
+import { get } from 'svelte/store';
+
 // Services
 import { getMostListenedTracks } from '../spotify/getMostListenedTracks';
+import { useTicket } from './useTicket';
 
 // Stores
 import { userInfo } from '$lib/stores/userInfo.store';
@@ -9,6 +13,8 @@ export async function updateLimitMostListenedTracks(
 	tracksLimit: number
 ) {
 	if (!email || tracksLimit === undefined) return undefined;
+
+	const userInfoValue = get(userInfo);
 
 	try {
 		const request = await fetch('/api/mongodb/update-limit-most-listened-tracks', {
@@ -40,16 +46,23 @@ export async function updateLimitMostListenedTracks(
 			})
 		});
 
+		if (!userInfoValue?.email || !userInfoValue?.tickets) {
+			throw new Error('User email or tickets are undefined');
+		}
+
+		const ticketUsed = await useTicket(userInfoValue.email, userInfoValue.tickets);
+
 		userInfo.update((user) => {
 			if (!user?.connectedStreamings?.spotify?.mostListenedTracks) return user;
 			user.connectedStreamings.spotify.mostListenedTracks.mostListenedTrackItem =
 				result.mostListenedTrackItem;
 			user.connectedStreamings.spotify.mostListenedTracks.mostListenedTracksItems =
 				result.mostListenedTracksItems;
+			user.tickets = ticketUsed.tickets;
 			return user;
 		});
 
-		return response;
+		return { loaded: true, success: true };
 	} catch {
 		return undefined;
 	}

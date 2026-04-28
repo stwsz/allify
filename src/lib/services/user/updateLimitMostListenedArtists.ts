@@ -62,7 +62,7 @@ export async function updateLimitMostListenedArtists(
 			return user;
 		});
 
-		return { loaded: true };
+		return { loaded: true, success: true };
 	} catch {
 		return undefined;
 	}
