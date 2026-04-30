@@ -72,7 +72,7 @@
 	}}
 >
 	<div
-		class="flex w-full flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left"
+		class="flex w-full items-center justify-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left"
 	>
 		{#if !loadingMoreItems}
 			<span class="text-sm font-medium">

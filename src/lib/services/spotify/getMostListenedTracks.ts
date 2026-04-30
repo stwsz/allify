@@ -21,7 +21,9 @@ export async function getMostListenedTracks() {
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				locale: getTranslationStore.locale,
-				tracksLimit: userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit ? userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit : 5
+				tracksLimit: userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit
+					? userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit
+					: 5
 			})
 		});
 
@@ -52,7 +54,9 @@ export async function getMostListenedTracks() {
 		}
 
 		return {
-			limit: userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit ? userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit : 5,
+			limit: userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit
+				? userInfoStore?.connectedStreamings?.spotify?.mostListenedTracks?.limit
+				: 5,
 			updatedAt: new Date(),
 			mostListenedTrackItem,
 			mostListenedTracksItems
