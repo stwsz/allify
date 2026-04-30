@@ -132,6 +132,8 @@ export const pt = {
 		myMusicalProfilePageMostListenedTracks: 'Mais ouvida',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'seguidores',
 		myMusicalProfilePageMostListenedTracksHeading2: 'Suas músicas mais ouvidas',
+		myMusicalProfilePageMostListenedLastUpdate: 'Última atualização:',
+		myMusicalProfilePageMostListenedButtonUpdate: 'Atualizar',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostrar +5 artistas',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 músicas',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:

@@ -37,7 +37,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			{ email },
 			{
 				$set: {
-					discoveries: { tracks, artists, updatedAt: new Date().toLocaleDateString('en-US') }
+					discoveries: { tracks, artists, updatedAt: new Date() }
 				}
 			}
 		);
@@ -45,7 +45,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		return new Response(
 			JSON.stringify({
 				success: true,
-				discoveries: { tracks, artists, updatedAt: new Date().toLocaleDateString('en-US') }
+				discoveries: { tracks, artists, updatedAt: new Date() }
 			}),
 			{
 				status: 200,

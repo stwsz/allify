@@ -38,9 +38,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			{
 				$set: {
 					'connectedStreamings.spotify.mostListenedTracks.limit': tracksLimit + 5,
-					'connectedStreamings.spotify.mostListenedTracks.updatedAt': new Date().toLocaleDateString(
-						'en-US'
-					)
+					'connectedStreamings.spotify.mostListenedTracks.updatedAt': new Date()
 				}
 			}
 		);

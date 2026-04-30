@@ -14,8 +14,30 @@
 </script>
 
 <div class="flex flex-col gap-10 lg:gap-14">
-	<h2>{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracksHeading2}</h2>
+	<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+		<h2 class="text-xl font-semibold">
+			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracksHeading2}
+		</h2>
 
+		<div class="flex items-center gap-3">
+			{#if $userInfo?.connectedStreamings.spotify?.mostListenedTracks?.updatedAt}
+				<span class="text-xs text-t-secondary whitespace-nowrap">
+					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedLastUpdate}
+					<strong class="font-medium text-t-primary">
+						{new Date($userInfo.connectedStreamings.spotify.mostListenedTracks.updatedAt)
+							.toLocaleString($translationsStore.locale)}
+					</strong>
+				</span>
+			{/if}
+
+			<button
+				class="rounded-md bg-brand-primary px-4 py-2 text-sm font-medium text-t-inverse shadow-sm transition-all cursor-pointer hover:opacity-90 hover:shadow-md active:scale-[0.98]"
+			>
+				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedButtonUpdate}
+			</button>
+		</div>
+	</div>
+	
 	<div class="flex flex-col gap-16">
 		{#each mostListenedTracks as track, i (track.id)}
 			{#if i === 0}

@@ -130,6 +130,8 @@ export const ja = {
 		myMusicalProfilePageMostListenedTracks: 'よく聴く',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'フォロワー',
 		myMusicalProfilePageMostListenedTracksHeading2: 'よく聴く曲',
+		myMusicalProfilePageMostListenedLastUpdate: '最終更新:',
+		myMusicalProfilePageMostListenedButtonUpdate: '更新',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '+5アーティストを表示',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '+5曲を表示',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:

@@ -33,7 +33,7 @@ export async function getAlbums() {
 		}
 
 		return {
-			updatedAt: new Date().toLocaleDateString('en-US'),
+			updatedAt: new Date(),
 			albumItems
 		};
 	} catch {
