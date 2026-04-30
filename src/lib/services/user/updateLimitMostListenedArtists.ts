@@ -58,6 +58,7 @@ export async function updateLimitMostListenedArtists(
 				result.mostListenedArtistItem;
 			user.connectedStreamings.spotify.mostListenedArtists.mostListenedArtistsItems =
 				result.mostListenedArtistsItems;
+			user.connectedStreamings.spotify.mostListenedArtists.updatedAt = String(new Date());
 			user.tickets = ticketUsed.tickets;
 			return user;
 		});
