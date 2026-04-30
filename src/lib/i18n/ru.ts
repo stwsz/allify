@@ -132,6 +132,8 @@ export const ru = {
 		myMusicalProfilePageMostListenedTracks: 'Самая прослушиваемая',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'подписчиков',
 		myMusicalProfilePageMostListenedTracksHeading2: 'Ваши самые прослушиваемые треки',
+		myMusicalProfilePageMostListenedLastUpdate: 'Последнее обновление:',
+		myMusicalProfilePageMostListenedButtonUpdate: 'Обновить',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Показать +5 исполнителей',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:

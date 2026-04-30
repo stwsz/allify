@@ -30,7 +30,7 @@ export async function getLikedTracks() {
 
 		return {
 			limit: 20,
-			updatedAt: new Date().toLocaleDateString('en-US'),
+			updatedAt: new Date(),
 			likedTracksItems
 		};
 	} catch {

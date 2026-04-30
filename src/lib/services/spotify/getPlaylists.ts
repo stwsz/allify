@@ -63,7 +63,7 @@ export async function getPlaylists() {
 		}
 
 		return {
-			updatedAt: new Date().toLocaleDateString('en-US'),
+			updatedAt: new Date(),
 			playlistItems
 		};
 	} catch {

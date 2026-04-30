@@ -133,6 +133,8 @@ export const it = {
 		myMusicalProfilePageMostListenedTracks: 'Più ascoltata',
 		myMusicalProfilePageMostListenedArtistsFollowers: 'follower',
 		myMusicalProfilePageMostListenedTracksHeading2: 'Le tue canzoni più ascoltate',
+		myMusicalProfilePageMostListenedLastUpdate: 'Ultimo aggiornamento:',
+		myMusicalProfilePageMostListenedButtonUpdate: 'Aggiorna',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostra +5 artisti',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostra +5 canzoni',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:

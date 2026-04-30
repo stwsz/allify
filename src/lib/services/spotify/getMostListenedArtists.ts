@@ -53,7 +53,7 @@ export async function getMostListenedArtists() {
 
 		return {
 			limit: userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit ? userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit : 5,
-			updatedAt: new Date().toLocaleDateString('en-US'),
+			updatedAt: new Date(),
 			mostListenedArtistItem,
 			mostListenedArtistsItems
 		};

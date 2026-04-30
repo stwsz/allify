@@ -9,14 +9,37 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { userInfo } from '$lib/stores/userInfo.store';
 
+	// Services
+	import { getMostListenedArtists } from '$lib/services/spotify/getMostListenedArtists';
+
 	$: mostListenedArtists =
 		$userInfo?.connectedStreamings.spotify?.mostListenedArtists?.mostListenedArtistsItems;
 </script>
 
 <div class="flex flex-col gap-10 lg:gap-14">
-	<h2>
-		{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsHeading2}
-	</h2>
+	<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+		<h2 class="text-xl font-semibold">
+			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsHeading2}
+		</h2>
+
+		<div class="flex items-center gap-3">
+			{#if $userInfo?.connectedStreamings.spotify?.mostListenedArtists?.updatedAt}
+				<span class="text-xs text-t-secondary whitespace-nowrap">
+					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedLastUpdate}
+					<strong class="font-medium text-t-primary">
+						{new Date($userInfo.connectedStreamings.spotify.mostListenedArtists.updatedAt)
+							.toLocaleString($translationsStore.locale)}
+					</strong>
+				</span>
+			{/if}
+
+			<button
+				class="rounded-md bg-brand-primary px-4 py-2 text-sm font-medium text-t-inverse shadow-sm transition-all cursor-pointer hover:opacity-90 hover:shadow-md active:scale-[0.98]"
+			>
+				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedButtonUpdate}
+			</button>
+		</div>
+	</div>
 
 	<div class="flex flex-col gap-16">
 		{#each mostListenedArtists as artist, i (artist.id)}
