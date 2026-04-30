@@ -21,7 +21,9 @@ export async function getMostListenedArtists() {
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				locale: getTranslationStore.locale,
-				artistsLimit: userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit ? userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit : 5
+				artistsLimit: userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit
+					? userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit
+					: 5
 			})
 		});
 
@@ -52,7 +54,9 @@ export async function getMostListenedArtists() {
 		}
 
 		return {
-			limit: userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit ? userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit : 5,
+			limit: userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit
+				? userInfoStore?.connectedStreamings?.spotify?.mostListenedArtists?.limit
+				: 5,
 			updatedAt: new Date(),
 			mostListenedArtistItem,
 			mostListenedArtistsItems
