@@ -23,6 +23,7 @@
 			{#if $userInfo?.connectedStreamings.spotify?.mostListenedArtists?.updatedAt}
 				<span class="flex flex-col gap-2 text-xs whitespace-nowrap text-t-secondary md:flex-row">
 					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedLastUpdate}
+
 					<strong class="font-medium text-t-primary">
 						{new Date(
 							$userInfo.connectedStreamings.spotify.mostListenedArtists.updatedAt
@@ -32,7 +33,7 @@
 			{/if}
 
 			<button
-				class="md:flex-sm cursor-pointer rounded-md bg-brand-primary px-4 py-2 text-xs font-medium text-t-inverse shadow-sm transition-all hover:opacity-90 hover:shadow-md active:scale-[0.98]"
+				class="cursor-pointer rounded-md bg-brand-primary px-4 py-2 text-xs font-medium text-t-inverse shadow-sm transition-all hover:opacity-90 hover:shadow-md active:scale-[0.98]"
 			>
 				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedButtonUpdate}
 			</button>
