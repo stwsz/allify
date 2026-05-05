@@ -16,6 +16,16 @@ export async function updateLimitMostListenedArtists(
 
 	const userInfoValue = get(userInfo);
 
+	if (!userInfoValue?.email || !userInfoValue?.tickets) {
+		throw new Error('User email or tickets are undefined');
+	}
+
+	const ticketUsed = await useTicket(userInfoValue.email, userInfoValue.tickets);
+
+	if (ticketUsed.error) {
+		throw new Error('Failed to use ticket');
+	}
+
 	try {
 		const request = await fetch('/api/mongodb/update-limit-most-listened-artists', {
 			method: 'POST',
@@ -50,15 +60,13 @@ export async function updateLimitMostListenedArtists(
 			throw new Error('User email or tickets are undefined');
 		}
 
-		const ticketUsed = await useTicket(userInfoValue.email, userInfoValue.tickets);
-
 		userInfo.update((user) => {
 			if (!user?.connectedStreamings?.spotify?.mostListenedArtists) return user;
 			user.connectedStreamings.spotify.mostListenedArtists.mostListenedArtistItem =
 				result.mostListenedArtistItem;
 			user.connectedStreamings.spotify.mostListenedArtists.mostListenedArtistsItems =
 				result.mostListenedArtistsItems;
-			user.connectedStreamings.spotify.mostListenedArtists.updatedAt = String(new Date());
+			user.connectedStreamings.spotify.mostListenedArtists.updatedAt = new Date();
 			user.tickets = ticketUsed.tickets;
 			return user;
 		});

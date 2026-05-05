@@ -16,11 +16,8 @@
 	export let additionalItemsType: 'artists' | 'tracks';
 
 	let loadingMoreItems = false;
-</script>
 
-<button
-	class="mx-auto w-fit cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse transition hover:opacity-90"
-	onclick={async () => {
+	async function moreMyMusicalProfileItems() {
 		if (($userInfo?.tickets ?? 0) === 0) {
 			toast.set({
 				showToast: true,
@@ -69,7 +66,12 @@
 				return;
 			}
 		}
-	}}
+	}
+</script>
+
+<button
+	class="mx-auto w-fit cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse transition hover:opacity-90"
+	onclick={moreMyMusicalProfileItems}
 >
 	<div
 		class="flex w-full items-center justify-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left"
