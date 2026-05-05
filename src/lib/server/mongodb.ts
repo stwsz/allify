@@ -1,6 +1,6 @@
 // mongoDB
 import { MongoClient } from 'mongodb';
-import { MONGO_URI, MONGO_DB } from '$env/static/private';
+import { MONGO_URI } from '$env/static/private';
 
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;

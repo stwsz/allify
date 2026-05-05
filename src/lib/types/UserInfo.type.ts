@@ -23,7 +23,7 @@ export type UserInfoSpotify = {
 	mostListenedArtists:
 		| {
 				limit: number;
-				updatedAt: string;
+				updatedAt: Date;
 				mostListenedArtistItem: ArtistSpotify;
 				mostListenedArtistsItems: ArtistSpotify[];
 		  }
@@ -31,7 +31,7 @@ export type UserInfoSpotify = {
 	mostListenedTracks:
 		| {
 				limit: number;
-				updatedAt: string;
+				updatedAt: Date;
 				mostListenedTrackItem: TrackSpotify;
 				mostListenedTracksItems: TrackSpotify[];
 		  }
@@ -39,19 +39,19 @@ export type UserInfoSpotify = {
 	likedTracks:
 		| {
 				limit: number;
-				updatedAt: string;
+				updatedAt: Date;
 				likedTracksItems: LikedTrackSpotify[];
 		  }
 		| undefined;
 	playlists:
 		| {
-				updatedAt: string;
+				updatedAt: Date;
 				playlistItems: PlaylistSpotify[];
 		  }
 		| undefined;
 	albums:
 		| {
-				updatedAt: string;
+				updatedAt: Date;
 				albumItems: AlbumSpotify[];
 		  }
 		| undefined;
