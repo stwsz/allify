@@ -16,6 +16,16 @@ export async function getDiscoveries(
 
 	const userInfoValue = get(userInfo);
 
+	if (!userInfoValue?.email || !userInfoValue?.tickets) {
+		throw new Error('User email or tickets are undefined');
+	}
+
+	const ticketUsed = await useTicket(userInfoValue.email, userInfoValue.tickets);
+
+	if (ticketUsed.error) {
+		throw new Error('Failed to use ticket');
+	}
+
 	const discoveriesRequest = await fetch('/api/ai/discoveries', {
 		method: 'POST',
 		headers: { 'Content-Type': 'application/json' },
@@ -43,15 +53,16 @@ export async function getDiscoveries(
 
 		const updateRes = await updateReq.json();
 
-		if (!userInfoValue?.email || !userInfoValue?.tickets) {
-			throw new Error('User email or tickets are undefined');
-		}
-
-		const ticketUsed = await useTicket(userInfoValue.email, userInfoValue.tickets);
-
 		userInfo.update((current) => {
 			if (!current?.email) return current;
-			return { ...current, discoveries: updateRes.discoveries, tickets: ticketUsed.tickets };
+			return {
+				...current,
+				discoveries: {
+					...updateRes.discoveries,
+					updatedAt: updateRes.discoveries.updatedAt
+				},
+				tickets: ticketUsed.tickets
+			};
 		});
 
 		return { loaded: true };
