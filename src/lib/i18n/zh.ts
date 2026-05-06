@@ -127,11 +127,7 @@ export const zh = {
 		myMusicalProfilePageMostListenedLastUpdate: '最后更新:',
 		myMusicalProfilePageMostListenedButtonUpdate: '更新',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '显示 +5 艺术家',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '显示 +5 歌曲',
-		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:
-			'看起来您没有足够的票来访问新的艺术家。',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage:
-			'看起来您没有足够的票来访问新的歌曲。'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '显示 +5 歌曲'
 	},
 	discoveriesPage: {
 		title: '音楽の発見 | Allify',
@@ -148,8 +144,7 @@ export const zh = {
 		discoveriesPageDiscoverAgain: '「もう一度発見」をクリックしておすすめを更新しましょう',
 		discoveriesPageDiscoverNowButton: '今すぐ発見',
 		discoveriesPageDiscoverAgainButton: 'もう一度発見',
-		alliMascotWavingAltText: '発見ページで手を振るAlliのマスコット',
-		noTicketsToastMessage: '新しい発見にアクセスするためのチケットが不足しているようです。'
+		alliMascotWavingAltText: '発見ページで手を振るAlliのマスコット'
 	},
 	musicBattlesPage: {
 		title: '音乐对战 | Allify',

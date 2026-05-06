@@ -137,11 +137,7 @@ export const es = {
 		myMusicalProfilePageMostListenedLastUpdate: 'Última actualización:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Actualizar',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostrar +5 artistas',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 canciones',
-		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:
-			'Parece que no tienes tickets suficientes para acceder a nuevos artistas.',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage:
-			'Parece que no tienes tickets suficientes para acceder a nuevas canciones.'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 canciones'
 	},
 	discoveriesPage: {
 		title: 'Descubrimientos Musicales | Allify',
@@ -159,9 +155,7 @@ export const es = {
 			'Haz clic en "Descubrir de nuevo" para actualizar tus recomendaciones',
 		discoveriesPageDiscoverNowButton: 'Descubrir ahora',
 		discoveriesPageDiscoverAgainButton: 'Descubrir de nuevo',
-		alliMascotWavingAltText: 'Mascota Alli saludando en la página de descubrimientos',
-		noTicketsToastMessage:
-			'Parece que no tienes suficientes tickets para acceder a nuevos descubrimientos.'
+		alliMascotWavingAltText: 'Mascota Alli saludando en la página de descubrimientos'
 	},
 	musicBattlesPage: {
 		title: 'Batallas de Música | Allify',

@@ -20,12 +20,6 @@ export async function updateLimitMostListenedTracks(
 		throw new Error('User email or tickets are undefined');
 	}
 
-	const ticketUsed = await useTicket(userInfoValue.email, userInfoValue.tickets);
-
-	if (ticketUsed.error) {
-		throw new Error('Failed to use ticket');
-	}
-
 	try {
 		const request = await fetch('/api/mongodb/update-limit-most-listened-tracks', {
 			method: 'POST',
@@ -58,6 +52,12 @@ export async function updateLimitMostListenedTracks(
 
 		if (!userInfoValue?.email || !userInfoValue?.tickets) {
 			throw new Error('User email or tickets are undefined');
+		}
+
+		const ticketUsed = await useTicket(userInfoValue.email, userInfoValue.tickets);
+
+		if (ticketUsed.error) {
+			throw new Error('Failed to use ticket');
 		}
 
 		userInfo.update((user) => {
