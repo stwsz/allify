@@ -6,7 +6,7 @@
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { userInfo } from '$lib/stores/userInfo.store';
-	import { toast } from '$lib/stores/toast.store';
+	import { showAddTickets } from '$lib/stores/showAddTickets.store';
 
 	// Services
 	import { updateLimitMostListenedTracks } from '$lib/services/user/updateLimitMostListenedTracks';
@@ -17,18 +17,9 @@
 
 	let loadingMoreItems = false;
 
-	async function moreMyMusicalProfileItems() {
+	async function handleLoadMoreMusicalItems() {
 		if (($userInfo?.tickets ?? 0) === 0) {
-			toast.set({
-				showToast: true,
-				toastType: 'warning',
-				toastMessage:
-					additionalItemsType === 'artists'
-						? $translationsStore.myMusicalProfilePage
-								.myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage
-						: $translationsStore.myMusicalProfilePage
-								.myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage
-			});
+			showAddTickets.set(true);
 
 			return;
 		}
@@ -71,7 +62,7 @@
 
 <button
 	class="mx-auto w-fit cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse transition hover:opacity-90"
-	onclick={moreMyMusicalProfileItems}
+	onclick={handleLoadMoreMusicalItems}
 >
 	<div
 		class="flex w-full items-center justify-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left"

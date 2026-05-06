@@ -1,10 +1,10 @@
 // Svelte
-import { json } from '@sveltejs/kit';
+import { json, type RequestHandler } from '@sveltejs/kit';
 
 // Stores
 import { userInfo } from '$lib/stores/userInfo.store';
 
-export const POST = async ({ cookies }) => {
+export const POST: RequestHandler = async ({ cookies }) => {
 	cookies.delete('spotify_access_token', {
 		path: '/'
 	});

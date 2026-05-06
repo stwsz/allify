@@ -12,7 +12,7 @@
 
 	// Services
 	import { getDiscoveries } from '$lib/services/user/getDiscoveries';
-	import { toast } from '$lib/stores/toast.store';
+	import { showAddTickets } from '$lib/stores/showAddTickets.store';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -22,6 +22,29 @@
 
 	$: mostListenedArtists = $userInfo?.discoveries.artists;
 	$: mostListenedTracks = $userInfo?.discoveries.tracks;
+
+	async function handleLoadDiscoveries() {
+		if (($userInfo?.tickets ?? 0) === 0) {
+			showAddTickets.set(true);
+			return;
+		}
+
+		loadingDiscoveries = true;
+
+		const loadedDiscoveries = await getDiscoveries(
+			$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.mostListenedTracksItems?.map(
+				(track) => `${track.name} - ${track.artists.map((artist) => artist).join(', ')}`
+			) ?? [],
+			$userInfo?.connectedStreamings.spotify?.mostListenedArtists?.mostListenedArtistsItems?.map(
+				(artist) => artist.name
+			) ?? [],
+			$userInfo?.email ?? ''
+		);
+
+		if (loadedDiscoveries?.loaded === true) {
+			loadingDiscoveries = false;
+		}
+	}
 </script>
 
 <svelte:head>
@@ -111,33 +134,7 @@
 
 				<button
 					class="mx-auto mt-4 w-full cursor-pointer rounded-lg bg-brand-primary px-8 py-4 text-sm font-medium text-t-inverse shadow-sm transition-all hover:bg-brand-primary-dark hover:shadow-md active:scale-95 sm:w-fit"
-					onclick={async () => {
-						if (($userInfo.tickets ?? 0) === 0) {
-							toast.set({
-								showToast: true,
-								toastType: 'warning',
-								toastMessage: $translationsStore.discoveriesPage.noTicketsToastMessage
-							});
-
-							return;
-						}
-
-						loadingDiscoveries = true;
-
-						const loadedDiscoveries = await getDiscoveries(
-							$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.mostListenedTracksItems?.map(
-								(track) => `${track.name} - ${track.artists.map((artist) => artist).join(', ')}`
-							) ?? [],
-							$userInfo?.connectedStreamings.spotify?.mostListenedArtists?.mostListenedArtistsItems?.map(
-								(artist) => artist.name
-							) ?? [],
-							$userInfo?.email
-						);
-
-						if (loadedDiscoveries?.loaded === true) {
-							loadingDiscoveries = false;
-						}
-					}}
+					onclick={handleLoadDiscoveries}
 				>
 					{#if $userInfo.discoveries.artists.length === 0 && $userInfo.discoveries.tracks.length === 0}
 						{$translationsStore.discoveriesPage.discoveriesPageDiscoverNowButton}

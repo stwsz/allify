@@ -10,10 +10,12 @@
 	import Footer from '$lib/components/general/footer/Footer.svelte';
 	import LoadingAfterConnection from '$lib/components/general/LoadingAfterConnection.svelte';
 	import Toast from '$lib/components/general/Toast.svelte';
+	import AddTicketsModal from '$lib/components/general/AddTicketsModal.svelte';
 
 	// Stores
 	import { userInfo } from '$lib/stores/userInfo.store';
 	import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
+	import { showAddTickets } from '$lib/stores/showAddTickets.store';
 
 	// Services
 	import { fetchUserInfo } from '$lib/services/user/fetchUserInfo';
@@ -69,3 +71,7 @@
 	loading={$loadingAfterConnectionStore.loading}
 	streamingPlatform={$loadingAfterConnectionStore.streamingPlatform}
 />
+
+{#if $showAddTickets}
+	<AddTicketsModal />
+{/if}

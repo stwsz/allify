@@ -133,11 +133,7 @@ export const ja = {
 		myMusicalProfilePageMostListenedLastUpdate: '最終更新:',
 		myMusicalProfilePageMostListenedButtonUpdate: '更新',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '+5アーティストを表示',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '+5曲を表示',
-		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:
-			'新しいアーティストにアクセスするためのチケットが不足しているようです。',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage:
-			'新しい曲にアクセスするためのチケットが不足しているようです。'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '+5曲を表示'
 	},
 	discoveriesPage: {
 		title: '音乐发现 | Allify',
@@ -153,8 +149,7 @@ export const ja = {
 		discoveriesPageDiscoverAgain: '点击“再次发现”刷新你的推荐',
 		discoveriesPageDiscoverNowButton: '立即发现',
 		discoveriesPageDiscoverAgainButton: '再次发现',
-		alliMascotWavingAltText: 'Alli吉祥物在发现页面挥手',
-		noTicketsToastMessage: '看起来你没有足够的票来访问新的发现。'
+		alliMascotWavingAltText: 'Alli吉祥物在发现页面挥手'
 	},
 	musicBattlesPage: {
 		title: '音楽バトル | Allify',

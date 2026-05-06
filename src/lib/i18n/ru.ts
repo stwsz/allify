@@ -135,11 +135,7 @@ export const ru = {
 		myMusicalProfilePageMostListenedLastUpdate: 'Последнее обновление:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Обновить',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Показать +5 исполнителей',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков',
-		myMusicalProfilePageMostListenedShowMoreFiveArtistsButtonNoTicketsToastMessage:
-			'Похоже, у вас недостаточно билетов для доступа к новым исполнителям.',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButtonNoTicketsToastMessage:
-			'Похоже, у вас недостаточно билетов для доступа к новым трекам.'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков'
 	},
 	discoveriesPage: {
 		title: 'Музыкальные открытия | Allify',
@@ -156,8 +152,7 @@ export const ru = {
 		discoveriesPageDiscoverAgain: 'Нажмите «Открыть снова», чтобы обновить рекомендации',
 		discoveriesPageDiscoverNowButton: 'Открыть сейчас',
 		discoveriesPageDiscoverAgainButton: 'Открыть снова',
-		alliMascotWavingAltText: 'Маскот Alli машет на странице открытий',
-		noTicketsToastMessage: 'Похоже, у вас недостаточно билетов для доступа к новым открытиям.'
+		alliMascotWavingAltText: 'Маскот Alli машет на странице открытий'
 	},
 	musicBattlesPage: {
 		title: 'Музыкальные баттлы | Allify',
