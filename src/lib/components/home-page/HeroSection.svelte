@@ -46,7 +46,7 @@
 	<img
 		src={AlliFullBodyPointing}
 		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-		class="mr-2 h-auto w-80 hidden lg:block md:mr-5 2xl:mr-10 2xl:w-105"
+		class="mr-2 hidden h-auto w-80 md:mr-5 lg:block 2xl:mr-10 2xl:w-105"
 		loading="eager"
 		fetchpriority="high"
 		decoding="sync"
