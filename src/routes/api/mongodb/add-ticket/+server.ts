@@ -14,7 +14,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		return new Response(JSON.stringify({ error: true }), { status: 400 });
 	}
 
-    console.log(`Adding ${tickets} tickets for ${email}`);
+	console.log(`Adding ${tickets} tickets for ${email}`);
 
 	try {
 		const client = await connectDB();

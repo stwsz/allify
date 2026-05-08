@@ -1,7 +1,7 @@
 <script lang="ts">
 	// Assets
-	import AlliFullBodyPointing from '$lib/assets/images/alli/alli-full-body-pointing.webp?enhanced';
-	import AlliFullBodyPointingDownwards from '$lib/assets/images/alli/alli-full-body-pointing-downwards.webp?enhanced';
+	import AlliFullBodyPointing from '$lib/assets/images/alli/alli-full-body-pointing.webp';
+	import AlliFullBodyPointingDownwards from '$lib/assets/images/alli/alli-full-body-pointing-downwards.webp';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -21,19 +21,14 @@
 			{$translationsStore.homePage.homePageHeroSectionParagraph1}
 		</p>
 
-		<picture class="lg:hidden">
-			<enhanced:img
-				src={AlliFullBodyPointingDownwards}
-				alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
-				class="h-auto w-56"
-				width="224"
-				height="224"
-				loading="eager"
-				fetchpriority="high"
-				decoding="sync"
-				sizes="224px"
-			/>
-		</picture>
+		<img
+			src={AlliFullBodyPointingDownwards}
+			alt={$translationsStore.homePage.alliMascotPointingDownwardsAltText}
+			class="block h-auto w-56 lg:hidden"
+			loading="eager"
+			fetchpriority="high"
+			decoding="sync"
+		/>
 
 		<a
 			class="mt-6 w-full cursor-pointer rounded-lg bg-brand-primary py-5 text-center text-sm font-medium text-t-inverse shadow-md transition-all hover:scale-105 hover:bg-brand-primary-dark lg:w-90 lg:max-w-90"
@@ -48,17 +43,12 @@
 		</a>
 	</div>
 
-	<picture class="hidden lg:block">
-		<enhanced:img
-			src={AlliFullBodyPointing}
-			alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
-			class="mr-2 h-auto w-105 md:mr-5 2xl:mr-10"
-			width="380"
-			height="380"
-			loading="eager"
-			fetchpriority="high"
-			decoding="sync"
-			sizes="(min-width: 1024px) 380px, 0px"
-		/>
-	</picture>
+	<img
+		src={AlliFullBodyPointing}
+		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
+		class="mr-2 h-auto w-80 hidden lg:block md:mr-5 2xl:mr-10 2xl:w-105"
+		loading="eager"
+		fetchpriority="high"
+		decoding="sync"
+	/>
 </section>

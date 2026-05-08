@@ -59,12 +59,8 @@
 			</button>
 
 			<div class="flex flex-col gap-1.5 pr-8">
-				<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">
-					Allify Tickets
-				</p>
-				<p class="text-xl font-bold text-t-primary">
-					Adquirir tickets
-				</p>
+				<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">Allify Tickets</p>
+				<p class="text-xl font-bold text-t-primary">Adquirir tickets</p>
 				<p class="text-sm leading-relaxed text-t-secondary">
 					Parece que seus tickets acabaram. Adquira mais para continuar aproveitando os recursos.
 				</p>
@@ -73,17 +69,15 @@
 
 		<div class="flex flex-col gap-5 px-6 py-5">
 			<div class="flex flex-col gap-3">
-				<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">
-					Quantidade
-				</p>
+				<p class="text-xs font-medium tracking-widest text-t-secondary uppercase">Quantidade</p>
 
 				<div class="grid grid-cols-4 gap-2">
 					{#each options as opt}
 						<button
-							class="rounded-xl border py-3 text-sm font-semibold transition cursor-pointer
+							class="cursor-pointer rounded-xl border py-3 text-sm font-semibold transition
 								{quantity === opt
-									? 'border-brand-primary bg-brand-primary text-t-inverse'
-									: 'border-b-default bg-s-muted text-t-primary hover:border-brand-primary hover:text-brand-primary'}"
+								? 'border-brand-primary bg-brand-primary text-t-inverse'
+								: 'border-b-default bg-s-muted text-t-primary hover:border-brand-primary hover:text-brand-primary'}"
 							on:click={() => (quantity = opt)}
 						>
 							{opt}
@@ -94,10 +88,10 @@
 						type="number"
 						min="1"
 						placeholder="Escolha você mesmo"
-						class="col-span-4 mt-1 rounded-xl border px-4 py-3 text-sm font-semibold transition bg-s-muted text-t-primary placeholder:text-t-muted outline-none
+						class="col-span-4 mt-1 rounded-xl border bg-s-muted px-4 py-3 text-sm font-semibold text-t-primary transition outline-none placeholder:text-t-muted
 							{!options.includes(quantity)
-								? 'border-brand-primary'
-								: 'border-b-default focus:border-brand-primary'}"
+							? 'border-brand-primary'
+							: 'border-b-default focus:border-brand-primary'}"
 						on:input={(e) => {
 							const val = parseInt(e.currentTarget.value);
 							if (!isNaN(val) && val >= 1) quantity = val;
@@ -110,7 +104,8 @@
 				<span
 					class="inline-flex shrink-0 items-center rounded-md bg-brand-primary px-3 py-1 text-[11px] font-medium text-t-inverse"
 				>
-					{quantity} {quantity === 1 ? 'ticket' : 'tickets'}
+					{quantity}
+					{quantity === 1 ? 'ticket' : 'tickets'}
 				</span>
 				<span class="text-xs text-t-muted">•</span>
 				<span class="text-xs text-t-secondary">
@@ -119,7 +114,7 @@
 			</div>
 
 			<button
-				class="w-full rounded-xl bg-brand-primary px-4 py-3 cursor-pointer text-sm font-semibold text-t-inverse transition hover:opacity-90 active:scale-95"
+				class="w-full cursor-pointer rounded-xl bg-brand-primary px-4 py-3 text-sm font-semibold text-t-inverse transition hover:opacity-90 active:scale-95"
 				on:click={handleCheckout}
 			>
 				Ir para o checkout
