@@ -16,8 +16,8 @@
 		loading="lazy"
 		fetchpriority="low"
 		decoding="async"
-		width="480"
-		height="360"
+		width="462"
+		height="386"
 		class="ml-6 h-auto w-[320px] lg:ml-20 lg:w-72 2xl:w-120"
 	/>
 
