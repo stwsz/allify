@@ -3,7 +3,7 @@
 	import { page } from '$app/stores';
 
 	// Assets
-	import AlliFullBodyWaving from '$lib/assets/images/alli/alli-full-body-waving.webp?enhanced';
+	import AlliFullBodyWaving from '$lib/assets/images/alli/alli-full-body-waving.webp';
 	import DotsLoading from '$lib/assets/images/animations/DotsLoading.svelte';
 	import TicketIcon from '$lib/assets/images/icons/TicketIcon.webp';
 
@@ -140,7 +140,7 @@
 						{$translationsStore.discoveriesPage.discoveriesPageDiscoverNowButton}
 					{:else}
 						<div
-							class="flex w-full flex-col items-center justify-center gap-2 text-center sm:flex-row sm:gap-3 sm:text-left"
+							class="flex w-full flex-row items-center justify-center gap-2 text-center sm:gap-3 sm:text-left"
 						>
 							<span class="text-sm">
 								{$translationsStore.discoveriesPage.discoveriesPageDiscoverAgainButton}
@@ -162,16 +162,13 @@
 				</button>
 			</div>
 
-			<enhanced:img
+			<img
 				src={AlliFullBodyWaving}
 				alt={$translationsStore.discoveriesPage.alliMascotWavingAltText}
-				class="mx-auto mt-5 h-auto w-44 sm:w-60 md:w-72 lg:mt-0 lg:w-85 xl:w-95"
-				width="380"
-				height="380"
+				class="mx-auto mt-5 h-auto w-40 sm:w-56 lg:mt-0 lg:w-85 xl:w-95"
 				loading="eager"
 				fetchpriority="high"
 				decoding="sync"
-				sizes="(min-width: 1280px) 380px, (min-width: 1024px) 320px, (min-width: 768px) 260px, 180px"
 			/>
 		</div>
 	</section>

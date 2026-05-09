@@ -162,6 +162,20 @@ export const pt = {
 		musicBattlesPageMetaOgAndTwitterContent:
 			'Participe de batalhas de música emocionantes, compare quem escutou mais uma música ou artista, desafie seus amigos e veja quem é o verdadeiro mestre da música.'
 	},
+	addTickets: {
+		addTicketsModalTitle: 'Allify Tickets',
+		addTicketsModalAriaLabel: 'Fechar modal de tickets',
+		addTicketsModalParagraph1: 'Adquirir tickets',
+		addTicketsModalParagraph2:
+			'Parece que seus tickets acabaram. Adquira mais para continuar aproveitando os recursos.',
+		addTicketsModalParagraph3: 'Quantidade',
+		addTicketsModalPlaceholder: 'Escolha você mesmo',
+		addTicketsModalTicket: 'Ticket',
+		addTicketsModalTickets: 'Tickets',
+		addTicketsModalSelected: 'Selecionado',
+		addTicketsModalSelectedPlural: 'Selecionados',
+		addTicketsModalButton: 'Ir para o pagamento'
+	},
 	profilePage: {
 		title: 'Perfil | Allify',
 		profilePageMetaDescription:

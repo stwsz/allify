@@ -21,20 +21,12 @@
 			iconAltText="Crown Icon"
 		/>
 
-		<picture>
-			<img
-				src={mostListenedTrackItem.images[1]?.url}
-				srcset="
-						{mostListenedTrackItem.images[2]?.url} 160w,
-						{mostListenedTrackItem.images[1]?.url} 320w,
-						{mostListenedTrackItem.images[0]?.url} 640w
-					"
-				sizes="(max-width: 640px) 160px, (max-width: 1024px) 176px, 192px"
-				alt={mostListenedTrackItem.name}
-				class="h-40 w-40 rounded-lg object-cover shadow-lg sm:h-44 sm:w-44 lg:h-60 lg:w-60"
-				loading="lazy"
-			/>
-		</picture>
+		<img
+			src={mostListenedTrackItem.images[0]?.url}
+			alt={mostListenedTrackItem.name}
+			class="h-40 w-40 rounded-lg object-cover shadow-lg sm:h-44 sm:w-44 lg:h-60 lg:w-60"
+			loading="lazy"
+		/>
 	</div>
 
 	<div class="flex flex-col gap-6">

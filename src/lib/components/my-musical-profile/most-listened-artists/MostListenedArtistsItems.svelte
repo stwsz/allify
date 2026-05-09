@@ -50,20 +50,12 @@
 				/>
 			{:else}
 				<div class="grid w-full grid-cols-[auto_1fr] gap-6 sm:grid-cols-[auto_1fr_auto]">
-					<picture class="shrink-0">
-						<img
-							src={artist.images[1]?.url}
-							srcset="
-					{artist.images[2]?.url} 160w,
-					{artist.images[1]?.url} 320w,
-					{artist.images[0]?.url} 640w
-				"
-							sizes="96px"
-							alt={artist.name}
-							class="h-20 w-20 rounded-lg object-cover shadow-md sm:h-36 sm:w-36 lg:h-42 lg:w-42"
-							loading="lazy"
-						/>
-					</picture>
+					<img
+						src={artist.images[0]?.url}
+						alt={artist.name}
+						class="h-20 w-20 rounded-lg object-cover shadow-md sm:h-36 sm:w-36 lg:h-42 lg:w-42"
+						loading="lazy"
+					/>
 
 					<div class="flex min-w-0 flex-col gap-5">
 						<div class="space-y-1.5">

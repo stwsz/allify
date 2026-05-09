@@ -154,6 +154,20 @@ export const ru = {
 		discoveriesPageDiscoverAgainButton: 'Открыть снова',
 		alliMascotWavingAltText: 'Маскот Alli машет на странице открытий'
 	},
+	addTickets: {
+		addTicketsModalTitle: 'Билеты Allify',
+		addTicketsModalAriaLabel: 'Закрыть модальное окно билетов',
+		addTicketsModalParagraph1: 'Приобрести билеты',
+		addTicketsModalParagraph2:
+			'Похоже, ваши билеты закончились. Приобретите больше, чтобы продолжать пользоваться функциями.',
+		addTicketsModalParagraph3: 'Количество',
+		addTicketsModalPlaceholder: 'Выберите самостоятельно',
+		addTicketsModalTicket: 'билет',
+		addTicketsModalTickets: 'билетов',
+		addTicketsModalSelected: 'выбран',
+		addTicketsModalSelectedPlural: 'выбрано',
+		addTicketsModalButton: 'Перейти к оплате'
+	},
 	musicBattlesPage: {
 		title: 'Музыкальные баттлы | Allify',
 		musicBattlesPageMetaDescription:
