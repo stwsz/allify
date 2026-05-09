@@ -28,6 +28,8 @@
 			loading="eager"
 			fetchpriority="high"
 			decoding="sync"
+			width="224"
+			height="200"
 		/>
 
 		<a
@@ -47,6 +49,8 @@
 		src={AlliFullBodyPointing}
 		alt={$translationsStore.homePage.alliMascotPointingToLeftAltText}
 		class="mr-2 hidden h-auto w-80 md:mr-5 lg:block 2xl:mr-10 2xl:w-105"
+		width="420"
+		height="400"
 		loading="eager"
 		fetchpriority="high"
 		decoding="sync"
