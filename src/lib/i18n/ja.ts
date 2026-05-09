@@ -151,6 +151,20 @@ export const ja = {
 		discoveriesPageDiscoverAgainButton: '再次发现',
 		alliMascotWavingAltText: 'Alli吉祥物在发现页面挥手'
 	},
+	addTickets: {
+		addTicketsModalTitle: 'Allifyチケット',
+		addTicketsModalAriaLabel: 'チケットモーダルを閉じる',
+		addTicketsModalParagraph1: 'チケットを購入する',
+		addTicketsModalParagraph2:
+			'チケットがなくなったようです。機能を引き続き利用するには、さらにチケットを購入してください。',
+		addTicketsModalParagraph3: '数量',
+		addTicketsModalPlaceholder: '自分で選ぶ',
+		addTicketsModalTicket: 'チケット',
+		addTicketsModalTickets: 'チケット',
+		addTicketsModalSelected: '選択',
+		addTicketsModalSelectedPlural: '選択',
+		addTicketsModalButton: '支払いに進む'
+	},
 	musicBattlesPage: {
 		title: '音楽バトル | Allify',
 		musicBattlesPageMetaDescription:

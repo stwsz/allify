@@ -156,6 +156,20 @@ export const en = {
 		discoveriesPageDiscoverAgainButton: 'Discover again',
 		alliMascotWavingAltText: 'Alli mascot waving on the discoveries page'
 	},
+	addTickets: {
+		addTicketsModalTitle: 'Allify Tickets',
+		addTicketsModalAriaLabel: 'Close tickets modal',
+		addTicketsModalParagraph1: 'Acquire tickets',
+		addTicketsModalParagraph2:
+			'It looks like your tickets have run out. Acquire more to continue enjoying the features.',
+		addTicketsModalParagraph3: 'Quantity',
+		addTicketsModalPlaceholder: 'Choose yourself',
+		addTicketsModalTicket: 'Ticket',
+		addTicketsModalTickets: 'Tickets',
+		addTicketsModalSelected: 'selected',
+		addTicketsModalSelectedPlural: 'selected',
+		addTicketsModalButton: 'Go to checkout'
+	},
 	musicBattlesPage: {
 		title: 'Music Battles | Allify',
 		musicBattlesPageMetaDescription:

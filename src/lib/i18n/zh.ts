@@ -146,6 +146,19 @@ export const zh = {
 		discoveriesPageDiscoverAgainButton: 'もう一度発見',
 		alliMascotWavingAltText: '発見ページで手を振るAlliのマスコット'
 	},
+	addTickets: {
+		addTicketsModalTitle: 'Allify 门票',
+		addTicketsModalAriaLabel: '关闭门票弹窗',
+		addTicketsModalParagraph1: '购买门票',
+		addTicketsModalParagraph2: '看起来您的门票已用完。购买更多门票以继续使用功能。',
+		addTicketsModalParagraph3: '数量',
+		addTicketsModalPlaceholder: '自己选择',
+		addTicketsModalTicket: '门票',
+		addTicketsModalTickets: '门票',
+		addTicketsModalSelected: '已选择',
+		addTicketsModalSelectedPlural: '已选择',
+		addTicketsModalButton: '前往付款'
+	},
 	musicBattlesPage: {
 		title: '音乐对战 | Allify',
 		musicBattlesPageMetaDescription:
