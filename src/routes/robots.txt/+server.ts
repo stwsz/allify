@@ -1,3 +1,4 @@
+// Environment variables
 import { ALLIFY_URL } from '$env/static/private';
 
 export const GET = () => {
