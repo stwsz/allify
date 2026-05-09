@@ -169,6 +169,8 @@
 				loading="eager"
 				fetchpriority="high"
 				decoding="sync"
+				width="420"
+				height="420"
 			/>
 		</div>
 	</section>
