@@ -23,6 +23,12 @@
 			link: '/music-battles'
 		}
 	];
+
+	function handleNavigation(link: string) {
+		goto(link);
+
+		isAsideMenuOpen = false;
+	}
 </script>
 
 <nav aria-label={$translationsStore.generalTexts.headerNavigationAriaLabel}>
@@ -30,11 +36,7 @@
 		{#each navItems as item}
 			<li class="overflow-y-hidden">
 				<button
-					on:click={() => {
-						goto(item.link);
-
-						isAsideMenuOpen = false;
-					}}
+					on:click={() => handleNavigation(item.link)}
 					aria-current={$page.url.pathname === item.link ? 'page' : undefined}
 					class="
 						relative
