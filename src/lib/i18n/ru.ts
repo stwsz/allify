@@ -27,10 +27,8 @@ export const ru = {
 		profileLoggedItem1: 'Профиль',
 		profileLoggedItem2: 'Настройки',
 		profileLoggedItem3: 'Выйти',
-		profileNotLoggedItem1:
-			'Войти через <span class="ml-1 font-semibold text-spotify">Spotify</span>',
-		profileNotLoggedItem2:
-			'Войти через <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
+		profileNotLoggedItem1: 'Войти через',
+		profileNotLoggedItem2: 'Войти через',
 		burguerMenuAltText: 'Открыть меню навигации',
 		closeMenuAltText: 'Закрыть меню навигации',
 		cardProfileAsideMenuParagraph1: 'Войти или создать аккаунт',

@@ -27,10 +27,8 @@ export const es = {
 		profileLoggedItem1: 'Perfil',
 		profileLoggedItem2: 'Configuraciones',
 		profileLoggedItem3: 'Cerrar sesión',
-		profileNotLoggedItem1:
-			'Iniciar sesión con <span class="ml-1 font-semibold text-spotify">Spotify</span>',
-		profileNotLoggedItem2:
-			'Iniciar sesión con <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
+		profileNotLoggedItem1: 'Iniciar sesión con ',
+		profileNotLoggedItem2: 'Iniciar sesión con ',
 		burguerMenuAltText: 'Abrir menú de navegación',
 		closeMenuAltText: 'Cerrar menú de navegación',
 		cardProfileAsideMenuParagraph1: 'Iniciar sesión o crear cuenta',

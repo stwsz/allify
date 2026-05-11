@@ -27,10 +27,8 @@ export const pt = {
 		profileLoggedItem1: 'Perfil',
 		profileLoggedItem2: 'Configurações',
 		profileLoggedItem3: 'Sair',
-		profileNotLoggedItem1:
-			'Entrar com <span class="ml-1 font-semibold text-spotify">Spotify</span>',
-		profileNotLoggedItem2:
-			'Entrar com <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
+		profileNotLoggedItem1: 'Entrar com',
+		profileNotLoggedItem2: 'Entrar com',
 		burguerMenuAltText: 'Abrir menu de navegação',
 		closeMenuAltText: 'Fechar menu de navegação',
 		cardProfileAsideMenuParagraph1: 'Entrar ou criar conta',

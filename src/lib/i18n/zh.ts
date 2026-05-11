@@ -27,9 +27,8 @@ export const zh = {
 		profileLoggedItem1: '资料',
 		profileLoggedItem2: '设置',
 		profileLoggedItem3: '退出登录',
-		profileNotLoggedItem1: '通过 <span class="ml-1 font-semibold text-spotify">Spotify</span> 登录',
-		profileNotLoggedItem2:
-			'通过 <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span> 登录',
+		profileNotLoggedItem1: '登录',
+		profileNotLoggedItem2: '登录',
 		burguerMenuAltText: '打开导航菜单',
 		closeMenuAltText: '关闭导航菜单',
 		cardProfileAsideMenuParagraph1: '登录或创建账户',

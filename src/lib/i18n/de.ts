@@ -26,10 +26,8 @@ export const de = {
 		profileLoggedItem1: 'Profil',
 		profileLoggedItem2: 'Einstellungen',
 		profileLoggedItem3: 'Abmelden',
-		profileNotLoggedItem1:
-			'Anmelden mit <span class="ml-1 font-semibold text-spotify">Spotify</span>',
-		profileNotLoggedItem2:
-			'Anmelden mit <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
+		profileNotLoggedItem1: 'Anmelden mit ',
+		profileNotLoggedItem2: 'Anmelden mit ',
 		burguerMenuAltText: 'Navigationsmenü öffnen',
 		profileLoggedAltText: 'Benutzerprofilbild',
 		closeMenuAltText: 'Navigationsmenü schließen',
