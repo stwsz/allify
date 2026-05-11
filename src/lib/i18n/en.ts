@@ -27,10 +27,8 @@ export const en = {
 		profileLoggedItem1: 'Profile',
 		profileLoggedItem2: 'Settings',
 		profileLoggedItem3: 'Log out',
-		profileNotLoggedItem1:
-			'Log in with <span class="ml-1 font-semibold text-spotify">Spotify</span>',
-		profileNotLoggedItem2:
-			'Log in with <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
+		profileNotLoggedItem1: 'Log in with ',
+		profileNotLoggedItem2: 'Log in with ',
 		burguerMenuAltText: 'Open navigation menu',
 		closeMenuAltText: 'Close navigation menu',
 		cardProfileAsideMenuParagraph1: 'Log in or create account',

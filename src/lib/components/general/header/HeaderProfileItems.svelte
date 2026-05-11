@@ -138,15 +138,16 @@
 						disabled={item.streaming === 'deezer'}
 						title={setTitleByStreaming(item.streaming)}
 						on:click={(e) => {
-							if (item.streaming === 'spotify') {
-								signInSpotify(item.streaming, e);
-							} else {
-								return;
-							}
+							if (item.streaming === 'spotify') signInSpotify(item.streaming, e);
 						}}
 						class="flex w-full cursor-pointer items-center px-3 py-2 transition-all hover:translate-x-0.5"
 					>
-						{@html item.text}
+						{item.text}
+						{#if item.streaming === 'spotify'}
+							<span class="ml-1 font-semibold text-spotify">Spotify</span>
+						{:else}
+							<span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>
+						{/if}
 					</button>
 				</li>
 			{/each}

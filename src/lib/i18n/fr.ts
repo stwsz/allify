@@ -26,10 +26,8 @@ export const fr = {
 		profileLoggedItem1: 'Profil',
 		profileLoggedItem2: 'Paramètres',
 		profileLoggedItem3: 'Se déconnecter',
-		profileNotLoggedItem1:
-			'Se connecter avec <span class="ml-1 font-semibold text-spotify">Spotify</span>',
-		profileNotLoggedItem2:
-			'Se connecter avec <span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>',
+		profileNotLoggedItem1: 'Se connecter avec ',
+		profileNotLoggedItem2: 'Se connecter avec ',
 		burguerMenuAltText: 'Ouvrir le menu de navigation',
 		profileLoggedAltText: 'Photo de profil utilisateur',
 		closeMenuAltText: 'Fermer le menu de navigation',

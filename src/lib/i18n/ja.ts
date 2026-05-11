@@ -27,9 +27,8 @@ export const ja = {
 		profileLoggedItem1: 'プロフィール',
 		profileLoggedItem2: '設定',
 		profileLoggedItem3: 'ログアウト',
-		profileNotLoggedItem1: '<span class="ml-1 font-semibold text-spotify">Spotify</span>でログイン',
-		profileNotLoggedItem2:
-			'<span class="ml-1 font-semibold text-s-inverse-muted">Deezer</span>でログイン',
+		profileNotLoggedItem1: 'でログイン',
+		profileNotLoggedItem2: 'でログイン',
 		burguerMenuAltText: 'ナビゲーションメニューを開く',
 		closeMenuAltText: 'ナビゲーションメニューを閉じる',
 		cardProfileAsideMenuParagraph1: 'ログインまたはアカウント作成',
