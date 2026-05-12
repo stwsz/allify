@@ -32,22 +32,22 @@ Connect your streaming services and discover your real listening patterns with n
 
 ## Stack
 
-| Layer | Tech |
-|---|---|
+| Layer     | Tech                   |
+| --------- | ---------------------- |
 | Framework | Svelte 5 + SvelteKit 2 |
-| Language | TypeScript 5 |
-| Styling | Tailwind CSS 4 |
-| Bundler | Vite 7 |
-| Deploy | Netlify |
+| Language  | TypeScript 5           |
+| Styling   | Tailwind CSS 4         |
+| Bundler   | Vite 7                 |
+| Deploy    | Netlify                |
 
 <br />
 
 ## Integrations
 
-| Service | Status |
-|---|---|
-| 🟢 Spotify | ✅ Live |
-| 🟣 Deezer | ⏳ Arriving soon |
+| Service    | Status           |
+| ---------- | ---------------- |
+| 🟢 Spotify | ✅ Live          |
+| 🟣 Deezer  | ⏳ Arriving soon |
 
 <br />
 
@@ -59,4 +59,3 @@ Made with 🎶 by [stwsz](https://github.com/stwsz)
 `© 2026 Allify`
 
 </div>
-

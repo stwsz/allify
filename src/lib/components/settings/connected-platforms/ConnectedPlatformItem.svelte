@@ -13,6 +13,22 @@
 		icon: any;
 		iconClass: string;
 	};
+
+	function handleLogout() {
+		if (platform.name.toLocaleLowerCase() === 'spotify') {
+			logoutSpotify();
+		} else {
+			return;
+		}
+	}
+
+	function handleLogin(e: MouseEvent) {
+		if (platform.name.toLocaleLowerCase() === 'spotify') {
+			signInSpotify(platform.name.toLocaleLowerCase() as 'spotify', e);
+		} else {
+			return;
+		}
+	}
 </script>
 
 <div
@@ -46,26 +62,14 @@
 	{#if $userInfo?.connectedStreamings.spotify?.connected === true && platform.name === 'spotify'}
 		<button
 			class="shrink-0 cursor-pointer rounded-lg border border-status-error/40 px-2.5 py-1.5 text-xs font-medium text-status-error transition-colors hover:bg-status-error/10 sm:px-3.5"
-			on:click={() => {
-				if (platform.name.toLocaleLowerCase() === 'spotify') {
-					logoutSpotify();
-				} else {
-					return;
-				}
-			}}
+			on:click={() => handleLogout()}
 		>
 			{$translationsStore.settingsPage.settingsPageConnectedPlatformsDisconnect}
 		</button>
 	{:else}
 		<button
 			class="shrink-0 cursor-pointer rounded-lg bg-brand-primary px-2.5 py-1.5 text-xs font-medium text-t-inverse transition-colors hover:bg-brand-primary-dark sm:px-3.5"
-			on:click={(e) => {
-				if (platform.name.toLocaleLowerCase() === 'spotify') {
-					signInSpotify(platform.name.toLocaleLowerCase() as 'spotify', e);
-				} else {
-					return;
-				}
-			}}
+			on:click={(e) => handleLogin(e)}
 		>
 			{$translationsStore.settingsPage.settingsPageConnectedPlatformsConnect}
 		</button>

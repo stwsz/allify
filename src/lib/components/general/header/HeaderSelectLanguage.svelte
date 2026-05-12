@@ -37,6 +37,16 @@
 
 	$: selectedLanguage =
 		languageOptions.find((lang) => lang.code === $languageStore) ?? languageOptions[0];
+
+	function toggleLanguageDropdown() {
+		showProfileOptions = false;
+		openLanguageDropdown = !openLanguageDropdown;
+	}
+
+	function selectLanguage(code: string) {
+		languageStore.set(code);
+		openLanguageDropdown = false;
+	}
 </script>
 
 <div class="relative inline-block">
@@ -58,10 +68,7 @@
 		"
 		aria-haspopup="listbox"
 		aria-expanded={openLanguageDropdown}
-		on:click={() => {
-			showProfileOptions = false;
-			openLanguageDropdown = !openLanguageDropdown;
-		}}
+		on:click={toggleLanguageDropdown}
 	>
 		<div class="flex min-w-0 items-center gap-2">
 			{#if browser}
@@ -105,10 +112,7 @@
 						? 'bg-brand-primary-light/15 hover:bg-brand-primary-light/20'
 						: 'hover:bg-s-muted'}
 					"
-					on:click={() => {
-						languageStore.set(language.code);
-						openLanguageDropdown = false;
-					}}
+					on:click={() => selectLanguage(language.code)}
 				>
 					<div class="flex items-center gap-2 px-3 py-2.5">
 						<img

@@ -20,6 +20,17 @@
 	$: loggedIn = $userInfo ? true : false;
 
 	let showProfileOptions: boolean = false;
+
+	function toggleProfileOptions() {
+		showProfileOptions = !showProfileOptions;
+	}
+
+	async function handleLogout() {
+		await logoutSpotify();
+
+		showProfileOptions = false;
+		isAsideMenuOpen = false;
+	}
 </script>
 
 <div class="mt-auto border-t border-b-muted/10 px-4 py-4 sm:px-5 sm:py-5">
@@ -51,7 +62,7 @@
 				ease-out
 				active:scale-[0.98]
 			"
-			on:click={() => (showProfileOptions = !showProfileOptions)}
+			on:click={toggleProfileOptions}
 			aria-label="Toggle profile items"
 		>
 			{#if loggedIn}
@@ -187,12 +198,7 @@
 							duration-200
 							hover:bg-status-error/80
 						"
-						on:click={async () => {
-							await logoutSpotify();
-
-							showProfileOptions = false;
-							isAsideMenuOpen = false;
-						}}
+						on:click={handleLogout}
 					>
 						{$translationsStore.generalTexts.profileLoggedItem3}
 					</button>

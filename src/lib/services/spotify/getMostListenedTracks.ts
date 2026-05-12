@@ -6,7 +6,7 @@ import { translationsStore } from '$lib/stores/translations.store';
 import { userInfo } from '$lib/stores/userInfo.store';
 
 // Types
-import type { TrackSpotify } from '$lib/types/UserInfo.type';
+import type { TrackSpotify } from '$lib/types/SpotifyData.type';
 
 export async function getMostListenedTracks() {
 	const getTranslationStore = get(translationsStore);

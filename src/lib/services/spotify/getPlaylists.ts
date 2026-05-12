@@ -1,4 +1,5 @@
-import type { PlaylistSpotify } from '$lib/types/UserInfo.type';
+// Types
+import type { PlaylistSpotify } from '$lib/types/SpotifyData.type';
 
 export async function getPlaylists() {
 	let playlistItems = [] as PlaylistSpotify[];

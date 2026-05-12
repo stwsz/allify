@@ -12,6 +12,10 @@
 
 	// Props
 	export let isAsideMenuOpen: boolean;
+
+	function closeMenu() {
+		isAsideMenuOpen = false;
+	}
 </script>
 
 <div
@@ -37,7 +41,7 @@
 		<div
 			class="flex items-center justify-between border-b border-b-default/60 pt-8 pr-3 pb-5.5 pl-8"
 		>
-			<button on:click={() => (isAsideMenuOpen = false)}>
+			<button on:click={closeMenu}>
 				<AllifyLogoColorful
 					logoSvgClass="w-26"
 					logoAltText={$translationsStore.generalTexts.logoColorfulAltText}
@@ -46,7 +50,7 @@
 
 			<button
 				aria-label={$translationsStore.generalTexts.closeMenuAltText}
-				on:click={() => (isAsideMenuOpen = false)}
+				on:click={closeMenu}
 				class="cursor-pointer rounded-md p-0.5 transition-all hover:bg-s-muted lg:hidden"
 			>
 				<CloseIcon
