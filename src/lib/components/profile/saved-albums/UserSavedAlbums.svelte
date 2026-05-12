@@ -7,7 +7,7 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Types
-	import type { AlbumSpotify } from '$lib/types/UserInfo.type';
+	import type { AlbumSpotify } from '$lib/types/SpotifyData.type';
 
 	// Props
 	export let userSavedAlbums: AlbumSpotify[];

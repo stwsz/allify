@@ -12,6 +12,8 @@
 	// Props
 	export let playlist: any;
 	export let showSelectedPlaylistModal: boolean;
+
+	console.log('playlist', playlist);
 </script>
 
 {#if showSelectedPlaylistModal}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Types
-	import type { LikedTrackSpotify } from '$lib/types/UserInfo.type';
+	import type { LikedTrackSpotify } from '$lib/types/SpotifyData.type';
 
 	// Props
 	export let item: LikedTrackSpotify;

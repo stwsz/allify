@@ -1,4 +1,7 @@
+// Svelte
 import type { RequestHandler } from '@sveltejs/kit';
+
+// Environment variable
 import { ALLIFY_URL } from '$env/static/private';
 
 export const GET: RequestHandler = async () => {
@@ -14,6 +17,8 @@ export const GET: RequestHandler = async () => {
 		'/data-usage'
 	];
 
+	const lastmod = '2026-05-12';
+
 	const body = `<?xml version="1.0" encoding="UTF-8" ?>
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 		${pages
@@ -21,8 +26,7 @@ export const GET: RequestHandler = async () => {
 				(page) => `
 			<url>
 				<loc>${ALLIFY_URL}${page}</loc>
-				<changefreq>weekly</changefreq>
-				<priority>0.8</priority>
+				<lastmod>${lastmod}</lastmod>
 			</url>
 		`
 			)

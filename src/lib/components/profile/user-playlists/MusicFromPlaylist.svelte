@@ -15,9 +15,9 @@
 	target="_blank"
 	rel="noopener noreferrer"
 >
-	{#if music.images?.[2]?.url}
+	{#if music.images?.[0]?.url}
 		<img
-			src={music.images[2].url}
+			src={music.images[0].url}
 			alt={music.name}
 			class="h-14 w-14 shrink-0 rounded object-cover"
 		/>
