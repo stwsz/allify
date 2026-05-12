@@ -1,16 +1,22 @@
 <script lang="ts">
 	// Assets
 	import TicketIcon from '$lib/assets/images/icons/TicketIcon.webp';
+	import PlusIcon from '$lib/assets/images/icons/PlusIcon.svelte';
 
 	// Components
 	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
+	import { showAddTickets } from '$lib/stores/showAddTickets.store';
 
 	// Props
 	export let userInfo;
 	export let tickets;
+
+	function openAddTickets() {
+		showAddTickets.set(true);
+	}
 </script>
 
 <div
@@ -79,6 +85,13 @@
 							? $translationsStore.generalTexts.tickets
 							: $translationsStore.generalTexts.ticket}
 					</span>
+
+					<button
+						class="flex cursor-pointer items-center justify-center rounded-full bg-s-default p-1.5 transition-all hover:scale-105"
+						on:click={openAddTickets}
+					>
+						<PlusIcon iconSvgClass="w-3 h-3 text-brand-primary" iconAltText="Add Ticket" />
+					</button>
 				</div>
 			</div>
 
