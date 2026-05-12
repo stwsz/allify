@@ -7,7 +7,7 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Types
-	import type { PlaylistSpotify } from '$lib/types/UserInfo.type';
+	import type { PlaylistSpotify } from '$lib/types/SpotifyData.type';
 
 	// Props
 	export let userPlaylists: PlaylistSpotify[];

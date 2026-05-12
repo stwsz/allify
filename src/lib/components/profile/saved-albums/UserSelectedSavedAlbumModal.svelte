@@ -7,7 +7,7 @@
 	import MusicFromAlbum from './MusicFromAlbum.svelte';
 
 	// Types
-	import type { AlbumSpotify } from '$lib/types/UserInfo.type';
+	import type { AlbumSpotify } from '$lib/types/SpotifyData.type';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
