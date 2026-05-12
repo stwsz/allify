@@ -1,5 +1,5 @@
 // Types
-import type { LikedTrackSpotify } from '$lib/types/UserInfo.type';
+import type { LikedTrackSpotify } from '$lib/types/SpotifyData.type';
 
 export async function getLikedTracks() {
 	let likedTracksItems = [] as LikedTrackSpotify[];

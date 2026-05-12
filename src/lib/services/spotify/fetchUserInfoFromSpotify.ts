@@ -1,5 +1,5 @@
 // Types
-import type { UserInfoSpotify } from '$lib/types/UserInfo.type';
+import type { UserInfoSpotify } from '$lib/types/SpotifyData.type';
 
 // Services
 import { getMostListenedArtists } from './getMostListenedArtists';

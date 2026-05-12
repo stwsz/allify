@@ -6,38 +6,26 @@
 	import { showAddTickets } from '$lib/stores/showAddTickets.store';
 	import { translationsStore } from '$lib/stores/translations.store';
 
-	let checkoutUrl: string | null = null;
+	// Services
+	import { handleCheckout } from '$lib/services/user/handleCheckout';
+
 	let quantity = 1;
 	const options = [1, 5, 10, 25];
 
-	async function handleCheckout() {
-		try {
-			const reqCreateCheckoutAbacatePay = await fetch('/api/checkout/tickets/create-checkout', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					items: [{ id: 'prod_ypRnMCbTwsXBKRfZgF4xrQXK', quantity }],
-					externalId: `allify_order_${crypto.randomUUID()}`,
-					returnUrl: `${window.location.href}`,
-					completionUrl: `${window.location.href}`,
-					methods: ['PIX', 'CARD'],
-					metadata: { origem: 'app-mobile' }
-				})
-			});
+	function closeAddTicketsModal() {
+		showAddTickets.set(false);
+	}
 
-			if (!reqCreateCheckoutAbacatePay.ok) {
-				const errData = await reqCreateCheckoutAbacatePay.json();
-				throw new Error(errData?.error ?? `HTTP error ${reqCreateCheckoutAbacatePay.status}`);
-			}
+	function handleQuantityChange(newQuantity: number) {
+		if (newQuantity >= 1) quantity = newQuantity;
+	}
 
-			const data = await reqCreateCheckoutAbacatePay.json();
-			checkoutUrl = data?.data?.url ?? null;
+	function handleInputChange(e: Event) {
+		const target = e.target as HTMLInputElement;
+		const value = parseInt(target.value);
 
-			if (!checkoutUrl) throw new Error('Checkout URL not found in response');
-
-			window.location.href = checkoutUrl;
-		} catch (err: any) {
-			console.error(err.message ?? 'An error occurred during checkout');
+		if (!isNaN(value)) {
+			handleQuantityChange(value);
 		}
 	}
 </script>
@@ -51,7 +39,7 @@
 		<div class="border-b border-b-default px-6 py-5">
 			<button
 				class="absolute top-5 right-5 z-10 cursor-pointer opacity-70 transition hover:scale-105 hover:opacity-100"
-				on:click={() => showAddTickets.set(false)}
+				on:click={closeAddTicketsModal}
 				aria-label={$translationsStore.addTickets.addTicketsModalAriaLabel}
 			>
 				<CloseIcon
@@ -86,7 +74,7 @@
 								{quantity === opt
 								? 'border-brand-primary bg-brand-primary text-t-inverse'
 								: 'border-b-default bg-s-muted text-t-primary hover:border-brand-primary hover:text-brand-primary'}"
-							on:click={() => (quantity = opt)}
+							on:click={() => handleQuantityChange(opt)}
 						>
 							{opt}
 						</button>
@@ -100,10 +88,7 @@
 							{!options.includes(quantity)
 							? 'border-brand-primary'
 							: 'border-b-default focus:border-brand-primary'}"
-						on:input={(e) => {
-							const val = parseInt(e.currentTarget.value);
-							if (!isNaN(val) && val >= 1) quantity = val;
-						}}
+						on:input={handleInputChange}
 					/>
 				</div>
 			</div>
@@ -127,7 +112,7 @@
 
 			<button
 				class="w-full cursor-pointer rounded-xl bg-brand-primary px-4 py-3 text-sm font-semibold text-t-inverse transition hover:opacity-90 active:scale-95"
-				on:click={handleCheckout}
+				on:click={() => handleCheckout(quantity)}
 			>
 				{$translationsStore.addTickets.addTicketsModalButton}
 			</button>

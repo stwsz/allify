@@ -40,6 +40,15 @@
 
 		return baseClass;
 	}
+
+	function handleStreamingClick(streaming: string) {
+		if (streaming === 'spotify') {
+			loadingAfterConnectionStore.set({ loading: true, streamingPlatform: 'spotify' });
+			window.location.href = '/api/spotify/auth/login';
+		} else if (streaming === 'deezer') {
+			// Handle Deezer login (if implemented in the future)
+		}
+	}
 </script>
 
 <section class="px-8 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16 2xl:px-32">
@@ -59,13 +68,7 @@
 		<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:gap-6">
 			{#each streamings as streaming}
 				<button
-					on:click={() => {
-						loadingAfterConnectionStore.set({
-							loading: true,
-							streamingPlatform: streaming.name as 'spotify' | 'deezer'
-						});
-						window.location.href = streaming.href;
-					}}
+					on:click={() => handleStreamingClick(streaming.name)}
 					disabled={streaming.name === 'deezer'}
 					title={setTitleByStreaming(streaming.name)}
 					class={setCLassByStreaming(streaming.name)}

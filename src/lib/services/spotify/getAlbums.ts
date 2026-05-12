@@ -1,4 +1,4 @@
-import type { AlbumSpotify } from '$lib/types/UserInfo.type';
+import type { AlbumSpotify } from '$lib/types/SpotifyData.type';
 
 export async function getAlbums() {
 	let albumItems = [] as AlbumSpotify[];
