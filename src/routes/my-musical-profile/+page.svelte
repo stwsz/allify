@@ -45,7 +45,7 @@
 			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageHeading1}
 		</h1>
 
-		<div class="space-y-12 lg:space-y-20">
+		<div class="space-y-20 lg:space-y-30">
 			{#each itemsType as type}
 				{#if type === 'artists'}
 					<MostListenedArtistsItems />

@@ -4,7 +4,7 @@
 	import ExternalLink from '../../general/ExternalLinkSpotify.svelte';
 	import Popularity from '$lib/components/general/Popularity.svelte';
 	import MoreMyMusicalProfileItems from '../MoreMyMusicalProfileItems.svelte';
-	import LastSyncMyMusicalProfileItems from '../LastSyncMyMusicalProfileItems.svelte';
+	import PossibleActionsMyMusicalProfile from '../PossibleActionsMyMusicalProfile.svelte';
 
 	// Stores
 	import { userInfo } from '$lib/stores/userInfo.store';
@@ -15,17 +15,17 @@
 </script>
 
 <div class="flex flex-col gap-10 lg:gap-14">
-	<div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+	<div class="mb-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 		<h2 class="text-xl font-semibold">
 			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedTracksHeading2}
 		</h2>
 
-		<LastSyncMyMusicalProfileItems
+		<PossibleActionsMyMusicalProfile
 			lastSync={$userInfo?.connectedStreamings.spotify?.mostListenedTracks?.updatedAt}
 		/>
 	</div>
 
-	<div class="flex flex-col gap-16">
+	<div class="flex flex-col gap-10">
 		{#each mostListenedTracks as track, i (track.id)}
 			{#if i === 0}
 				<TopTrackItem

@@ -133,6 +133,8 @@ export const ru = {
 		myMusicalProfilePageMostListenedLastUpdate: 'Последнее обновление:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Обновить',
 		myMusicalProfilePageMostListenedReloadIconAltText: 'Иконка обновления',
+		myMusicalProfilePageMostListenedShareButton: 'Поделиться',
+		myMusicalProfilePageMostListenedShareIconAltText: 'Иконка для поделиться',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Показать +5 исполнителей',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков'
 	},

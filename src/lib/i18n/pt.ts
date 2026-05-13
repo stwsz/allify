@@ -133,6 +133,8 @@ export const pt = {
 		myMusicalProfilePageMostListenedLastUpdate: 'Última atualização:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Atualizar',
 		myMusicalProfilePageMostListenedReloadIconAltText: 'Ícone de atualizar',
+		myMusicalProfilePageMostListenedShareButton: 'Compartilhar',
+		myMusicalProfilePageMostListenedShareIconAltText: 'Ícone de compartilhar',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostrar +5 artistas',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 músicas'
 	},

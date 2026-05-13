@@ -135,6 +135,8 @@ export const es = {
 		myMusicalProfilePageMostListenedLastUpdate: 'Última actualización:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Actualizar',
 		myMusicalProfilePageMostListenedReloadIconAltText: 'Ícono de actualizar',
+		myMusicalProfilePageMostListenedShareButton: 'Compartir',
+		myMusicalProfilePageMostListenedShareIconAltText: 'Ícono de compartir',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostrar +5 artistas',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 canciones'
 	},
