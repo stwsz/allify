@@ -132,6 +132,9 @@ export const ru = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Ваши самые прослушиваемые треки',
 		myMusicalProfilePageMostListenedLastUpdate: 'Последнее обновление:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Обновить',
+		myMusicalProfilePageMostListenedReloadIconAltText: 'Иконка обновления',
+		myMusicalProfilePageMostListenedShareButton: 'Поделиться',
+		myMusicalProfilePageMostListenedShareIconAltText: 'Иконка для поделиться',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Показать +5 исполнителей',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков'
 	},
@@ -181,6 +184,7 @@ export const ru = {
 			'Просматривайте свой публичный профиль, делитесь статистикой прослушивания, понравившимися треками, плейлистами и сохранёнными альбомами, подключайте стриминговые платформы для персональных инсайтов.',
 		profilePageImageAltText: 'Фото профиля',
 		profilePageFollowers: 'подписчиков',
+		profilePageAddTicketsAltText: 'Добавить билеты',
 		profilePageCarouselButtonAriaLabelPrev: 'Предыдущая кнопка карусели',
 		profilePageCarouselButtonAriaLabelNext: 'Следующая кнопка карусели',
 		profilePageCarouselArrowIconAltText: 'Иконка стрелки карусели',

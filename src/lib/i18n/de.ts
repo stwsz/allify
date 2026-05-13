@@ -134,6 +134,9 @@ export const de = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Deine meistgehörten Songs',
 		myMusicalProfilePageMostListenedLastUpdate: 'Letzte Aktualisierung:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Aktualisieren',
+		myMusicalProfilePageMostListenedReloadIconAltText: 'Aktualisierungssymbol',
+		myMusicalProfilePageMostListenedShareButton: 'Teilen',
+		myMusicalProfilePageMostListenedShareIconAltText: 'Teilen-Symbol',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Zeige +5 Künstler',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Zeige +5 Songs'
 	},
@@ -184,6 +187,7 @@ export const de = {
 			'Sieh dir dein öffentliches Profil an, teile deine Hörstatistiken, gelikete Songs, Playlists und gespeicherte Alben und verbinde deine Streaming-Plattformen für personalisierte Einblicke.',
 		profilePageImageAltText: 'Profilbild von',
 		profilePageFollowers: 'Follower',
+		profilePageAddTicketsAltText: 'Tickets hinzufügen',
 		profilePageCarouselButtonAriaLabelPrev: 'Vorherige Karussell-Schaltfläche',
 		profilePageCarouselButtonAriaLabelNext: 'Nächste Karussell-Schaltfläche',
 		profilePageCarouselArrowIconAltText: 'Karussell-Pfeil-Symbol',

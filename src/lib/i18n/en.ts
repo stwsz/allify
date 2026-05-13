@@ -134,6 +134,9 @@ export const en = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Your most listened tracks',
 		myMusicalProfilePageMostListenedLastUpdate: 'Last update:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Update',
+		myMusicalProfilePageMostListenedReloadIconAltText: 'Reload icon',
+		myMusicalProfilePageMostListenedShareButton: 'Share',
+		myMusicalProfilePageMostListenedShareIconAltText: 'Share icon',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Show +5 artists',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Show +5 tracks'
 	},
@@ -183,6 +186,7 @@ export const en = {
 			'See your public profile, share your listening statistics, liked songs, playlists and saved albums, and connect your streaming platforms for personalized insights.',
 		profilePageImageAltText: 'Profile picture of',
 		profilePageFollowers: 'followers',
+		profilePageAddTicketsAltText: 'Add tickets',
 		profilePageCarouselButtonAriaLabelPrev: 'Previous carousel button',
 		profilePageCarouselButtonAriaLabelNext: 'Next carousel button',
 		profilePageCarouselArrowIconAltText: 'Carousel arrow icon',

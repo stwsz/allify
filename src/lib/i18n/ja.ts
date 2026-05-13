@@ -131,6 +131,9 @@ export const ja = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'よく聴く曲',
 		myMusicalProfilePageMostListenedLastUpdate: '最終更新:',
 		myMusicalProfilePageMostListenedButtonUpdate: '更新',
+		myMusicalProfilePageMostListenedReloadIconAltText: '更新アイコン',
+		myMusicalProfilePageMostListenedShareButton: '共有',
+		myMusicalProfilePageMostListenedShareIconAltText: '共有アイコン',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '+5アーティストを表示',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '+5曲を表示'
 	},
@@ -179,6 +182,7 @@ export const ja = {
 			'公開プロフィールを見て、リスニング統計・お気に入りの曲・プレイリスト・保存したアルバムを共有し、ストリーミングプラットフォームを接続してパーソナライズされたインサイトを取得しましょう。',
 		profilePageImageAltText: 'のプロフィール写真',
 		profilePageFollowers: 'フォロワー',
+		profilePageAddTicketsAltText: 'チケットを追加',
 		profilePageCarouselButtonAriaLabelPrev: 'カルーセルの前へボタン',
 		profilePageCarouselButtonAriaLabelNext: 'カルーセルの次へボタン',
 		profilePageCarouselArrowIconAltText: 'カルーセルの矢印アイコン',

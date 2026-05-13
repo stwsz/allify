@@ -134,6 +134,9 @@ export const fr = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Vos chansons les plus écoutées',
 		myMusicalProfilePageMostListenedLastUpdate: 'Dernière mise à jour :',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Mettre à jour',
+		myMusicalProfilePageMostListenedReloadIconAltText: 'Icône de mise à jour',
+		myMusicalProfilePageMostListenedShareButton: 'Partager',
+		myMusicalProfilePageMostListenedShareIconAltText: 'Icône de partage',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Afficher +5 artistes',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Afficher +5 chansons'
 	},
@@ -185,6 +188,7 @@ export const fr = {
 			"Consultez votre profil public, partagez vos statistiques d'écoute, chansons likées, playlists et albums sauvegardés, et connectez vos plateformes de streaming pour des insights personnalisés.",
 		profilePageImageAltText: 'Photo de profil de',
 		profilePageFollowers: 'Abonnés',
+		profilePageAddTicketsAltText: 'Ajouter des tickets',
 		profilePageCarouselButtonAriaLabelPrev: 'Bouton carrousel précédent',
 		profilePageCarouselButtonAriaLabelNext: 'Bouton carrousel suivant',
 		profilePageCarouselArrowIconAltText: 'Icône de flèche du carrousel',

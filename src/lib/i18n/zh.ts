@@ -125,6 +125,9 @@ export const zh = {
 		myMusicalProfilePageMostListenedTracksHeading2: '您最常听的歌曲',
 		myMusicalProfilePageMostListenedLastUpdate: '最后更新:',
 		myMusicalProfilePageMostListenedButtonUpdate: '更新',
+		myMusicalProfilePageMostListenedReloadIconAltText: '更新图标',
+		myMusicalProfilePageMostListenedShareButton: '分享',
+		myMusicalProfilePageMostListenedShareIconAltText: '分享图标',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '显示 +5 艺术家',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '显示 +5 歌曲'
 	},
@@ -173,6 +176,7 @@ export const zh = {
 			'查看您的公开资料，分享聆听统计数据、收藏歌曲、播放列表和已保存专辑，连接流媒体平台获取个性化洞察。',
 		profilePageImageAltText: '的资料照片',
 		profilePageFollowers: '粉丝',
+		profilePageAddTicketsAltText: '添加门票',
 		profilePageCarouselButtonAriaLabelPrev: '轮播上一个按钮',
 		profilePageCarouselButtonAriaLabelNext: '轮播下一个按钮',
 		profilePageCarouselArrowIconAltText: '轮播箭头图标',
