@@ -4,7 +4,7 @@
 	import ExternalLinkSpotify from '../../general/ExternalLinkSpotify.svelte';
 	import Popularity from '$lib/components/general/Popularity.svelte';
 	import MoreMyMusicalProfileItems from '../MoreMyMusicalProfileItems.svelte';
-	import ReloadButton from '../ReloadButton.svelte';
+	import LastSyncMyMusicalProfileItems from '../LastSyncMyMusicalProfileItems.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -20,21 +20,9 @@
 			{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedArtistsHeading2}
 		</h2>
 
-		<div class="mt-3 flex items-center justify-between gap-3 md:mt-0">
-			{#if $userInfo?.connectedStreamings.spotify?.mostListenedArtists?.updatedAt}
-				<span class="flex flex-col gap-2 text-xs whitespace-nowrap text-t-secondary md:flex-row">
-					{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedLastUpdate}
-
-					<strong class="font-medium text-t-primary">
-						{new Date(
-							$userInfo.connectedStreamings.spotify.mostListenedArtists.updatedAt
-						).toLocaleString($translationsStore.locale)}
-					</strong>
-				</span>
-			{/if}
-
-			<ReloadButton />
-		</div>
+		<LastSyncMyMusicalProfileItems
+			lastSync={$userInfo?.connectedStreamings.spotify?.mostListenedArtists?.updatedAt}
+		/>
 	</div>
 
 	<div class="flex flex-col gap-16">
