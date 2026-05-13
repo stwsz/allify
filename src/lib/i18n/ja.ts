@@ -180,6 +180,7 @@ export const ja = {
 			'公開プロフィールを見て、リスニング統計・お気に入りの曲・プレイリスト・保存したアルバムを共有し、ストリーミングプラットフォームを接続してパーソナライズされたインサイトを取得しましょう。',
 		profilePageImageAltText: 'のプロフィール写真',
 		profilePageFollowers: 'フォロワー',
+		profilePageAddTicketsAltText: 'チケットを追加',
 		profilePageCarouselButtonAriaLabelPrev: 'カルーセルの前へボタン',
 		profilePageCarouselButtonAriaLabelNext: 'カルーセルの次へボタン',
 		profilePageCarouselArrowIconAltText: 'カルーセルの矢印アイコン',

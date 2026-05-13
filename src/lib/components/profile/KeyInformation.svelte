@@ -76,7 +76,7 @@
 					<img
 						src={TicketIcon}
 						alt={$translationsStore.generalTexts.ticketAltText}
-						class="h-6 w-6 rounded-full bg-s-page p-0.5"
+						class="h-6.5 w-6.5 rounded-full bg-s-page p-0.5"
 					/>
 
 					<span class="text-sm font-medium">
@@ -90,7 +90,7 @@
 						class="flex cursor-pointer items-center justify-center rounded-full bg-s-default p-1.5 transition-all hover:scale-105"
 						on:click={openAddTickets}
 					>
-						<PlusIcon iconSvgClass="w-3 h-3 text-brand-primary" iconAltText="Add Ticket" />
+						<PlusIcon iconSvgClass="w-2.5 h-2.5 text-brand-primary" iconAltText={$translationsStore.profilePage.profilePageAddTicketsAltText} />
 					</button>
 				</div>
 			</div>

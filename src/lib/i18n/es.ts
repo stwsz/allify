@@ -185,6 +185,7 @@ export const es = {
 			'Ve tu perfil público, comparte tus estadísticas de escucha, canciones que te gustan, playlists y álbumes guardados, y conecta tus plataformas de streaming para insights personalizados.',
 		profilePageImageAltText: 'Foto de perfil de',
 		profilePageFollowers: 'seguidores',
+		profilePageAddTicketsAltText: 'Agregar tickets',
 		profilePageCarouselButtonAriaLabelPrev: 'Botón anterior del carrusel',
 		profilePageCarouselButtonAriaLabelNext: 'Botón siguiente del carrusel',
 		profilePageCarouselArrowIconAltText: 'Ícono de flecha del carrusel',

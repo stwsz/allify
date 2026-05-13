@@ -185,6 +185,7 @@ export const de = {
 			'Sieh dir dein öffentliches Profil an, teile deine Hörstatistiken, gelikete Songs, Playlists und gespeicherte Alben und verbinde deine Streaming-Plattformen für personalisierte Einblicke.',
 		profilePageImageAltText: 'Profilbild von',
 		profilePageFollowers: 'Follower',
+		profilePageAddTicketsAltText: 'Tickets hinzufügen',
 		profilePageCarouselButtonAriaLabelPrev: 'Vorherige Karussell-Schaltfläche',
 		profilePageCarouselButtonAriaLabelNext: 'Nächste Karussell-Schaltfläche',
 		profilePageCarouselArrowIconAltText: 'Karussell-Pfeil-Symbol',

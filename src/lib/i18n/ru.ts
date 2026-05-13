@@ -182,6 +182,7 @@ export const ru = {
 			'Просматривайте свой публичный профиль, делитесь статистикой прослушивания, понравившимися треками, плейлистами и сохранёнными альбомами, подключайте стриминговые платформы для персональных инсайтов.',
 		profilePageImageAltText: 'Фото профиля',
 		profilePageFollowers: 'подписчиков',
+		profilePageAddTicketsAltText: 'Добавить билеты',
 		profilePageCarouselButtonAriaLabelPrev: 'Предыдущая кнопка карусели',
 		profilePageCarouselButtonAriaLabelNext: 'Следующая кнопка карусели',
 		profilePageCarouselArrowIconAltText: 'Иконка стрелки карусели',
