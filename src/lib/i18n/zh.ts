@@ -125,6 +125,7 @@ export const zh = {
 		myMusicalProfilePageMostListenedTracksHeading2: '您最常听的歌曲',
 		myMusicalProfilePageMostListenedLastUpdate: '最后更新:',
 		myMusicalProfilePageMostListenedButtonUpdate: '更新',
+		myMusicalProfilePageMostListenedReloadIconAltText: '更新图标',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '显示 +5 艺术家',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '显示 +5 歌曲'
 	},

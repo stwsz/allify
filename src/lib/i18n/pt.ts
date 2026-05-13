@@ -132,6 +132,7 @@ export const pt = {
 		myMusicalProfilePageMostListenedTracksHeading2: 'Suas músicas mais ouvidas',
 		myMusicalProfilePageMostListenedLastUpdate: 'Última atualização:',
 		myMusicalProfilePageMostListenedButtonUpdate: 'Atualizar',
+		myMusicalProfilePageMostListenedReloadIconAltText: 'Ícone de atualizar',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostrar +5 artistas',
 		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 músicas'
 	},

@@ -4,6 +4,7 @@
 	import ExternalLink from '../../general/ExternalLinkSpotify.svelte';
 	import Popularity from '$lib/components/general/Popularity.svelte';
 	import MoreMyMusicalProfileItems from '../MoreMyMusicalProfileItems.svelte';
+	import ReloadButton from '../ReloadButton.svelte';
 
 	// Stores
 	import { userInfo } from '$lib/stores/userInfo.store';
@@ -32,11 +33,7 @@
 				</span>
 			{/if}
 
-			<button
-				class="cursor-pointer rounded-md bg-brand-primary px-4 py-2 text-xs font-medium text-t-inverse shadow-sm transition-all hover:opacity-90 hover:shadow-md active:scale-[0.98]"
-			>
-				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageMostListenedButtonUpdate}
-			</button>
+			<ReloadButton />
 		</div>
 	</div>
 
