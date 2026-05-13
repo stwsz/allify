@@ -3,12 +3,13 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Props
-	export let streamingPlatform: 'spotify' | 'deezer' = 'spotify';
+	export let streamingPlatform: 'spotify' | 'deezer' | 'base' = 'base';
 	export let animationAltText: string = $translationsStore.generalTexts.loadingComponentAriaLabel;
 
 	const platformColors = {
 		spotify: 'bg-spotify',
-		deezer: 'bg-deezer'
+		deezer: 'bg-deezer',
+		base: 'bg-s-default'
 	};
 </script>
 
