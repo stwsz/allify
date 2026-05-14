@@ -3,7 +3,7 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Props
-	export let iconSvgClass: string = 'w-11 h-11';
+	export let iconSvgClass: string;
 	export let iconAltText: string = $translationsStore.homePage.connectPlatformSpotifyAltText;
 </script>
 

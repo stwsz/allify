@@ -198,6 +198,7 @@ export const en = {
 		profilePageUserSavedAlbumsSectionHeading2: 'Saved albums',
 		profilePageUserSavedAlbumsSectionParagraph1: 'Your albums will appear here once you save some.',
 		profilePageExternalLinkSpotify: 'View profile on Spotify',
+		profilePageExternalLinkDeezer: 'View profile on Deezer',
 		profilePageUserPlaylistItemBy: 'By',
 		profilePageUserPlaylistItemMusics: 'songs',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Close saved track modal',

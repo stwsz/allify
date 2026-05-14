@@ -187,6 +187,7 @@ export const zh = {
 		profilePageUserSavedAlbumsSectionHeading2: '已保存的专辑',
 		profilePageUserSavedAlbumsSectionParagraph1: '保存专辑后，它们将显示在这里。',
 		profilePageExternalLinkSpotify: '在 Spotify 上查看资料',
+		profilePageExternalLinkDeezer: '在 Deezer 上查看资料',
 		profilePageUserPlaylistItemBy: '作者',
 		profilePageUserPlaylistItemMusics: '首歌曲',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: '关闭收藏歌曲弹窗',
