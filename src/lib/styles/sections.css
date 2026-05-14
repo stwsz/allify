@@ -3,7 +3,7 @@
 }
 
 .base-section h1 {
-	@apply text-2xl leading-tight font-semibold sm:text-3xl lg:mb-10 lg:text-4xl;
+	@apply text-2xl leading-tight font-semibold sm:text-3xl lg:text-4xl;
 }
 
 .base-section h2 {

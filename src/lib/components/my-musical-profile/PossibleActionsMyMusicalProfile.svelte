@@ -19,7 +19,7 @@
 		</strong>
 	</span>
 
-	<div class="flex gap-2">
+	<div class="flex gap-4">
 		<button
 			class="flex flex-1 cursor-pointer items-center justify-center gap-1.5 rounded-md bg-brand-primary px-4 py-2 text-xs font-medium text-t-inverse shadow-sm transition-all hover:opacity-90 hover:shadow-md sm:flex-none"
 		>

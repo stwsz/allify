@@ -201,6 +201,7 @@ export const es = {
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Tus álbumes aparecerán aquí cuando guardes alguno.',
 		profilePageExternalLinkSpotify: 'Ver perfil en Spotify',
+		profilePageExternalLinkDeezer: 'Ver perfil en Deezer',
 		profilePageUserPlaylistItemBy: 'Por',
 		profilePageUserPlaylistItemMusics: 'canciones',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Cerrar modal de canción guardada',

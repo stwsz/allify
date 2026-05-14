@@ -194,6 +194,7 @@ export const ja = {
 		profilePageUserSavedAlbumsSectionHeading2: '保存したアルバム',
 		profilePageUserSavedAlbumsSectionParagraph1: 'アルバムを保存するとここに表示されます。',
 		profilePageExternalLinkSpotify: 'Spotifyでプロフィールを見る',
+		profilePageExternalLinkDeezer: 'Deezerでプロフィールを見る',
 		profilePageUserPlaylistItemBy: '作成者',
 		profilePageUserPlaylistItemMusics: '曲',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: '保存した曲のモーダルを閉じる',

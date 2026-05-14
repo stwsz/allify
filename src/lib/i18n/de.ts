@@ -201,6 +201,7 @@ export const de = {
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Deine Alben erscheinen hier, sobald du welche gespeichert hast.',
 		profilePageExternalLinkSpotify: 'Profil auf Spotify ansehen',
+		profilePageExternalLinkDeezer: 'Profil auf Deezer ansehen',
 		profilePageUserPlaylistItemBy: 'Von',
 		profilePageUserPlaylistItemMusics: 'Songs',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Gespeicherten Track schließen',

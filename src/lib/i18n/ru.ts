@@ -198,6 +198,7 @@ export const ru = {
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Ваши альбомы появятся здесь, как только вы сохраните хотя бы один.',
 		profilePageExternalLinkSpotify: 'Посмотреть профиль в Spotify',
+		profilePageExternalLinkDeezer: 'Посмотреть профиль в Deezer',
 		profilePageUserPlaylistItemBy: 'Автор',
 		profilePageUserPlaylistItemMusics: 'треков',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Закрыть модальное окно трека',

@@ -5,6 +5,7 @@
 
 	// Components
 	import ExternalLink from '$lib/components/general/ExternalLinkSpotify.svelte';
+	import StreamingSelector from '../general/StreamingSelector.svelte';
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
@@ -13,6 +14,8 @@
 	// Props
 	export let userInfo;
 	export let tickets;
+
+	let selectedStreaming: 'spotify' | 'deezer';
 
 	function openAddTickets() {
 		showAddTickets.set(true);
@@ -40,9 +43,7 @@
 				/>
 			{:else if userInfo.name}
 				<div
-					class="
-								flex h-24 w-24 items-center justify-center rounded-full border-4 border-brand-primary sm:h-32 sm:w-32 lg:h-36 lg:w-36
-							"
+					class="flex h-24 w-24 items-center justify-center rounded-full border-4 border-brand-primary sm:h-32 sm:w-32 lg:h-36 lg:w-36"
 					aria-label={userInfo.name}
 				>
 					<p
@@ -113,10 +114,16 @@
 		</div>
 	</div>
 
-	<ExternalLink
-		streamingPlatform="spotify"
-		externalLink={userInfo.profileLink}
-		externalLinkText={$translationsStore.profilePage.profilePageExternalLinkSpotify}
-		additionalClass="w-full sm:w-70"
-	/>
+	<div class="flex flex-col gap-5">
+		<StreamingSelector bind:selectedStreaming />
+
+		<ExternalLink
+			streamingPlatform={selectedStreaming}
+			externalLink={selectedStreaming === 'spotify' ? userInfo.profileLink : userInfo.profileLink}
+			externalLinkText={selectedStreaming === 'spotify'
+				? $translationsStore.profilePage.profilePageExternalLinkSpotify
+				: $translationsStore.profilePage.profilePageExternalLinkDeezer}
+			additionalClass="w-full sm:w-70"
+		/>
+	</div>
 </div>

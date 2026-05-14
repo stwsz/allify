@@ -202,6 +202,7 @@ export const fr = {
 		profilePageUserSavedAlbumsSectionParagraph1:
 			'Vos albums apparaîtront ici une fois que vous en aurez sauvegardé.',
 		profilePageExternalLinkSpotify: 'Voir le profil sur Spotify',
+		profilePageExternalLinkDeezer: 'Voir le profil sur Deezer',
 		profilePageUserPlaylistItemBy: 'Par',
 		profilePageUserPlaylistItemMusics: 'Chansons',
 		profilePageUserSelectedSavedTrackCloseButtonAriaLabel: 'Fermer la piste sauvegardée',
