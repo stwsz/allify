@@ -1,5 +1,5 @@
 <script lang="ts">
-    // Components
+	// Components
 	import SelectStreamingButton from '../profile/SelectStreamingButton.svelte';
 
 	export let selectedStreaming: 'spotify' | 'deezer' = 'spotify';

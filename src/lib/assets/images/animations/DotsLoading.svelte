@@ -3,27 +3,28 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Props
-	export let streamingPlatform: 'spotify' | 'deezer' | 'base' = 'base';
+	export let dotsTheme: 'spotify' | 'deezer' | 'base-light' | 'base' = 'base';
 	export let animationAltText: string = $translationsStore.generalTexts.loadingComponentAriaLabel;
 
 	const platformColors = {
 		spotify: 'bg-spotify',
 		deezer: 'bg-deezer',
-		base: 'bg-s-default'
+		base: 'bg-s-inverse',
+		'base-light': 'bg-s-default'
 	};
 </script>
 
 <div class="flex gap-2" aria-label={animationAltText} role="img">
 	<span
-		class="h-2 w-2 {platformColors[streamingPlatform]} animate-bounce rounded-full"
+		class="h-2 w-2 {platformColors[dotsTheme]} animate-bounce rounded-full"
 		style="animation-delay: 0ms;"
 	></span>
 	<span
-		class="h-2 w-2 {platformColors[streamingPlatform]} animate-bounce rounded-full"
+		class="h-2 w-2 {platformColors[dotsTheme]} animate-bounce rounded-full"
 		style="animation-delay: 150ms;"
 	></span>
 	<span
-		class="h-2 w-2 {platformColors[streamingPlatform]} animate-bounce rounded-full"
+		class="h-2 w-2 {platformColors[dotsTheme]} animate-bounce rounded-full"
 		style="animation-delay: 300ms;"
 	></span>
 </div>

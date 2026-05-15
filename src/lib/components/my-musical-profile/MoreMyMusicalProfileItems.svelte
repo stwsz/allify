@@ -86,7 +86,7 @@
 				<span class="text-sm font-semibold">-1</span>
 			</div>
 		{:else}
-			<DotsLoading />
+			<DotsLoading dotsTheme="base-light" />
 		{/if}
 	</div>
 </button>
