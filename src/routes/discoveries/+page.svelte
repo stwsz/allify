@@ -89,7 +89,7 @@
 				>
 					{#if loadingDiscoveries}
 						<div class="mx-auto flex h-full items-center justify-center">
-							<DotsLoading />
+							<DotsLoading dotsTheme="base" />
 						</div>
 					{:else if (mostListenedArtists?.length ?? 0) !== 0 && (mostListenedTracks?.length ?? 0) !== 0}
 						<div class="flex-1">

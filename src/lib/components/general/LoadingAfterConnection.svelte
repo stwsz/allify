@@ -45,7 +45,7 @@
 			</div>
 
 			<div class="relative">
-				<DotsLoading streamingPlatform={streamingPlatform ? streamingPlatform : undefined} />
+				<DotsLoading dotsTheme={streamingPlatform ? streamingPlatform : 'base'} />
 			</div>
 		</div>
 	</div>
