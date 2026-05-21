@@ -137,7 +137,8 @@ export const es = {
 		myMusicalProfilePageMostListenedShareButton: 'Compartir',
 		myMusicalProfilePageMostListenedShareIconAltText: 'Ícono de compartir',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostrar +5 artistas',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 canciones'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostrar +5 canciones',
+		myMusicalProfilePageMostListenedCrownIconAltText: 'Ícono de corona'
 	},
 	discoveriesPage: {
 		title: 'Descubrimientos Musicales | Allify',

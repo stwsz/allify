@@ -134,7 +134,8 @@ export const ja = {
 		myMusicalProfilePageMostListenedShareButton: '共有',
 		myMusicalProfilePageMostListenedShareIconAltText: '共有アイコン',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '+5アーティストを表示',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '+5曲を表示'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '+5曲を表示',
+		myMusicalProfilePageMostListenedCrownIconAltText: '王冠アイコン'
 	},
 	discoveriesPage: {
 		title: '音乐发现 | Allify',

@@ -135,7 +135,8 @@ export const ru = {
 		myMusicalProfilePageMostListenedShareButton: 'Поделиться',
 		myMusicalProfilePageMostListenedShareIconAltText: 'Иконка для поделиться',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Показать +5 исполнителей',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Показать +5 треков',
+		myMusicalProfilePageMostListenedCrownIconAltText: 'Иконка короны'
 	},
 	discoveriesPage: {
 		title: 'Музыкальные открытия | Allify',

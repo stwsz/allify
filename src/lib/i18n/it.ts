@@ -136,7 +136,8 @@ export const it = {
 		myMusicalProfilePageMostListenedShareButton: 'Condividi',
 		myMusicalProfilePageMostListenedShareIconAltText: 'Icona di condivisione',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: 'Mostra +5 artisti',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostra +5 canzoni'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: 'Mostra +5 canzoni',
+		myMusicalProfilePageMostListenedCrownIconAltText: 'Icona di corona'
 	},
 	discoveriesPage: {
 		title: 'Scoperte Musicali | Allify',

@@ -128,7 +128,8 @@ export const zh = {
 		myMusicalProfilePageMostListenedShareButton: '分享',
 		myMusicalProfilePageMostListenedShareIconAltText: '分享图标',
 		myMusicalProfilePageMostListenedShowMoreFiveArtistsButton: '显示 +5 艺术家',
-		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '显示 +5 歌曲'
+		myMusicalProfilePageMostListenedShowMoreFiveTracksButton: '显示 +5 歌曲',
+		myMusicalProfilePageMostListenedCrownIconAltText: '皇冠图标'
 	},
 	discoveriesPage: {
 		title: '音楽の発見 | Allify',
