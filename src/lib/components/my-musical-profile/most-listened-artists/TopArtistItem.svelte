@@ -54,7 +54,7 @@
 			<div class="flex flex-wrap gap-2">
 				{#each mostListenedArtistItem.genres as genre}
 					<span
-						class="rounded-xl bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse sm:text-sm"
+						class="rounded-xl bg-brand-primary px-3 py-1 text-xs font-medium text-t-inverse"
 					>
 						{genre}
 					</span>
