@@ -4,12 +4,14 @@ import { get } from 'svelte/store';
 // Stores
 import { userInfo } from '$lib/stores/userInfo.store';
 import { translationsStore } from '$lib/stores/translations.store';
+import { loadingAfterConnectionStore } from '$lib/stores/loadingAfterConnection.store';
 
 // Services
 import { userInfoFromSpotify } from './../spotify/fetchUserInfoFromSpotify';
 import { initialUserInfoFromSpotify } from '../spotify/initialUserInfoFromSpotify';
 import { getUser } from './getUser';
 import { createUser } from './createUser';
+import { sendEmail } from '../send-email/sendEmail';
 
 // Email templates
 import { welcomeToAllifyTemplate } from '$lib/emails/templates/welcomeToAllifyTemaplate';
@@ -30,7 +32,8 @@ export async function fetchUserInfo() {
 		const createUserResult = await createUser({
 			email: userFromSpotify.email,
 			tickets: 5,
-			discoveries: { updatedAt: '', tracks: [], artists: [] },
+			primaryStreaming: 'spotify',
+			discoveries: { updatedAt: undefined, tracks: [], artists: [] },
 			connectedStreamings: { spotify: userFromSpotify, deezer: undefined }
 		});
 
@@ -39,24 +42,20 @@ export async function fetchUserInfo() {
 
 			userInfo.set(createUserResult.createdUser);
 
-			await fetch('/api/sending-email', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({
-					subject: $translationsStore.templateEmail.welcomeToAllifySubject,
-					emailTo: 'igorgabsprofissional@gmail.com',
-					message: welcomeToAllifyTemplate(
-						createUserResult.createdUser.connectedStreamings.spotify.name,
-						'Spotify'
-					)
-				})
-			});
+			sendEmail(
+				$translationsStore.templateEmail.welcomeToAllifySubject,
+				'igorgabsprofissional@gmail.com',
+				welcomeToAllifyTemplate(
+					createUserResult.createdUser.connectedStreamings.spotify.name,
+					'Spotify'
+				)
+			);
 		} else {
 			userInfo.set(undefined);
 		}
 	} catch {
 		userInfo.set(undefined);
+	} finally {
+		loadingAfterConnectionStore.set({ loading: false, streamingPlatform: null });
 	}
 }

@@ -11,7 +11,12 @@
 	export let showProfileOptions: boolean;
 	export let openLanguageDropdown: boolean;
 
-	$: loggedIn = $userInfo ? true : false;
+	$: loggedIn =
+		$userInfo?.connectedStreamings?.spotify?.connected === true ||
+		$userInfo?.connectedStreamings?.deezer !== undefined
+			? true
+			: false;
+	$: primaryStreaming = $userInfo?.primaryStreaming ?? 'spotify';
 </script>
 
 <button
@@ -44,19 +49,19 @@
 	}}
 >
 	{#if loggedIn}
-		{#if $userInfo?.connectedStreamings.spotify?.image}
+		{#if $userInfo?.connectedStreamings[primaryStreaming]?.image}
 			<img
 				class={`
-					h-${$userInfo?.connectedStreamings.spotify?.image?.height}
-					w-${$userInfo?.connectedStreamings.spotify?.image?.width}
+					h-${$userInfo?.connectedStreamings[primaryStreaming]?.image?.height}
+					w-${$userInfo?.connectedStreamings[primaryStreaming]?.image?.width}
 					rounded-full
 					border
 					object-cover
 					p-1
 					text-brand-primary
 				`}
-				src={$userInfo?.connectedStreamings.spotify?.image?.url}
-				alt={$userInfo?.connectedStreamings.spotify?.name}
+				src={$userInfo?.connectedStreamings[primaryStreaming]?.image?.url}
+				alt={$userInfo?.connectedStreamings[primaryStreaming]?.name}
 			/>
 		{:else}
 			<div
@@ -74,9 +79,9 @@
 					font-medium
 					text-brand-primary
 				"
-				aria-label={$userInfo?.connectedStreamings.spotify?.name}
+				aria-label={$userInfo?.connectedStreamings[primaryStreaming]?.name}
 			>
-				{$userInfo?.connectedStreamings.spotify?.name.slice(0, 1)}
+				{$userInfo?.connectedStreamings[primaryStreaming]?.name.slice(0, 1)}
 			</div>
 		{/if}
 	{:else}

@@ -7,7 +7,7 @@
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	// Services
-	import { handleCheckout } from '$lib/services/user/handleCheckout';
+	import { handleCheckout } from '$lib/services/checkout/handleCheckout';
 
 	let quantity = 1;
 	const options = [1, 5, 10, 25];
