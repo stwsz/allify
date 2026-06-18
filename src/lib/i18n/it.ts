@@ -165,10 +165,9 @@ export const it = {
 		musicCommunityPageHeading1: 'Esplora la Community musicale',
 		musicCommunityParagraph1:
 			'Cerca i tuoi amici e scopri cosa stanno ascoltando, oltre ai loro artisti e brani più ascoltati.',
-		musicCommunitySearchPlaceholder:
-			'Cerca per nome utente',
+		musicCommunitySearchPlaceholder: 'Cerca per nome utente',
 		musicCommunitySearchButtonAltText:
-			'Icona della lente di ingrandimento per cercare per nome utente',
+			'Icona della lente di ingrandimento per cercare per nome utente'
 	},
 	profilePage: {
 		title: 'Profilo | Allify',

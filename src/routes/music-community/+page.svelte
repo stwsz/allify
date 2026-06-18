@@ -51,18 +51,16 @@
 			</p>
 		</div>
 
-		<div
-			class="max-w-4xl rounded-xl border border-input-border bg-s-default p-4"
-		>
+		<div class="max-w-4xl rounded-xl border border-input-border bg-s-default p-4">
 			<div class="flex flex-col gap-3 sm:flex-row">
 				<input
 					type="text"
 					placeholder={$translationsStore.musicCommunityPage.musicCommunitySearchPlaceholder}
-					class="h-12 flex-1 rounded-xl border border-input-border bg-input-bg px-4 text-sm text-t-primary outline-none transition-colors focus:border-b-focus"
+					class="h-12 flex-1 rounded-xl border border-input-border bg-input-bg px-4 text-sm text-t-primary transition-colors outline-none focus:border-b-focus"
 				/>
 
 				<button
-					class="flex h-12 w-12 shrink-0 items-center cursor-pointer justify-center rounded-xl bg-brand-primary transition-colors hover:bg-brand-primary-dark"
+					class="flex h-12 w-12 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-brand-primary transition-colors hover:bg-brand-primary-dark"
 				>
 					<SearchIcon
 						iconSvgClass="h-4.5 w-4.5 text-t-inverse"
@@ -73,5 +71,7 @@
 		</div>
 	</section>
 {:else}
-	<NotLogged notLoggedParagraph={$translationsStore.generalTexts.notLoggedMusicCommunityParagraph1} />
+	<NotLogged
+		notLoggedParagraph={$translationsStore.generalTexts.notLoggedMusicCommunityParagraph1}
+	/>
 {/if}

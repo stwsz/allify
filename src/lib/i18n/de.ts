@@ -167,10 +167,8 @@ export const de = {
 		musicCommunityPageHeading1: 'Erkunde die Musik-Community',
 		musicCommunityParagraph1:
 			'Durchsuche deine Freunde und sieh, was sie hören sowie welche Künstler und Songs sie am häufigsten hören.',
-		musicCommunitySearchPlaceholder:
-			'Nach Benutzernamen suchen',
-		musicCommunitySearchButtonAltText:
-			'Lupensymbol zum Suchen nach einem Benutzernamen',
+		musicCommunitySearchPlaceholder: 'Nach Benutzernamen suchen',
+		musicCommunitySearchButtonAltText: 'Lupensymbol zum Suchen nach einem Benutzernamen'
 	},
 	profilePage: {
 		title: 'Profil | Allify',

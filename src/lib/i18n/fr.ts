@@ -168,10 +168,8 @@ export const fr = {
 		musicCommunityPageHeading1: 'Explorez la Communauté musicale',
 		musicCommunityParagraph1:
 			'Recherchez vos amis et découvrez ce qu’ils écoutent, ainsi que leurs artistes et chansons les plus écoutés.',
-		musicCommunitySearchPlaceholder:
-			'Rechercher par nom d’utilisateur',
-		musicCommunitySearchButtonAltText:
-			'Icône de loupe pour rechercher par nom d’utilisateur',
+		musicCommunitySearchPlaceholder: 'Rechercher par nom d’utilisateur',
+		musicCommunitySearchButtonAltText: 'Icône de loupe pour rechercher par nom d’utilisateur'
 	},
 	profilePage: {
 		title: 'Profil | Allify',

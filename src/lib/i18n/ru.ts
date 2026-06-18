@@ -164,10 +164,8 @@ export const ru = {
 		musicCommunityPageHeading1: 'Исследуйте музыкальное сообщество',
 		musicCommunityParagraph1:
 			'Ищите своих друзей, смотрите, что они слушают, а также их самых популярных исполнителей и треки.',
-		musicCommunitySearchPlaceholder:
-			'Поиск по имени пользователя',
-		musicCommunitySearchButtonAltText:
-			'Значок лупы для поиска по имени пользователя'
+		musicCommunitySearchPlaceholder: 'Поиск по имени пользователя',
+		musicCommunitySearchButtonAltText: 'Значок лупы для поиска по имени пользователя'
 	},
 	profilePage: {
 		title: 'Профиль | Allify',

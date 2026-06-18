@@ -166,10 +166,8 @@ export const en = {
 		musicCommunityPageHeading1: 'Explore the Music Community',
 		musicCommunityParagraph1:
 			'Search for your friends and see what they are listening to, as well as their most listened-to artists and songs.',
-		musicCommunitySearchPlaceholder:
-			'Search by username',
-		musicCommunitySearchButtonAltText:
-			'Magnifying glass icon to search by username',
+		musicCommunitySearchPlaceholder: 'Search by username',
+		musicCommunitySearchButtonAltText: 'Magnifying glass icon to search by username'
 	},
 	profilePage: {
 		title: 'Profile | Allify',

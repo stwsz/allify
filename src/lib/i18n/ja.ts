@@ -162,10 +162,8 @@ export const ja = {
 		musicCommunityPageHeading1: '音楽コミュニティを探索する',
 		musicCommunityParagraph1:
 			'友達を検索して、彼らが何を聴いているのかや、最もよく聴いているアーティストや楽曲を確認しましょう。',
-		musicCommunitySearchPlaceholder:
-			'ユーザー名で検索',
-		musicCommunitySearchButtonAltText:
-			'ユーザー名を検索するための虫眼鏡アイコン',
+		musicCommunitySearchPlaceholder: 'ユーザー名で検索',
+		musicCommunitySearchButtonAltText: 'ユーザー名を検索するための虫眼鏡アイコン'
 	},
 	profilePage: {
 		title: 'プロフィール | Allify',
