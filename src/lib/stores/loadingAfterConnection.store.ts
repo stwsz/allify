@@ -14,7 +14,7 @@ const initialState = storedLoading
 	: {
 			loading: false,
 			streamingPlatform: null
-	  };
+		};
 
 export const loadingAfterConnectionStore: Writable<{
 	loading: boolean;
