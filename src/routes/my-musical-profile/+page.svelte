@@ -41,13 +41,15 @@
 </svelte:head>
 
 {#if $userInfo?.connectedStreamings.spotify?.connected === true}
-	<section class="base-section">
-		<div class="mb-4 flex flex-col items-center justify-between lg:mb-12 lg:flex-row">
-			<h1 class="mb-6 lg:mb-0">
+	<section class="base-section core-page">
+		<div class="flex flex-col justify-between gap-5 mb-12 lg:items-center lg:flex-row">
+			<h1
+				class="text-2xl font-semibold text-t-primary mb-2 md:text-3xl lg:mb-4"
+			>
 				{$translationsStore.myMusicalProfilePage.myMusicalProfilePageHeading1}
 			</h1>
 
-			<div class="w-fit">
+			<div class="w-fit mx-auto lg:mx-0">
 				<StreamingSelector />
 			</div>
 		</div>

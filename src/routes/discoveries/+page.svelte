@@ -139,21 +139,21 @@
 </svelte:head>
 
 {#if $userInfo?.connectedStreamings.spotify?.connected === true}
-	<section class="base-section px-4 py-10 md:px-6 md:py-14">
+	<section class="base-section core-page">
 		<h1
-			class="mb-4 text-center text-2xl font-semibold text-t-primary md:text-left md:text-3xl lg:mb-6"
+			class="text-2xl font-semibold text-t-primary mb-3 md:text-3xl lg:mb-5"
 		>
 			{$translationsStore.discoveriesPage.discoveriesPageHeading1}
 		</h1>
 
 		<div class="flex flex-col-reverse justify-between gap-10 lg:flex-row">
-			<div class="flex w-full flex-col gap-5 lg:w-3/5">
-				<p class="text-center text-sm leading-relaxed text-t-secondary md:text-left md:text-base">
+			<div class="flex w-full flex-col gap-10 lg:w-3/5">
+				<p class="text-sm leading-relaxed text-t-secondary md:text-base">
 					{$translationsStore.discoveriesPage.discoveriesPageParagraph1}
 				</p>
 
 				<div
-					class={`mt-2 flex min-h-45 flex-col gap-6 rounded-xl border border-b-default bg-s-default px-6 py-4 shadow-sm sm:flex-row md:px-8 md:py-6 ${loadingDiscoveries ? 'h-30' : 'h-auto'}`}
+					class={`flex min-h-45 flex-col gap-6 rounded-xl border border-b-default bg-s-default px-6 py-4 shadow-sm sm:flex-row md:px-8 md:py-6 ${loadingDiscoveries ? 'h-30' : 'h-auto'}`}
 				>
 					{#if loadingDiscoveries}
 						<div class="mx-auto flex h-full items-center justify-center">

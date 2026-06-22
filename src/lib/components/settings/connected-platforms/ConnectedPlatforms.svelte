@@ -18,12 +18,12 @@
 	] as { name: 'spotify' | 'deezer'; icon: typeof SvelteComponent; iconClass: string }[];
 </script>
 
-<div class="flex flex-col items-start gap-2">
-	<h2 class="mb-2 text-xl font-medium text-t-primary">
+<div class="flex flex-col items-start gap-5">
+	<h2>
 		{$translationsStore.settingsPage.settingsPageConnectedStreamingSectionHeading2}
 	</h2>
 
-	<p class="mt-1 mb-6 text-sm text-t-secondary">
+	<p class="text-sm leading-relaxed text-t-secondary md:text-base">
 		{$translationsStore.settingsPage.settingsPageConnectedStreamingSectionParagraph1}
 	</p>
 
