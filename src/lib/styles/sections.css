@@ -19,5 +19,25 @@
 }
 
 .base-section.legal-pages {
-	@apply space-y-8;
+	@apply flex flex-col gap-8;
+}
+
+.base-section.legal-pages div {
+	@apply flex flex-col gap-6;
+}
+
+.base-section.legal-pages ul {
+	@apply list-disc pl-6 flex flex-col gap-3 font-medium;
+}
+
+.base-section.legal-pages h1 {
+	@apply text-2xl leading-tight font-semibold sm:text-3xl lg:text-4xl;
+}
+
+.base-section.legal-pages h2 {
+	@apply text-xl leading-snug font-semibold sm:text-2xl lg:text-3xl;
+}
+
+.base-section.legal-pages h3 {
+	@apply text-lg leading-snug font-semibold sm:text-xl lg:text-2xl;
 }
