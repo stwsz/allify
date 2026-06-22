@@ -40,9 +40,9 @@
 </svelte:head>
 
 {#if $userInfo?.connectedStreamings.spotify?.connected === true}
-	<section class="base-section">
+	<section class="base-section core-page">
 		<h1
-			class="text-2xl font-semibold text-t-primary mb-2 md:text-3xl lg:mb-4"
+			class="text-2xl font-semibold text-t-primary mb-3 md:text-3xl lg:mb-5"
 		>
 			{$translationsStore.musicCommunityPage.musicCommunityPageHeading1}
 		</h1>
@@ -51,7 +51,7 @@
 			{$translationsStore.musicCommunityPage.musicCommunityParagraph1}
 		</p>
 
-		<div class="flex items-center gap-3 mt-2">
+		<div class="flex items-center gap-3 mt-10">
 			<input
 				type="text"
 				placeholder={$translationsStore.musicCommunityPage.musicCommunitySearchPlaceholder}

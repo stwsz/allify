@@ -64,9 +64,9 @@
 		</div>
 
 		<div class="flex flex-col justify-center gap-2 text-t-primary">
-			<div class="flex flex-col items-center gap-1 md:flex-row md:gap-8">
+			<div class="flex flex-col items-center gap-1 mb-2 md:flex-row md:gap-8">
 				{#if userInfo.name}
-					<h1 class="mb-1.5! text-2xl font-semibold sm:text-3xl">
+					<h1 class="text-2xl font-semibold sm:text-3xl">
 						{userInfo.name}
 					</h1>
 				{/if}

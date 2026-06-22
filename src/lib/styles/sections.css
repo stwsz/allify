@@ -1,35 +1,23 @@
 .base-section {
-	@apply flex flex-col gap-5 px-8 pt-10 pb-20 sm:pt-12 2xl:px-32 2xl:pt-20 2xl:pb-28;
+	@apply px-8 pb-20 pt-12 sm:px-12 lg:pt-22 lg:pb-30 2xl:px-32;
 }
 
-.base-section h1 {
+.base-section.core-page h1 {
 	@apply text-2xl leading-tight font-semibold sm:text-3xl lg:text-4xl;
 }
 
-.base-section h2 {
+.base-section.core-page h2 {
 	@apply text-xl leading-snug font-semibold sm:text-2xl lg:text-3xl;
 }
 
-.base-section h3 {
-	@apply text-lg leading-snug font-medium sm:text-xl lg:text-2xl;
+.base-section.settings-page h1 {
+	@apply text-2xl leading-tight font-semibold sm:text-3xl lg:text-4xl;
+}
+
+.base-section.settings-page h2 {
+	@apply text-xl leading-snug font-semibold sm:text-2xl lg:text-3xl;
 }
 
 .base-section.legal-pages {
-	@apply space-y-5;
-}
-
-.base-section.legal-pages div {
-	@apply space-y-3;
-}
-
-.base-section.legal-pages ul {
-	@apply list-inside list-disc space-y-3;
-}
-
-.base-section.legal-pages h2 {
-	@apply mb-2 lg:mb-7;
-}
-
-.base-section.legal-pages h3 {
-	@apply mb-1 lg:my-5;
+	@apply space-y-8;
 }
