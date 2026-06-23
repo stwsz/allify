@@ -169,7 +169,14 @@ export const fr = {
 		musicCommunityParagraph1:
 			'Recherchez vos amis et découvrez ce qu’ils écoutent, ainsi que leurs artistes et chansons les plus écoutés.',
 		musicCommunitySearchPlaceholder: 'Rechercher par nom d’utilisateur',
-		musicCommunitySearchButtonAltText: 'Icône de loupe pour rechercher par nom d’utilisateur'
+		musicCommunitySearchButtonAltText: 'Icône de loupe pour rechercher par nom d’utilisateur',
+		musicCommunityFavoritesSectionHeading2: 'Vos profils favoris',
+		musicCommunityFavoritesSectionParagraph1:
+			'Ici, vous pouvez voir les profils que vous avez enregistrés comme favoris.',
+		musicCommunityFavoritesSectionUserImageAltText: 'Image de profil de',
+		musicCommunityFavoritesSectionEmptyParagraph1: "Vous n'avez encore enregistré aucun favori.",
+		musicCommunityFavoritesSectionEmptyParagraph2:
+			'Ajoutez des profils à votre liste de favoris pour y accéder rapidement.'
 	},
 	profilePage: {
 		title: 'Profil | Allify',

@@ -165,7 +165,14 @@ export const ru = {
 		musicCommunityParagraph1:
 			'Ищите своих друзей, смотрите, что они слушают, а также их самых популярных исполнителей и треки.',
 		musicCommunitySearchPlaceholder: 'Поиск по имени пользователя',
-		musicCommunitySearchButtonAltText: 'Значок лупы для поиска по имени пользователя'
+		musicCommunitySearchButtonAltText: 'Значок лупы для поиска по имени пользователя',
+		musicCommunityFavoritesSectionHeading2: 'Ваши избранные профили',
+		musicCommunityFavoritesSectionParagraph1:
+			'Здесь вы можете увидеть профили, которые вы сохранили в избранное.',
+		musicCommunityFavoritesSectionUserImageAltText: 'Изображение профиля пользователя',
+		musicCommunityFavoritesSectionEmptyParagraph1: 'Вы ещё не сохранили ни одного избранного профиля.',
+		musicCommunityFavoritesSectionEmptyParagraph2:
+			'Добавьте профили в список избранного, чтобы быстро получать к ним доступ.'
 	},
 	profilePage: {
 		title: 'Профиль | Allify',

@@ -13,4 +13,8 @@ export type UserInfo = {
 		spotify: UserInfoSpotify | undefined;
 		deezer: undefined;
 	};
+	favorites: {
+		name: string;
+		userImage: string;
+	}[];
 };
