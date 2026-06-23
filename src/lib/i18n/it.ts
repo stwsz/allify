@@ -167,7 +167,14 @@ export const it = {
 			'Cerca i tuoi amici e scopri cosa stanno ascoltando, oltre ai loro artisti e brani più ascoltati.',
 		musicCommunitySearchPlaceholder: 'Cerca per nome utente',
 		musicCommunitySearchButtonAltText:
-			'Icona della lente di ingrandimento per cercare per nome utente'
+			'Icona della lente di ingrandimento per cercare per nome utente',
+		musicCommunityFavoritesSectionHeading2: 'I tuoi profili preferiti',
+		musicCommunityFavoritesSectionParagraph1:
+			'Qui puoi vedere i profili che hai salvato come preferiti.',
+		musicCommunityFavoritesSectionUserImageAltText: 'Immagine del profilo di',
+		musicCommunityFavoritesSectionEmptyParagraph1: 'Non hai ancora salvato nessun preferito.',
+		musicCommunityFavoritesSectionEmptyParagraph2:
+			'Aggiungi profili alla tua lista dei preferiti per accedervi rapidamente.'
 	},
 	profilePage: {
 		title: 'Profilo | Allify',

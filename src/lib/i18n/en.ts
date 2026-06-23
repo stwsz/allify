@@ -167,7 +167,14 @@ export const en = {
 		musicCommunityParagraph1:
 			'Search for your friends and see what they are listening to, as well as their most listened-to artists and songs.',
 		musicCommunitySearchPlaceholder: 'Search by username',
-		musicCommunitySearchButtonAltText: 'Magnifying glass icon to search by username'
+		musicCommunitySearchButtonAltText: 'Magnifying glass icon to search by username',
+		musicCommunityFavoritesSectionHeading2: 'Your Favorite Profiles',
+		musicCommunityFavoritesSectionParagraph1:
+			'Here you can see the profiles you have saved as favorites.',
+		musicCommunityFavoritesSectionUserImageAltText: 'Profile image of',
+		musicCommunityFavoritesSectionEmptyParagraph1: 'You have not saved any favorites yet.',
+		musicCommunityFavoritesSectionEmptyParagraph2:
+			'Add profiles to your favorites list to access them quickly.'
 	},
 	profilePage: {
 		title: 'Profile | Allify',

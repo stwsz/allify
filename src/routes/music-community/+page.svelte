@@ -7,8 +7,8 @@
 
 	// Components
 	import NotLogged from '$lib/components/general/NotLogged.svelte';
-	import StreamingSelector from '$lib/components/general/StreamingSelector.svelte';
-
+	import FavoritesSection from '$lib/components/music-community/FavoritesSection.svelte';
+	
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 	import { userInfo } from '$lib/stores/userInfo.store';
@@ -51,21 +51,29 @@
 			{$translationsStore.musicCommunityPage.musicCommunityParagraph1}
 		</p>
 
-		<div class="flex items-center gap-3 mt-10">
-			<input
-				type="text"
-				placeholder={$translationsStore.musicCommunityPage.musicCommunitySearchPlaceholder}
-				class="flex-1 rounded-xl border bg-s-muted px-4 py-3 text-sm font-semibold text-t-primary transition outline-none placeholder:text-t-muted focus:border-brand-primary"
-			/>
+		<div class="flex w-full gap-14 mt-10">
+			<div class="w-3/5">
+				<div class="flex items-center gap-3">
+					<input
+						type="text"
+						placeholder={$translationsStore.musicCommunityPage.musicCommunitySearchPlaceholder}
+						class="flex-1 rounded-xl border bg-s-muted px-4 py-3 text-sm font-semibold text-t-primary transition outline-none placeholder:text-t-muted focus:border-brand-primary"
+					/>
 
-			<button
-				class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl bg-brand-primary transition-colors hover:bg-brand-primary-dark"
-			>
-				<SearchIcon
-					iconSvgClass="h-4.5 w-4.5 text-t-inverse"
-					iconAltText={$translationsStore.musicCommunityPage.musicCommunitySearchButtonAltText}
-				/>
-			</button>
+					<button
+						class="flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl bg-brand-primary transition-colors hover:bg-brand-primary-dark"
+					>
+						<SearchIcon
+							iconSvgClass="h-4.5 w-4.5 text-t-inverse"
+							iconAltText={$translationsStore.musicCommunityPage.musicCommunitySearchButtonAltText}
+						/>
+					</button>
+				</div>
+			</div>
+
+			<div class="w-2/5">
+				<FavoritesSection favorites={$userInfo?.favorites} />
+			</div>
 		</div>
 	</section>
 {:else}

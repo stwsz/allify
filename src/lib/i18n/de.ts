@@ -168,7 +168,14 @@ export const de = {
 		musicCommunityParagraph1:
 			'Durchsuche deine Freunde und sieh, was sie hören sowie welche Künstler und Songs sie am häufigsten hören.',
 		musicCommunitySearchPlaceholder: 'Nach Benutzernamen suchen',
-		musicCommunitySearchButtonAltText: 'Lupensymbol zum Suchen nach einem Benutzernamen'
+		musicCommunitySearchButtonAltText: 'Lupensymbol zum Suchen nach einem Benutzernamen',
+		musicCommunityFavoritesSectionHeading2: 'Deine Lieblingsprofile',
+		musicCommunityFavoritesSectionParagraph1:
+			'Hier kannst du die Profile sehen, die du als Favoriten gespeichert hast.',
+		musicCommunityFavoritesSectionUserImageAltText: 'Profilbild von',
+		musicCommunityFavoritesSectionEmptyParagraph1: 'Du hast noch keine Favoriten gespeichert.',
+		musicCommunityFavoritesSectionEmptyParagraph2:
+			'Füge Profile zu deiner Favoritenliste hinzu, um schnell auf sie zuzugreifen.'
 	},
 	profilePage: {
 		title: 'Profil | Allify',

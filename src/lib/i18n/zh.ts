@@ -157,7 +157,14 @@ export const zh = {
 		musicCommunityPageHeading1: '探索音乐社区',
 		musicCommunityParagraph1: '搜索朋友，查看他们在听什么，以及他们最常听的艺术家和曲目。',
 		musicCommunitySearchPlaceholder: '按用户名搜索',
-		musicCommunitySearchButtonAltText: '用于按用户名搜索的放大镜图标'
+		musicCommunitySearchButtonAltText: '用于按用户名搜索的放大镜图标',
+		musicCommunityFavoritesSectionHeading2: '您收藏的个人资料',
+		musicCommunityFavoritesSectionParagraph1:
+			'在这里，您可以查看已收藏的个人资料。',
+		musicCommunityFavoritesSectionUserImageAltText: '个人资料图片：',
+		musicCommunityFavoritesSectionEmptyParagraph1: '您尚未收藏任何个人资料。',
+		musicCommunityFavoritesSectionEmptyParagraph2:
+			'将个人资料添加到收藏列表中，以便快速访问。'
 	},
 	profilePage: {
 		title: '资料 | Allify',
