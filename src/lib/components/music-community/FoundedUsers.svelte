@@ -14,7 +14,7 @@
 	export let loadingFoundedUsers: boolean;
 </script>
 
-<div class="flex h-5/6 max-h-5/6 rounded-xl border border-b-default bg-s-default px-6 py-4">
+<div class="flex h-5/6 max-h-5/6 rounded-xl border border-b-default bg-s-default p-5">
 	{#if loadingFoundedUsers}
 		<div class="mx-auto flex h-full items-center justify-center">
 			<DotsLoading dotsTheme="base" />
