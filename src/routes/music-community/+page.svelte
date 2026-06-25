@@ -78,7 +78,7 @@
 			{$translationsStore.musicCommunityPage.musicCommunityParagraph1}
 		</p>
 
-		<div class="mt-10 flex flex-col gap-8 xl:flex-row xl:gap-20">
+		<div class="mt-10 flex flex-col gap-8 xl:flex-row xl:gap-12">
 			<div class="flex w-full flex-col gap-6 xl:w-3/5">
 				<div class="flex items-center gap-3">
 					<input
