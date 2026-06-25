@@ -16,6 +16,12 @@
 	export let foundedUsers: SearchUserInfo[] | undefined = undefined;
 	export let loadingFoundedUsers: boolean = false;
 	export let hasSearched: boolean = false;
+
+	$: mockedUsers = foundedUsers
+		? [...foundedUsers, ...foundedUsers, ...foundedUsers, ...foundedUsers, ...foundedUsers]
+		: [];
+
+	console.log('foundedUsers', foundedUsers);
 </script>
 
 <div class="flex h-5/6 max-h-5/6 rounded-xl border border-b-default bg-s-default p-5">
@@ -25,7 +31,7 @@
 		</div>
 	{:else if foundedUsers && foundedUsers.length > 0}
 		<div class="flex w-full flex-wrap gap-4">
-			{#each foundedUsers as user}
+			{#each mockedUsers as user}
 				<FoundedUserItem {user} />
 			{/each}
 		</div>
