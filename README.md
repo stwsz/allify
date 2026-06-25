@@ -10,7 +10,7 @@
 
 <br />
 
-**Everything about your music. Connected. Ranked. Yours.**
+**Everything about your music. Connected. Shared. Yours.**
 
 <br />
 
@@ -26,7 +26,7 @@
 
 Most music platforms tell you what to listen to. Allify shows you who you are as a listener.
 
-Connect your streaming services and discover your real listening patterns with no guesses involved. Get recommendations based on your actual taste, challenge your friends in musical showdowns, and see your complete music identity in one place.
+Connect your streaming services and discover your real listening patterns with no guesses involved. Get recommendations based on your actual taste, explore the musical community, discover people with similar tastes, and see your complete music identity in one place.
 
 <br />
 
