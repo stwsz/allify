@@ -12,9 +12,10 @@
 	import type { SearchUserInfo } from '$lib/types/UserInfo.type';
 
 	// Props
-	export let searchUserInputValue: string;
-	export let foundedUsers: SearchUserInfo[];
-	export let loadingFoundedUsers: boolean;
+	export let searchUserInputValue: string = '';
+	export let foundedUsers: SearchUserInfo[] | undefined = undefined;
+	export let loadingFoundedUsers: boolean = false;
+	export let hasSearched: boolean = false;
 </script>
 
 <div class="flex h-5/6 max-h-5/6 rounded-xl border border-b-default bg-s-default p-5">
@@ -22,13 +23,13 @@
 		<div class="mx-auto flex h-full items-center justify-center">
 			<DotsLoading dotsTheme="base" />
 		</div>
-	{:else if foundedUsers !== undefined && foundedUsers.length > 0}
+	{:else if foundedUsers && foundedUsers.length > 0}
 		<div class="flex w-full flex-wrap gap-4">
 			{#each foundedUsers as user}
 				<FoundedUserItem {user} />
 			{/each}
 		</div>
-	{:else if searchUserInputValue === undefined}
+	{:else if !hasSearched}
 		<div
 			class="w-full rounded-xl border border-dashed border-b-default bg-s-muted px-6 py-12 text-center"
 		>

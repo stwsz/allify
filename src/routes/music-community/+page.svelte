@@ -20,17 +20,26 @@
 	// Types
 	import type { SearchUserInfo } from '$lib/types/UserInfo.type';
 
-	let searchUserInputValue: string;
+	let searchUserInputValue: string = '';
 	let loadingFoundedUsers = false;
 
-	$: foundedUsers = [] as SearchUserInfo[];
+	let foundedUsers: SearchUserInfo[] | undefined = undefined;
+	let hasSearched = false;
 
 	async function handleSearchUser() {
-		loadingFoundedUsers = true;
-		const data = await searchUsers(searchUserInputValue);
+		if (!searchUserInputValue || searchUserInputValue.length < 2) return;
 
-		foundedUsers = data;
-		loadingFoundedUsers = false;
+		hasSearched = true;
+		loadingFoundedUsers = true;
+
+		try {
+			const data = await searchUsers(searchUserInputValue);
+			foundedUsers = data;
+		} catch (err) {
+			foundedUsers = [];
+		} finally {
+			loadingFoundedUsers = false;
+		}
 	}
 </script>
 
@@ -93,7 +102,7 @@
 					</button>
 				</div>
 
-				<FoundedUsers {searchUserInputValue} {foundedUsers} {loadingFoundedUsers} />
+				<FoundedUsers {searchUserInputValue} {foundedUsers} {loadingFoundedUsers} {hasSearched} />
 			</div>
 
 			<div class="w-2/5">
