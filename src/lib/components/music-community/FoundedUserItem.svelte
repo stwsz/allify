@@ -5,6 +5,9 @@
 	import OutlinedStar from '$lib/assets/images/icons/OutlinedStar.svelte';
 	import FilledStar from '$lib/assets/images/icons/FilledStar.svelte';
 
+	// Components
+	import ProfileWithoutPhoto from '$lib/components/general/ProfileWithoutPhoto.svelte';
+
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
@@ -18,14 +21,18 @@
 </script>
 
 <article
-	class="flex w-full cursor-pointer items-center justify-between gap-4 rounded-xl border border-b-default bg-s-muted p-2.5 transition hover:border-brand-primary sm:w-[calc(50%-0.5rem)] xl:w-[calc(33.333%-0.75rem)]"
+	class="flex h-fit w-full cursor-pointer items-center justify-between gap-4 rounded-xl border border-b-default bg-s-muted p-2.5 transition hover:border-brand-primary sm:w-[calc(50%-0.5rem)] xl:w-[calc(33.333%-0.75rem)]"
 >
 	<div class="flex min-w-0 items-center gap-4">
-		<img
-			src={user.image.url}
-			alt={`${$translationsStore.musicCommunityPage.musicCommunityFavoritesSectionUserImageAltText} ${user.name}`}
-			class="h-13 w-13 shrink-0 rounded-full object-cover"
-		/>
+		{#if user.image}
+			<img
+				src={user.image.url}
+				alt={`${$translationsStore.musicCommunityPage.musicCommunityFavoritesSectionUserImageAltText} ${user.name}`}
+				class="h-13 w-13 shrink-0 rounded-full object-cover"
+			/>
+		{:else}
+			<ProfileWithoutPhoto userName={user.name} additionalClassesToSize="h-13 w-13" />
+		{/if}
 
 		<div class="mb-1 flex min-w-0 flex-col gap-1">
 			<p class="truncate text-lg font-semibold text-t-primary">
@@ -47,7 +54,7 @@
 	</div>
 
 	<button
-		class="shrink-0 text-brand-primary"
+		class="mr-2 shrink-0 text-brand-primary"
 		aria-label={$translationsStore.musicCommunityPage.musicCommunityStarIconAltText}
 	>
 		{#if mockedUserIsFavorite}
