@@ -84,7 +84,7 @@
 					{$translationsStore.addTickets.addTicketsModalParagraph3}
 				</p>
 
-				<div class="grid grid-cols-4 gap-3 mt-1">
+				<div class="mt-1 grid grid-cols-4 gap-3">
 					{#each options as opt}
 						<button
 							class="cursor-pointer rounded-xl border py-3 text-sm font-semibold transition
