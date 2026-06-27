@@ -24,7 +24,7 @@
 			<DotsLoading dotsTheme="base" />
 		</div>
 	{:else if foundedUsers && foundedUsers.length > 0}
-		<div class="flex w-full flex-wrap gap-4 overflow-auto max-h-70 h-70">
+		<div class="flex h-70 max-h-70 w-full flex-wrap gap-4 overflow-auto">
 			{#each foundedUsers as user}
 				<FoundedUserItem {user} />
 			{/each}

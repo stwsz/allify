@@ -6,7 +6,7 @@
 	export let favorites;
 </script>
 
-<div class="rounded-xl border border-b-default bg-s-default p-5 w-full xl:w-2/5">
+<div class="w-full rounded-xl border border-b-default bg-s-default p-5 xl:w-2/5">
 	<div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 		<div>
 			<h2 class="text-xl font-semibold text-t-primary">
@@ -29,7 +29,9 @@
 		</span>
 	</div>
 
-	<div class={`flex flex-col gap-4 h-64 max-h-64 ${favorites && favorites.length > 0 ? 'overflow-auto' : 'overflow-hidden'}`}>
+	<div
+		class={`flex h-64 max-h-64 flex-col gap-4 ${favorites && favorites.length > 0 ? 'overflow-auto' : 'overflow-hidden'}`}
+	>
 		{#if favorites && favorites.length > 0}
 			{#each favorites as favorite}
 				<div
@@ -48,7 +50,7 @@
 			{/each}
 		{:else}
 			<div
-				class="flex w-full flex-col items-center justify-center rounded-xl border border-dashed border-b-default bg-s-muted px-6 h-full text-center"
+				class="flex h-full w-full flex-col items-center justify-center rounded-xl border border-dashed border-b-default bg-s-muted px-6 text-center"
 			>
 				<p class="font-medium text-t-primary">
 					{$translationsStore.musicCommunityPage.musicCommunityFavoritesSectionEmptyParagraph1}
