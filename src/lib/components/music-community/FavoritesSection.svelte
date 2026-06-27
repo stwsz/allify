@@ -6,7 +6,7 @@
 	export let favorites;
 </script>
 
-<div class="rounded-xl border border-b-default bg-s-default p-5">
+<div class="w-full rounded-xl border border-b-default bg-s-default p-5 xl:w-2/5">
 	<div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 		<div>
 			<h2 class="text-xl font-semibold text-t-primary">
@@ -29,24 +29,28 @@
 		</span>
 	</div>
 
-	<div class="flex flex-col gap-4">
-		{#each favorites as favorite}
-			<div
-				class="flex items-center gap-4 rounded-xl border border-b-default bg-s-muted p-3 transition hover:border-brand-primary"
-			>
-				<img
-					src={favorite.userImage}
-					alt={`${$translationsStore.musicCommunityPage.musicCommunityFavoritesSectionUserImageAltText} ${favorite.name}`}
-					class="h-14 w-14 shrink-0 rounded-lg object-cover sm:h-16 sm:w-16"
-				/>
+	<div
+		class={`flex h-64 max-h-64 flex-col gap-4 ${favorites && favorites.length > 0 ? 'overflow-auto' : 'overflow-hidden'}`}
+	>
+		{#if favorites && favorites.length > 0}
+			{#each favorites as favorite}
+				<div
+					class="flex items-center gap-4 rounded-xl border border-b-default bg-s-muted p-3 transition hover:border-brand-primary"
+				>
+					<img
+						src={favorite.userImage}
+						alt={`${$translationsStore.musicCommunityPage.musicCommunityFavoritesSectionUserImageAltText} ${favorite.name}`}
+						class="h-14 w-14 shrink-0 rounded-lg object-cover sm:h-16 sm:w-16"
+					/>
 
-				<h3 class="min-w-0 truncate font-semibold text-t-primary">
-					{favorite.name}
-				</h3>
-			</div>
+					<h3 class="min-w-0 truncate font-semibold text-t-primary">
+						{favorite.name}
+					</h3>
+				</div>
+			{/each}
 		{:else}
 			<div
-				class="rounded-xl border border-dashed border-b-default bg-s-muted px-6 py-10 text-center"
+				class="flex h-full w-full flex-col items-center justify-center rounded-xl border border-dashed border-b-default bg-s-muted px-6 text-center"
 			>
 				<p class="font-medium text-t-primary">
 					{$translationsStore.musicCommunityPage.musicCommunityFavoritesSectionEmptyParagraph1}
@@ -56,6 +60,6 @@
 					{$translationsStore.musicCommunityPage.musicCommunityFavoritesSectionEmptyParagraph2}
 				</p>
 			</div>
-		{/each}
+		{/if}
 	</div>
 </div>
