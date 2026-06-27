@@ -6,7 +6,7 @@
 	export let favorites;
 </script>
 
-<div class="rounded-xl border border-b-default bg-s-default p-5">
+<div class="rounded-xl border border-b-default bg-s-default p-5 w-full xl:w-2/5">
 	<div class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 		<div>
 			<h2 class="text-xl font-semibold text-t-primary">
