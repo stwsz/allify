@@ -10,6 +10,11 @@
 
 	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
+	import { userInfo } from '$lib/stores/userInfo.store';
+
+	// Services
+	import { addToFavorites } from '$lib/services/user/updates/addToFavorites';
+	import { removeFromFavorites } from '$lib/services/user/updates/removeFromFavorites';
 
 	// Types
 	import type { SearchUserInfo } from '$lib/types/UserInfo.type';
@@ -17,7 +22,49 @@
 	// Props
 	export let user: SearchUserInfo;
 
-	let mockedUserIsFavorite: boolean = true;
+	$: userOnFavorites =
+		$userInfo?.favorites.some((favorite) => favorite.email === user.email) || false;
+
+	async function handleAddToFavorites(
+		emailToSave?: string,
+		email?: string,
+		name?: string,
+		image?: { url: string; height: number | null; width: number | null }
+	) {
+		if (!emailToSave || !email || !name || !image) return;
+
+		const alreadyExists = $userInfo?.favorites.some((favorite) => favorite.email === email);
+
+		if (alreadyExists) {
+			const data = await removeFromFavorites(emailToSave, email);
+
+			if (!data) return;
+
+			userInfo.update((user) => {
+				if (user) {
+					user.favorites = user.favorites.filter(
+						(favorite) => favorite.email !== data.removedFavorite.email
+					);
+				}
+
+				return user;
+			});
+
+			return;
+		}
+
+		const data = await addToFavorites(emailToSave, email, name, image);
+
+		if (!data) return;
+
+		userInfo.update((user) => {
+			if (user) {
+				user.favorites.push({ email, name, image });
+			}
+
+			return user;
+		});
+	}
 </script>
 
 <article
@@ -54,10 +101,11 @@
 	</div>
 
 	<button
-		class="mr-2 shrink-0 text-brand-primary"
+		class="mr-2 shrink-0 cursor-pointer text-brand-primary transition hover:text-brand-primary-dark"
 		aria-label={$translationsStore.musicCommunityPage.musicCommunityStarIconAltText}
+		on:click={() => handleAddToFavorites($userInfo?.email, user.email, user.name, user.image)}
 	>
-		{#if mockedUserIsFavorite}
+		{#if userOnFavorites}
 			<FilledStar
 				iconSvgClass="h-4 w-4"
 				iconAltText={$translationsStore.musicCommunityPage.musicCommunityStarIconRemoveAltText}

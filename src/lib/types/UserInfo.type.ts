@@ -1,3 +1,4 @@
+// Types
 import type { UserInfoSpotify } from './SpotifyData.type';
 
 export type UserInfo = {
@@ -10,18 +11,19 @@ export type UserInfo = {
 		tracks: string[];
 		artists: string[];
 	};
+	favorites: {
+		email: string;
+		name: string;
+		image: { url: string; height: number | null; width: number | null };
+	}[];
 	connectedStreamings: {
 		spotify: UserInfoSpotify | undefined;
 		deezer: undefined;
 	};
-	favorites: {
-		name: string;
-		userImage: string;
-	}[];
 };
 
 export type SearchUserInfo = {
-	id: string;
+	email: string;
 	name: string;
 	image: { url: string; height: number | null; width: number | null };
 	spotifyConnected: boolean;

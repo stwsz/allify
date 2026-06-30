@@ -41,6 +41,7 @@ export const POST: RequestHandler = async ({ request }) => {
 			tickets: 5,
 			primaryStreaming: streaming,
 			discoveries: { updatedAt: undefined, tracks: [], artists: [] },
+			favorites: [],
 			connectedStreamings: { [streaming]: streamingData }
 		};
 
