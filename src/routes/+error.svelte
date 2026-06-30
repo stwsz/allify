@@ -1,6 +1,9 @@
 <script lang="ts">
+	// Svelte
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
+
+	// Stores
 	import { translationsStore } from '$lib/stores/translations.store';
 
 	const status = $page.status || 500;

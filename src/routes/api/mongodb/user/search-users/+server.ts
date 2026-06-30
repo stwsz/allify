@@ -19,9 +19,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	try {
-		const body = await request.json();
-
-		const { user } = body;
+		const { user } = await request.json();
 
 		if (!user) {
 			return new Response(JSON.stringify({ error: 'User is required' }), { status: 400 });
@@ -47,9 +45,9 @@ export const POST: RequestHandler = async ({ request }) => {
 		return new Response(
 			JSON.stringify({
 				users: foundUsers.map((user) => ({
-					id: user._id,
-					image: user.primaryStreaming === 'spotify' ? user.connectedStreamings.spotify.image : '',
 					name: user.name,
+					email: user.email,
+					image: user.primaryStreaming === 'spotify' ? user.connectedStreamings.spotify.image : '',
 					spotifyConnected:
 						user.connectedStreamings.spotify && user.connectedStreamings.spotify.connected === true
 							? true
